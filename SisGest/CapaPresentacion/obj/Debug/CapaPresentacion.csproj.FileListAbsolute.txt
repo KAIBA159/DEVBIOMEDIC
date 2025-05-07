@@ -1,0 +1,221 @@
+C:\SisVentas\CapaPresentacion\bin\Debug\CapaPresentacion.dll
+C:\SisVentas\CapaPresentacion\bin\Debug\CapaPresentacion.pdb
+C:\SisVentas\CapaPresentacion\bin\Debug\CapaNegocio.dll
+C:\SisVentas\CapaPresentacion\bin\Debug\CapaDatos.dll
+C:\SisVentas\CapaPresentacion\bin\Debug\CapaNegocio.pdb
+C:\SisVentas\CapaPresentacion\bin\Debug\CapaDatos.pdb
+C:\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.csprojResolveAssemblyReference.cache
+C:\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FrmCategoria.resources
+C:\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.GenerateResource.Cache
+C:\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.dll
+C:\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
+C:\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.Properties.Resources.resources
+C:\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.frmPresentacion.resources
+C:\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.frmArticulo.resources
+C:\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.frmVistaCategoria_Articulo.resources
+C:\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.frmProveedor.resources
+C:\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.frmCliente.resources
+C:\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.frmTrabajador.resources
+C:\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.frmPrincipal.resources
+C:\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.frmLogin.resources
+C:\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FrmIngreso.resources
+C:\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FrmVistaArticulo_Ingreso.resources
+C:\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FrmVistaProveedor_Ingreso.resources
+C:\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FrmVenta.resources
+C:\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FrmVistaArticulo_Venta.resources
+C:\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FrmVistaCliente_Venta.resources
+C:\SisVentas\CapaPresentacion\bin\Debug\CapaPresentacion.dll.config
+C:\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FrmReporteFactura.resources
+C:\SisVentas\CapaPresentacion\obj\Debug\RdlCompile.cache
+C:\SisVentas\CapaPresentacion\obj\Debug\RdlCompile.compiled
+C:\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FrmReporteArticulos.resources
+C:\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.Consultas.FrmConsulta_Stock_Articulos.resources
+C:\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.Consultas.FrmConsultaCompras.resources
+C:\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.Consultas.FrmConsultaVentas.resources
+C:\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.FrmReporteCategoria.resources
+C:\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.FrmReporteCliente.resources
+C:\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.FrmReporteCompras.resources
+C:\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.FrmReportePresentacion.resources
+C:\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.FrmReporteProveedor.resources
+C:\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.FrmReporteTrabajador.resources
+C:\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.FrmReporteVentas.resources
+C:\SisVentas - copia\CapaPresentacion\bin\Debug\CapaPresentacion.dll.config
+C:\SisVentas - copia\CapaPresentacion\bin\Debug\CapaPresentacion.dll
+C:\SisVentas - copia\CapaPresentacion\bin\Debug\CapaPresentacion.pdb
+C:\SisVentas - copia\CapaPresentacion\bin\Debug\CapaNegocio.dll
+C:\SisVentas - copia\CapaPresentacion\bin\Debug\CapaDatos.dll
+C:\SisVentas - copia\CapaPresentacion\bin\Debug\CapaNegocio.pdb
+C:\SisVentas - copia\CapaPresentacion\bin\Debug\CapaDatos.pdb
+C:\SisVentas - copia\CapaPresentacion\obj\Debug\CapaPresentacion.Consultas.FrmConsultaCompras.resources
+C:\SisVentas - copia\CapaPresentacion\obj\Debug\CapaPresentacion.Consultas.FrmConsultaVentas.resources
+C:\SisVentas - copia\CapaPresentacion\obj\Debug\CapaPresentacion.Consultas.FrmConsulta_Stock_Articulos.resources
+C:\SisVentas - copia\CapaPresentacion\obj\Debug\CapaPresentacion.frmArticulo.resources
+C:\SisVentas - copia\CapaPresentacion\obj\Debug\CapaPresentacion.FrmCategoria.resources
+C:\SisVentas - copia\CapaPresentacion\obj\Debug\CapaPresentacion.frmCliente.resources
+C:\SisVentas - copia\CapaPresentacion\obj\Debug\CapaPresentacion.FrmIngreso.resources
+C:\SisVentas - copia\CapaPresentacion\obj\Debug\CapaPresentacion.frmLogin.resources
+C:\SisVentas - copia\CapaPresentacion\obj\Debug\CapaPresentacion.frmPresentacion.resources
+C:\SisVentas - copia\CapaPresentacion\obj\Debug\CapaPresentacion.frmPrincipal.resources
+C:\SisVentas - copia\CapaPresentacion\obj\Debug\CapaPresentacion.frmProveedor.resources
+C:\SisVentas - copia\CapaPresentacion\obj\Debug\CapaPresentacion.frmTrabajador.resources
+C:\SisVentas - copia\CapaPresentacion\obj\Debug\CapaPresentacion.FrmVenta.resources
+C:\SisVentas - copia\CapaPresentacion\obj\Debug\CapaPresentacion.FrmVistaArticulo_Ingreso.resources
+C:\SisVentas - copia\CapaPresentacion\obj\Debug\CapaPresentacion.FrmVistaArticulo_Venta.resources
+C:\SisVentas - copia\CapaPresentacion\obj\Debug\CapaPresentacion.frmVistaCategoria_Articulo.resources
+C:\SisVentas - copia\CapaPresentacion\obj\Debug\CapaPresentacion.FrmVistaCliente_Venta.resources
+C:\SisVentas - copia\CapaPresentacion\obj\Debug\CapaPresentacion.FrmVistaProveedor_Ingreso.resources
+C:\SisVentas - copia\CapaPresentacion\obj\Debug\CapaPresentacion.Properties.Resources.resources
+C:\SisVentas - copia\CapaPresentacion\obj\Debug\CapaPresentacion.FrmReporteArticulos.resources
+C:\SisVentas - copia\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.FrmReporteCategoria.resources
+C:\SisVentas - copia\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.FrmReporteCliente.resources
+C:\SisVentas - copia\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.FrmReporteCompras.resources
+C:\SisVentas - copia\CapaPresentacion\obj\Debug\CapaPresentacion.FrmReporteFactura.resources
+C:\SisVentas - copia\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.FrmReportePresentacion.resources
+C:\SisVentas - copia\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.FrmReporteProveedor.resources
+C:\SisVentas - copia\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.FrmReporteTrabajador.resources
+C:\SisVentas - copia\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.FrmReporteVentas.resources
+C:\SisVentas - copia\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.GenerateResource.Cache
+C:\SisVentas - copia\CapaPresentacion\obj\Debug\RdlCompile.cache
+C:\SisVentas - copia\CapaPresentacion\obj\Debug\RdlCompile.compiled
+C:\SisVentas - copia\CapaPresentacion\obj\Debug\CapaPresentacion.dll
+C:\SisVentas - copia\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
+C:\SisVentas - copia\CapaPresentacion\obj\Debug\CapaPresentacion.csprojResolveAssemblyReference.cache
+C:\Users\Administrador\Desktop\SW\Sistema de Ventas C# - SQL Server 2014 (Free)\Sistema de Ventas C# - SQL Server 2014 (Free) - Incanatoit\Código Fuente\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.AssemblyReference.cache
+C:\Users\Administrador\Documents\SW\SisVentas\CapaPresentacion\bin\Debug\CapaPresentacion.dll.config
+C:\Users\Administrador\Documents\SW\SisVentas\CapaPresentacion\bin\Debug\CapaPresentacion.dll
+C:\Users\Administrador\Documents\SW\SisVentas\CapaPresentacion\bin\Debug\CapaPresentacion.pdb
+C:\Users\Administrador\Documents\SW\SisVentas\CapaPresentacion\bin\Debug\CapaNegocio.dll
+C:\Users\Administrador\Documents\SW\SisVentas\CapaPresentacion\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\Administrador\Documents\SW\SisVentas\CapaPresentacion\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\Administrador\Documents\SW\SisVentas\CapaPresentacion\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\Administrador\Documents\SW\SisVentas\CapaPresentacion\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\Administrador\Documents\SW\SisVentas\CapaPresentacion\bin\Debug\CapaDatos.dll
+C:\Users\Administrador\Documents\SW\SisVentas\CapaPresentacion\bin\Debug\CapaNegocio.pdb
+C:\Users\Administrador\Documents\SW\SisVentas\CapaPresentacion\bin\Debug\CapaDatos.pdb
+C:\Users\Administrador\Documents\SW\SisVentas\CapaPresentacion\bin\Debug\CapaDatos.dll.config
+C:\Users\Administrador\Documents\SW\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.AssemblyReference.cache
+C:\Users\Administrador\Documents\SW\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.Consultas.FrmConsultaCompras.resources
+C:\Users\Administrador\Documents\SW\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.Consultas.FrmConsultaVentas.resources
+C:\Users\Administrador\Documents\SW\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.Consultas.FrmConsulta_Stock_Articulos.resources
+C:\Users\Administrador\Documents\SW\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.frmArticulo.resources
+C:\Users\Administrador\Documents\SW\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FrmCategoria.resources
+C:\Users\Administrador\Documents\SW\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.frmCliente.resources
+C:\Users\Administrador\Documents\SW\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FrmIngreso.resources
+C:\Users\Administrador\Documents\SW\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.frmLogin.resources
+C:\Users\Administrador\Documents\SW\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.frmPresentacion.resources
+C:\Users\Administrador\Documents\SW\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.frmPrincipal.resources
+C:\Users\Administrador\Documents\SW\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.frmProveedor.resources
+C:\Users\Administrador\Documents\SW\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.frmTrabajador.resources
+C:\Users\Administrador\Documents\SW\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FrmVenta.resources
+C:\Users\Administrador\Documents\SW\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FrmVistaArticulo_Ingreso.resources
+C:\Users\Administrador\Documents\SW\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FrmVistaArticulo_Venta.resources
+C:\Users\Administrador\Documents\SW\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.frmVistaCategoria_Articulo.resources
+C:\Users\Administrador\Documents\SW\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FrmVistaCliente_Venta.resources
+C:\Users\Administrador\Documents\SW\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FrmVistaProveedor_Ingreso.resources
+C:\Users\Administrador\Documents\SW\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.Properties.Resources.resources
+C:\Users\Administrador\Documents\SW\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FrmReporteArticulos.resources
+C:\Users\Administrador\Documents\SW\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.FrmReporteCategoria.resources
+C:\Users\Administrador\Documents\SW\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.FrmReporteCliente.resources
+C:\Users\Administrador\Documents\SW\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.FrmReporteCompras.resources
+C:\Users\Administrador\Documents\SW\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FrmReporteFactura.resources
+C:\Users\Administrador\Documents\SW\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.FrmReportePresentacion.resources
+C:\Users\Administrador\Documents\SW\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.FrmReporteProveedor.resources
+C:\Users\Administrador\Documents\SW\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.FrmReporteTrabajador.resources
+C:\Users\Administrador\Documents\SW\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.FrmReporteVentas.resources
+C:\Users\Administrador\Documents\SW\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.GenerateResource.cache
+C:\Users\Administrador\Documents\SW\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CoreCompileInputs.cache
+C:\Users\Administrador\Documents\SW\SisVentas\CapaPresentacion\obj\Debug\CapaPres.61CA7C38.Up2Date
+C:\Users\Administrador\Documents\SW\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.dll
+C:\Users\Administrador\Documents\SW\SisVentas\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
+C:\Users\Administrador\Documents\SW\SisGest\CapaPresentacion\bin\Debug\CapaPresentacion.dll.config
+C:\Users\Administrador\Documents\SW\SisGest\CapaPresentacion\bin\Debug\CapaPresentacion.dll
+C:\Users\Administrador\Documents\SW\SisGest\CapaPresentacion\bin\Debug\CapaPresentacion.pdb
+C:\Users\Administrador\Documents\SW\SisGest\CapaPresentacion\bin\Debug\CapaNegocio.dll
+C:\Users\Administrador\Documents\SW\SisGest\CapaPresentacion\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\Administrador\Documents\SW\SisGest\CapaPresentacion\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\Administrador\Documents\SW\SisGest\CapaPresentacion\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\Administrador\Documents\SW\SisGest\CapaPresentacion\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\Administrador\Documents\SW\SisGest\CapaPresentacion\bin\Debug\CapaDatos.dll
+C:\Users\Administrador\Documents\SW\SisGest\CapaPresentacion\bin\Debug\CapaNegocio.pdb
+C:\Users\Administrador\Documents\SW\SisGest\CapaPresentacion\bin\Debug\CapaDatos.pdb
+C:\Users\Administrador\Documents\SW\SisGest\CapaPresentacion\bin\Debug\CapaDatos.dll.config
+C:\Users\Administrador\Documents\SW\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.AssemblyReference.cache
+C:\Users\Administrador\Documents\SW\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.Consultas.FrmConsultaCompras.resources
+C:\Users\Administrador\Documents\SW\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.Consultas.FrmConsultaVentas.resources
+C:\Users\Administrador\Documents\SW\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.Consultas.FrmConsulta_Stock_Articulos.resources
+C:\Users\Administrador\Documents\SW\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.frmArticulo.resources
+C:\Users\Administrador\Documents\SW\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.FrmCategoria.resources
+C:\Users\Administrador\Documents\SW\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.frmCliente.resources
+C:\Users\Administrador\Documents\SW\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.FrmIngreso.resources
+C:\Users\Administrador\Documents\SW\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.frmLogin.resources
+C:\Users\Administrador\Documents\SW\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.frmPresentacion.resources
+C:\Users\Administrador\Documents\SW\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.frmPrincipal.resources
+C:\Users\Administrador\Documents\SW\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.frmProveedor.resources
+C:\Users\Administrador\Documents\SW\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.frmTrabajador.resources
+C:\Users\Administrador\Documents\SW\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.FrmVenta.resources
+C:\Users\Administrador\Documents\SW\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.FrmVistaArticulo_Ingreso.resources
+C:\Users\Administrador\Documents\SW\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.FrmVistaArticulo_Venta.resources
+C:\Users\Administrador\Documents\SW\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.frmVistaCategoria_Articulo.resources
+C:\Users\Administrador\Documents\SW\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.FrmVistaCliente_Venta.resources
+C:\Users\Administrador\Documents\SW\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.FrmVistaProveedor_Ingreso.resources
+C:\Users\Administrador\Documents\SW\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.Properties.Resources.resources
+C:\Users\Administrador\Documents\SW\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.FrmReporteArticulos.resources
+C:\Users\Administrador\Documents\SW\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.FrmReporteCategoria.resources
+C:\Users\Administrador\Documents\SW\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.FrmReporteCliente.resources
+C:\Users\Administrador\Documents\SW\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.FrmReporteCompras.resources
+C:\Users\Administrador\Documents\SW\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.FrmReporteFactura.resources
+C:\Users\Administrador\Documents\SW\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.FrmReportePresentacion.resources
+C:\Users\Administrador\Documents\SW\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.FrmReporteProveedor.resources
+C:\Users\Administrador\Documents\SW\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.FrmReporteTrabajador.resources
+C:\Users\Administrador\Documents\SW\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.FrmReporteVentas.resources
+C:\Users\Administrador\Documents\SW\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.GenerateResource.cache
+C:\Users\Administrador\Documents\SW\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CoreCompileInputs.cache
+C:\Users\Administrador\Documents\SW\SisGest\CapaPresentacion\obj\Debug\CapaPres.61CA7C38.Up2Date
+C:\Users\Administrador\Documents\SW\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.dll
+C:\Users\Administrador\Documents\SW\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEV\SisGest\CapaPresentacion\bin\Debug\CapaPresentacion.dll.config
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEV\SisGest\CapaPresentacion\bin\Debug\CapaPresentacion.dll
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEV\SisGest\CapaPresentacion\bin\Debug\CapaPresentacion.pdb
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEV\SisGest\CapaPresentacion\bin\Debug\CapaNegocio.dll
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEV\SisGest\CapaPresentacion\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEV\SisGest\CapaPresentacion\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEV\SisGest\CapaPresentacion\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEV\SisGest\CapaPresentacion\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEV\SisGest\CapaPresentacion\bin\Debug\CapaDatos.dll
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEV\SisGest\CapaPresentacion\bin\Debug\CapaNegocio.pdb
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEV\SisGest\CapaPresentacion\bin\Debug\CapaDatos.pdb
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEV\SisGest\CapaPresentacion\bin\Debug\CapaDatos.dll.config
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEV\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.AssemblyReference.cache
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEV\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.Consultas.FrmConsultaCompras.resources
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEV\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.Consultas.FrmConsultaVentas.resources
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEV\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.Consultas.FrmConsulta_Stock_Articulos.resources
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEV\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.frmArticulo.resources
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEV\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.FrmCategoria.resources
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEV\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.frmCliente.resources
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEV\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.FrmIngreso.resources
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEV\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.frmLogin.resources
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEV\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.frmPresentacion.resources
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEV\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.frmPrincipal.resources
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEV\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.frmProveedor.resources
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEV\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.frmTrabajador.resources
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEV\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.FrmVenta.resources
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEV\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.FrmVistaArticulo_Ingreso.resources
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEV\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.FrmVistaArticulo_Venta.resources
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEV\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.frmVistaCategoria_Articulo.resources
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEV\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.FrmVistaCliente_Venta.resources
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEV\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.FrmVistaProveedor_Ingreso.resources
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEV\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.Properties.Resources.resources
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEV\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.FrmReporteArticulos.resources
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEV\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.FrmReporteCategoria.resources
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEV\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.FrmReporteCliente.resources
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEV\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.FrmReporteCompras.resources
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEV\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.FrmReporteFactura.resources
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEV\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.FrmReportePresentacion.resources
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEV\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.FrmReporteProveedor.resources
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEV\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.FrmReporteTrabajador.resources
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEV\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.FrmReporteVentas.resources
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEV\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.GenerateResource.cache
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEV\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CoreCompileInputs.cache
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEV\SisGest\CapaPresentacion\obj\Debug\CapaPres.61CA7C38.Up2Date
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEV\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.dll
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEV\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
