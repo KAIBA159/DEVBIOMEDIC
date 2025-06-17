@@ -72,6 +72,7 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.encargadoTransportistaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -204,7 +205,8 @@
             // MnuMantenimiento
             // 
             this.MnuMantenimiento.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.trabajadoresToolStripMenuItem});
+            this.trabajadoresToolStripMenuItem,
+            this.encargadoTransportistaToolStripMenuItem});
             this.MnuMantenimiento.Image = global::CapaPresentacion.Properties.Resources.report;
             this.MnuMantenimiento.Name = "MnuMantenimiento";
             this.MnuMantenimiento.Size = new System.Drawing.Size(117, 20);
@@ -214,7 +216,7 @@
             // 
             this.trabajadoresToolStripMenuItem.Image = global::CapaPresentacion.Properties.Resources.empleados_b;
             this.trabajadoresToolStripMenuItem.Name = "trabajadoresToolStripMenuItem";
-            this.trabajadoresToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.trabajadoresToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
             this.trabajadoresToolStripMenuItem.Text = "Trabajadores";
             this.trabajadoresToolStripMenuItem.Click += new System.EventHandler(this.trabajadoresToolStripMenuItem_Click);
             // 
@@ -440,6 +442,13 @@
             this.toolStripStatusLabel.Size = new System.Drawing.Size(107, 17);
             this.toolStripStatusLabel.Text = "Sistema de Gestión";
             // 
+            // encargadoTransportistaToolStripMenuItem
+            // 
+            this.encargadoTransportistaToolStripMenuItem.Name = "encargadoTransportistaToolStripMenuItem";
+            this.encargadoTransportistaToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
+            this.encargadoTransportistaToolStripMenuItem.Text = "Encargado-Transportista";
+            this.encargadoTransportistaToolStripMenuItem.Click += new System.EventHandler(this.encargadoTransportistaToolStripMenuItem_Click);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -510,6 +519,7 @@
         private System.Windows.Forms.ToolStripMenuItem backUpBDToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton TsCompras;
         private System.Windows.Forms.ToolStripButton TsVentas;
+        private System.Windows.Forms.ToolStripMenuItem encargadoTransportistaToolStripMenuItem;
     }
 }
 

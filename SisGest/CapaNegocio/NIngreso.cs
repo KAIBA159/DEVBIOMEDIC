@@ -6,17 +6,25 @@ using System.Threading.Tasks;
 
 using System.Data;
 using CapaDatos;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace CapaNegocio
 {
     public class NIngreso
     {
-        public static string Insertar(int idtrabajador,int idproveedor, DateTime fecha,
-            string tipo_comprobante,string serie,string correlativo, decimal igv,
-            string estado,DataTable dtDetalles)
+        public static string Insertar(int idtrabajador,
+                                      int idproveedor, DateTime fecha,
+            string tipo_comprobante,string serie,
+            string correlativo, decimal igv,
+            string estado,string cbTipo_Ingreso,
+            int idencargadoTransportista,
+            DataTable dtDetalles)
         {
             DIngreso Obj = new DIngreso();
             Obj.Idtrabajador = idtrabajador;
+            Obj.IdencargadoTransportista = idencargadoTransportista;
+            
+
             Obj.Idproveedor = idproveedor;
             Obj.Fecha = fecha;
             Obj.Tipo_Comprobante = tipo_comprobante;
@@ -24,6 +32,9 @@ namespace CapaNegocio
             Obj.Correlativo = correlativo;
             Obj.Igv = igv;
             Obj.Estado = estado;
+
+            Obj.Tipo_Ingreso = cbTipo_Ingreso;
+
             List<DDetalle_Ingreso> detalles = new List<DDetalle_Ingreso>();
             foreach (DataRow row in dtDetalles.Rows)
             {
@@ -35,6 +46,17 @@ namespace CapaNegocio
                 detalle.Stock_Actual = Convert.ToInt32(row["stock_inicial"].ToString());
                 detalle.Fecha_Produccion = Convert.ToDateTime(row["fecha_produccion"].ToString());
                 detalle.Fecha_Vencimiento = Convert.ToDateTime(row["fecha_vencimiento"].ToString());
+
+
+                //detalle. = Convert.ToString(row["guia_remisioncliente"].ToString());
+                //detalle. = Convert.ToString(row["subcliente"].ToString());
+
+
+
+
+                detalle.Lote = Convert.ToString(row["lote"].ToString());
+
+
                 detalles.Add(detalle);
             }
             return Obj.Insertar(Obj,detalles);

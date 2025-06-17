@@ -280,5 +280,12 @@ namespace CapaPresentacion
             frm.Idtrabajador = Convert.ToInt32(this.Idtrabajador);
 
         }
+
+        private void encargadoTransportistaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEncargadoTransportista frm = new frmEncargadoTransportista();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }

@@ -4,17 +4,17 @@
   <description asmv2:publisher="IncanatoIt" co.v1:suiteName="Sisventas" asmv2:product="Sisventas" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <deployment install="true" mapFileExtensions="true" />
   <compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">
-    <framework targetVersion="4.5.1" profile="Full" supportedRuntime="4.0.30319" />
+    <framework targetVersion="4.7.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="SisVentas.exe.manifest" size="8845">
+    <dependentAssembly dependencyType="install" codebase="SisVentas.exe.manifest" size="9513">
       <assemblyIdentity name="SisVentas.exe" version="1.0.0.2" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Zu5FJ8urjAbS8Hx2QdkqndtWtsBgQnyZO1dwU+Zc1jg=</dsig:DigestValue>
+        <dsig:DigestValue>9Q4UQqMgsALttZpbqckgJfZBX8Dv5wPUXGjYyrMqDLQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

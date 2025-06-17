@@ -35,6 +35,13 @@ namespace CapaPresentacion
             this.txtProveedor.Text = nombre;
         }
 
+
+        public void setEncargado(string idEncargadoTransportista, string EncargadoTransportista)
+        {
+            this.txtIdencargado.Text = idEncargadoTransportista;
+            this.txtEncargado.Text = EncargadoTransportista;
+        }
+
         public void setArticulo (string idarticulo,string nombre)
         {
             this.txtIdarticulo.Text = idarticulo;
@@ -49,8 +56,11 @@ namespace CapaPresentacion
             this.ttMensaje.SetToolTip(this.txtStock, "Ingrese la cantidad de compra");
             this.ttMensaje.SetToolTip(this.txtArticulo, "Seleccione el Artículo de compra");
             this.txtIdproveedor.Visible = false;
+            this.txtIdencargado.Visible = false;
+
             this.txtIdarticulo.Visible = false;
             this.txtProveedor.ReadOnly = true;
+            this.txtEncargado.ReadOnly = true; 
             this.txtArticulo.ReadOnly = true;
 
         }
@@ -72,8 +82,13 @@ namespace CapaPresentacion
         private void Limpiar()
         {
             this.txtIdingreso.Text = string.Empty;
+
             this.txtIdproveedor.Text = string.Empty;
             this.txtProveedor.Text = string.Empty;
+
+            this.txtIdencargado.Text = string.Empty;
+            this.txtEncargado.Text = string.Empty;
+
             this.txtSerie.Text = string.Empty;
             this.txtCorrelativo.Text = string.Empty;
             this.txtIgv.Text = string.Empty;
@@ -88,6 +103,8 @@ namespace CapaPresentacion
             this.txtStock.Text = string.Empty;
             this.txtPrecio_Compra.Text = string.Empty;
             this.txtPrecio_Venta.Text = string.Empty;
+
+            this.txtLote.Text = string.Empty;
         }
 
         //Habilitar los controles del formulario
@@ -98,15 +115,28 @@ namespace CapaPresentacion
             this.txtCorrelativo.ReadOnly = !valor;
             this.txtIgv.ReadOnly = !valor;
             this.dtFecha.Enabled = valor;
+
             this.cbTipo_Comprobante.Enabled = valor;
+
+            this.cbTipo_Ingreso.Enabled = valor;
+
             this.txtStock.ReadOnly = !valor;
             this.txtPrecio_Compra.ReadOnly = !valor;
             this.txtPrecio_Venta.ReadOnly = !valor;
+
+            this.txtLote.ReadOnly = !valor;
+
+
+
             this.dtFecha_Produccion.Enabled = valor;
             this.dtFecha_Vencimiento.Enabled = valor;
             
             this.btnBuscarArticulo.Enabled = valor;
             this.btnBuscarProveedor.Enabled = valor;
+
+            this.btnBuscarEncargado.Enabled = valor;
+            
+
             this.btnAgregar.Enabled = valor;
             this.btnQuitar.Enabled = valor;
         }
@@ -166,6 +196,9 @@ namespace CapaPresentacion
             this.dtDetalle = new DataTable("Detalle");
             this.dtDetalle.Columns.Add("idarticulo",System.Type.GetType("System.Int32"));
             this.dtDetalle.Columns.Add("articulo", System.Type.GetType("System.String"));
+
+            this.dtDetalle.Columns.Add("lote", System.Type.GetType("System.String"));
+
             this.dtDetalle.Columns.Add("precio_compra", System.Type.GetType("System.Decimal"));
             this.dtDetalle.Columns.Add("precio_venta", System.Type.GetType("System.Decimal"));
             this.dtDetalle.Columns.Add("stock_inicial", System.Type.GetType("System.Int32"));
@@ -296,49 +329,73 @@ namespace CapaPresentacion
             {
                 string rpta = "";
                 if (this.txtIdproveedor.Text == string.Empty || this.txtSerie.Text == string.Empty
-                    || this.txtCorrelativo.Text == string.Empty || this.txtIgv.Text == string.Empty)
+                    || this.txtCorrelativo.Text == string.Empty || this.txtIgv.Text == string.Empty
+                    || this.txtIdencargado.Text == string.Empty
+                    )
                 {
                     MensajeError("Falta ingresar algunos datos, serán remarcados");
                     errorIcono.SetError(txtIdproveedor, "Ingrese un Valor");
                     errorIcono.SetError(txtSerie, "Ingrese un Valor");
                     errorIcono.SetError(txtCorrelativo, "Ingrese un Valor");
                     errorIcono.SetError(txtIgv, "Ingrese un Valor");
+                    errorIcono.SetError(txtEncargado, "Ingrese un Encargado");
+                    
+
+                    //errorIcono.SetError(txtLote, "Ingrese un lote");
                 }
                 else
                 {
-                    errorIcono.Clear();
 
-                    if (this.IsNuevo)
+                    if (dtDetalle != null && dtDetalle.Rows.Count > 0)
                     {
-                        rpta = NIngreso.Insertar(Idtrabajador, Convert.ToInt32(this.txtIdproveedor.Text),
-                            dtFecha.Value,cbTipo_Comprobante.Text,txtSerie.Text,txtCorrelativo.Text,
-                            Convert.ToDecimal(txtIgv.Text),"EMITIDO",dtDetalle);
+                        errorIcono.Clear();
 
-                    }
-                    
-
-                    if (rpta.Equals("OK"))
-                    {
                         if (this.IsNuevo)
                         {
-                            this.MensajeOk("Se Insertó de forma correcta el registro");
+                            rpta = NIngreso.Insertar(Idtrabajador, 
+                                Convert.ToInt32(this.txtIdproveedor.Text),
+                                dtFecha.Value, 
+                                cbTipo_Comprobante.Text,
+                                txtSerie.Text,
+                                txtCorrelativo.Text,
+                                Convert.ToDecimal(txtIgv.Text), "EMITIDO",
+
+                                cbTipo_Ingreso.Text,
+                                Convert.ToInt32(this.txtIdencargado.Text),
+                                dtDetalle
+                                );
+
                         }
-                        
-                        
+
+
+                        if (rpta.Equals("OK"))
+                        {
+                            if (this.IsNuevo)
+                            {
+                                this.MensajeOk("Se Insertó de forma correcta el registro");
+                            }
+
+
+                        }
+                        else
+                        {
+                            this.MensajeError(rpta);
+                        }
+
+                        this.IsNuevo = false;
+                        this.Botones();
+                        this.Limpiar();
+                        this.limpiarDetalle();
+                        this.Mostrar();
+
                     }
                     else
                     {
-                        this.MensajeError(rpta);
+
+                        errorIcono.SetError(dataListadoDetalle, "Ingrese un valor al Detalle ");
                     }
 
-                    this.IsNuevo = false;
-                    this.Botones();
-                    this.Limpiar();
-                    this.limpiarDetalle();
-                    this.Mostrar();
-
-
-                    
+                     
                 }
             }
             catch (Exception ex)
@@ -360,9 +417,12 @@ namespace CapaPresentacion
                     errorIcono.SetError(txtStock, "Ingrese un Valor");
                     errorIcono.SetError(txtPrecio_Compra, "Ingrese un Valor");
                     errorIcono.SetError(txtPrecio_Venta, "Ingrese un Valor");
+                    errorIcono.SetError(txtLote, "Ingrese un Lote");
                 }
                 else
                 {
+                    errorIcono.Clear();
+
                     bool registrar = true;
                     foreach (DataRow row in dtDetalle.Rows)
                     {
@@ -387,6 +447,9 @@ namespace CapaPresentacion
                         row["fecha_produccion"] = dtFecha_Produccion.Value;
                         row["fecha_vencimiento"] = dtFecha_Vencimiento.Value;
                         row["subtotal"] = subTotal;
+
+                        row["lote"] = this.txtLote.Text;
+
                         this.dtDetalle.Rows.Add(row);
                         this.limpiarDetalle();
 
@@ -431,6 +494,11 @@ namespace CapaPresentacion
             this.txtCorrelativo.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["correlativo"].Value);
             this.lblTotal_Pagado.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["total"].Value);
             this.txtIgv.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["Impuesto"].Value);
+
+            this.txtEncargado .Text = Convert.ToString(this.dataListado.CurrentRow.Cells["EncargadoTransportista"].Value);
+
+
+
             this.MostrarDetalle();
             this.tabControl1.SelectedIndex = 1;
         }
@@ -441,6 +509,17 @@ namespace CapaPresentacion
             frm.Texto = Convert.ToString(dtFecha1.Value);
             frm.Texto2 = Convert.ToString(dtFecha2.Value);
             frm.ShowDialog();
+        }
+
+        private void btnBuscarEncargado_Click(object sender, EventArgs e)
+        {
+            FrmVistaEncargado_Ingreso vista = new FrmVistaEncargado_Ingreso();
+            vista.ShowDialog();
+        }
+
+        private void btnBuscarProveedor_ClientSizeChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

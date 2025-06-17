@@ -1,9 +1,12 @@
-﻿using System;
+﻿using log4net;
+using log4net.Config;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,8 +17,15 @@ namespace CapaPresentacion
 {
     public partial class frmLogin : Form
     {
+        private static readonly ILog log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
+
+
         public frmLogin()
         {
+            XmlConfigurator.Configure();
+
+            log.Debug("Mensaje de depuración");
+
             InitializeComponent();
             LblHora.Text = DateTime.Now.ToString();
         }

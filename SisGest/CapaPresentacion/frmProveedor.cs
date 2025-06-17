@@ -221,6 +221,8 @@ namespace CapaPresentacion
         {
             try
             {
+                errorIcono.Clear();
+
                 string rpta = "";
                 if (this.txtRazon_Social.Text == string.Empty || this.txtNum_Documento.Text==string.Empty
                     || this.txtDireccion.Text==string.Empty)

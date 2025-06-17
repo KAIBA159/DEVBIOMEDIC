@@ -17,6 +17,11 @@ namespace CapaDatos
         private int _Cantidad;
         private decimal _Precio_Venta;
         private decimal _Descuento;
+
+        private string _Subcliente;
+        
+
+        private string _Guia_remisioncliente;
         //Propiedades
         public int Iddetalle_venta
         {
@@ -57,6 +62,19 @@ namespace CapaDatos
             set { _Descuento = value; }
         }
 
+
+        public string Guia_remisioncliente
+        {
+            get { return _Guia_remisioncliente; }
+            set { _Guia_remisioncliente = value; }
+        }
+
+        public string Subcliente
+        {
+            get { return _Subcliente; }
+            set { _Subcliente = value; }
+        }
+        
         //Constructores
         public DDetalle_Venta()
         {
@@ -118,6 +136,29 @@ namespace CapaDatos
                 ParPrecioVenta.SqlDbType = SqlDbType.Money;
                 ParPrecioVenta.Value = Detalle_Venta.Precio_Venta;
                 SqlCmd.Parameters.Add(ParPrecioVenta);
+
+
+
+                //
+                SqlParameter Parguia_remisioncliente = new SqlParameter();
+                Parguia_remisioncliente.ParameterName = "@guia_remisioncliente";
+                Parguia_remisioncliente.SqlDbType = SqlDbType.VarChar;
+                Parguia_remisioncliente.Size = 50;
+                Parguia_remisioncliente.Value = Detalle_Venta.Guia_remisioncliente;
+                SqlCmd.Parameters.Add(Parguia_remisioncliente);
+
+
+                SqlParameter ParSubcliente = new SqlParameter();
+                ParSubcliente.ParameterName = "@subcliente";
+                ParSubcliente.SqlDbType = SqlDbType.VarChar;
+                ParSubcliente.Size = 50;
+                ParSubcliente.Value = Detalle_Venta.Subcliente;
+                SqlCmd.Parameters.Add(ParSubcliente);
+
+              
+                //
+
+
 
                 SqlParameter ParDescuento = new SqlParameter();
                 ParDescuento.ParameterName = "@descuento";

@@ -18,7 +18,10 @@ namespace CapaDatos
         private byte[] _Imagen;
         private int _Idcategoria;
         private int _Idpresentacion;
-        private string _TextoBuscar;       
+        private string _TextoBuscar;
+
+        private string _RegistroSanitario;
+        private string _Fabricante;
 
         public int Idarticulo
         {
@@ -61,13 +64,25 @@ namespace CapaDatos
             set { _TextoBuscar = value; }
         }
 
+        public string Fabricante
+        {
+            get { return _Fabricante; }
+            set { _Fabricante = value; }
+        }
+
+        public string RegistroSanitario
+        {
+            get { return _RegistroSanitario; }
+            set { _RegistroSanitario = value; }
+        }
+
         //Constructores
         public DArticulo()
         {
 
         }
 
-        public DArticulo(int idarticulo,string codigo,string nombre,string descripcion,byte[] imagen,int idcategoria,int idpresentacion,string textobuscar)
+        public DArticulo(int idarticulo,string codigo,string nombre,string descripcion,byte[] imagen,int idcategoria,int idpresentacion,string textobuscar ,string registrosantario,string fabricante)
         {
             this.Idarticulo = idarticulo;
             this.Codigo = codigo;
@@ -77,6 +92,10 @@ namespace CapaDatos
             this.Idcategoria = idcategoria;
             this.Idpresentacion = idpresentacion;
             this.TextoBuscar = textobuscar;
+
+
+            this.RegistroSanitario = registrosantario;
+            this.Fabricante = fabricante;
 
         }
 
@@ -141,6 +160,24 @@ namespace CapaDatos
                 ParIdpresentacion.SqlDbType = SqlDbType.VarChar;
                 ParIdpresentacion.Value = Articulo.Idpresentacion;
                 SqlCmd.Parameters.Add(ParIdpresentacion);
+
+
+
+                SqlParameter ParRegistroSanitario = new SqlParameter();
+                ParRegistroSanitario.ParameterName = "@registrosanitario";
+                ParRegistroSanitario.SqlDbType = SqlDbType.VarChar;
+                ParRegistroSanitario.Size = 100;
+                ParRegistroSanitario.Value = Articulo.RegistroSanitario;
+                SqlCmd.Parameters.Add(ParRegistroSanitario);
+
+                SqlParameter ParFabricante = new SqlParameter();
+                ParFabricante.ParameterName = "@fabricante";
+                ParFabricante.SqlDbType = SqlDbType.VarChar;
+                ParFabricante.Size = 100;
+                ParFabricante.Value = Articulo.Fabricante;
+                SqlCmd.Parameters.Add(ParFabricante);
+
+
 
                 //Ejecutamos nuestro comando
 
@@ -220,6 +257,22 @@ namespace CapaDatos
                 ParIdpresentacion.SqlDbType = SqlDbType.VarChar;
                 ParIdpresentacion.Value = Articulo.Idpresentacion;
                 SqlCmd.Parameters.Add(ParIdpresentacion);
+
+
+                SqlParameter ParRegistroSanitario = new SqlParameter();
+                ParRegistroSanitario.ParameterName = "@registrosanitario";
+                ParRegistroSanitario.SqlDbType = SqlDbType.VarChar;
+                ParRegistroSanitario.Size = 100;
+                ParRegistroSanitario.Value = Articulo.RegistroSanitario;
+                SqlCmd.Parameters.Add(ParRegistroSanitario);
+
+                SqlParameter ParFabricante = new SqlParameter();
+                ParFabricante.ParameterName = "@fabricante";
+                ParFabricante.SqlDbType = SqlDbType.VarChar;
+                ParFabricante.Size = 100;
+                ParFabricante.Value = Articulo.Fabricante;
+                SqlCmd.Parameters.Add(ParFabricante);
+
 
 
                 //Ejecutamos nuestro comando

@@ -17,6 +17,7 @@ namespace CapaDatos
         private int _Idarticulo;
         private decimal _Precio_Compra;
         private decimal _Precio_Venta;
+        private string _Lote;  
         private int _Stock_Inicial;
         private int _Stock_Actual;
         private DateTime _Fecha_Produccion;
@@ -79,6 +80,13 @@ namespace CapaDatos
             get { return _Fecha_Vencimiento; }
             set { _Fecha_Vencimiento = value; }
         }
+
+        public string Lote
+        {
+            get { return _Lote; }
+            set { _Lote = value; }
+        }
+
         //Constructores 
         public DDetalle_Ingreso()
         {
@@ -172,6 +180,23 @@ namespace CapaDatos
                 ParFecha_Vencimiento.Value = Detalle_Ingreso.Fecha_Vencimiento;
                 SqlCmd.Parameters.Add(ParFecha_Vencimiento);
 
+
+                SqlParameter ParLote = new SqlParameter();
+                ParLote.ParameterName = "@lote";
+                ParLote.SqlDbType = SqlDbType.VarChar;
+                ParLote.Size = 50;
+                ParLote.Value = Detalle_Ingreso.Lote;
+                SqlCmd.Parameters.Add(ParLote);
+
+
+
+                //SqlParameter ParLote = new SqlParameter();
+                //ParLote.ParameterName = "@lote";
+                //ParLote.SqlDbType = SqlDbType.Int;
+                //ParLote.Value = Detalle_Ingreso.Lote;
+                //SqlCmd.Parameters.Add(ParLote);
+
+                ParFecha_Vencimiento.SqlDbType = SqlDbType.Date;
                 //Ejecutamos nuestro comando
 
                 rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "NO se Ingreso el Registro";

@@ -23,7 +23,9 @@ namespace CapaNegocio
             Obj.Serie = serie;
             Obj.Correlativo = correlativo;
             Obj.Igv = igv;
+
             List<DDetalle_Venta> detalles = new List<DDetalle_Venta>();
+
             foreach (DataRow row in dtDetalles.Rows)
             {
                 DDetalle_Venta detalle = new DDetalle_Venta();
@@ -31,6 +33,11 @@ namespace CapaNegocio
                 detalle.Cantidad = Convert.ToInt32(row["cantidad"].ToString());
                 detalle.Precio_Venta = Convert.ToDecimal(row["precio_venta"].ToString());
                 detalle.Descuento = Convert.ToDecimal(row["descuento"].ToString());
+
+
+                detalle.Guia_remisioncliente = row["guia_remisioncliente"].ToString();
+                detalle.Subcliente = row["subcliente"].ToString();
+
                 detalles.Add(detalle);
             }
             return Obj.Insertar(Obj, detalles);

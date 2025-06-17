@@ -21,7 +21,11 @@ namespace CapaDatos
         private string _Correlativo;
         private decimal _Igv;
         private string _Estado;
+        private int _IdencargadoTransportista;
+        private string _Tipo_Ingreso;
+
         
+
         //Propiedades
         public int Idingreso
         {
@@ -80,6 +84,20 @@ namespace CapaDatos
             get { return _Estado; }
             set { _Estado = value; }
         }
+
+        public string Tipo_Ingreso
+        {
+            get { return _Tipo_Ingreso; }
+            set { _Tipo_Ingreso = value; }
+        }
+
+        public int IdencargadoTransportista
+        {
+            get { return _IdencargadoTransportista; }
+            set { _IdencargadoTransportista = value; }
+        }
+
+
         //Constructores
         public DIngreso()
         {
@@ -88,17 +106,21 @@ namespace CapaDatos
 
         public DIngreso(int idingreso,int idtrabajador,int idproveedor,
             DateTime fecha,string tipo_comprobante,string serie,
-            string correlativo,decimal igv, string estado)
+            string correlativo,decimal igv, string estado,string tipo_Ingreso, int idencargadoTransportista)
         {
             this.Idingreso = idingreso;
             this.Idtrabajador = idtrabajador;
             this.Idproveedor = idproveedor;
+            this.IdencargadoTransportista = idencargadoTransportista;
             this.Fecha = fecha;
             this.Tipo_Comprobante = tipo_comprobante;
             this.Serie = serie;
             this.Correlativo = correlativo;
             this.Igv = igv;
             this.Estado = estado;
+
+            this.Tipo_Ingreso = tipo_Ingreso;
+
         }
         //Métodos
         public string Insertar(DIngreso Ingreso,List<DDetalle_Ingreso> Detalle)
@@ -138,6 +160,13 @@ namespace CapaDatos
                 SqlCmd.Parameters.Add(ParIdproveedor);
 
 
+                SqlParameter Paridencargadotransportista = new SqlParameter();
+                Paridencargadotransportista.ParameterName = "@idencargadotransportista";
+                Paridencargadotransportista.SqlDbType = SqlDbType.Int;
+                Paridencargadotransportista.Value = Ingreso.IdencargadoTransportista;
+                SqlCmd.Parameters.Add(Paridencargadotransportista);
+
+
                 SqlParameter ParFecha = new SqlParameter();
                 ParFecha.ParameterName = "@fecha";
                 ParFecha.SqlDbType = SqlDbType.Date;
@@ -150,6 +179,14 @@ namespace CapaDatos
                 ParTipo_Comprobante.Size = 20;
                 ParTipo_Comprobante.Value = Ingreso.Tipo_Comprobante;
                 SqlCmd.Parameters.Add(ParTipo_Comprobante);
+
+                SqlParameter Partipo_Ingreso = new SqlParameter();
+                Partipo_Ingreso.ParameterName = "@tipo_Ingreso";
+                Partipo_Ingreso.SqlDbType = SqlDbType.VarChar;
+                Partipo_Ingreso.Size = 50;
+                Partipo_Ingreso.Value = Ingreso.Tipo_Ingreso;
+                SqlCmd.Parameters.Add(Partipo_Ingreso);
+
 
                 SqlParameter ParSerie = new SqlParameter();
                 ParSerie.ParameterName = "@serie";

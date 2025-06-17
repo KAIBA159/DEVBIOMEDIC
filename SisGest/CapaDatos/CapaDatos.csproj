@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CapaDatos</RootNamespace>
     <AssemblyName>CapaDatos</AssemblyName>
-    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -48,6 +49,7 @@
     <Compile Include="DDetalle_Venta.cs" />
     <Compile Include="DIngreso.cs" />
     <Compile Include="DPresentacion.cs" />
+    <Compile Include="DEncargadoTransportista.cs" />
     <Compile Include="DProveedor.cs" />
     <Compile Include="DTrabajador.cs" />
     <Compile Include="DVenta.cs" />

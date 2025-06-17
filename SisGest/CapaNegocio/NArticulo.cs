@@ -13,7 +13,7 @@ namespace CapaNegocio
     {
         //Método Insertar que llama al método Insertar de la clase DArticulo
         //de la CapaDatos
-        public static string Insertar(string codigo,string nombre, string descripcion,byte[] imagen,int idcategoria, int idpresentacion)
+        public static string Insertar(string codigo,string nombre, string descripcion,byte[] imagen,int idcategoria, int idpresentacion, string fabricante, string registrosanitario)
         {
             DArticulo Obj = new DArticulo();
             Obj.Codigo = codigo;
@@ -23,12 +23,17 @@ namespace CapaNegocio
             Obj.Idcategoria = idcategoria;
             Obj.Idpresentacion = idpresentacion;
 
+            Obj.Fabricante = fabricante;
+            Obj.RegistroSanitario = registrosanitario;
+
+
+
             return Obj.Insertar(Obj);
         }
 
         //Método Editar que llama al método Editar de la clase DArticulo
         //de la CapaDatos
-        public static string Editar(int idarticulo,string codigo, string nombre, string descripcion, byte[] imagen, int idcategoria, int idpresentacion)
+        public static string Editar(int idarticulo,string codigo, string nombre, string descripcion, byte[] imagen, int idcategoria, int idpresentacion, string fabricante, string registrosanitario)
         {
             DArticulo Obj = new DArticulo();
             Obj.Idarticulo = idarticulo;
@@ -38,6 +43,10 @@ namespace CapaNegocio
             Obj.Imagen = imagen;
             Obj.Idcategoria = idcategoria;
             Obj.Idpresentacion = idpresentacion;
+
+            Obj.Fabricante = fabricante;
+            Obj.RegistroSanitario = registrosanitario;
+
             return Obj.Editar(Obj);
         }
 

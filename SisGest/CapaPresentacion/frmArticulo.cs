@@ -72,6 +72,12 @@ namespace CapaPresentacion
             this.txtIdcategoria.Text = string.Empty;
             this.txtCategoria.Text = string.Empty;
             this.txtIdarticulo.Text = string.Empty;
+
+            this.txtFabricante.Text = string.Empty;
+            this.txtRegistroSanitario.Text = string.Empty;
+
+
+
             this.pxImagen.Image = global::CapaPresentacion.Properties.Resources.file;
         }
 
@@ -81,6 +87,11 @@ namespace CapaPresentacion
             this.txtCodigo.ReadOnly = !valor;
             this.txtNombre.ReadOnly = !valor;
             this.txtDescripcion.ReadOnly = !valor;
+
+            this.txtRegistroSanitario.ReadOnly = !valor;
+            this.txtFabricante.ReadOnly = !valor;
+
+
             this.btnBuscarCategoria.Enabled = valor;
             this.cbIdpresentacion.Enabled = valor;
             this.btnCargar.Enabled = valor;
@@ -202,6 +213,10 @@ namespace CapaPresentacion
                     errorIcono.SetError(txtNombre, "Ingrese un Valor");
                     errorIcono.SetError(txtCodigo, "Ingrese un Valor");
                     errorIcono.SetError(txtCategoria, "Ingrese un Valor");
+
+                    errorIcono.SetError(txtFabricante, "Ingrese un Fabricante");
+                    errorIcono.SetError(txtRegistroSanitario, "Ingrese un Registro Sanitario");
+
                 }
                 else
                 {
@@ -215,17 +230,32 @@ namespace CapaPresentacion
 
                     if (this.IsNuevo)
                     {
-                        rpta = NArticulo.Insertar(this.txtCodigo.Text,this.txtNombre.Text.Trim().ToUpper(),
-                            this.txtDescripcion.Text.Trim(),imagen,Convert.ToInt32(this.txtIdcategoria.Text),
-                            Convert.ToInt32(this.cbIdpresentacion.SelectedValue));
+                        rpta = NArticulo.Insertar(  this.txtCodigo.Text,
+                                                    this.txtNombre.Text.Trim().ToUpper(),
+                                                    this.txtDescripcion.Text.Trim(),
+                                                    imagen,Convert.ToInt32(this.txtIdcategoria.Text),
+                                                    Convert.ToInt32(this.cbIdpresentacion.SelectedValue),
+
+                                                    this.txtFabricante.Text.Trim(),
+                                                    this.txtRegistroSanitario.Text.Trim()
+
+                                                    );
 
                     }
                     else
                     {
-                        rpta = NArticulo.Editar(Convert.ToInt32(this.txtIdarticulo.Text),
-                            this.txtCodigo.Text, this.txtNombre.Text.Trim().ToUpper(),
-                            this.txtDescripcion.Text.Trim(), imagen, Convert.ToInt32(this.txtIdcategoria.Text),
-                            Convert.ToInt32(this.cbIdpresentacion.SelectedValue));
+                        rpta = NArticulo.Editar(Convert.ToInt32(
+                                                    this.txtIdarticulo.Text),
+                                                    this.txtCodigo.Text, 
+                                                    this.txtNombre.Text.Trim().ToUpper(),
+                                                    this.txtDescripcion.Text.Trim(), 
+                                                    imagen, Convert.ToInt32(this.txtIdcategoria.Text),
+                                                    Convert.ToInt32(this.cbIdpresentacion.SelectedValue),
+
+                                                    this.txtFabricante.Text.Trim(),
+                                                    this.txtRegistroSanitario.Text.Trim()
+
+                                                    );
                     }
 
                     if (rpta.Equals("OK"))
@@ -302,6 +332,9 @@ namespace CapaPresentacion
             this.txtCodigo.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["codigo"].Value);
             this.txtNombre.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["nombre"].Value);
             this.txtDescripcion.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["descripcion"].Value);
+
+            this.txtRegistroSanitario.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["Registrosanitario"].Value);
+            this.txtFabricante.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["Fabricante"].Value);
 
             byte[] imagenBuffer = (byte[])this.dataListado.CurrentRow.Cells["imagen"].Value;
             System.IO.MemoryStream ms = new System.IO.MemoryStream(imagenBuffer);
@@ -383,6 +416,11 @@ namespace CapaPresentacion
         private void frmArticulo_FormClosing(object sender, FormClosingEventArgs e)
         {
             _Instancia = null;
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
