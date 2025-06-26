@@ -81,6 +81,9 @@ namespace CapaPresentacion
         //Limpiar todos los controles del formulario
         private void Limpiar()
         {
+
+
+            this.dtFecha.Value = DateTime.Now;
             this.txtIdingreso.Text = string.Empty;
 
             this.txtIdproveedor.Text = string.Empty;
@@ -182,8 +185,18 @@ namespace CapaPresentacion
         {
             this.dataListado.DataSource = NIngreso.BuscarFechas(this.dtFecha1.Value.ToString("dd/MM/yyyy"),
                 this.dtFecha2.Value.ToString("dd/MM/yyyy"));
-            this.OcultarColumnas();
-            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+
+            var resultado = this.dataListado.DataSource;
+             
+
+            if (resultado != null)
+            {
+               
+                this.OcultarColumnas();
+                lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+
+            }
+
         }
 
         private void MostrarDetalle()
@@ -486,6 +499,19 @@ namespace CapaPresentacion
 
         private void dataListado_DoubleClick(object sender, EventArgs e)
         {
+
+            //SE DEBE LIMPIAR PRIMERO, PARA DESPUES SETEAR
+
+            //ES EL EVENTO CANCELAR
+            //INI
+            this.IsNuevo = false;
+            this.Botones();
+            this.Limpiar();
+            this.Habilitar(false);
+            this.limpiarDetalle();
+            //FIN
+
+
             this.txtIdingreso.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["idingreso"].Value);
             this.txtProveedor.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["proveedor"].Value);
             this.dtFecha.Value = Convert.ToDateTime(this.dataListado.CurrentRow.Cells["fecha"].Value);
@@ -519,6 +545,22 @@ namespace CapaPresentacion
 
         private void btnBuscarProveedor_ClientSizeChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnImprimirCargo_Click(object sender, EventArgs e)
+        {
+
+            //Reportes.FrmReporteCompras frm = new Reportes.FrmReporteCompras();
+            //frm.Texto = Convert.ToString(dtFecha1.Value);
+            //frm.Texto2 = Convert.ToString(dtFecha2.Value);
+            //frm.ShowDialog();
+
+
+            Reportes.FrmReporteIngresoCargo frm2 = new Reportes.FrmReporteIngresoCargo();
+            frm2.idingreso = 3011;//Convert.ToString(dtFecha1.Value);
+            //frm.Texto2 = Convert.ToString(dtFecha2.Value);
+            frm2.ShowDialog();
 
         }
     }

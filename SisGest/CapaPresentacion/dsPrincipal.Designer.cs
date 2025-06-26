@@ -44,6 +44,8 @@ namespace CapaPresentacion {
         
         private spbuscar_venta_fechaDataTable tablespbuscar_venta_fecha;
         
+        private spbuscar_ingresoCargoDataTable tablespbuscar_ingresoCargo;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -101,6 +103,9 @@ namespace CapaPresentacion {
                 }
                 if ((ds.Tables["spbuscar_venta_fecha"] != null)) {
                     base.Tables.Add(new spbuscar_venta_fechaDataTable(ds.Tables["spbuscar_venta_fecha"]));
+                }
+                if ((ds.Tables["spbuscar_ingresoCargo"] != null)) {
+                    base.Tables.Add(new spbuscar_ingresoCargoDataTable(ds.Tables["spbuscar_ingresoCargo"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -222,6 +227,16 @@ namespace CapaPresentacion {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public spbuscar_ingresoCargoDataTable spbuscar_ingresoCargo {
+            get {
+                return this.tablespbuscar_ingresoCargo;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -317,6 +332,9 @@ namespace CapaPresentacion {
                 if ((ds.Tables["spbuscar_venta_fecha"] != null)) {
                     base.Tables.Add(new spbuscar_venta_fechaDataTable(ds.Tables["spbuscar_venta_fecha"]));
                 }
+                if ((ds.Tables["spbuscar_ingresoCargo"] != null)) {
+                    base.Tables.Add(new spbuscar_ingresoCargoDataTable(ds.Tables["spbuscar_ingresoCargo"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -410,6 +428,12 @@ namespace CapaPresentacion {
                     this.tablespbuscar_venta_fecha.InitVars();
                 }
             }
+            this.tablespbuscar_ingresoCargo = ((spbuscar_ingresoCargoDataTable)(base.Tables["spbuscar_ingresoCargo"]));
+            if ((initTable == true)) {
+                if ((this.tablespbuscar_ingresoCargo != null)) {
+                    this.tablespbuscar_ingresoCargo.InitVars();
+                }
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -440,6 +464,8 @@ namespace CapaPresentacion {
             base.Tables.Add(this.tablespbuscar_ingreso_fecha);
             this.tablespbuscar_venta_fecha = new spbuscar_venta_fechaDataTable();
             base.Tables.Add(this.tablespbuscar_venta_fecha);
+            this.tablespbuscar_ingresoCargo = new spbuscar_ingresoCargoDataTable();
+            base.Tables.Add(this.tablespbuscar_ingresoCargo);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -499,6 +525,12 @@ namespace CapaPresentacion {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private bool ShouldSerializespbuscar_venta_fecha() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializespbuscar_ingresoCargo() {
             return false;
         }
         
@@ -587,6 +619,9 @@ namespace CapaPresentacion {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void spbuscar_venta_fechaRowChangeEventHandler(object sender, spbuscar_venta_fechaRowChangeEvent e);
         
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void spbuscar_ingresoCargoRowChangeEventHandler(object sender, spbuscar_ingresoCargoRowChangeEvent e);
+        
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
@@ -625,6 +660,12 @@ namespace CapaPresentacion {
             private global::System.Data.DataColumn columndescuento;
             
             private global::System.Data.DataColumn columnTotal_Parcial;
+            
+            private global::System.Data.DataColumn columnlote;
+            
+            private global::System.Data.DataColumn columnguia_remisioncliente;
+            
+            private global::System.Data.DataColumn columnsubcliente;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -789,6 +830,30 @@ namespace CapaPresentacion {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn loteColumn {
+                get {
+                    return this.columnlote;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn guia_remisionclienteColumn {
+                get {
+                    return this.columnguia_remisioncliente;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn subclienteColumn {
+                get {
+                    return this.columnsubcliente;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -824,7 +889,25 @@ namespace CapaPresentacion {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public spreporte_facturaRow Addspreporte_facturaRow(string Trabajador, string Cliente, string direccion, string telefono, string num_documento, System.DateTime fecha, string tipo_comprobante, string serie, string correlativo, decimal igv, string nombre, decimal precio_venta, int cantidad, decimal descuento, decimal Total_Parcial) {
+            public spreporte_facturaRow Addspreporte_facturaRow(
+                        string Trabajador, 
+                        string Cliente, 
+                        string direccion, 
+                        string telefono, 
+                        string num_documento, 
+                        System.DateTime fecha, 
+                        string tipo_comprobante, 
+                        string serie, 
+                        string correlativo, 
+                        decimal igv, 
+                        string nombre, 
+                        decimal precio_venta, 
+                        int cantidad, 
+                        decimal descuento, 
+                        decimal Total_Parcial, 
+                        string lote, 
+                        string guia_remisioncliente, 
+                        string subcliente) {
                 spreporte_facturaRow rowspreporte_facturaRow = ((spreporte_facturaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -842,7 +925,10 @@ namespace CapaPresentacion {
                         precio_venta,
                         cantidad,
                         descuento,
-                        Total_Parcial};
+                        Total_Parcial,
+                        lote,
+                        guia_remisioncliente,
+                        subcliente};
                 rowspreporte_facturaRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowspreporte_facturaRow);
                 return rowspreporte_facturaRow;
@@ -888,6 +974,9 @@ namespace CapaPresentacion {
                 this.columncantidad = base.Columns["cantidad"];
                 this.columndescuento = base.Columns["descuento"];
                 this.columnTotal_Parcial = base.Columns["Total_Parcial"];
+                this.columnlote = base.Columns["lote"];
+                this.columnguia_remisioncliente = base.Columns["guia_remisioncliente"];
+                this.columnsubcliente = base.Columns["subcliente"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -925,6 +1014,12 @@ namespace CapaPresentacion {
                 base.Columns.Add(this.columndescuento);
                 this.columnTotal_Parcial = new global::System.Data.DataColumn("Total_Parcial", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTotal_Parcial);
+                this.columnlote = new global::System.Data.DataColumn("lote", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnlote);
+                this.columnguia_remisioncliente = new global::System.Data.DataColumn("guia_remisioncliente", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnguia_remisioncliente);
+                this.columnsubcliente = new global::System.Data.DataColumn("subcliente", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsubcliente);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnidventa}, true));
                 this.columnidventa.AutoIncrement = true;
@@ -953,6 +1048,12 @@ namespace CapaPresentacion {
                 this.columncantidad.AllowDBNull = false;
                 this.columndescuento.AllowDBNull = false;
                 this.columnTotal_Parcial.ReadOnly = true;
+                this.columnlote.ReadOnly = true;
+                this.columnlote.MaxLength = 100;
+                this.columnguia_remisioncliente.ReadOnly = true;
+                this.columnguia_remisioncliente.MaxLength = 50;
+                this.columnsubcliente.ReadOnly = true;
+                this.columnsubcliente.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4066,6 +4167,20 @@ namespace CapaPresentacion {
             
             private global::System.Data.DataColumn columnImpuesto;
             
+            private global::System.Data.DataColumn columniddetalle_venta;
+            
+            private global::System.Data.DataColumn columniddetalle_venta1;
+            
+            private global::System.Data.DataColumn columnsubcliente;
+            
+            private global::System.Data.DataColumn columnlote;
+            
+            private global::System.Data.DataColumn columncantidad;
+            
+            private global::System.Data.DataColumn columndescripcion;
+            
+            private global::System.Data.DataColumn columnidarticulo;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public spbuscar_venta_fechaDataTable() {
@@ -4173,6 +4288,62 @@ namespace CapaPresentacion {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn iddetalle_ventaColumn {
+                get {
+                    return this.columniddetalle_venta;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn iddetalle_venta1Column {
+                get {
+                    return this.columniddetalle_venta1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn subclienteColumn {
+                get {
+                    return this.columnsubcliente;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn loteColumn {
+                get {
+                    return this.columnlote;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn cantidadColumn {
+                get {
+                    return this.columncantidad;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn descripcionColumn {
+                get {
+                    return this.columndescripcion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn idarticuloColumn {
+                get {
+                    return this.columnidarticulo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -4208,7 +4379,7 @@ namespace CapaPresentacion {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public spbuscar_venta_fechaRow Addspbuscar_venta_fechaRow(string Trabajador, string Cliente, System.DateTime fecha, string tipo_comprobante, string serie, string correlativo, decimal Total, decimal Impuesto) {
+            public spbuscar_venta_fechaRow Addspbuscar_venta_fechaRow(string Trabajador, string Cliente, System.DateTime fecha, string tipo_comprobante, string serie, string correlativo, decimal Total, decimal Impuesto, string iddetalle_venta1, string subcliente, string lote, int cantidad, string descripcion, int idarticulo) {
                 spbuscar_venta_fechaRow rowspbuscar_venta_fechaRow = ((spbuscar_venta_fechaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -4219,7 +4390,14 @@ namespace CapaPresentacion {
                         serie,
                         correlativo,
                         Total,
-                        Impuesto};
+                        Impuesto,
+                        null,
+                        iddetalle_venta1,
+                        subcliente,
+                        lote,
+                        cantidad,
+                        descripcion,
+                        idarticulo};
                 rowspbuscar_venta_fechaRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowspbuscar_venta_fechaRow);
                 return rowspbuscar_venta_fechaRow;
@@ -4258,6 +4436,13 @@ namespace CapaPresentacion {
                 this.columncorrelativo = base.Columns["correlativo"];
                 this.columnTotal = base.Columns["Total"];
                 this.columnImpuesto = base.Columns["Impuesto"];
+                this.columniddetalle_venta = base.Columns["iddetalle_venta"];
+                this.columniddetalle_venta1 = base.Columns["iddetalle_venta1"];
+                this.columnsubcliente = base.Columns["subcliente"];
+                this.columnlote = base.Columns["lote"];
+                this.columncantidad = base.Columns["cantidad"];
+                this.columndescripcion = base.Columns["descripcion"];
+                this.columnidarticulo = base.Columns["idarticulo"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4281,6 +4466,20 @@ namespace CapaPresentacion {
                 base.Columns.Add(this.columnTotal);
                 this.columnImpuesto = new global::System.Data.DataColumn("Impuesto", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnImpuesto);
+                this.columniddetalle_venta = new global::System.Data.DataColumn("iddetalle_venta", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columniddetalle_venta);
+                this.columniddetalle_venta1 = new global::System.Data.DataColumn("iddetalle_venta1", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columniddetalle_venta1);
+                this.columnsubcliente = new global::System.Data.DataColumn("subcliente", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsubcliente);
+                this.columnlote = new global::System.Data.DataColumn("lote", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnlote);
+                this.columncantidad = new global::System.Data.DataColumn("cantidad", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncantidad);
+                this.columndescripcion = new global::System.Data.DataColumn("descripcion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndescripcion);
+                this.columnidarticulo = new global::System.Data.DataColumn("idarticulo", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnidarticulo);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnidventa}, true));
                 this.columnidventa.AutoIncrement = true;
@@ -4300,6 +4499,21 @@ namespace CapaPresentacion {
                 this.columncorrelativo.MaxLength = 7;
                 this.columnTotal.ReadOnly = true;
                 this.columnImpuesto.AllowDBNull = false;
+                this.columniddetalle_venta.AutoIncrement = true;
+                this.columniddetalle_venta.AutoIncrementSeed = -1;
+                this.columniddetalle_venta.AutoIncrementStep = -1;
+                this.columniddetalle_venta.AllowDBNull = false;
+                this.columniddetalle_venta.ReadOnly = true;
+                this.columniddetalle_venta1.ReadOnly = true;
+                this.columniddetalle_venta1.MaxLength = 50;
+                this.columnsubcliente.ReadOnly = true;
+                this.columnsubcliente.MaxLength = 50;
+                this.columnlote.ReadOnly = true;
+                this.columnlote.MaxLength = 100;
+                this.columncantidad.ReadOnly = true;
+                this.columndescripcion.ReadOnly = true;
+                this.columndescripcion.MaxLength = 1024;
+                this.columnidarticulo.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4386,6 +4600,497 @@ namespace CapaPresentacion {
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
                 attribute2.FixedValue = "spbuscar_venta_fechaDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class spbuscar_ingresoCargoDataTable : global::System.Data.TypedTableBase<spbuscar_ingresoCargoRow> {
+            
+            private global::System.Data.DataColumn columnidingreso;
+            
+            private global::System.Data.DataColumn columnTrabajador;
+            
+            private global::System.Data.DataColumn columnproveedor;
+            
+            private global::System.Data.DataColumn columnfecha;
+            
+            private global::System.Data.DataColumn columntipo_comprobante;
+            
+            private global::System.Data.DataColumn columnserie;
+            
+            private global::System.Data.DataColumn columncorrelativo;
+            
+            private global::System.Data.DataColumn columnestado;
+            
+            private global::System.Data.DataColumn columnTotal;
+            
+            private global::System.Data.DataColumn columnEncargadoTransportista;
+            
+            private global::System.Data.DataColumn columndescripcion;
+            
+            private global::System.Data.DataColumn columnLOTE;
+            
+            private global::System.Data.DataColumn columnTipo_Ingreso;
+            
+            private global::System.Data.DataColumn columnregistrosanitario;
+            
+            private global::System.Data.DataColumn columnfabricante;
+            
+            private global::System.Data.DataColumn columnStockingreso;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public spbuscar_ingresoCargoDataTable() {
+                this.TableName = "spbuscar_ingresoCargo";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal spbuscar_ingresoCargoDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected spbuscar_ingresoCargoDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn idingresoColumn {
+                get {
+                    return this.columnidingreso;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn TrabajadorColumn {
+                get {
+                    return this.columnTrabajador;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn proveedorColumn {
+                get {
+                    return this.columnproveedor;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn fechaColumn {
+                get {
+                    return this.columnfecha;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn tipo_comprobanteColumn {
+                get {
+                    return this.columntipo_comprobante;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn serieColumn {
+                get {
+                    return this.columnserie;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn correlativoColumn {
+                get {
+                    return this.columncorrelativo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn estadoColumn {
+                get {
+                    return this.columnestado;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn TotalColumn {
+                get {
+                    return this.columnTotal;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn EncargadoTransportistaColumn {
+                get {
+                    return this.columnEncargadoTransportista;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn descripcionColumn {
+                get {
+                    return this.columndescripcion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn LOTEColumn {
+                get {
+                    return this.columnLOTE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Tipo_IngresoColumn {
+                get {
+                    return this.columnTipo_Ingreso;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn registrosanitarioColumn {
+                get {
+                    return this.columnregistrosanitario;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn fabricanteColumn {
+                get {
+                    return this.columnfabricante;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn StockingresoColumn {
+                get {
+                    return this.columnStockingreso;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public spbuscar_ingresoCargoRow this[int index] {
+                get {
+                    return ((spbuscar_ingresoCargoRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event spbuscar_ingresoCargoRowChangeEventHandler spbuscar_ingresoCargoRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event spbuscar_ingresoCargoRowChangeEventHandler spbuscar_ingresoCargoRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event spbuscar_ingresoCargoRowChangeEventHandler spbuscar_ingresoCargoRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event spbuscar_ingresoCargoRowChangeEventHandler spbuscar_ingresoCargoRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Addspbuscar_ingresoCargoRow(spbuscar_ingresoCargoRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public spbuscar_ingresoCargoRow Addspbuscar_ingresoCargoRow(string Trabajador, string proveedor, System.DateTime fecha, string tipo_comprobante, string serie, string correlativo, string estado, decimal Total, string EncargadoTransportista, string descripcion, string LOTE, string Tipo_Ingreso, string registrosanitario, string fabricante, int Stockingreso) {
+                spbuscar_ingresoCargoRow rowspbuscar_ingresoCargoRow = ((spbuscar_ingresoCargoRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        Trabajador,
+                        proveedor,
+                        fecha,
+                        tipo_comprobante,
+                        serie,
+                        correlativo,
+                        estado,
+                        Total,
+                        EncargadoTransportista,
+                        descripcion,
+                        LOTE,
+                        Tipo_Ingreso,
+                        registrosanitario,
+                        fabricante,
+                        Stockingreso};
+                rowspbuscar_ingresoCargoRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowspbuscar_ingresoCargoRow);
+                return rowspbuscar_ingresoCargoRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public spbuscar_ingresoCargoRow FindByidingreso(int idingreso) {
+                return ((spbuscar_ingresoCargoRow)(this.Rows.Find(new object[] {
+                            idingreso})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                spbuscar_ingresoCargoDataTable cln = ((spbuscar_ingresoCargoDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new spbuscar_ingresoCargoDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnidingreso = base.Columns["idingreso"];
+                this.columnTrabajador = base.Columns["Trabajador"];
+                this.columnproveedor = base.Columns["proveedor"];
+                this.columnfecha = base.Columns["fecha"];
+                this.columntipo_comprobante = base.Columns["tipo_comprobante"];
+                this.columnserie = base.Columns["serie"];
+                this.columncorrelativo = base.Columns["correlativo"];
+                this.columnestado = base.Columns["estado"];
+                this.columnTotal = base.Columns["Total"];
+                this.columnEncargadoTransportista = base.Columns["EncargadoTransportista"];
+                this.columndescripcion = base.Columns["descripcion"];
+                this.columnLOTE = base.Columns["LOTE"];
+                this.columnTipo_Ingreso = base.Columns["Tipo_Ingreso"];
+                this.columnregistrosanitario = base.Columns["registrosanitario"];
+                this.columnfabricante = base.Columns["fabricante"];
+                this.columnStockingreso = base.Columns["Stockingreso"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnidingreso = new global::System.Data.DataColumn("idingreso", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnidingreso);
+                this.columnTrabajador = new global::System.Data.DataColumn("Trabajador", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTrabajador);
+                this.columnproveedor = new global::System.Data.DataColumn("proveedor", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnproveedor);
+                this.columnfecha = new global::System.Data.DataColumn("fecha", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfecha);
+                this.columntipo_comprobante = new global::System.Data.DataColumn("tipo_comprobante", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntipo_comprobante);
+                this.columnserie = new global::System.Data.DataColumn("serie", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnserie);
+                this.columncorrelativo = new global::System.Data.DataColumn("correlativo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncorrelativo);
+                this.columnestado = new global::System.Data.DataColumn("estado", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnestado);
+                this.columnTotal = new global::System.Data.DataColumn("Total", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTotal);
+                this.columnEncargadoTransportista = new global::System.Data.DataColumn("EncargadoTransportista", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEncargadoTransportista);
+                this.columndescripcion = new global::System.Data.DataColumn("descripcion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndescripcion);
+                this.columnLOTE = new global::System.Data.DataColumn("LOTE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLOTE);
+                this.columnTipo_Ingreso = new global::System.Data.DataColumn("Tipo_Ingreso", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTipo_Ingreso);
+                this.columnregistrosanitario = new global::System.Data.DataColumn("registrosanitario", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnregistrosanitario);
+                this.columnfabricante = new global::System.Data.DataColumn("fabricante", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfabricante);
+                this.columnStockingreso = new global::System.Data.DataColumn("Stockingreso", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnStockingreso);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnidingreso}, true));
+                this.columnidingreso.AutoIncrement = true;
+                this.columnidingreso.AllowDBNull = false;
+                this.columnidingreso.ReadOnly = true;
+                this.columnidingreso.Unique = true;
+                this.columnTrabajador.ReadOnly = true;
+                this.columnTrabajador.MaxLength = 61;
+                this.columnproveedor.MaxLength = 150;
+                this.columnfecha.AllowDBNull = false;
+                this.columntipo_comprobante.MaxLength = 20;
+                this.columnserie.MaxLength = 4;
+                this.columncorrelativo.MaxLength = 7;
+                this.columnestado.MaxLength = 7;
+                this.columnTotal.ReadOnly = true;
+                this.columnEncargadoTransportista.ReadOnly = true;
+                this.columnEncargadoTransportista.MaxLength = 200;
+                this.columndescripcion.MaxLength = 1024;
+                this.columnLOTE.ReadOnly = true;
+                this.columnLOTE.MaxLength = 50;
+                this.columnTipo_Ingreso.ReadOnly = true;
+                this.columnTipo_Ingreso.MaxLength = 50;
+                this.columnregistrosanitario.ReadOnly = true;
+                this.columnregistrosanitario.MaxLength = 100;
+                this.columnfabricante.ReadOnly = true;
+                this.columnfabricante.MaxLength = 100;
+                this.columnStockingreso.ReadOnly = true;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public spbuscar_ingresoCargoRow Newspbuscar_ingresoCargoRow() {
+                return ((spbuscar_ingresoCargoRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new spbuscar_ingresoCargoRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(spbuscar_ingresoCargoRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.spbuscar_ingresoCargoRowChanged != null)) {
+                    this.spbuscar_ingresoCargoRowChanged(this, new spbuscar_ingresoCargoRowChangeEvent(((spbuscar_ingresoCargoRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.spbuscar_ingresoCargoRowChanging != null)) {
+                    this.spbuscar_ingresoCargoRowChanging(this, new spbuscar_ingresoCargoRowChangeEvent(((spbuscar_ingresoCargoRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.spbuscar_ingresoCargoRowDeleted != null)) {
+                    this.spbuscar_ingresoCargoRowDeleted(this, new spbuscar_ingresoCargoRowChangeEvent(((spbuscar_ingresoCargoRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.spbuscar_ingresoCargoRowDeleting != null)) {
+                    this.spbuscar_ingresoCargoRowDeleting(this, new spbuscar_ingresoCargoRowChangeEvent(((spbuscar_ingresoCargoRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Removespbuscar_ingresoCargoRow(spbuscar_ingresoCargoRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                dsPrincipal ds = new dsPrincipal();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "spbuscar_ingresoCargoDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -4644,6 +5349,55 @@ namespace CapaPresentacion {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string lote {
+                get {
+                    try {
+                        return ((string)(this[this.tablespreporte_factura.loteColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'lote\' de la tabla \'spreporte_factura\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespreporte_factura.loteColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string guia_remisioncliente {
+                get {
+                    try {
+                        return ((string)(this[this.tablespreporte_factura.guia_remisionclienteColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'guia_remisioncliente\' de la tabla \'spreporte_factura\' es " +
+                                "DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespreporte_factura.guia_remisionclienteColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string subcliente {
+                get {
+                    try {
+                        return ((string)(this[this.tablespreporte_factura.subclienteColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'subcliente\' de la tabla \'spreporte_factura\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespreporte_factura.subclienteColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsTrabajadorNull() {
                 return this.IsNull(this.tablespreporte_factura.TrabajadorColumn);
             }
@@ -4700,6 +5454,42 @@ namespace CapaPresentacion {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetTotal_ParcialNull() {
                 this[this.tablespreporte_factura.Total_ParcialColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsloteNull() {
+                return this.IsNull(this.tablespreporte_factura.loteColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetloteNull() {
+                this[this.tablespreporte_factura.loteColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Isguia_remisionclienteNull() {
+                return this.IsNull(this.tablespreporte_factura.guia_remisionclienteColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setguia_remisionclienteNull() {
+                this[this.tablespreporte_factura.guia_remisionclienteColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IssubclienteNull() {
+                return this.IsNull(this.tablespreporte_factura.subclienteColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetsubclienteNull() {
+                this[this.tablespreporte_factura.subclienteColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -6043,6 +6833,111 @@ namespace CapaPresentacion {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int iddetalle_venta {
+                get {
+                    return ((int)(this[this.tablespbuscar_venta_fecha.iddetalle_ventaColumn]));
+                }
+                set {
+                    this[this.tablespbuscar_venta_fecha.iddetalle_ventaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string iddetalle_venta1 {
+                get {
+                    try {
+                        return ((string)(this[this.tablespbuscar_venta_fecha.iddetalle_venta1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'iddetalle_venta1\' de la tabla \'spbuscar_venta_fecha\' es D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespbuscar_venta_fecha.iddetalle_venta1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string subcliente {
+                get {
+                    try {
+                        return ((string)(this[this.tablespbuscar_venta_fecha.subclienteColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'subcliente\' de la tabla \'spbuscar_venta_fecha\' es DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tablespbuscar_venta_fecha.subclienteColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string lote {
+                get {
+                    try {
+                        return ((string)(this[this.tablespbuscar_venta_fecha.loteColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'lote\' de la tabla \'spbuscar_venta_fecha\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespbuscar_venta_fecha.loteColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int cantidad {
+                get {
+                    try {
+                        return ((int)(this[this.tablespbuscar_venta_fecha.cantidadColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'cantidad\' de la tabla \'spbuscar_venta_fecha\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespbuscar_venta_fecha.cantidadColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string descripcion {
+                get {
+                    try {
+                        return ((string)(this[this.tablespbuscar_venta_fecha.descripcionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'descripcion\' de la tabla \'spbuscar_venta_fecha\' es DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tablespbuscar_venta_fecha.descripcionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int idarticulo {
+                get {
+                    return ((int)(this[this.tablespbuscar_venta_fecha.idarticuloColumn]));
+                }
+                set {
+                    this[this.tablespbuscar_venta_fecha.idarticuloColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsTrabajadorNull() {
                 return this.IsNull(this.tablespbuscar_venta_fecha.TrabajadorColumn);
             }
@@ -6075,6 +6970,505 @@ namespace CapaPresentacion {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetTotalNull() {
                 this[this.tablespbuscar_venta_fecha.TotalColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Isiddetalle_venta1Null() {
+                return this.IsNull(this.tablespbuscar_venta_fecha.iddetalle_venta1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setiddetalle_venta1Null() {
+                this[this.tablespbuscar_venta_fecha.iddetalle_venta1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IssubclienteNull() {
+                return this.IsNull(this.tablespbuscar_venta_fecha.subclienteColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetsubclienteNull() {
+                this[this.tablespbuscar_venta_fecha.subclienteColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsloteNull() {
+                return this.IsNull(this.tablespbuscar_venta_fecha.loteColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetloteNull() {
+                this[this.tablespbuscar_venta_fecha.loteColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IscantidadNull() {
+                return this.IsNull(this.tablespbuscar_venta_fecha.cantidadColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetcantidadNull() {
+                this[this.tablespbuscar_venta_fecha.cantidadColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsdescripcionNull() {
+                return this.IsNull(this.tablespbuscar_venta_fecha.descripcionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetdescripcionNull() {
+                this[this.tablespbuscar_venta_fecha.descripcionColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class spbuscar_ingresoCargoRow : global::System.Data.DataRow {
+            
+            private spbuscar_ingresoCargoDataTable tablespbuscar_ingresoCargo;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal spbuscar_ingresoCargoRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablespbuscar_ingresoCargo = ((spbuscar_ingresoCargoDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int idingreso {
+                get {
+                    return ((int)(this[this.tablespbuscar_ingresoCargo.idingresoColumn]));
+                }
+                set {
+                    this[this.tablespbuscar_ingresoCargo.idingresoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Trabajador {
+                get {
+                    try {
+                        return ((string)(this[this.tablespbuscar_ingresoCargo.TrabajadorColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Trabajador\' de la tabla \'spbuscar_ingresoCargo\' es DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tablespbuscar_ingresoCargo.TrabajadorColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string proveedor {
+                get {
+                    try {
+                        return ((string)(this[this.tablespbuscar_ingresoCargo.proveedorColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'proveedor\' de la tabla \'spbuscar_ingresoCargo\' es DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tablespbuscar_ingresoCargo.proveedorColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime fecha {
+                get {
+                    return ((global::System.DateTime)(this[this.tablespbuscar_ingresoCargo.fechaColumn]));
+                }
+                set {
+                    this[this.tablespbuscar_ingresoCargo.fechaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string tipo_comprobante {
+                get {
+                    try {
+                        return ((string)(this[this.tablespbuscar_ingresoCargo.tipo_comprobanteColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'tipo_comprobante\' de la tabla \'spbuscar_ingresoCargo\' es " +
+                                "DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespbuscar_ingresoCargo.tipo_comprobanteColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string serie {
+                get {
+                    try {
+                        return ((string)(this[this.tablespbuscar_ingresoCargo.serieColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'serie\' de la tabla \'spbuscar_ingresoCargo\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespbuscar_ingresoCargo.serieColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string correlativo {
+                get {
+                    try {
+                        return ((string)(this[this.tablespbuscar_ingresoCargo.correlativoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'correlativo\' de la tabla \'spbuscar_ingresoCargo\' es DBNul" +
+                                "l.", e);
+                    }
+                }
+                set {
+                    this[this.tablespbuscar_ingresoCargo.correlativoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string estado {
+                get {
+                    try {
+                        return ((string)(this[this.tablespbuscar_ingresoCargo.estadoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'estado\' de la tabla \'spbuscar_ingresoCargo\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespbuscar_ingresoCargo.estadoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public decimal Total {
+                get {
+                    try {
+                        return ((decimal)(this[this.tablespbuscar_ingresoCargo.TotalColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Total\' de la tabla \'spbuscar_ingresoCargo\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespbuscar_ingresoCargo.TotalColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string EncargadoTransportista {
+                get {
+                    try {
+                        return ((string)(this[this.tablespbuscar_ingresoCargo.EncargadoTransportistaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'EncargadoTransportista\' de la tabla \'spbuscar_ingresoCarg" +
+                                "o\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespbuscar_ingresoCargo.EncargadoTransportistaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string descripcion {
+                get {
+                    try {
+                        return ((string)(this[this.tablespbuscar_ingresoCargo.descripcionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'descripcion\' de la tabla \'spbuscar_ingresoCargo\' es DBNul" +
+                                "l.", e);
+                    }
+                }
+                set {
+                    this[this.tablespbuscar_ingresoCargo.descripcionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string LOTE {
+                get {
+                    try {
+                        return ((string)(this[this.tablespbuscar_ingresoCargo.LOTEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'LOTE\' de la tabla \'spbuscar_ingresoCargo\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespbuscar_ingresoCargo.LOTEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Tipo_Ingreso {
+                get {
+                    try {
+                        return ((string)(this[this.tablespbuscar_ingresoCargo.Tipo_IngresoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Tipo_Ingreso\' de la tabla \'spbuscar_ingresoCargo\' es DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tablespbuscar_ingresoCargo.Tipo_IngresoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string registrosanitario {
+                get {
+                    try {
+                        return ((string)(this[this.tablespbuscar_ingresoCargo.registrosanitarioColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'registrosanitario\' de la tabla \'spbuscar_ingresoCargo\' es" +
+                                " DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespbuscar_ingresoCargo.registrosanitarioColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string fabricante {
+                get {
+                    try {
+                        return ((string)(this[this.tablespbuscar_ingresoCargo.fabricanteColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'fabricante\' de la tabla \'spbuscar_ingresoCargo\' es DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tablespbuscar_ingresoCargo.fabricanteColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Stockingreso {
+                get {
+                    try {
+                        return ((int)(this[this.tablespbuscar_ingresoCargo.StockingresoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Stockingreso\' de la tabla \'spbuscar_ingresoCargo\' es DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tablespbuscar_ingresoCargo.StockingresoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsTrabajadorNull() {
+                return this.IsNull(this.tablespbuscar_ingresoCargo.TrabajadorColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetTrabajadorNull() {
+                this[this.tablespbuscar_ingresoCargo.TrabajadorColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsproveedorNull() {
+                return this.IsNull(this.tablespbuscar_ingresoCargo.proveedorColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetproveedorNull() {
+                this[this.tablespbuscar_ingresoCargo.proveedorColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Istipo_comprobanteNull() {
+                return this.IsNull(this.tablespbuscar_ingresoCargo.tipo_comprobanteColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Settipo_comprobanteNull() {
+                this[this.tablespbuscar_ingresoCargo.tipo_comprobanteColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsserieNull() {
+                return this.IsNull(this.tablespbuscar_ingresoCargo.serieColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetserieNull() {
+                this[this.tablespbuscar_ingresoCargo.serieColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IscorrelativoNull() {
+                return this.IsNull(this.tablespbuscar_ingresoCargo.correlativoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetcorrelativoNull() {
+                this[this.tablespbuscar_ingresoCargo.correlativoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsestadoNull() {
+                return this.IsNull(this.tablespbuscar_ingresoCargo.estadoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetestadoNull() {
+                this[this.tablespbuscar_ingresoCargo.estadoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsTotalNull() {
+                return this.IsNull(this.tablespbuscar_ingresoCargo.TotalColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetTotalNull() {
+                this[this.tablespbuscar_ingresoCargo.TotalColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsEncargadoTransportistaNull() {
+                return this.IsNull(this.tablespbuscar_ingresoCargo.EncargadoTransportistaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetEncargadoTransportistaNull() {
+                this[this.tablespbuscar_ingresoCargo.EncargadoTransportistaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsdescripcionNull() {
+                return this.IsNull(this.tablespbuscar_ingresoCargo.descripcionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetdescripcionNull() {
+                this[this.tablespbuscar_ingresoCargo.descripcionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsLOTENull() {
+                return this.IsNull(this.tablespbuscar_ingresoCargo.LOTEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetLOTENull() {
+                this[this.tablespbuscar_ingresoCargo.LOTEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsTipo_IngresoNull() {
+                return this.IsNull(this.tablespbuscar_ingresoCargo.Tipo_IngresoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetTipo_IngresoNull() {
+                this[this.tablespbuscar_ingresoCargo.Tipo_IngresoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsregistrosanitarioNull() {
+                return this.IsNull(this.tablespbuscar_ingresoCargo.registrosanitarioColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetregistrosanitarioNull() {
+                this[this.tablespbuscar_ingresoCargo.registrosanitarioColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsfabricanteNull() {
+                return this.IsNull(this.tablespbuscar_ingresoCargo.fabricanteColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetfabricanteNull() {
+                this[this.tablespbuscar_ingresoCargo.fabricanteColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsStockingresoNull() {
+                return this.IsNull(this.tablespbuscar_ingresoCargo.StockingresoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetStockingresoNull() {
+                this[this.tablespbuscar_ingresoCargo.StockingresoColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -6417,6 +7811,40 @@ namespace CapaPresentacion {
                 }
             }
         }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class spbuscar_ingresoCargoRowChangeEvent : global::System.EventArgs {
+            
+            private spbuscar_ingresoCargoRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public spbuscar_ingresoCargoRowChangeEvent(spbuscar_ingresoCargoRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public spbuscar_ingresoCargoRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
     }
 }
 namespace CapaPresentacion.dsPrincipalTableAdapters {
@@ -6559,6 +7987,9 @@ namespace CapaPresentacion.dsPrincipalTableAdapters {
             tableMapping.ColumnMappings.Add("cantidad", "cantidad");
             tableMapping.ColumnMappings.Add("descuento", "descuento");
             tableMapping.ColumnMappings.Add("Total_Parcial", "Total_Parcial");
+            tableMapping.ColumnMappings.Add("lote", "lote");
+            tableMapping.ColumnMappings.Add("guia_remisioncliente", "guia_remisioncliente");
+            tableMapping.ColumnMappings.Add("subcliente", "subcliente");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -8253,6 +9684,13 @@ namespace CapaPresentacion.dsPrincipalTableAdapters {
             tableMapping.ColumnMappings.Add("correlativo", "correlativo");
             tableMapping.ColumnMappings.Add("Total", "Total");
             tableMapping.ColumnMappings.Add("Impuesto", "Impuesto");
+            tableMapping.ColumnMappings.Add("iddetalle_venta", "iddetalle_venta");
+            tableMapping.ColumnMappings.Add("iddetalle_venta1", "iddetalle_venta1");
+            tableMapping.ColumnMappings.Add("subcliente", "subcliente");
+            tableMapping.ColumnMappings.Add("lote", "lote");
+            tableMapping.ColumnMappings.Add("cantidad", "cantidad");
+            tableMapping.ColumnMappings.Add("descripcion", "descripcion");
+            tableMapping.ColumnMappings.Add("idarticulo", "idarticulo");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -8320,6 +9758,202 @@ namespace CapaPresentacion.dsPrincipalTableAdapters {
                 this.Adapter.SelectCommand.Parameters[2].Value = ((string)(textobuscar2));
             }
             dsPrincipal.spbuscar_venta_fechaDataTable dataTable = new dsPrincipal.spbuscar_venta_fechaDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class spbuscar_ingresoCargoTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public spbuscar_ingresoCargoTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "spbuscar_ingresoCargo";
+            tableMapping.ColumnMappings.Add("idingreso", "idingreso");
+            tableMapping.ColumnMappings.Add("Trabajador", "Trabajador");
+            tableMapping.ColumnMappings.Add("proveedor", "proveedor");
+            tableMapping.ColumnMappings.Add("fecha", "fecha");
+            tableMapping.ColumnMappings.Add("tipo_comprobante", "tipo_comprobante");
+            tableMapping.ColumnMappings.Add("serie", "serie");
+            tableMapping.ColumnMappings.Add("correlativo", "correlativo");
+            tableMapping.ColumnMappings.Add("estado", "estado");
+            tableMapping.ColumnMappings.Add("Total", "Total");
+            tableMapping.ColumnMappings.Add("EncargadoTransportista", "EncargadoTransportista");
+            tableMapping.ColumnMappings.Add("descripcion", "descripcion");
+            tableMapping.ColumnMappings.Add("LOTE", "LOTE");
+            tableMapping.ColumnMappings.Add("Tipo_Ingreso", "Tipo_Ingreso");
+            tableMapping.ColumnMappings.Add("registrosanitario", "registrosanitario");
+            tableMapping.ColumnMappings.Add("fabricante", "fabricante");
+            tableMapping.ColumnMappings.Add("Stockingreso", "Stockingreso");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::CapaPresentacion.Properties.Settings.Default.dbventasConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "dbo.spbuscar_ingresoCargo";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idIngreso", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(dsPrincipal.spbuscar_ingresoCargoDataTable dataTable, global::System.Nullable<int> idIngreso) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((idIngreso.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(idIngreso.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual dsPrincipal.spbuscar_ingresoCargoDataTable GetData(global::System.Nullable<int> idIngreso) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((idIngreso.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(idIngreso.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            dsPrincipal.spbuscar_ingresoCargoDataTable dataTable = new dsPrincipal.spbuscar_ingresoCargoDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }

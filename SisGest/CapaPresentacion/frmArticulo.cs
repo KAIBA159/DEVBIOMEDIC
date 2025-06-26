@@ -96,7 +96,7 @@ namespace CapaPresentacion
             this.cbIdpresentacion.Enabled = valor;
             this.btnCargar.Enabled = valor;
             this.btnLimpiar.Enabled = valor;
-            this.txtIdarticulo.ReadOnly = !valor;
+            this.txtIdarticulo.ReadOnly = true;
         }
 
         //Habilitar los botones

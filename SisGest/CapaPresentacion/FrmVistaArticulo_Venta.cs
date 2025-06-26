@@ -32,15 +32,54 @@ namespace CapaPresentacion
         private void MostrarArticulo_Venta_Nombre()
         {
             this.dataListado.DataSource = NVenta.MostrarArticulo_Venta_Nombre(this.txtBuscar.Text);
-            this.OcultarColumnas();
-            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+            
+
+            if (dataListado.DataSource != null)
+            {
+
+                this.OcultarColumnas();
+                lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+
+                foreach (DataGridViewColumn col in dataListado.Columns)
+                {
+                    col.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+
+                    // Limitar el ancho máximo
+                    if (col.Width > 300)
+                    {
+                        col.Width = 300;
+                    }
+                }
+
+            }
+
         }
 
         private void MostrarArticulo_Venta_Codigo()
         {
             this.dataListado.DataSource = NVenta.MostrarArticulo_Venta_Codigo(this.txtBuscar.Text);
-            this.OcultarColumnas();
-            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+           
+
+            if (dataListado.DataSource != null)
+            {
+
+                this.OcultarColumnas();
+                lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+
+                foreach(DataGridViewColumn col in dataListado.Columns)
+                {   
+                    col.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+
+                    // Limitar el ancho máximo
+                    if (col.Width > 300)
+                    {
+                        col.Width = 300;
+                    }
+                }
+
+            }
+
+
         }
 
 
@@ -63,8 +102,9 @@ namespace CapaPresentacion
 
         private void dataListado_DoubleClick(object sender, EventArgs e)
         {
+            
             FrmVenta form = FrmVenta.GetInstancia();
-            string par1, par2;
+            string par1, par2,par7;
             decimal par3, par4;
             int par5;
             DateTime par6;
@@ -74,7 +114,10 @@ namespace CapaPresentacion
             par4 = Convert.ToDecimal(this.dataListado.CurrentRow.Cells["precio_venta"].Value);
             par5 = Convert.ToInt32(this.dataListado.CurrentRow.Cells["stock_actual"].Value);
             par6 = Convert.ToDateTime(this.dataListado.CurrentRow.Cells["fecha_vencimiento"].Value);
-            form.setArticulo(par1, par2, par3, par4, par5, par6);
+
+            par7 = Convert.ToString(this.dataListado.CurrentRow.Cells["Lote"].Value);
+
+            form.setArticulo(par1, par2, par3, par4, par5, par6,par7);
             this.Hide();
         }
     }

@@ -226,6 +226,12 @@
     <Compile Include="Reportes\FrmReporteCliente.Designer.cs">
       <DependentUpon>FrmReporteCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reportes\FrmReporteIngresoCargo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\FrmReporteIngresoCargo.Designer.cs">
+      <DependentUpon>FrmReporteIngresoCargo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\FrmReporteCompras.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -343,6 +349,9 @@
     <EmbeddedResource Include="Reportes\FrmReporteCliente.resx">
       <DependentUpon>FrmReporteCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\FrmReporteIngresoCargo.resx">
+      <DependentUpon>FrmReporteIngresoCargo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\FrmReporteCompras.resx">
       <DependentUpon>FrmReporteCompras.cs</DependentUpon>
     </EmbeddedResource>
@@ -364,6 +373,7 @@
     <EmbeddedResource Include="Reportes\rptArticulos.rdlc" />
     <EmbeddedResource Include="Reportes\rptCategoria.rdlc" />
     <EmbeddedResource Include="Reportes\rptCliente.rdlc" />
+    <EmbeddedResource Include="Reportes\rptReporteIngresoCargo.rdlc" />
     <EmbeddedResource Include="Reportes\rptCompras.rdlc" />
     <EmbeddedResource Include="Reportes\rptComprobanteFactura.rdlc" />
     <EmbeddedResource Include="Reportes\rptPresentacion.rdlc" />

@@ -62,7 +62,7 @@ namespace CapaPresentacion
             this.txtNum_Documento.ReadOnly = !valor;
             this.txtTelefono.ReadOnly = !valor;
             this.txtEmail.ReadOnly = !valor;
-            this.txtIdcliente.ReadOnly = !valor;
+            this.txtIdcliente.ReadOnly = true;
         }
 
         //Habilitar los botones

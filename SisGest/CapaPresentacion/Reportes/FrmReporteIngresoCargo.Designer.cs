@@ -1,6 +1,6 @@
-﻿namespace CapaPresentacion
+﻿namespace CapaPresentacion.Reportes
 {
-    partial class FrmReporteFactura
+    partial class FrmReporteIngresoCargo
     {
         /// <summary>
         /// Required designer variable.
@@ -30,18 +30,22 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.spreporte_facturaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dsPrincipal = new CapaPresentacion.dsPrincipal();
+            
+            
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.spreporte_facturaTableAdapter = new CapaPresentacion.dsPrincipalTableAdapters.spreporte_facturaTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.spreporte_facturaBindingSource)).BeginInit();
+
+
+            this.dsPrincipal = new CapaPresentacion.dsPrincipal();
+            this.spbuscar_ingresoCargoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.spbuscar_ingresoCargoTableAdapter = new CapaPresentacion.dsPrincipalTableAdapters.spbuscar_ingresoCargoTableAdapter(); //.spbuscar_ingresoCargoTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.spbuscar_ingresoCargoBindingSource)).BeginInit();// .spbuscaringresofechaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsPrincipal)).BeginInit();
             this.SuspendLayout();
             // 
-            // spreporte_facturaBindingSource
+            // spbuscaringresofechaBindingSource
             // 
-            this.spreporte_facturaBindingSource.DataMember = "spreporte_factura";
-            this.spreporte_facturaBindingSource.DataSource = this.dsPrincipal;
+            this.spbuscar_ingresoCargoBindingSource.DataMember = "spbuscar_ingresoCargo";
+            this.spbuscar_ingresoCargoBindingSource.DataSource = this.dsPrincipal;
             // 
             // dsPrincipal
             // 
@@ -52,31 +56,30 @@
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.spreporte_facturaBindingSource;
+            reportDataSource1.Value = this.spbuscar_ingresoCargoBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "CapaPresentacion.Reportes.rptComprobanteFactura.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "CapaPresentacion.Reportes.rptReporteIngresoCargo.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(781, 514);
+            this.reportViewer1.Size = new System.Drawing.Size(710, 432);
             this.reportViewer1.TabIndex = 0;
             // 
-            // spreporte_facturaTableAdapter
+            // spbuscar_ingresoCargoTableAdapter
             // 
-            this.spreporte_facturaTableAdapter.ClearBeforeFill = true;
+            this.spbuscar_ingresoCargoTableAdapter.ClearBeforeFill = true;
             // 
-            // FrmReporteFactura
+            // FrmReporteIngresoCargo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(781, 514);
+            this.ClientSize = new System.Drawing.Size(710, 432);
             this.Controls.Add(this.reportViewer1);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.MaximizeBox = false;
-            this.Name = "FrmReporteFactura";
-            this.Text = ".:: Egreso ::.";
-            this.Load += new System.EventHandler(this.FrmReporteFactura_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.spreporte_facturaBindingSource)).EndInit();
+            this.Name = "FrmReporteIngresoCargo";
+            this.Text = ".:: IngresoCargo ::.";
+            this.Load += new System.EventHandler(this.FrmReporteIngresoCargo_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.spbuscar_ingresoCargoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsPrincipal)).EndInit();
             this.ResumeLayout(false);
 
@@ -85,8 +88,8 @@
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private System.Windows.Forms.BindingSource spreporte_facturaBindingSource;
+        private System.Windows.Forms.BindingSource spbuscar_ingresoCargoBindingSource;
         private dsPrincipal dsPrincipal;
-        private dsPrincipalTableAdapters.spreporte_facturaTableAdapter spreporte_facturaTableAdapter;
+        private dsPrincipalTableAdapters.spbuscar_ingresoCargoTableAdapter spbuscar_ingresoCargoTableAdapter;
     }
 }

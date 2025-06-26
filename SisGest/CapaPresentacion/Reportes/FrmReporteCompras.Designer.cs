@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            
             this.dsPrincipal = new CapaPresentacion.dsPrincipal();
             this.spbuscaringresofechaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.spbuscar_ingreso_fechaTableAdapter = new CapaPresentacion.dsPrincipalTableAdapters.spbuscar_ingreso_fechaTableAdapter();

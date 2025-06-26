@@ -37,6 +37,8 @@ namespace CapaNegocio
 
                 detalle.Guia_remisioncliente = row["guia_remisioncliente"].ToString();
                 detalle.Subcliente = row["subcliente"].ToString();
+                detalle.Lote  = row["lote"].ToString();
+
 
                 detalles.Add(detalle);
             }

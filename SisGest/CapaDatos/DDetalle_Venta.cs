@@ -19,7 +19,8 @@ namespace CapaDatos
         private decimal _Descuento;
 
         private string _Subcliente;
-        
+        private string _Lote;
+
 
         private string _Guia_remisioncliente;
         //Propiedades
@@ -74,7 +75,14 @@ namespace CapaDatos
             get { return _Subcliente; }
             set { _Subcliente = value; }
         }
-        
+
+        public string Lote
+        {
+            get { return _Lote; }
+            set { _Lote = value; }
+        }
+
+
         //Constructores
         public DDetalle_Venta()
         {
@@ -82,7 +90,8 @@ namespace CapaDatos
         }
 
         public DDetalle_Venta(int iddetalle_venta,int idventa,int iddetalle_ingreso,
-            int cantidad,decimal precio_venta,decimal descuento)
+            int cantidad,decimal precio_venta,decimal descuento , 
+            string guia_remisioncliente,string subcliente ,string lote)
         {
             this.Iddetalle_venta = iddetalle_venta;
             this.Idventa = idventa;
@@ -90,6 +99,12 @@ namespace CapaDatos
             this.Cantidad = cantidad;
             this.Precio_Venta = precio_venta;
             this.Descuento = descuento;
+
+            this.Guia_remisioncliente = guia_remisioncliente;
+            this.Subcliente = subcliente;
+            this.Lote = lote;
+
+
         }
 
         //Método Insertar
@@ -155,7 +170,15 @@ namespace CapaDatos
                 ParSubcliente.Value = Detalle_Venta.Subcliente;
                 SqlCmd.Parameters.Add(ParSubcliente);
 
-              
+
+
+                SqlParameter ParLote = new SqlParameter();
+                ParLote.ParameterName = "@lote";
+                ParLote.SqlDbType = SqlDbType.VarChar;
+                ParLote.Size = 100;
+                ParLote.Value = Detalle_Venta.Lote;
+                SqlCmd.Parameters.Add(ParLote);
+
                 //
 
 

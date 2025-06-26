@@ -244,6 +244,7 @@ C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacio
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.frmLogin.resources
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.frmPresentacion.resources
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.frmPrincipal.resources
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.frmEncargadoTransportista.resources
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.frmProveedor.resources
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.frmTrabajador.resources
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.FrmVenta.resources
@@ -251,11 +252,13 @@ C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacio
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.FrmVistaArticulo_Venta.resources
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.frmVistaCategoria_Articulo.resources
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.FrmVistaCliente_Venta.resources
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.FrmVistaEncargado_Ingreso.resources
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.FrmVistaProveedor_Ingreso.resources
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.Properties.Resources.resources
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.FrmReporteArticulos.resources
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.FrmReporteCategoria.resources
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.FrmReporteCliente.resources
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.FrmReporteIngresoCargo.resources
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.FrmReporteCompras.resources
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.FrmReporteFactura.resources
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.FrmReportePresentacion.resources
@@ -267,5 +270,3 @@ C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacio
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacion\obj\Debug\CapaPres.61CA7C38.Up2Date
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.dll
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
-C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.FrmVistaEncargado_Ingreso.resources
-C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacion\obj\Debug\CapaPresentacion.frmEncargadoTransportista.resources

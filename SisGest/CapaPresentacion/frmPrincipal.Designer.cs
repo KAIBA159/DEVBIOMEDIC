@@ -45,6 +45,7 @@
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MnuMantenimiento = new System.Windows.Forms.ToolStripMenuItem();
             this.trabajadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.encargadoTransportistaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MnuConsultas = new System.Windows.Forms.ToolStripMenuItem();
             this.ventasPorFechasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comprasPorFechasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -72,7 +73,6 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.encargadoTransportistaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -157,22 +157,22 @@
             this.proveedorToolStripMenuItem});
             this.MnuCompras.Image = global::CapaPresentacion.Properties.Resources.compra_b;
             this.MnuCompras.Name = "MnuCompras";
-            this.MnuCompras.Size = new System.Drawing.Size(83, 20);
-            this.MnuCompras.Text = "Compras";
+            this.MnuCompras.Size = new System.Drawing.Size(74, 20);
+            this.MnuCompras.Text = "Ingreso";
             // 
             // ingresosToolStripMenuItem
             // 
             this.ingresosToolStripMenuItem.Image = global::CapaPresentacion.Properties.Resources.compra_m;
             this.ingresosToolStripMenuItem.Name = "ingresosToolStripMenuItem";
-            this.ingresosToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
-            this.ingresosToolStripMenuItem.Text = "Ingresos";
+            this.ingresosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ingresosToolStripMenuItem.Text = "Ingreso";
             this.ingresosToolStripMenuItem.Click += new System.EventHandler(this.ingresosToolStripMenuItem_Click);
             // 
             // proveedorToolStripMenuItem
             // 
             this.proveedorToolStripMenuItem.Image = global::CapaPresentacion.Properties.Resources.proveedores_m;
             this.proveedorToolStripMenuItem.Name = "proveedorToolStripMenuItem";
-            this.proveedorToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.proveedorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.proveedorToolStripMenuItem.Text = "Proveedor";
             this.proveedorToolStripMenuItem.Click += new System.EventHandler(this.proveedorToolStripMenuItem_Click);
             // 
@@ -183,22 +183,22 @@
             this.clientesToolStripMenuItem});
             this.MnuVentas.Image = global::CapaPresentacion.Properties.Resources.ventas_m;
             this.MnuVentas.Name = "MnuVentas";
-            this.MnuVentas.Size = new System.Drawing.Size(69, 20);
-            this.MnuVentas.Text = "Ventas";
+            this.MnuVentas.Size = new System.Drawing.Size(70, 20);
+            this.MnuVentas.Text = "Egreso";
             // 
             // ventasToolStripMenuItem1
             // 
             this.ventasToolStripMenuItem1.Image = global::CapaPresentacion.Properties.Resources.ventas2;
             this.ventasToolStripMenuItem1.Name = "ventasToolStripMenuItem1";
-            this.ventasToolStripMenuItem1.Size = new System.Drawing.Size(116, 22);
-            this.ventasToolStripMenuItem1.Text = "Ventas";
+            this.ventasToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.ventasToolStripMenuItem1.Text = "Salida";
             this.ventasToolStripMenuItem1.Click += new System.EventHandler(this.ventasToolStripMenuItem1_Click);
             // 
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.Image = global::CapaPresentacion.Properties.Resources.cliente_m;
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.clientesToolStripMenuItem.Text = "Clientes";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
@@ -219,6 +219,13 @@
             this.trabajadoresToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
             this.trabajadoresToolStripMenuItem.Text = "Trabajadores";
             this.trabajadoresToolStripMenuItem.Click += new System.EventHandler(this.trabajadoresToolStripMenuItem_Click);
+            // 
+            // encargadoTransportistaToolStripMenuItem
+            // 
+            this.encargadoTransportistaToolStripMenuItem.Name = "encargadoTransportistaToolStripMenuItem";
+            this.encargadoTransportistaToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
+            this.encargadoTransportistaToolStripMenuItem.Text = "Encargado-Transportista";
+            this.encargadoTransportistaToolStripMenuItem.Click += new System.EventHandler(this.encargadoTransportistaToolStripMenuItem_Click);
             // 
             // MnuConsultas
             // 
@@ -441,13 +448,6 @@
             this.toolStripStatusLabel.Name = "toolStripStatusLabel";
             this.toolStripStatusLabel.Size = new System.Drawing.Size(107, 17);
             this.toolStripStatusLabel.Text = "Sistema de Gestión";
-            // 
-            // encargadoTransportistaToolStripMenuItem
-            // 
-            this.encargadoTransportistaToolStripMenuItem.Name = "encargadoTransportistaToolStripMenuItem";
-            this.encargadoTransportistaToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-            this.encargadoTransportistaToolStripMenuItem.Text = "Encargado-Transportista";
-            this.encargadoTransportistaToolStripMenuItem.Click += new System.EventHandler(this.encargadoTransportistaToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 

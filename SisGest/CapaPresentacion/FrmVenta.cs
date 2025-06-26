@@ -39,7 +39,7 @@ namespace CapaPresentacion
 
         public void setArticulo (string iddetalle_ingreso,string nombre,
             decimal precio_compra,decimal precio_venta,int stock,
-            DateTime fecha_vencimiento)
+            DateTime fecha_vencimiento,string lotet)
         {
             this.txtIdarticulo.Text = iddetalle_ingreso;
             this.txtArticulo.Text = nombre;
@@ -47,6 +47,9 @@ namespace CapaPresentacion
             this.txtPrecio_Venta.Text = Convert.ToString(precio_venta);
             this.txtStock_Actual.Text = Convert.ToString(stock);
             this.dtFecha_Vencimiento.Value = fecha_vencimiento;
+            this.txtLote.Text = lotet;
+            this.txtCantidad.Text = string.Empty;
+
         }
 
         public FrmVenta()
@@ -82,6 +85,11 @@ namespace CapaPresentacion
         //Limpiar todos los controles del formulario
         private void Limpiar()
         {
+
+            this.dtFecha.Value = DateTime.Now;
+            this.dtFecha_Vencimiento.Value = DateTime.Now;
+            
+
             this.txtIdventa.Text = string.Empty;
             this.txtIdcliente.Text = string.Empty;
             this.txtCliente.Text = string.Empty;
@@ -108,27 +116,33 @@ namespace CapaPresentacion
 
             this.txtGuia_Cliente.Text = string.Empty;
             this.txtSubCliente.Text = string.Empty;
+            this.txtLote.Text = string.Empty;
 
         }
 
         //Habilitar los controles del formulario
         private void Habilitar(bool valor)
         {
+            
+
             this.txtIdventa.ReadOnly = !valor;
+
+            this.txtIdventa.ReadOnly = true;
+
             this.txtSerie.ReadOnly = !valor;
             this.txtCorrelativo.ReadOnly = !valor;
             this.txtIgv.ReadOnly = !valor;
             this.dtFecha.Enabled = valor;
             this.cbTipo_Comprobante.Enabled = valor;
             this.txtCantidad.ReadOnly = !valor;
-            this.txtPrecio_Compra.ReadOnly = !valor;
+            this.txtPrecio_Compra.ReadOnly = true;
             this.txtPrecio_Venta.ReadOnly = !valor;
 
             //
             this.txtGuia_Cliente.ReadOnly = !valor;
             this.txtSubCliente.ReadOnly = !valor;
 
-            this.txtStock_Actual.ReadOnly = !valor;
+            this.txtStock_Actual.ReadOnly = true;
             this.txtDescuento.ReadOnly = !valor;
             this.dtFecha_Vencimiento.Enabled = valor;
 
@@ -170,8 +184,29 @@ namespace CapaPresentacion
         private void Mostrar()
         {
             this.dataListado.DataSource = NVenta.Mostrar();
-            this.OcultarColumnas();
-            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+           
+
+            if (dataListado.DataSource != null)
+            {
+
+
+                this.OcultarColumnas();
+                lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+
+                foreach (DataGridViewColumn col in dataListado.Columns)
+                {
+                    col.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+
+                    // Limitar el ancho máximo
+                    if (col.Width > 300)
+                    {
+                        col.Width = 300;
+                    }
+                }
+
+            }
+
+
         }
 
         //Método BuscarFechas
@@ -179,13 +214,37 @@ namespace CapaPresentacion
         {
             this.dataListado.DataSource = NVenta.BuscarFechas(this.dtFecha1.Value.ToString("dd/MM/yyyy"),
                 this.dtFecha2.Value.ToString("dd/MM/yyyy"));
-            this.OcultarColumnas();
-            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+
+
+            if (dataListado.DataSource != null)
+            {
+
+                //this.OcultarColumnas();
+                //lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+                this.OcultarColumnas();
+                lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+            }
+
+            //this.OcultarColumnas();
+            //lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
         }
 
         private void MostrarDetalle()
         {
             this.dataListadoDetalle.DataSource = NVenta.MostrarDetalle(this.txtIdventa.Text);
+
+            foreach (DataGridViewColumn col in dataListadoDetalle.Columns)
+            {
+                col.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+
+                // Limitar el ancho máximo
+                if (col.Width > 300)
+                {
+                    col.Width = 300;
+                }
+            }
+
+
 
         }
         private void crearTabla()
@@ -202,6 +261,10 @@ namespace CapaPresentacion
             this.dtDetalle.Columns.Add("descuento", System.Type.GetType("System.Decimal"));
             this.dtDetalle.Columns.Add("subtotal", System.Type.GetType("System.Decimal"));
             this.dtDetalle.Columns.Add("Impuesto", System.Type.GetType("System.Decimal"));
+
+            this.dtDetalle.Columns.Add("lote", System.Type.GetType("System.String"));
+
+
             //Relacionar nuestro DataGRidView con nuestro DataTable
             this.dataListadoDetalle.DataSource = this.dtDetalle;
 
@@ -280,6 +343,15 @@ namespace CapaPresentacion
 
         private void dataListado_DoubleClick(object sender, EventArgs e)
         {
+            // cacnelar evento
+            this.IsNuevo = false;
+            this.Botones();
+            this.Limpiar();
+            this.limpiarDetalle();
+            this.Habilitar(false);
+            //
+
+
             this.txtIdventa.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["idventa"].Value);
             this.txtCliente.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["cliente"].Value);
             this.dtFecha.Value = Convert.ToDateTime(this.dataListado.CurrentRow.Cells["fecha"].Value);
@@ -288,6 +360,7 @@ namespace CapaPresentacion
             this.txtCorrelativo.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["correlativo"].Value);
             this.lblTotal_Pagado.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["total"].Value);
             this.txtIgv.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["Impuesto"].Value);
+
             this.MostrarDetalle();
             this.tabControl1.SelectedIndex = 1;
         }
@@ -416,11 +489,15 @@ namespace CapaPresentacion
             {
                 errorIcono.Clear();
 
+                this.txtDescuento.Text = "0";
 
-                if (this.txtIdarticulo.Text == string.Empty || this.txtCantidad.Text == string.Empty
-                    || this.txtDescuento.Text == string.Empty|| this.txtPrecio_Venta.Text == string.Empty
+                if (this.txtIdarticulo.Text == string.Empty 
+                    || this.txtCantidad.Text == string.Empty
+                    || this.txtDescuento.Text == string.Empty
+                    || this.txtPrecio_Venta.Text == string.Empty
 
-                    || this.txtGuia_Cliente.Text == string.Empty || this.txtSubCliente.Text == string.Empty
+                    || this.txtGuia_Cliente.Text == string.Empty 
+                    || this.txtSubCliente.Text == string.Empty
 
                     )
                 {
@@ -461,7 +538,9 @@ namespace CapaPresentacion
 
                         row["guia_remisioncliente"] = Convert.ToString(this.txtGuia_Cliente.Text);
                         row["subcliente"] = Convert.ToString(this.txtSubCliente.Text);
-                        
+
+                        row["lote"] = Convert.ToString(this.txtLote.Text);
+
                         //errorIcono.SetError(txtGuia_Cliente, "Ingrese una Guia de Cliente");
                         //errorIcono.SetError(txtSubCliente, "Ingrese un SubCliente");
 
