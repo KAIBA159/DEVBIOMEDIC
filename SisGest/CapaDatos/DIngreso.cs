@@ -24,7 +24,14 @@ namespace CapaDatos
         private int _IdencargadoTransportista;
         private string _Tipo_Ingreso;
 
-        
+        private DateTime _HoraInicioDT;
+        private DateTime _HoraFinDT;
+
+        private string _CbTipo_Producto;
+        private string _Bultos;
+        private string _Dua;
+        private string _CorrelativoUnico;
+
 
         //Propiedades
         public int Idingreso
@@ -32,52 +39,52 @@ namespace CapaDatos
             get { return _Idingreso; }
             set { _Idingreso = value; }
         }
-        
+
 
         public int Idtrabajador
         {
             get { return _Idtrabajador; }
             set { _Idtrabajador = value; }
         }
-        
+
 
         public int Idproveedor
         {
             get { return _Idproveedor; }
             set { _Idproveedor = value; }
         }
-        
+
         public DateTime Fecha
         {
             get { return _Fecha; }
             set { _Fecha = value; }
         }
-        
+
         public string Tipo_Comprobante
         {
             get { return _Tipo_Comprobante; }
             set { _Tipo_Comprobante = value; }
         }
-        
+
         public string Serie
         {
             get { return _Serie; }
             set { _Serie = value; }
         }
-        
+
 
         public string Correlativo
         {
             get { return _Correlativo; }
             set { _Correlativo = value; }
         }
-        
+
         public decimal Igv
         {
             get { return _Igv; }
             set { _Igv = value; }
         }
-        
+
 
         public string Estado
         {
@@ -97,6 +104,46 @@ namespace CapaDatos
             set { _IdencargadoTransportista = value; }
         }
 
+        public DateTime HoraInicioDT
+        {
+            get { return _HoraInicioDT; }
+            set { _HoraInicioDT = value; }
+        }
+
+        public DateTime HoraFinDT
+        {
+            get { return _HoraFinDT; }
+            set { _HoraFinDT = value; }
+        }
+
+        //Obj.HoraInicioDT = horaInicioDT;
+        //    Obj.horaFinDT = horaFinDT;
+
+        public string CbTipo_Producto
+        {
+            get { return _CbTipo_Producto; }
+            set { _CbTipo_Producto = value; }
+        }
+
+        public string Bultos
+        {
+            get { return _Bultos; }
+            set { _Bultos = value; }
+        }
+
+        public string Dua
+        {
+            get { return _Dua; }
+            set { _Dua = value; }
+        }
+
+        public string CorrelativoUnico
+        {
+            get { return _CorrelativoUnico; }
+            set { _CorrelativoUnico = value; }
+        }
+
+
 
         //Constructores
         public DIngreso()
@@ -104,10 +151,24 @@ namespace CapaDatos
 
         }
 
-        public DIngreso(int idingreso,int idtrabajador,int idproveedor,
-            DateTime fecha,string tipo_comprobante,string serie,
-            string correlativo,decimal igv, string estado,string tipo_Ingreso, int idencargadoTransportista)
+        public DIngreso(int idingreso, int idtrabajador, int idproveedor,
+            DateTime fecha, string tipo_comprobante, string serie,
+            string correlativo,
+            decimal igv,
+            string estado,
+            string tipo_Ingreso,
+            int idencargadoTransportista,
+            DateTime horaInicioDT,
+            DateTime horaFinDT,
+
+            string cbTipo_Producto,
+            string bultos,
+            string dua,
+            string correlativoUnico
+
+            )
         {
+
             this.Idingreso = idingreso;
             this.Idtrabajador = idtrabajador;
             this.Idproveedor = idproveedor;
@@ -116,6 +177,19 @@ namespace CapaDatos
             this.Tipo_Comprobante = tipo_comprobante;
             this.Serie = serie;
             this.Correlativo = correlativo;
+            this.Igv = igv;
+            this.Estado = estado;
+
+            this.HoraInicioDT = horaInicioDT;
+            this.HoraFinDT = horaFinDT;
+
+
+            this.CbTipo_Producto = cbTipo_Producto;
+            this.Bultos = bultos;
+            this.Dua = dua;
+            this.CorrelativoUnico = correlativoUnico;
+
+
             this.Igv = igv;
             this.Estado = estado;
 
@@ -216,6 +290,52 @@ namespace CapaDatos
                 ParEstado.Size = 7;
                 ParEstado.Value = Ingreso.Estado;
                 SqlCmd.Parameters.Add(ParEstado);
+
+
+                //-------------------------------------
+
+                SqlParameter ParhoraInicio = new SqlParameter();
+                ParhoraInicio.ParameterName = "@horaInicio";
+                ParhoraInicio.SqlDbType = SqlDbType.DateTime;
+                ParhoraInicio.Value = Ingreso.HoraInicioDT;
+                SqlCmd.Parameters.Add(ParhoraInicio);
+
+                SqlParameter ParhoraFin = new SqlParameter();
+                ParhoraFin.ParameterName = "@horaFin";
+                ParhoraFin.SqlDbType = SqlDbType.DateTime;
+                ParhoraFin.Value = Ingreso.HoraFinDT;
+                SqlCmd.Parameters.Add(ParhoraFin);
+
+                //-------------------------------------------------------------------
+
+                SqlParameter ParcbTipo_Producto = new SqlParameter();
+                ParcbTipo_Producto.ParameterName = "@cbTipo_Producto";
+                ParcbTipo_Producto.SqlDbType = SqlDbType.VarChar;
+                ParcbTipo_Producto.Size = 50;
+                ParcbTipo_Producto.Value = Ingreso.CbTipo_Producto;
+                SqlCmd.Parameters.Add(ParcbTipo_Producto);
+
+                SqlParameter Parbultos = new SqlParameter();
+                Parbultos.ParameterName = "@bultos";
+                Parbultos.SqlDbType = SqlDbType.VarChar;
+                Parbultos.Size = 50;
+                Parbultos.Value = Ingreso.Bultos;
+                SqlCmd.Parameters.Add(Parbultos);
+
+                SqlParameter Pardua = new SqlParameter();
+                Pardua.ParameterName = "@dua";
+                Pardua.SqlDbType = SqlDbType.VarChar;
+                Pardua.Size = 50;
+                Pardua.Value = Ingreso.Dua;
+                SqlCmd.Parameters.Add(Pardua);
+
+                SqlParameter ParcorrelativoUnico = new SqlParameter();
+                ParcorrelativoUnico.ParameterName = "@correlativoUnico";
+                ParcorrelativoUnico.SqlDbType = SqlDbType.VarChar;
+                ParcorrelativoUnico.Size = 50;
+                ParcorrelativoUnico.Value = Ingreso.CorrelativoUnico;
+                SqlCmd.Parameters.Add(ParcorrelativoUnico);
+
 
                 //Ejecutamos nuestro comando
 
@@ -361,6 +481,32 @@ namespace CapaDatos
             }
             return DtResultado;
 
+        }
+
+        public string DObtenerCorrelativoUnico()
+        {
+            
+            string correlativoUnico = string.Empty;
+
+            using (SqlConnection SqlCon = new SqlConnection())
+            {
+                SqlCon.ConnectionString = Conexion.Cn;
+                SqlCon.Open();
+
+                using (SqlCommand SqlCmd = new SqlCommand("sp_generar_correlativo_unico", SqlCon))
+                {
+                    SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                    // Ejecuta y obtiene el valor único
+                    object result = SqlCmd.ExecuteScalar();
+
+                    if (result != null)
+                    {
+                        correlativoUnico = result.ToString();
+                    }
+                }
+            }
+            return correlativoUnico;
         }
 
 

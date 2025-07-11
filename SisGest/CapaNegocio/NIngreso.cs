@@ -12,13 +12,30 @@ namespace CapaNegocio
 {
     public class NIngreso
     {
-        public static string Insertar(int idtrabajador,
-                                      int idproveedor, DateTime fecha,
-            string tipo_comprobante,string serie,
+        public static string Insertar(
+            int idtrabajador,
+            int idproveedor, 
+            DateTime fecha,
+            string tipo_comprobante,
+            string serie,
             string correlativo, decimal igv,
             string estado,string cbTipo_Ingreso,
             int idencargadoTransportista,
-            DataTable dtDetalles)
+
+            DateTime horaInicioDT,
+            DateTime horaFinDT,
+
+
+            string cbTipo_Producto,
+            string bultos,
+            string dUA,
+            string correlativoUnico,
+
+
+
+            DataTable dtDetalles
+            
+            )
         {
             DIngreso Obj = new DIngreso();
             Obj.Idtrabajador = idtrabajador;
@@ -32,6 +49,18 @@ namespace CapaNegocio
             Obj.Correlativo = correlativo;
             Obj.Igv = igv;
             Obj.Estado = estado;
+
+            Obj.HoraInicioDT = horaInicioDT;
+            Obj.HoraFinDT = horaFinDT;
+
+            Obj.CbTipo_Producto = cbTipo_Producto;
+            Obj.Bultos = bultos;
+            Obj.Dua = dUA;
+            Obj.CorrelativoUnico = correlativoUnico;
+
+            //DateTime horaInicioDT,
+            //DateTime horaFinDT,
+
 
             Obj.Tipo_Ingreso = cbTipo_Ingreso;
 
@@ -51,6 +80,36 @@ namespace CapaNegocio
                 //detalle. = Convert.ToString(row["guia_remisioncliente"].ToString());
                 //detalle. = Convert.ToString(row["subcliente"].ToString());
 
+                ////
+                ///
+                bool limpio = Convert.ToBoolean(row["limpio"]);
+                detalle.Limpio = limpio ? "Activo" : "Inactivo";
+                //detalle.Limpio          = row["limpio"].ToString();
+
+                bool deteriorado = Convert.ToBoolean(row["deteriorado"]);
+                detalle.Deteriorado = deteriorado ? "Activo" : "Inactivo";
+                //detalle.Deteriorado     = row["deteriorado"].ToString();
+
+                bool envasecerrado = Convert.ToBoolean(row["envasecerrado"]);
+                detalle.Envasecerrado = envasecerrado ? "Activo" : "Inactivo";
+                //detalle.Envasecerrado   = row["envasecerrado"].ToString();
+
+                bool certanalisis = Convert.ToBoolean(row["certanalisis"]);
+                detalle.Certanalisis = certanalisis ? "Activo" : "Inactivo";
+                //detalle.Certanalisis    = row["certanalisis"].ToString();
+
+                bool sanitario = Convert.ToBoolean(row["sanitario"]);
+                detalle.Sanitario = sanitario ? "Activo" : "Inactivo";
+                //detalle.Sanitario       = row["sanitario"].ToString();
+
+
+                //this.dtDetalle.Columns.Add("limpio", System.Type.GetType("System.String"));
+                //this.dtDetalle.Columns.Add("deteriorado", System.Type.GetType("System.String"));
+                //this.dtDetalle.Columns.Add("envasecerrado", System.Type.GetType("System.String"));
+                //this.dtDetalle.Columns.Add("certanalisis", System.Type.GetType("System.String"));
+                //this.dtDetalle.Columns.Add("sanitario", System.Type.GetType("System.String"));
+
+                ////
 
 
 
@@ -83,6 +142,14 @@ namespace CapaNegocio
             DIngreso Obj = new DIngreso();
             return Obj.BuscarFechas(textobuscar,textobuscar2);
         }
+
+        public static string ObtenerCorrelativoUnico()
+        {
+            DIngreso Obj = new DIngreso();
+
+            return Obj.DObtenerCorrelativoUnico();
+        }
+        
 
         public static DataTable MostrarDetalle(string textobuscar)
         {

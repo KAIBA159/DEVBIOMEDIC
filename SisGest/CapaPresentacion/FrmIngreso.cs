@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaNegocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -6,9 +7,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 using System.Windows.Forms;
-
-using CapaNegocio;
 
 namespace CapaPresentacion
 {
@@ -92,13 +92,48 @@ namespace CapaPresentacion
             this.txtIdencargado.Text = string.Empty;
             this.txtEncargado.Text = string.Empty;
 
+            //
+            this.dtp_inicio.Value = DateTime.Now;
+            this.dtp_fin.Value = DateTime.Now;
+
+
+            this.txtBultos.Text = string.Empty;
+            this.txtDUA.Text = string.Empty;
+
+
+            this.txtCorrelativoUnico.Text = string.Empty;
+            this.txtCorrelativoUnico.Text = obtenercorrelativoUnico();
+
+
+            //
+
+
             this.txtSerie.Text = string.Empty;
             this.txtCorrelativo.Text = string.Empty;
             this.txtIgv.Text = string.Empty;
             this.lblTotal_Pagado.Text = "0,0";
             this.txtIgv.Text = "18";
+
+            //
+
             this.crearTabla();
+
+
         }
+
+        private string obtenercorrelativoUnico()
+        {
+            string val  = string.Empty;
+
+
+            val = NIngreso.ObtenerCorrelativoUnico();
+
+            return val;
+        
+            
+        }
+
+
         private void limpiarDetalle()
         {
             this.txtIdarticulo.Text = string.Empty;
@@ -108,6 +143,21 @@ namespace CapaPresentacion
             this.txtPrecio_Venta.Text = string.Empty;
 
             this.txtLote.Text = string.Empty;
+
+            //
+            cb_limpio.Checked = false;
+
+            cb_deteriorado.Checked = false;
+
+            cb_envasecerrado.Checked = false;
+
+            cb_certanalisis.Checked = false;
+
+            cb_sanitario.Checked = false;
+
+            //
+
+
         }
 
         //Habilitar los controles del formulario
@@ -116,6 +166,25 @@ namespace CapaPresentacion
             this.txtIdingreso.ReadOnly = !valor;
             this.txtSerie.ReadOnly = !valor;
             this.txtCorrelativo.ReadOnly = !valor;
+
+
+            //
+            this.txtBultos.ReadOnly = !valor;
+            this.txtDUA.ReadOnly = !valor;
+            this.txtCorrelativoUnico.ReadOnly = !valor;
+
+
+            this.txtIdingreso.ReadOnly = true;
+            this.txtCorrelativoUnico.ReadOnly = true;
+
+
+            this.cbTipo_Producto.Enabled = valor;  
+            //
+
+            this.dtp_inicio.Enabled = valor;
+            this.dtp_fin.Enabled = valor;
+
+
             this.txtIgv.ReadOnly = !valor;
             this.dtFecha.Enabled = valor;
 
@@ -135,6 +204,16 @@ namespace CapaPresentacion
             this.dtFecha_Vencimiento.Enabled = valor;
             
             this.btnBuscarArticulo.Enabled = valor;
+
+            //
+            this.cb_limpio.Enabled = valor;
+            this.cb_deteriorado.Enabled = valor;
+            this.cb_envasecerrado.Enabled = valor;
+            this.cb_certanalisis.Enabled = valor;
+            this.cb_sanitario.Enabled = valor;
+
+            //
+
             this.btnBuscarProveedor.Enabled = valor;
 
             this.btnBuscarEncargado.Enabled = valor;
@@ -176,8 +255,29 @@ namespace CapaPresentacion
         private void Mostrar()
         {
             this.dataListado.DataSource = NIngreso.Mostrar();
-            this.OcultarColumnas();
-            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+
+
+            if (dataListado != null)
+            {
+                foreach (DataGridViewColumn col in dataListado.Columns)
+                {
+                    col.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+
+                    // Limitar el ancho máximo
+                    if (col.Width > 300)
+                    {
+                        col.Width = 300;
+                    }
+                }
+
+
+                this.OcultarColumnas();
+                lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+            }
+
+            
+
+
         }
 
         //Método BuscarFechas
@@ -187,11 +287,23 @@ namespace CapaPresentacion
                 this.dtFecha2.Value.ToString("dd/MM/yyyy"));
 
             var resultado = this.dataListado.DataSource;
-             
+
+
 
             if (resultado != null)
             {
-               
+
+                foreach (DataGridViewColumn col in dataListado.Columns)
+                {
+                    col.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+
+                    // Limitar el ancho máximo
+                    if (col.Width > 300)
+                    {
+                        col.Width = 300;
+                    }
+                }
+
                 this.OcultarColumnas();
                 lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
 
@@ -199,26 +311,175 @@ namespace CapaPresentacion
 
         }
 
+
+        //private void BuscarFechas()
+        //{
+        //    this.dataListado.DataSource = NIngreso.BuscarFechas(this.dtFecha1.Value.ToString("dd/MM/yyyy"),
+        //        this.dtFecha2.Value.ToString("dd/MM/yyyy"));
+
+        //    var resultado = this.dataListado.DataSource;
+
+
+
+        //    if (resultado != null)
+        //    {
+
+        //        foreach (DataGridViewColumn col in dataListado.Columns)
+        //        {
+        //            col.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+
+        //            // Limitar el ancho máximo
+        //            if (col.Width > 300)
+        //            {
+        //                col.Width = 300;
+        //            }
+        //        }
+
+        //        this.OcultarColumnas();
+        //        lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+
+        //    }
+
+        //}
+
+
         private void MostrarDetalle()
         {
-            this.dataListadoDetalle.DataSource = NIngreso.MostrarDetalle(this.txtIdingreso.Text);
+
+
+
+            //this.dataListadoDetalle.DataSource = NIngreso.MostrarDetalle(this.txtIdingreso.Text);
+
+
+            DataTable dtOriginal = NIngreso.MostrarDetalle(this.txtIdingreso.Text);
+
+            //this.dataListadoDetalle.Columns.Add("sanitario", typeof(bool));
+            //fila["sanitario"] = true; // o false
+
+            //this.dataListadoDetalle.Columns.Add("limpio", typeof(bool));
+            //this.dtDetalle.Columns.Add("limpio", typeof(bool));
+
+            DataTable dtClon = dtOriginal.Clone();
+
+            // Cambiar el tipo de las columnas deseadas a bool
+            dtClon.Columns["limpio"].DataType = typeof(bool);
+            dtClon.Columns["deteriorado"].DataType = typeof(bool);
+            dtClon.Columns["envasecerrado"].DataType = typeof(bool);
+            dtClon.Columns["certanalisis"].DataType = typeof(bool);
+            dtClon.Columns["sanitario"].DataType = typeof(bool);
+
+            //fila["sanitario"] = true; // o false
+
+
+            foreach (DataRow filaOriginal in dtOriginal.Rows)
+            {
+                DataRow filaNueva = dtClon.NewRow();
+
+                foreach (DataColumn columna in dtOriginal.Columns)
+                {
+                    string nombreColumna = columna.ColumnName;
+
+                    if (dtClon.Columns[nombreColumna].DataType == typeof(bool))
+                    {
+                        string valorTexto = filaOriginal[nombreColumna]?.ToString().Trim().ToLower();
+                        filaNueva[nombreColumna] = (valorTexto == "activo");
+                    }
+                    else
+                    {
+                        filaNueva[nombreColumna] = filaOriginal[nombreColumna];
+                    }
+                }
+
+                dtClon.Rows.Add(filaNueva);
+            }
+
+            // 4.Asignar al DataGridView
+            this.dataListadoDetalle.DataSource = dtClon;
+
+            //foreach (DataGridViewRow fila in dataListadoDetalle.Rows)
+            //{
+            //    nuevaFila["limpio"] = row["limpio"].ToString() == "Activo";
+            //    nuevaFila["deteriorado"] = row["deteriorado"].ToString() == "Activo";
+            //    nuevaFila["envasecerrado"] = row["envasecerrado"].ToString() == "Activo";
+            //    nuevaFila["certanalisis"] = row["certanalisis"].ToString() == "Activo";
+            //    nuevaFila["sanitario"] = row["sanitario"].ToString() == "Activo";
+            //}
+
+            //foreach (DataGridViewRow fila in dataListadoDetalle.Rows)
+            //{
+            //    if (fila.IsNewRow) continue;
+            //    fila.Cells["limpio"].Value = true;
+            //}
+
+
+
+            if (this.dataListadoDetalle.DataSource != null)
+            {
+                foreach (DataGridViewColumn col in dataListadoDetalle.Columns)
+                {
+                    col.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+
+                    // Limitar el ancho máximo
+                    if (col.Width > 300)
+                    {
+                        col.Width = 300;
+                    }
+                }
+            }
+
             
+
         }
         private void crearTabla()
         {
             this.dtDetalle = new DataTable("Detalle");
+
             this.dtDetalle.Columns.Add("idarticulo",System.Type.GetType("System.Int32"));
+            this.dtDetalle.Columns["idarticulo"].ReadOnly = true;
+
+
             this.dtDetalle.Columns.Add("articulo", System.Type.GetType("System.String"));
+            this.dtDetalle.Columns["articulo"].ReadOnly = true;
 
             this.dtDetalle.Columns.Add("lote", System.Type.GetType("System.String"));
+            this.dtDetalle.Columns["lote"].ReadOnly = true;
 
             this.dtDetalle.Columns.Add("precio_compra", System.Type.GetType("System.Decimal"));
+            this.dtDetalle.Columns["precio_compra"].ReadOnly = true;
+
             this.dtDetalle.Columns.Add("precio_venta", System.Type.GetType("System.Decimal"));
+            this.dtDetalle.Columns["precio_venta"].ReadOnly = true;
+
             this.dtDetalle.Columns.Add("stock_inicial", System.Type.GetType("System.Int32"));
+            this.dtDetalle.Columns["stock_inicial"].ReadOnly = true;
             this.dtDetalle.Columns.Add("fecha_produccion", System.Type.GetType("System.DateTime"));
+            this.dtDetalle.Columns["fecha_produccion"].ReadOnly = true;
             this.dtDetalle.Columns.Add("fecha_vencimiento", System.Type.GetType("System.DateTime"));
+            this.dtDetalle.Columns["fecha_vencimiento"].ReadOnly = true;
             this.dtDetalle.Columns.Add("subtotal", System.Type.GetType("System.Decimal"));
+            this.dtDetalle.Columns["subtotal"].ReadOnly = true;
             this.dtDetalle.Columns.Add("Impuesto", System.Type.GetType("System.Decimal"));
+            this.dtDetalle.Columns["Impuesto"].ReadOnly = true;
+
+
+            //this.dtDetalle.Columns.Add("limpio", System.Type.GetType("System.String"));
+            this.dtDetalle.Columns.Add("limpio", typeof(bool));
+            this.dtDetalle.Columns["limpio"].ReadOnly = true;
+            this.dtDetalle.Columns.Add("deteriorado", typeof(bool));
+
+            this.dtDetalle.Columns["deteriorado"].ReadOnly = true;
+            this.dtDetalle.Columns.Add("envasecerrado", typeof(bool));
+
+            this.dtDetalle.Columns["envasecerrado"].ReadOnly = true;
+            this.dtDetalle.Columns.Add("certanalisis", typeof(bool));
+
+            this.dtDetalle.Columns["certanalisis"].ReadOnly = true;
+            this.dtDetalle.Columns.Add("sanitario", typeof(bool));
+
+            this.dtDetalle.Columns["sanitario"].ReadOnly = true;
+
+
+
             //Relacionar nuestro DataGRidView con nuestro DataTable
             this.dataListadoDetalle.DataSource = this.dtDetalle;
 
@@ -340,6 +601,25 @@ namespace CapaPresentacion
         {
             try
             {
+
+
+                //TimeSpan hora = TimeSpan.Parse(horaInicio);
+
+                DateTime hora_Inicio = dtp_inicio.Value;
+                string horaInicio = hora_Inicio.ToString("HH:mm");
+
+                DateTime hora_Fin = dtp_fin.Value;
+                string horaFin = hora_Fin.ToString("HH:mm");
+
+
+                DateTime horaInicioDT = DateTime.Today.Add(TimeSpan.Parse(horaInicio));
+                DateTime horaFinDT = DateTime.Today.Add(TimeSpan.Parse(horaFin));
+
+                // te da algo como 2025-07-06 14:30:00
+                //cmd.Parameters.AddWithValue("@hora", hora);
+
+
+
                 string rpta = "";
                 if (this.txtIdproveedor.Text == string.Empty || this.txtSerie.Text == string.Empty
                     || this.txtCorrelativo.Text == string.Empty || this.txtIgv.Text == string.Empty
@@ -359,6 +639,9 @@ namespace CapaPresentacion
                 else
                 {
 
+
+
+
                     if (dtDetalle != null && dtDetalle.Rows.Count > 0)
                     {
                         errorIcono.Clear();
@@ -375,6 +658,17 @@ namespace CapaPresentacion
 
                                 cbTipo_Ingreso.Text,
                                 Convert.ToInt32(this.txtIdencargado.Text),
+
+                                horaInicioDT,
+                                horaFinDT,
+
+
+                                cbTipo_Producto.Text,
+                                txtBultos.Text,
+                                txtDUA.Text,
+                                txtCorrelativoUnico.Text,
+
+
                                 dtDetalle
                                 );
 
@@ -447,6 +741,40 @@ namespace CapaPresentacion
                     }
                     if (registrar)
                     {
+
+                        //bool estaMarcado = cb_limpio.Checked;
+
+                        //bool cb_limpio_b = cb_limpio.Checked;
+                        //string txt_cb_limpio = cb_limpio_b.ToString();
+
+                        //bool cb_limpio_b = cb_limpio.Checked;
+                        //string txt_cb_limpio = cb_limpio_b ? "Activo" : "Inactivo";
+
+
+                        //bool cb_deteriorado_b = cb_deteriorado.Checked;
+                        //string txt_cb_deteriorado = cb_deteriorado_b.ToString();
+
+                        //bool cb_deteriorado_b = cb_deteriorado.Checked;
+                        //string txt_cb_deteriorado = cb_deteriorado_b ? "Activo" : "Inactivo";
+
+                        ////bool cb_deteriorado_b = true;
+                        ////string txt_cb_deteriorado = cb_deteriorado_b ? "Activo" : "Inactivo";
+
+                        //bool cb_envasecerrado_b = cb_envasecerrado.Checked;
+                        //string txt_cb_envasecerrado = cb_envasecerrado_b ? "Activo" : "Inactivo";
+
+                        ////bool cb_certanalisis_b = cb_certanalisis.Checked;
+                        ////string txt_cb_certanalisis = cb_certanalisis_b.ToString();
+
+                        //bool cb_certanalisis_b = cb_certanalisis.Checked;
+                        //string txt_cb_certanalisis = cb_certanalisis_b ? "Activo" : "Inactivo";
+
+
+                        //bool cb_sanitario_b = cb_sanitario.Checked;
+                        //string txt_cb_sanitario = cb_sanitario_b ? "Activo" : "Inactivo"; 
+
+
+
                         decimal subTotal=Convert.ToDecimal(this.txtStock.Text)*Convert.ToDecimal(this.txtPrecio_Compra.Text);
                         totalPagado = totalPagado + subTotal;
                         this.lblTotal_Pagado.Text = totalPagado.ToString("#0.00#");
@@ -462,6 +790,16 @@ namespace CapaPresentacion
                         row["subtotal"] = subTotal;
 
                         row["lote"] = this.txtLote.Text;
+
+
+
+
+                        row["limpio"] = cb_limpio.Checked;
+                        row["deteriorado"] = cb_deteriorado.Checked; 
+                        row["envasecerrado"] = cb_envasecerrado.Checked;
+                        row["certanalisis"] = cb_certanalisis.Checked;
+                        row["sanitario"] = cb_sanitario.Checked;
+
 
                         this.dtDetalle.Rows.Add(row);
                         this.limpiarDetalle();
@@ -504,6 +842,7 @@ namespace CapaPresentacion
 
             //ES EL EVENTO CANCELAR
             //INI
+
             this.IsNuevo = false;
             this.Botones();
             this.Limpiar();
@@ -523,6 +862,18 @@ namespace CapaPresentacion
 
             this.txtEncargado .Text = Convert.ToString(this.dataListado.CurrentRow.Cells["EncargadoTransportista"].Value);
 
+            this.dtp_inicio.Value = Convert.ToDateTime(this.dataListado.CurrentRow.Cells["horaInicio"].Value);
+            this.dtp_fin.Value = Convert.ToDateTime(this.dataListado.CurrentRow.Cells["horaFin"].Value);
+
+
+            this.cbTipo_Producto.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["cbTipo_Producto"].Value);
+            this.txtBultos.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["bultos"].Value);
+            this.txtDUA.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["dua"].Value);
+            this.txtCorrelativoUnico.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["correlativoUnico"].Value);
+   //         isnull(i.cbTipo_Producto, '') as 'cbTipo_Producto',
+			//isnull(i.bultos, '') as 'bultos',
+			//isnull(i.dua, '') as 'dua',
+			//isnull(i.correlativoUnico, '') as 'correlativoUnico'
 
 
             this.MostrarDetalle();
@@ -551,16 +902,15 @@ namespace CapaPresentacion
         private void btnImprimirCargo_Click(object sender, EventArgs e)
         {
 
-            //Reportes.FrmReporteCompras frm = new Reportes.FrmReporteCompras();
-            //frm.Texto = Convert.ToString(dtFecha1.Value);
-            //frm.Texto2 = Convert.ToString(dtFecha2.Value);
-            //frm.ShowDialog();
-
-
             Reportes.FrmReporteIngresoCargo frm2 = new Reportes.FrmReporteIngresoCargo();
-            frm2.idingreso = 3011;//Convert.ToString(dtFecha1.Value);
+            frm2.idingreso = 3016;//Convert.ToString(dtFecha1.Value);
             //frm.Texto2 = Convert.ToString(dtFecha2.Value);
             frm2.ShowDialog();
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
 
         }
     }

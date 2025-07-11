@@ -23,7 +23,49 @@ namespace CapaDatos
         private DateTime _Fecha_Produccion;
         private DateTime _Fecha_Vencimiento;
 
+
+        private string _Limpio;
+        private string _Deteriorado;
+        private string _Envasecerrado;
+        private string _Certanalisis;
+        private string _Sanitario;
+
         //Propiedades
+
+
+        public string Sanitario
+        {
+            get { return _Sanitario; }
+            set { _Sanitario = value; }
+        }
+
+
+        public string Certanalisis
+        {
+            get { return _Certanalisis; }
+            set { _Certanalisis = value; }
+        }
+
+
+        public string Envasecerrado
+        {
+            get { return _Envasecerrado; }
+            set { _Envasecerrado = value; }
+        }
+
+        public string Deteriorado
+        {
+            get { return _Deteriorado; }
+            set { _Deteriorado = value; }
+        }
+
+        public string Limpio
+        {
+            get { return _Limpio; }
+            set { _Limpio = value; }
+        }
+
+
         public int Iddetalle_Ingreso
         {
             get { return _Iddetalle_Ingreso; }
@@ -95,7 +137,15 @@ namespace CapaDatos
         public DDetalle_Ingreso(int iddetalle_ingreso,int idingreso,
             int idarticulo,decimal precio_compra,decimal precio_venta,
             int stock_inicial,int stock_actual,DateTime fecha_produccion,
-            DateTime fecha_vencimiento)
+            DateTime fecha_vencimiento,
+            string limpio,
+            string deteriorado,
+            string envasecerrado,
+            string certanalisis,
+            string sanitario
+
+
+            )
         {
             this.Iddetalle_Ingreso = iddetalle_ingreso;
             this.Idingreso = idingreso;
@@ -106,6 +156,13 @@ namespace CapaDatos
             this.Stock_Actual = stock_actual;
             this.Fecha_Produccion = fecha_produccion;
             this.Fecha_Vencimiento = fecha_vencimiento;
+
+            this.Limpio = limpio;
+            this.Deteriorado = deteriorado;
+            this.Envasecerrado = envasecerrado;
+            this.Certanalisis = certanalisis;
+            this.Sanitario = sanitario;
+
 
         }
 
@@ -187,6 +244,50 @@ namespace CapaDatos
                 ParLote.Size = 50;
                 ParLote.Value = Detalle_Ingreso.Lote;
                 SqlCmd.Parameters.Add(ParLote);
+
+
+                ////
+                ///
+                SqlParameter ParLimpio = new SqlParameter();
+                ParLimpio.ParameterName = "@limpio";
+                ParLimpio.SqlDbType = SqlDbType.VarChar;
+                ParLimpio.Size = 10;
+                ParLimpio.Value = Detalle_Ingreso.Limpio;
+                SqlCmd.Parameters.Add(ParLimpio);
+
+                SqlParameter ParDeteriorado = new SqlParameter();
+                ParDeteriorado.ParameterName = "@deteriorado";
+                ParDeteriorado.SqlDbType = SqlDbType.VarChar;
+                ParDeteriorado.Size = 10;
+                ParDeteriorado.Value = Detalle_Ingreso.Deteriorado;
+                SqlCmd.Parameters.Add(ParDeteriorado);
+
+                SqlParameter ParEnvasecerrado = new SqlParameter();
+                ParEnvasecerrado.ParameterName = "@envasecerrado";
+                ParEnvasecerrado.SqlDbType = SqlDbType.VarChar;
+                ParEnvasecerrado.Size = 10;
+                ParEnvasecerrado.Value = Detalle_Ingreso.Envasecerrado;
+                SqlCmd.Parameters.Add(ParEnvasecerrado);
+
+                SqlParameter ParCertanalisis = new SqlParameter();
+                ParCertanalisis.ParameterName = "@certanalisis";
+                ParCertanalisis.SqlDbType = SqlDbType.VarChar;
+                ParCertanalisis.Size = 10;
+                ParCertanalisis.Value = Detalle_Ingreso.Certanalisis;
+                SqlCmd.Parameters.Add(ParCertanalisis);
+
+                SqlParameter ParSanitario = new SqlParameter();
+                ParSanitario.ParameterName = "@sanitario";
+                ParSanitario.SqlDbType = SqlDbType.VarChar;
+                ParSanitario.Size = 10;
+                ParSanitario.Value = Detalle_Ingreso.Sanitario;
+                SqlCmd.Parameters.Add(ParSanitario);
+
+
+
+                ////
+
+
 
 
 

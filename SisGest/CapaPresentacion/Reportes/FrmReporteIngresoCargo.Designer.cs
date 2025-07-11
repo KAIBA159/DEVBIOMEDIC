@@ -30,19 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            
-            
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-
-
-            this.dsPrincipal = new CapaPresentacion.dsPrincipal();
             this.spbuscar_ingresoCargoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.spbuscar_ingresoCargoTableAdapter = new CapaPresentacion.dsPrincipalTableAdapters.spbuscar_ingresoCargoTableAdapter(); //.spbuscar_ingresoCargoTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.spbuscar_ingresoCargoBindingSource)).BeginInit();// .spbuscaringresofechaBindingSource)).BeginInit();
+            this.dsPrincipal = new CapaPresentacion.dsPrincipal();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.spbuscar_ingresoCargoTableAdapter = new CapaPresentacion.dsPrincipalTableAdapters.spbuscar_ingresoCargoTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.spbuscar_ingresoCargoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsPrincipal)).BeginInit();
             this.SuspendLayout();
             // 
-            // spbuscaringresofechaBindingSource
+            // spbuscar_ingresoCargoBindingSource
             // 
             this.spbuscar_ingresoCargoBindingSource.DataMember = "spbuscar_ingresoCargo";
             this.spbuscar_ingresoCargoBindingSource.DataSource = this.dsPrincipal;
@@ -60,9 +56,9 @@
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "CapaPresentacion.Reportes.rptReporteIngresoCargo.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.reportViewer1.Margin = new System.Windows.Forms.Padding(2);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(710, 432);
+            this.reportViewer1.Size = new System.Drawing.Size(1050, 715);
             this.reportViewer1.TabIndex = 0;
             // 
             // spbuscar_ingresoCargoTableAdapter
@@ -73,9 +69,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(710, 432);
+            this.ClientSize = new System.Drawing.Size(1050, 715);
             this.Controls.Add(this.reportViewer1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
             this.Name = "FrmReporteIngresoCargo";
             this.Text = ".:: IngresoCargo ::.";
             this.Load += new System.EventHandler(this.FrmReporteIngresoCargo_Load);

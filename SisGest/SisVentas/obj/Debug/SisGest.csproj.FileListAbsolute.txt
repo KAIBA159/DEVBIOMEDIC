@@ -104,3 +104,4 @@ C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\SisVentas\obj\D
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\SisVentas\obj\Debug\SisGest.csproj.Up2Date
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\SisVentas\obj\Debug\SisVentas.exe
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\SisVentas\obj\Debug\SisVentas.pdb
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\SisVentas\obj\Debug\SisVentas.exe.config
