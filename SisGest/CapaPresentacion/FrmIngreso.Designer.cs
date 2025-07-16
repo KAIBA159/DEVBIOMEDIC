@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.dtFecha2 = new System.Windows.Forms.DateTimePicker();
             this.dtFecha1 = new System.Windows.Forms.DateTimePicker();
@@ -39,12 +38,13 @@
             this.Eliminar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.lblTotal = new System.Windows.Forms.Label();
             this.chkEliminar = new System.Windows.Forms.CheckBox();
-            this.btnImprimir = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.txtBultos = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.txtCorrelativoUnico = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.txtDUA = new System.Windows.Forms.TextBox();
             this.cbTipo_Producto = new System.Windows.Forms.ComboBox();
@@ -53,9 +53,7 @@
             this.label20 = new System.Windows.Forms.Label();
             this.dtp_fin = new System.Windows.Forms.DateTimePicker();
             this.dtp_inicio = new System.Windows.Forms.DateTimePicker();
-            this.txtIdencargado = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.btnBuscarEncargado = new System.Windows.Forms.Button();
             this.txtEncargado = new System.Windows.Forms.TextBox();
             this.cbTipo_Ingreso = new System.Windows.Forms.ComboBox();
             this.label18 = new System.Windows.Forms.Label();
@@ -63,10 +61,15 @@
             this.label16 = new System.Windows.Forms.Label();
             this.dataListadoDetalle = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.cb_sanitario = new System.Windows.Forms.CheckBox();
+            this.cb_certanalisis = new System.Windows.Forms.CheckBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.cb_envasecerrado = new System.Windows.Forms.CheckBox();
+            this.cb_deteriorado = new System.Windows.Forms.CheckBox();
+            this.cb_limpio = new System.Windows.Forms.CheckBox();
             this.txtLote = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.btnQuitar = new System.Windows.Forms.Button();
-            this.btnAgregar = new System.Windows.Forms.Button();
             this.dtFecha_Vencimiento = new System.Windows.Forms.DateTimePicker();
             this.label15 = new System.Windows.Forms.Label();
             this.dtFecha_Produccion = new System.Windows.Forms.DateTimePicker();
@@ -77,43 +80,40 @@
             this.label12 = new System.Windows.Forms.Label();
             this.txtStock = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnBuscarArticulo = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.txtArticulo = new System.Windows.Forms.TextBox();
-            this.txtIdarticulo = new System.Windows.Forms.TextBox();
             this.txtCorrelativo = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.cbTipo_Comprobante = new System.Windows.Forms.ComboBox();
             this.dtFecha = new System.Windows.Forms.DateTimePicker();
             this.label10 = new System.Windows.Forms.Label();
-            this.btnBuscarProveedor = new System.Windows.Forms.Button();
-            this.txtIdproveedor = new System.Windows.Forms.TextBox();
             this.txtProveedor = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtSerie = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnNuevo = new System.Windows.Forms.Button();
             this.txtIdingreso = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtIdencargado = new System.Windows.Forms.TextBox();
+            this.txtIdarticulo = new System.Windows.Forms.TextBox();
+            this.txtIdproveedor = new System.Windows.Forms.TextBox();
             this.txtIgv = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.ttMensaje = new System.Windows.Forms.ToolTip(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnImprimir = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnBuscarEncargado = new System.Windows.Forms.Button();
+            this.btnQuitar = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnBuscarArticulo = new System.Windows.Forms.Button();
+            this.btnBuscarProveedor = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.txtCorrelativoUnico = new System.Windows.Forms.TextBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.txtBultos = new System.Windows.Forms.TextBox();
-            this.cb_limpio = new System.Windows.Forms.CheckBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.cb_deteriorado = new System.Windows.Forms.CheckBox();
-            this.cb_envasecerrado = new System.Windows.Forms.CheckBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.cb_sanitario = new System.Windows.Forms.CheckBox();
-            this.cb_certanalisis = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataListado)).BeginInit();
@@ -121,10 +121,10 @@
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataListadoDetalle)).BeginInit();
             this.groupBox2.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -161,20 +161,7 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Listado";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Silver;
-            this.button1.Image = global::CapaPresentacion.Properties.Resources.imprimir;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(698, 28);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(148, 28);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "&Imprimir_Cargo";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.btnImprimirCargo_Click);
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // label9
             // 
@@ -254,48 +241,6 @@
             this.chkEliminar.UseVisualStyleBackColor = true;
             this.chkEliminar.CheckedChanged += new System.EventHandler(this.chkEliminar_CheckedChanged);
             // 
-            // btnImprimir
-            // 
-            this.btnImprimir.BackColor = System.Drawing.Color.Silver;
-            this.btnImprimir.Image = global::CapaPresentacion.Properties.Resources.imprimir;
-            this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImprimir.Location = new System.Drawing.Point(593, 28);
-            this.btnImprimir.Margin = new System.Windows.Forms.Padding(2);
-            this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(88, 28);
-            this.btnImprimir.TabIndex = 4;
-            this.btnImprimir.Text = "&Imprimir";
-            this.btnImprimir.UseVisualStyleBackColor = false;
-            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.BackColor = System.Drawing.Color.Silver;
-            this.btnEliminar.Image = global::CapaPresentacion.Properties.Resources.eliminar;
-            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(498, 28);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(81, 28);
-            this.btnEliminar.TabIndex = 3;
-            this.btnEliminar.Text = "&Anular";
-            this.btnEliminar.UseVisualStyleBackColor = false;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.BackColor = System.Drawing.Color.Silver;
-            this.btnBuscar.Image = global::CapaPresentacion.Properties.Resources.Buscar_p;
-            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(405, 28);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(79, 28);
-            this.btnBuscar.TabIndex = 2;
-            this.btnBuscar.Text = "&Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = false;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -366,6 +311,46 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ingresos Almacén";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(584, 64);
+            this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(42, 13);
+            this.label25.TabIndex = 61;
+            this.label25.Text = "Bultos: ";
+            // 
+            // txtBultos
+            // 
+            this.txtBultos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.txtBultos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtBultos.Location = new System.Drawing.Point(627, 60);
+            this.txtBultos.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBultos.Name = "txtBultos";
+            this.txtBultos.Size = new System.Drawing.Size(97, 20);
+            this.txtBultos.TabIndex = 60;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(263, 19);
+            this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(91, 13);
+            this.label24.TabIndex = 59;
+            this.label24.Text = "CorrelativoUnico: ";
+            // 
+            // txtCorrelativoUnico
+            // 
+            this.txtCorrelativoUnico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.txtCorrelativoUnico.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCorrelativoUnico.Location = new System.Drawing.Point(354, 15);
+            this.txtCorrelativoUnico.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCorrelativoUnico.Name = "txtCorrelativoUnico";
+            this.txtCorrelativoUnico.Size = new System.Drawing.Size(178, 20);
+            this.txtCorrelativoUnico.TabIndex = 58;
             // 
             // label23
             // 
@@ -452,17 +437,6 @@
             this.dtp_inicio.Size = new System.Drawing.Size(77, 20);
             this.dtp_inicio.TabIndex = 50;
             // 
-            // txtIdencargado
-            // 
-            this.txtIdencargado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.txtIdencargado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtIdencargado.Location = new System.Drawing.Point(915, 36);
-            this.txtIdencargado.Margin = new System.Windows.Forms.Padding(2);
-            this.txtIdencargado.Name = "txtIdencargado";
-            this.txtIdencargado.Size = new System.Drawing.Size(42, 20);
-            this.txtIdencargado.TabIndex = 49;
-            this.txtIdencargado.Visible = false;
-            // 
             // label19
             // 
             this.label19.AutoSize = true;
@@ -472,17 +446,6 @@
             this.label19.Size = new System.Drawing.Size(62, 13);
             this.label19.TabIndex = 48;
             this.label19.Text = "Encargado:";
-            // 
-            // btnBuscarEncargado
-            // 
-            this.btnBuscarEncargado.Image = global::CapaPresentacion.Properties.Resources.Buscar_p;
-            this.btnBuscarEncargado.Location = new System.Drawing.Point(852, 79);
-            this.btnBuscarEncargado.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBuscarEncargado.Name = "btnBuscarEncargado";
-            this.btnBuscarEncargado.Size = new System.Drawing.Size(32, 25);
-            this.btnBuscarEncargado.TabIndex = 47;
-            this.btnBuscarEncargado.UseVisualStyleBackColor = true;
-            this.btnBuscarEncargado.Click += new System.EventHandler(this.btnBuscarEncargado_Click);
             // 
             // txtEncargado
             // 
@@ -581,8 +544,81 @@
             this.groupBox2.Size = new System.Drawing.Size(899, 114);
             this.groupBox2.TabIndex = 28;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "qqqq";
+            this.groupBox2.Text = "Detalle";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.cb_sanitario);
+            this.groupBox4.Controls.Add(this.cb_certanalisis);
+            this.groupBox4.Location = new System.Drawing.Point(554, 24);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(132, 58);
+            this.groupBox4.TabIndex = 47;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "DocumentosRecibidos";
+            // 
+            // cb_sanitario
+            // 
+            this.cb_sanitario.AutoSize = true;
+            this.cb_sanitario.Location = new System.Drawing.Point(7, 35);
+            this.cb_sanitario.Name = "cb_sanitario";
+            this.cb_sanitario.Size = new System.Drawing.Size(93, 17);
+            this.cb_sanitario.TabIndex = 45;
+            this.cb_sanitario.Text = "Reg. Sanitario";
+            this.cb_sanitario.UseVisualStyleBackColor = true;
+            // 
+            // cb_certanalisis
+            // 
+            this.cb_certanalisis.AutoSize = true;
+            this.cb_certanalisis.Location = new System.Drawing.Point(6, 16);
+            this.cb_certanalisis.Name = "cb_certanalisis";
+            this.cb_certanalisis.Size = new System.Drawing.Size(101, 17);
+            this.cb_certanalisis.TabIndex = 44;
+            this.cb_certanalisis.Text = "Cert. de Analisis";
+            this.cb_certanalisis.UseVisualStyleBackColor = true;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.cb_envasecerrado);
+            this.groupBox3.Controls.Add(this.cb_deteriorado);
+            this.groupBox3.Controls.Add(this.cb_limpio);
+            this.groupBox3.Location = new System.Drawing.Point(389, 21);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(132, 78);
+            this.groupBox3.TabIndex = 45;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "EstadoProducto";
+            // 
+            // cb_envasecerrado
+            // 
+            this.cb_envasecerrado.AutoSize = true;
+            this.cb_envasecerrado.Location = new System.Drawing.Point(6, 55);
+            this.cb_envasecerrado.Name = "cb_envasecerrado";
+            this.cb_envasecerrado.Size = new System.Drawing.Size(102, 17);
+            this.cb_envasecerrado.TabIndex = 46;
+            this.cb_envasecerrado.Text = "Envase Cerrado";
+            this.cb_envasecerrado.UseVisualStyleBackColor = true;
+            // 
+            // cb_deteriorado
+            // 
+            this.cb_deteriorado.AutoSize = true;
+            this.cb_deteriorado.Location = new System.Drawing.Point(6, 35);
+            this.cb_deteriorado.Name = "cb_deteriorado";
+            this.cb_deteriorado.Size = new System.Drawing.Size(81, 17);
+            this.cb_deteriorado.TabIndex = 45;
+            this.cb_deteriorado.Text = "Deteriorado";
+            this.cb_deteriorado.UseVisualStyleBackColor = true;
+            // 
+            // cb_limpio
+            // 
+            this.cb_limpio.AutoSize = true;
+            this.cb_limpio.Location = new System.Drawing.Point(6, 16);
+            this.cb_limpio.Name = "cb_limpio";
+            this.cb_limpio.Size = new System.Drawing.Size(56, 17);
+            this.cb_limpio.TabIndex = 44;
+            this.cb_limpio.Text = "Limpio";
+            this.cb_limpio.UseVisualStyleBackColor = true;
             // 
             // txtLote
             // 
@@ -603,28 +639,6 @@
             this.label17.Size = new System.Drawing.Size(31, 13);
             this.label17.TabIndex = 42;
             this.label17.Text = "Lote:";
-            // 
-            // btnQuitar
-            // 
-            this.btnQuitar.Image = global::CapaPresentacion.Properties.Resources.Remove;
-            this.btnQuitar.Location = new System.Drawing.Point(821, 52);
-            this.btnQuitar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnQuitar.Name = "btnQuitar";
-            this.btnQuitar.Size = new System.Drawing.Size(43, 27);
-            this.btnQuitar.TabIndex = 41;
-            this.btnQuitar.UseVisualStyleBackColor = true;
-            this.btnQuitar.Click += new System.EventHandler(this.btnQuitar_Click);
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.Image = global::CapaPresentacion.Properties.Resources.agregar_p;
-            this.btnAgregar.Location = new System.Drawing.Point(821, 21);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(43, 27);
-            this.btnAgregar.TabIndex = 40;
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // dtFecha_Vencimiento
             // 
@@ -724,17 +738,6 @@
             this.label5.TabIndex = 32;
             this.label5.Text = "Cantidad:";
             // 
-            // btnBuscarArticulo
-            // 
-            this.btnBuscarArticulo.Image = global::CapaPresentacion.Properties.Resources.Buscar_p;
-            this.btnBuscarArticulo.Location = new System.Drawing.Point(296, 20);
-            this.btnBuscarArticulo.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBuscarArticulo.Name = "btnBuscarArticulo";
-            this.btnBuscarArticulo.Size = new System.Drawing.Size(32, 22);
-            this.btnBuscarArticulo.TabIndex = 32;
-            this.btnBuscarArticulo.UseVisualStyleBackColor = true;
-            this.btnBuscarArticulo.Click += new System.EventHandler(this.btnBuscarArticulo_Click);
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -754,16 +757,6 @@
             this.txtArticulo.Name = "txtArticulo";
             this.txtArticulo.Size = new System.Drawing.Size(223, 20);
             this.txtArticulo.TabIndex = 30;
-            // 
-            // txtIdarticulo
-            // 
-            this.txtIdarticulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.txtIdarticulo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtIdarticulo.Location = new System.Drawing.Point(747, 36);
-            this.txtIdarticulo.Margin = new System.Windows.Forms.Padding(2);
-            this.txtIdarticulo.Name = "txtIdarticulo";
-            this.txtIdarticulo.Size = new System.Drawing.Size(42, 20);
-            this.txtIdarticulo.TabIndex = 31;
             // 
             // txtCorrelativo
             // 
@@ -819,28 +812,6 @@
             this.label10.TabIndex = 21;
             this.label10.Text = "Fecha:";
             // 
-            // btnBuscarProveedor
-            // 
-            this.btnBuscarProveedor.Image = global::CapaPresentacion.Properties.Resources.Buscar_p;
-            this.btnBuscarProveedor.Location = new System.Drawing.Point(538, 34);
-            this.btnBuscarProveedor.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBuscarProveedor.Name = "btnBuscarProveedor";
-            this.btnBuscarProveedor.Size = new System.Drawing.Size(32, 25);
-            this.btnBuscarProveedor.TabIndex = 18;
-            this.btnBuscarProveedor.UseVisualStyleBackColor = true;
-            this.btnBuscarProveedor.ClientSizeChanged += new System.EventHandler(this.btnBuscarProveedor_ClientSizeChanged);
-            this.btnBuscarProveedor.Click += new System.EventHandler(this.btnBuscarProveedor_Click);
-            // 
-            // txtIdproveedor
-            // 
-            this.txtIdproveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.txtIdproveedor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtIdproveedor.Location = new System.Drawing.Point(700, 36);
-            this.txtIdproveedor.Margin = new System.Windows.Forms.Padding(2);
-            this.txtIdproveedor.Name = "txtIdproveedor";
-            this.txtIdproveedor.Size = new System.Drawing.Size(42, 20);
-            this.txtIdproveedor.TabIndex = 17;
-            // 
             // txtProveedor
             // 
             this.txtProveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
@@ -881,48 +852,6 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "Comprobante:";
             // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnCancelar.Image = global::CapaPresentacion.Properties.Resources.error2;
-            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(830, 416);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(80, 27);
-            this.btnCancelar.TabIndex = 9;
-            this.btnCancelar.Text = "&Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnGuardar.Image = global::CapaPresentacion.Properties.Resources.disco;
-            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(740, 416);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(80, 27);
-            this.btnGuardar.TabIndex = 7;
-            this.btnGuardar.Text = "&Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = false;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnNuevo.Image = global::CapaPresentacion.Properties.Resources.nuevo;
-            this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevo.Location = new System.Drawing.Point(655, 416);
-            this.btnNuevo.Margin = new System.Windows.Forms.Padding(2);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(80, 26);
-            this.btnNuevo.TabIndex = 6;
-            this.btnNuevo.Text = "&Nuevo";
-            this.btnNuevo.UseVisualStyleBackColor = false;
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
-            // 
             // txtIdingreso
             // 
             this.txtIdingreso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
@@ -942,6 +871,37 @@
             this.label3.Size = new System.Drawing.Size(43, 13);
             this.label3.TabIndex = 0;
             this.label3.Text = "Código:";
+            // 
+            // txtIdencargado
+            // 
+            this.txtIdencargado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.txtIdencargado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtIdencargado.Location = new System.Drawing.Point(915, 36);
+            this.txtIdencargado.Margin = new System.Windows.Forms.Padding(2);
+            this.txtIdencargado.Name = "txtIdencargado";
+            this.txtIdencargado.Size = new System.Drawing.Size(42, 20);
+            this.txtIdencargado.TabIndex = 49;
+            this.txtIdencargado.Visible = false;
+            // 
+            // txtIdarticulo
+            // 
+            this.txtIdarticulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.txtIdarticulo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtIdarticulo.Location = new System.Drawing.Point(747, 36);
+            this.txtIdarticulo.Margin = new System.Windows.Forms.Padding(2);
+            this.txtIdarticulo.Name = "txtIdarticulo";
+            this.txtIdarticulo.Size = new System.Drawing.Size(42, 20);
+            this.txtIdarticulo.TabIndex = 31;
+            // 
+            // txtIdproveedor
+            // 
+            this.txtIdproveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.txtIdproveedor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtIdproveedor.Location = new System.Drawing.Point(700, 36);
+            this.txtIdproveedor.Margin = new System.Windows.Forms.Padding(2);
+            this.txtIdproveedor.Name = "txtIdproveedor";
+            this.txtIdproveedor.Size = new System.Drawing.Size(42, 20);
+            this.txtIdproveedor.TabIndex = 17;
             // 
             // txtIgv
             // 
@@ -985,6 +945,160 @@
             // 
             this.errorIcono.ContainerControl = this;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Silver;
+            this.button1.Image = global::CapaPresentacion.Properties.Resources.imprimir;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(698, 28);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(148, 28);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "&Imprimir_Cargo";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.btnImprimirCargo_Click);
+            // 
+            // btnImprimir
+            // 
+            this.btnImprimir.BackColor = System.Drawing.Color.Silver;
+            this.btnImprimir.Image = global::CapaPresentacion.Properties.Resources.imprimir;
+            this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnImprimir.Location = new System.Drawing.Point(593, 28);
+            this.btnImprimir.Margin = new System.Windows.Forms.Padding(2);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(88, 28);
+            this.btnImprimir.TabIndex = 4;
+            this.btnImprimir.Text = "&Imprimir";
+            this.btnImprimir.UseVisualStyleBackColor = false;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.Color.Silver;
+            this.btnEliminar.Image = global::CapaPresentacion.Properties.Resources.eliminar;
+            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEliminar.Location = new System.Drawing.Point(498, 28);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(81, 28);
+            this.btnEliminar.TabIndex = 3;
+            this.btnEliminar.Text = "&Anular";
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackColor = System.Drawing.Color.Silver;
+            this.btnBuscar.Image = global::CapaPresentacion.Properties.Resources.Buscar_p;
+            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscar.Location = new System.Drawing.Point(405, 28);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(79, 28);
+            this.btnBuscar.TabIndex = 2;
+            this.btnBuscar.Text = "&Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // btnBuscarEncargado
+            // 
+            this.btnBuscarEncargado.Image = global::CapaPresentacion.Properties.Resources.Buscar_p;
+            this.btnBuscarEncargado.Location = new System.Drawing.Point(852, 79);
+            this.btnBuscarEncargado.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuscarEncargado.Name = "btnBuscarEncargado";
+            this.btnBuscarEncargado.Size = new System.Drawing.Size(32, 25);
+            this.btnBuscarEncargado.TabIndex = 47;
+            this.btnBuscarEncargado.UseVisualStyleBackColor = true;
+            this.btnBuscarEncargado.Click += new System.EventHandler(this.btnBuscarEncargado_Click);
+            // 
+            // btnQuitar
+            // 
+            this.btnQuitar.Image = global::CapaPresentacion.Properties.Resources.Remove;
+            this.btnQuitar.Location = new System.Drawing.Point(821, 52);
+            this.btnQuitar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnQuitar.Name = "btnQuitar";
+            this.btnQuitar.Size = new System.Drawing.Size(43, 27);
+            this.btnQuitar.TabIndex = 41;
+            this.btnQuitar.UseVisualStyleBackColor = true;
+            this.btnQuitar.Click += new System.EventHandler(this.btnQuitar_Click);
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Image = global::CapaPresentacion.Properties.Resources.agregar_p;
+            this.btnAgregar.Location = new System.Drawing.Point(821, 21);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(43, 27);
+            this.btnAgregar.TabIndex = 40;
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // btnBuscarArticulo
+            // 
+            this.btnBuscarArticulo.Image = global::CapaPresentacion.Properties.Resources.Buscar_p;
+            this.btnBuscarArticulo.Location = new System.Drawing.Point(296, 20);
+            this.btnBuscarArticulo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuscarArticulo.Name = "btnBuscarArticulo";
+            this.btnBuscarArticulo.Size = new System.Drawing.Size(32, 22);
+            this.btnBuscarArticulo.TabIndex = 32;
+            this.btnBuscarArticulo.UseVisualStyleBackColor = true;
+            this.btnBuscarArticulo.Click += new System.EventHandler(this.btnBuscarArticulo_Click);
+            // 
+            // btnBuscarProveedor
+            // 
+            this.btnBuscarProveedor.Image = global::CapaPresentacion.Properties.Resources.Buscar_p;
+            this.btnBuscarProveedor.Location = new System.Drawing.Point(538, 34);
+            this.btnBuscarProveedor.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuscarProveedor.Name = "btnBuscarProveedor";
+            this.btnBuscarProveedor.Size = new System.Drawing.Size(32, 25);
+            this.btnBuscarProveedor.TabIndex = 18;
+            this.btnBuscarProveedor.UseVisualStyleBackColor = true;
+            this.btnBuscarProveedor.ClientSizeChanged += new System.EventHandler(this.btnBuscarProveedor_ClientSizeChanged);
+            this.btnBuscarProveedor.Click += new System.EventHandler(this.btnBuscarProveedor_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnCancelar.Image = global::CapaPresentacion.Properties.Resources.error2;
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelar.Location = new System.Drawing.Point(830, 416);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(80, 27);
+            this.btnCancelar.TabIndex = 9;
+            this.btnCancelar.Text = "&Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnGuardar.Image = global::CapaPresentacion.Properties.Resources.disco;
+            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGuardar.Location = new System.Drawing.Point(740, 416);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(80, 27);
+            this.btnGuardar.TabIndex = 7;
+            this.btnGuardar.Text = "&Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnNuevo.Image = global::CapaPresentacion.Properties.Resources.nuevo;
+            this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNuevo.Location = new System.Drawing.Point(655, 416);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(80, 26);
+            this.btnNuevo.TabIndex = 6;
+            this.btnNuevo.Text = "&Nuevo";
+            this.btnNuevo.UseVisualStyleBackColor = false;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::CapaPresentacion.Properties.Resources.pencil_scale;
@@ -995,119 +1109,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(68, 48);
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(263, 19);
-            this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(91, 13);
-            this.label24.TabIndex = 59;
-            this.label24.Text = "CorrelativoUnico: ";
-            // 
-            // txtCorrelativoUnico
-            // 
-            this.txtCorrelativoUnico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.txtCorrelativoUnico.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCorrelativoUnico.Location = new System.Drawing.Point(354, 15);
-            this.txtCorrelativoUnico.Margin = new System.Windows.Forms.Padding(2);
-            this.txtCorrelativoUnico.Name = "txtCorrelativoUnico";
-            this.txtCorrelativoUnico.Size = new System.Drawing.Size(178, 20);
-            this.txtCorrelativoUnico.TabIndex = 58;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(584, 64);
-            this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(42, 13);
-            this.label25.TabIndex = 61;
-            this.label25.Text = "Bultos: ";
-            // 
-            // txtBultos
-            // 
-            this.txtBultos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.txtBultos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtBultos.Location = new System.Drawing.Point(627, 60);
-            this.txtBultos.Margin = new System.Windows.Forms.Padding(2);
-            this.txtBultos.Name = "txtBultos";
-            this.txtBultos.Size = new System.Drawing.Size(97, 20);
-            this.txtBultos.TabIndex = 60;
-            // 
-            // cb_limpio
-            // 
-            this.cb_limpio.AutoSize = true;
-            this.cb_limpio.Location = new System.Drawing.Point(6, 16);
-            this.cb_limpio.Name = "cb_limpio";
-            this.cb_limpio.Size = new System.Drawing.Size(56, 17);
-            this.cb_limpio.TabIndex = 44;
-            this.cb_limpio.Text = "Limpio";
-            this.cb_limpio.UseVisualStyleBackColor = true;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.cb_envasecerrado);
-            this.groupBox3.Controls.Add(this.cb_deteriorado);
-            this.groupBox3.Controls.Add(this.cb_limpio);
-            this.groupBox3.Location = new System.Drawing.Point(389, 21);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(132, 78);
-            this.groupBox3.TabIndex = 45;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "EstadoProducto";
-            // 
-            // cb_deteriorado
-            // 
-            this.cb_deteriorado.AutoSize = true;
-            this.cb_deteriorado.Location = new System.Drawing.Point(6, 35);
-            this.cb_deteriorado.Name = "cb_deteriorado";
-            this.cb_deteriorado.Size = new System.Drawing.Size(81, 17);
-            this.cb_deteriorado.TabIndex = 45;
-            this.cb_deteriorado.Text = "Deteriorado";
-            this.cb_deteriorado.UseVisualStyleBackColor = true;
-            // 
-            // cb_envasecerrado
-            // 
-            this.cb_envasecerrado.AutoSize = true;
-            this.cb_envasecerrado.Location = new System.Drawing.Point(6, 55);
-            this.cb_envasecerrado.Name = "cb_envasecerrado";
-            this.cb_envasecerrado.Size = new System.Drawing.Size(102, 17);
-            this.cb_envasecerrado.TabIndex = 46;
-            this.cb_envasecerrado.Text = "Envase Cerrado";
-            this.cb_envasecerrado.UseVisualStyleBackColor = true;
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.cb_sanitario);
-            this.groupBox4.Controls.Add(this.cb_certanalisis);
-            this.groupBox4.Location = new System.Drawing.Point(554, 24);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(132, 58);
-            this.groupBox4.TabIndex = 47;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "DocumentosRecibidos";
-            // 
-            // cb_sanitario
-            // 
-            this.cb_sanitario.AutoSize = true;
-            this.cb_sanitario.Location = new System.Drawing.Point(7, 35);
-            this.cb_sanitario.Name = "cb_sanitario";
-            this.cb_sanitario.Size = new System.Drawing.Size(93, 17);
-            this.cb_sanitario.TabIndex = 45;
-            this.cb_sanitario.Text = "Reg. Sanitario";
-            this.cb_sanitario.UseVisualStyleBackColor = true;
-            // 
-            // cb_certanalisis
-            // 
-            this.cb_certanalisis.AutoSize = true;
-            this.cb_certanalisis.Location = new System.Drawing.Point(6, 16);
-            this.cb_certanalisis.Name = "cb_certanalisis";
-            this.cb_certanalisis.Size = new System.Drawing.Size(101, 17);
-            this.cb_certanalisis.TabIndex = 44;
-            this.cb_certanalisis.Text = "Cert. de Analisis";
-            this.cb_certanalisis.UseVisualStyleBackColor = true;
             // 
             // FrmIngreso
             // 
@@ -1140,12 +1141,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataListadoDetalle)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

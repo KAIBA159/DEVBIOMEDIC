@@ -287,5 +287,14 @@ namespace CapaPresentacion
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void karteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            ConsultarKardex frm = new ConsultarKardex();
+            frm.MdiParent = this;
+            frm.Show();
+
+        }
     }
 }

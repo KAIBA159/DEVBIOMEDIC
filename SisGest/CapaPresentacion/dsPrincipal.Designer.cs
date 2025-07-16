@@ -4181,6 +4181,12 @@ namespace CapaPresentacion {
             
             private global::System.Data.DataColumn columnidarticulo;
             
+            private global::System.Data.DataColumn columnFechaInicio;
+            
+            private global::System.Data.DataColumn columnFechaFin;
+            
+            private global::System.Data.DataColumn columnguia_remisioncliente;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public spbuscar_venta_fechaDataTable() {
@@ -4344,6 +4350,30 @@ namespace CapaPresentacion {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn FechaInicioColumn {
+                get {
+                    return this.columnFechaInicio;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn FechaFinColumn {
+                get {
+                    return this.columnFechaFin;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn guia_remisionclienteColumn {
+                get {
+                    return this.columnguia_remisioncliente;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -4379,7 +4409,24 @@ namespace CapaPresentacion {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public spbuscar_venta_fechaRow Addspbuscar_venta_fechaRow(string Trabajador, string Cliente, System.DateTime fecha, string tipo_comprobante, string serie, string correlativo, decimal Total, decimal Impuesto, string iddetalle_venta1, string subcliente, string lote, int cantidad, string descripcion, int idarticulo) {
+            public spbuscar_venta_fechaRow Addspbuscar_venta_fechaRow(
+                        string Trabajador, 
+                        string Cliente, 
+                        System.DateTime fecha, 
+                        string tipo_comprobante, 
+                        string serie, 
+                        string correlativo, 
+                        decimal Total, 
+                        decimal Impuesto, 
+                        string iddetalle_venta1, 
+                        string subcliente, 
+                        string lote, 
+                        int cantidad, 
+                        string descripcion, 
+                        int idarticulo, 
+                        System.DateTime FechaInicio, 
+                        System.DateTime FechaFin, 
+                        string guia_remisioncliente) {
                 spbuscar_venta_fechaRow rowspbuscar_venta_fechaRow = ((spbuscar_venta_fechaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -4397,7 +4444,10 @@ namespace CapaPresentacion {
                         lote,
                         cantidad,
                         descripcion,
-                        idarticulo};
+                        idarticulo,
+                        FechaInicio,
+                        FechaFin,
+                        guia_remisioncliente};
                 rowspbuscar_venta_fechaRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowspbuscar_venta_fechaRow);
                 return rowspbuscar_venta_fechaRow;
@@ -4443,6 +4493,9 @@ namespace CapaPresentacion {
                 this.columncantidad = base.Columns["cantidad"];
                 this.columndescripcion = base.Columns["descripcion"];
                 this.columnidarticulo = base.Columns["idarticulo"];
+                this.columnFechaInicio = base.Columns["FechaInicio"];
+                this.columnFechaFin = base.Columns["FechaFin"];
+                this.columnguia_remisioncliente = base.Columns["guia_remisioncliente"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4480,6 +4533,12 @@ namespace CapaPresentacion {
                 base.Columns.Add(this.columndescripcion);
                 this.columnidarticulo = new global::System.Data.DataColumn("idarticulo", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnidarticulo);
+                this.columnFechaInicio = new global::System.Data.DataColumn("FechaInicio", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFechaInicio);
+                this.columnFechaFin = new global::System.Data.DataColumn("FechaFin", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFechaFin);
+                this.columnguia_remisioncliente = new global::System.Data.DataColumn("guia_remisioncliente", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnguia_remisioncliente);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnidventa}, true));
                 this.columnidventa.AutoIncrement = true;
@@ -4514,6 +4573,10 @@ namespace CapaPresentacion {
                 this.columndescripcion.ReadOnly = true;
                 this.columndescripcion.MaxLength = 1024;
                 this.columnidarticulo.AllowDBNull = false;
+                this.columnFechaInicio.ReadOnly = true;
+                this.columnFechaFin.ReadOnly = true;
+                this.columnguia_remisioncliente.ReadOnly = true;
+                this.columnguia_remisioncliente.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7203,6 +7266,56 @@ namespace CapaPresentacion {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime FechaInicio {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tablespbuscar_venta_fecha.FechaInicioColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'FechaInicio\' de la tabla \'spbuscar_venta_fecha\' es DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tablespbuscar_venta_fecha.FechaInicioColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime FechaFin {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tablespbuscar_venta_fecha.FechaFinColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'FechaFin\' de la tabla \'spbuscar_venta_fecha\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespbuscar_venta_fecha.FechaFinColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string guia_remisioncliente {
+                get {
+                    try {
+                        return ((string)(this[this.tablespbuscar_venta_fecha.guia_remisionclienteColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'guia_remisioncliente\' de la tabla \'spbuscar_venta_fecha\' " +
+                                "es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespbuscar_venta_fecha.guia_remisionclienteColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsTrabajadorNull() {
                 return this.IsNull(this.tablespbuscar_venta_fecha.TrabajadorColumn);
             }
@@ -7295,6 +7408,42 @@ namespace CapaPresentacion {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetdescripcionNull() {
                 this[this.tablespbuscar_venta_fecha.descripcionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsFechaInicioNull() {
+                return this.IsNull(this.tablespbuscar_venta_fecha.FechaInicioColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetFechaInicioNull() {
+                this[this.tablespbuscar_venta_fecha.FechaInicioColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsFechaFinNull() {
+                return this.IsNull(this.tablespbuscar_venta_fecha.FechaFinColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetFechaFinNull() {
+                this[this.tablespbuscar_venta_fecha.FechaFinColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Isguia_remisionclienteNull() {
+                return this.IsNull(this.tablespbuscar_venta_fecha.guia_remisionclienteColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setguia_remisionclienteNull() {
+                this[this.tablespbuscar_venta_fecha.guia_remisionclienteColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -10386,6 +10535,9 @@ namespace CapaPresentacion.dsPrincipalTableAdapters {
             tableMapping.ColumnMappings.Add("cantidad", "cantidad");
             tableMapping.ColumnMappings.Add("descripcion", "descripcion");
             tableMapping.ColumnMappings.Add("idarticulo", "idarticulo");
+            tableMapping.ColumnMappings.Add("FechaInicio", "FechaInicio");
+            tableMapping.ColumnMappings.Add("FechaFin", "FechaFin");
+            tableMapping.ColumnMappings.Add("guia_remisioncliente", "guia_remisioncliente");
             this._adapter.TableMappings.Add(tableMapping);
         }
         

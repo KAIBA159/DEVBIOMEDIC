@@ -115,6 +115,7 @@
             this.txtIgv.Name = "txtIgv";
             this.txtIgv.Size = new System.Drawing.Size(82, 20);
             this.txtIgv.TabIndex = 27;
+            this.txtIgv.Visible = false;
             // 
             // dtFecha_Vencimiento
             // 
@@ -165,6 +166,7 @@
             this.label11.Size = new System.Drawing.Size(28, 13);
             this.label11.TabIndex = 26;
             this.label11.Text = "IGV:";
+            this.label11.Visible = false;
             // 
             // txtCorrelativo
             // 
@@ -277,7 +279,7 @@
             this.txtIdventa.Location = new System.Drawing.Point(88, 30);
             this.txtIdventa.Margin = new System.Windows.Forms.Padding(2);
             this.txtIdventa.Name = "txtIdventa";
-            this.txtIdventa.Size = new System.Drawing.Size(94, 20);
+            this.txtIdventa.Size = new System.Drawing.Size(149, 20);
             this.txtIdventa.TabIndex = 3;
             // 
             // label3
@@ -632,7 +634,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(182, 40);
+            this.label18.Location = new System.Drawing.Point(149, 40);
             this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(38, 13);
@@ -683,7 +685,7 @@
             // 
             this.txtStock_Actual.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.txtStock_Actual.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtStock_Actual.Location = new System.Drawing.Point(224, 36);
+            this.txtStock_Actual.Location = new System.Drawing.Point(191, 36);
             this.txtStock_Actual.Margin = new System.Windows.Forms.Padding(2);
             this.txtStock_Actual.Name = "txtStock_Actual";
             this.txtStock_Actual.ReadOnly = true;
@@ -693,7 +695,7 @@
             // btnQuitar
             // 
             this.btnQuitar.Image = global::CapaPresentacion.Properties.Resources.Remove;
-            this.btnQuitar.Location = new System.Drawing.Point(784, 40);
+            this.btnQuitar.Location = new System.Drawing.Point(784, 37);
             this.btnQuitar.Margin = new System.Windows.Forms.Padding(2);
             this.btnQuitar.Name = "btnQuitar";
             this.btnQuitar.Size = new System.Drawing.Size(43, 27);
@@ -704,7 +706,7 @@
             // btnAgregar
             // 
             this.btnAgregar.Image = global::CapaPresentacion.Properties.Resources.agregar_p;
-            this.btnAgregar.Location = new System.Drawing.Point(784, 11);
+            this.btnAgregar.Location = new System.Drawing.Point(784, 10);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(43, 27);

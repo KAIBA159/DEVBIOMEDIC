@@ -73,6 +73,7 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.karteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -164,7 +165,7 @@
             // 
             this.ingresosToolStripMenuItem.Image = global::CapaPresentacion.Properties.Resources.compra_m;
             this.ingresosToolStripMenuItem.Name = "ingresosToolStripMenuItem";
-            this.ingresosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ingresosToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.ingresosToolStripMenuItem.Text = "Ingreso";
             this.ingresosToolStripMenuItem.Click += new System.EventHandler(this.ingresosToolStripMenuItem_Click);
             // 
@@ -172,7 +173,7 @@
             // 
             this.proveedorToolStripMenuItem.Image = global::CapaPresentacion.Properties.Resources.proveedores_m;
             this.proveedorToolStripMenuItem.Name = "proveedorToolStripMenuItem";
-            this.proveedorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.proveedorToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.proveedorToolStripMenuItem.Text = "Proveedor";
             this.proveedorToolStripMenuItem.Click += new System.EventHandler(this.proveedorToolStripMenuItem_Click);
             // 
@@ -190,7 +191,7 @@
             // 
             this.ventasToolStripMenuItem1.Image = global::CapaPresentacion.Properties.Resources.ventas2;
             this.ventasToolStripMenuItem1.Name = "ventasToolStripMenuItem1";
-            this.ventasToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.ventasToolStripMenuItem1.Size = new System.Drawing.Size(116, 22);
             this.ventasToolStripMenuItem1.Text = "Salida";
             this.ventasToolStripMenuItem1.Click += new System.EventHandler(this.ventasToolStripMenuItem1_Click);
             // 
@@ -198,7 +199,7 @@
             // 
             this.clientesToolStripMenuItem.Image = global::CapaPresentacion.Properties.Resources.cliente_m;
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.clientesToolStripMenuItem.Text = "Clientes";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
@@ -232,7 +233,8 @@
             this.MnuConsultas.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ventasPorFechasToolStripMenuItem,
             this.comprasPorFechasToolStripMenuItem,
-            this.stockDeArtículosToolStripMenuItem});
+            this.stockDeArtículosToolStripMenuItem,
+            this.karteToolStripMenuItem});
             this.MnuConsultas.Image = global::CapaPresentacion.Properties.Resources.consultas;
             this.MnuConsultas.Name = "MnuConsultas";
             this.MnuConsultas.Size = new System.Drawing.Size(87, 20);
@@ -449,6 +451,13 @@
             this.toolStripStatusLabel.Size = new System.Drawing.Size(107, 17);
             this.toolStripStatusLabel.Text = "Sistema de Gestión";
             // 
+            // karteToolStripMenuItem
+            // 
+            this.karteToolStripMenuItem.Name = "karteToolStripMenuItem";
+            this.karteToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.karteToolStripMenuItem.Text = "Kardex_Producto";
+            this.karteToolStripMenuItem.Click += new System.EventHandler(this.karteToolStripMenuItem_Click);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -520,6 +529,7 @@
         private System.Windows.Forms.ToolStripButton TsCompras;
         private System.Windows.Forms.ToolStripButton TsVentas;
         private System.Windows.Forms.ToolStripMenuItem encargadoTransportistaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem karteToolStripMenuItem;
     }
 }
 

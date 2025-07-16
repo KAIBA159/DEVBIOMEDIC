@@ -902,14 +902,39 @@ namespace CapaPresentacion
         private void btnImprimirCargo_Click(object sender, EventArgs e)
         {
 
-            Reportes.FrmReporteIngresoCargo frm2 = new Reportes.FrmReporteIngresoCargo();
-            frm2.idingreso = 3016;//Convert.ToString(dtFecha1.Value);
-            //frm.Texto2 = Convert.ToString(dtFecha2.Value);
-            frm2.ShowDialog();
+            //Reportes.FrmReporteIngresoCargo frm2 = new Reportes.FrmReporteIngresoCargo();
+            //frm2.idingreso = 3016;//Convert.ToString(dtFecha1.Value);
+            ////frm.Texto2 = Convert.ToString(dtFecha2.Value);
+            //frm2.ShowDialog();
+
+            if (this.dataListado.CurrentRow != null &&
+            this.dataListado.CurrentRow.Cells["idingreso"].Value != DBNull.Value)
+            {
+                try
+                {
+                    Reportes.FrmReporteIngresoCargo frm2 = new Reportes.FrmReporteIngresoCargo();
+                    frm2.idingreso = Convert.ToInt32(this.dataListado.CurrentRow.Cells["idingreso"].Value);
+                    frm2.ShowDialog();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al abrir el reporte: " + ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar una fila válida que contenga un ID de ingreso.");
+            }
+
 
         }
 
         private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
         {
 
         }

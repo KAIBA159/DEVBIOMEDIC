@@ -88,7 +88,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage2.Size = new System.Drawing.Size(694, 338);
+            this.tabPage2.Size = new System.Drawing.Size(738, 338);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Mantenimiento";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -124,10 +124,11 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(666, 282);
+            this.groupBox1.Size = new System.Drawing.Size(724, 282);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Artículos";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // txtFabricante
             // 
@@ -136,7 +137,7 @@
             this.txtFabricante.Location = new System.Drawing.Point(104, 140);
             this.txtFabricante.Margin = new System.Windows.Forms.Padding(2);
             this.txtFabricante.Name = "txtFabricante";
-            this.txtFabricante.Size = new System.Drawing.Size(272, 20);
+            this.txtFabricante.Size = new System.Drawing.Size(257, 20);
             this.txtFabricante.TabIndex = 24;
             // 
             // label10
@@ -157,7 +158,7 @@
             this.txtRegistroSanitario.Location = new System.Drawing.Point(104, 116);
             this.txtRegistroSanitario.Margin = new System.Windows.Forms.Padding(2);
             this.txtRegistroSanitario.Name = "txtRegistroSanitario";
-            this.txtRegistroSanitario.Size = new System.Drawing.Size(272, 20);
+            this.txtRegistroSanitario.Size = new System.Drawing.Size(257, 20);
             this.txtRegistroSanitario.TabIndex = 22;
             // 
             // label9
@@ -173,16 +174,16 @@
             // cbIdpresentacion
             // 
             this.cbIdpresentacion.FormattingEnabled = true;
-            this.cbIdpresentacion.Location = new System.Drawing.Point(491, 68);
+            this.cbIdpresentacion.Location = new System.Drawing.Point(458, 68);
             this.cbIdpresentacion.Margin = new System.Windows.Forms.Padding(2);
             this.cbIdpresentacion.Name = "cbIdpresentacion";
-            this.cbIdpresentacion.Size = new System.Drawing.Size(95, 21);
+            this.cbIdpresentacion.Size = new System.Drawing.Size(208, 21);
             this.cbIdpresentacion.TabIndex = 20;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(416, 71);
+            this.label8.Location = new System.Drawing.Point(367, 71);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(72, 13);
@@ -192,7 +193,7 @@
             // btnBuscarCategoria
             // 
             this.btnBuscarCategoria.Image = global::CapaPresentacion.Properties.Resources.Buscar_p;
-            this.btnBuscarCategoria.Location = new System.Drawing.Point(590, 43);
+            this.btnBuscarCategoria.Location = new System.Drawing.Point(684, 43);
             this.btnBuscarCategoria.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscarCategoria.Name = "btnBuscarCategoria";
             this.btnBuscarCategoria.Size = new System.Drawing.Size(32, 25);
@@ -214,16 +215,16 @@
             // 
             this.txtCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.txtCategoria.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCategoria.Location = new System.Drawing.Point(492, 44);
+            this.txtCategoria.Location = new System.Drawing.Point(459, 44);
             this.txtCategoria.Margin = new System.Windows.Forms.Padding(2);
             this.txtCategoria.Name = "txtCategoria";
-            this.txtCategoria.Size = new System.Drawing.Size(94, 20);
+            this.txtCategoria.Size = new System.Drawing.Size(207, 20);
             this.txtCategoria.TabIndex = 16;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(432, 47);
+            this.label7.Location = new System.Drawing.Point(383, 47);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(57, 13);
@@ -271,7 +272,7 @@
             this.txtCodigo.Location = new System.Drawing.Point(104, 68);
             this.txtCodigo.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(272, 20);
+            this.txtCodigo.Size = new System.Drawing.Size(257, 20);
             this.txtCodigo.TabIndex = 11;
             // 
             // label6
@@ -349,7 +350,7 @@
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtDescripcion.Size = new System.Drawing.Size(272, 59);
+            this.txtDescripcion.Size = new System.Drawing.Size(257, 59);
             this.txtDescripcion.TabIndex = 5;
             // 
             // txtNombre
@@ -359,7 +360,7 @@
             this.txtNombre.Location = new System.Drawing.Point(104, 92);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(272, 20);
+            this.txtNombre.Size = new System.Drawing.Size(257, 20);
             this.txtNombre.TabIndex = 4;
             // 
             // txtIdarticulo
@@ -553,7 +554,7 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(702, 364);
+            this.tabControl1.Size = new System.Drawing.Size(746, 364);
             this.tabControl1.TabIndex = 7;
             // 
             // ttMensaje
@@ -580,7 +581,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(724, 458);
+            this.ClientSize = new System.Drawing.Size(768, 458);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tabControl1);
