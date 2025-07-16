@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CapaNegocio;
+using CapaPresentacion.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,15 +10,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using CapaNegocio;
-
 namespace CapaPresentacion
 {
     public partial class FrmVistaArticulo_Ingreso : Form
     {
-        public FrmVistaArticulo_Ingreso()
+        private IFormularioReceptorArticulo receptor;
+
+        //public FrmVistaArticulo_Ingreso()
+        //{
+        //    InitializeComponent();
+        //}
+
+        public FrmVistaArticulo_Ingreso(IFormularioReceptorArticulo receptor)
         {
             InitializeComponent();
+            this.receptor = receptor;
         }
 
         private void FrmVistaArticulo_Ingreso_Load(object sender, EventArgs e)
@@ -55,12 +63,22 @@ namespace CapaPresentacion
 
         private void dataListado_DoubleClick(object sender, EventArgs e)
         {
-            FrmIngreso form = FrmIngreso.GetInstancia();
-            string par1, par2;
-            par1 = Convert.ToString(this.dataListado.CurrentRow.Cells["idarticulo"].Value);
-            par2 = Convert.ToString(this.dataListado.CurrentRow.Cells["nombre"].Value);
-            form.setArticulo(par1,par2);
-            this.Hide();
+            //FrmIngreso form = FrmIngreso.GetInstancia();
+            //string par1, par2;
+            //par1 = Convert.ToString(this.dataListado.CurrentRow.Cells["idarticulo"].Value);
+            //par2 = Convert.ToString(this.dataListado.CurrentRow.Cells["nombre"].Value);
+            //form.setArticulo(par1,par2);
+            //this.Hide();
+
+            if (this.dataListado.CurrentRow != null)
+            {
+                string id = Convert.ToString(this.dataListado.CurrentRow.Cells["idarticulo"].Value);
+                string nombre = Convert.ToString(this.dataListado.CurrentRow.Cells["nombre"].Value);
+
+                receptor.setArticulo(id, nombre); // 👈 Se lo pasas al formulario original
+                this.Close(); // o this.Hide();
+            }
+
         }
     }
 }

@@ -9,10 +9,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using CapaNegocio;
+using CapaPresentacion.Interfaces;
 
 namespace CapaPresentacion
 {
-    public partial class FrmVenta : Form
+    public partial class FrmVenta : Form, IFormularioReceptorProveedor
     {
         private bool IsNuevo = false;
         public int Idtrabajador;
@@ -36,6 +37,13 @@ namespace CapaPresentacion
             this.txtIdcliente.Text = idcliente;
             this.txtCliente.Text = nombre;
         }
+
+        public void setProovedor(string id, string nombre)
+        {
+            this.txtIdcliente.Text = id;          // Asegúrate de tener este TextBox
+            this.txtCliente.Text = nombre;  // Asegúrate de tener este TextBox
+        }
+        
 
         public void setArticulo (string iddetalle_ingreso,string nombre,
             decimal precio_compra,decimal precio_venta,int stock,
@@ -287,8 +295,12 @@ namespace CapaPresentacion
 
         private void btnBuscarCliente_Click(object sender, EventArgs e)
         {
-            FrmVistaCliente_Venta vista = new FrmVistaCliente_Venta();
+            //FrmVistaCliente_Venta vista = new FrmVistaCliente_Venta();
+            //vista.ShowDialog();
+
+            FrmVistaProveedor_Ingreso vista = new FrmVistaProveedor_Ingreso(this);
             vista.ShowDialog();
+
         }
 
         private void btnBuscarArticulo_Click(object sender, EventArgs e)

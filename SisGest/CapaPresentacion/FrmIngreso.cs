@@ -1,4 +1,5 @@
 ﻿using CapaNegocio;
+using CapaPresentacion.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,7 +13,7 @@ using System.Windows.Forms;
 
 namespace CapaPresentacion
 {
-    public partial class FrmIngreso : Form
+    public partial class FrmIngreso : Form, IFormularioReceptorArticulo, IFormularioReceptorProveedor
     {
         public int Idtrabajador;
         private bool IsNuevo;
@@ -501,15 +502,21 @@ namespace CapaPresentacion
             _instancia = null;
         }
 
+        public void setProovedor(string id, string nombre)
+        {
+            this.txtIdproveedor.Text = id;          // Asegúrate de tener este TextBox
+            this.txtProveedor.Text = nombre;  // Asegúrate de tener este TextBox
+        }
+
         private void btnBuscarProveedor_Click(object sender, EventArgs e)
         {
-            FrmVistaProveedor_Ingreso vista = new FrmVistaProveedor_Ingreso();
+            FrmVistaProveedor_Ingreso vista = new FrmVistaProveedor_Ingreso(this);
             vista.ShowDialog();
         }
 
         private void btnBuscarArticulo_Click(object sender, EventArgs e)
         {
-            FrmVistaArticulo_Ingreso vista = new FrmVistaArticulo_Ingreso();
+            FrmVistaArticulo_Ingreso vista = new FrmVistaArticulo_Ingreso(this);
             vista.ShowDialog();
         }
 

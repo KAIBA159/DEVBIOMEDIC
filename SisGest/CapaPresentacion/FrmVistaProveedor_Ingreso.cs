@@ -1,22 +1,32 @@
-﻿using System;
+﻿using CapaNegocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using CapaNegocio;
+using CapaPresentacion.Interfaces;
 
 namespace CapaPresentacion
 {
     public partial class FrmVistaProveedor_Ingreso : Form
     {
-        public FrmVistaProveedor_Ingreso()
+
+        private IFormularioReceptorProveedor receptor; 
+        //public FrmVistaProveedor_Ingreso()
+        //{
+        //    InitializeComponent();
+        //}
+
+        public FrmVistaProveedor_Ingreso(IFormularioReceptorProveedor receptor)
         {
             InitializeComponent();
+            this.receptor = receptor;
         }
 
         private void FrmVistaProveedor_Ingreso_Load(object sender, EventArgs e)
@@ -34,8 +44,30 @@ namespace CapaPresentacion
         private void Mostrar()
         {
             this.dataListado.DataSource = NProveedor.Mostrar();
-            this.OcultarColumnas();
-            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+
+            //
+            if (dataListado != null)
+            {
+                foreach (DataGridViewColumn col in dataListado.Columns)
+                {
+                    col.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+
+                    // Limitar el ancho máximo
+                    if (col.Width > 300)
+                    {
+                        col.Width = 300;
+                    }
+                }
+
+
+                this.OcultarColumnas();
+                lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+
+            }
+            //
+
+            //this.OcultarColumnas();
+            //lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
         }
 
         //Método BuscarRazon_Social
@@ -68,12 +100,23 @@ namespace CapaPresentacion
 
         private void dataListado_DoubleClick(object sender, EventArgs e)
         {
-            FrmIngreso form = FrmIngreso.GetInstancia();
-            string par1, par2;
-            par1 = Convert.ToString(this.dataListado.CurrentRow.Cells["idproveedor"].Value);
-            par2 = Convert.ToString(this.dataListado.CurrentRow.Cells["razon_social"].Value);
-            form.setProveedor(par1,par2);
-            this.Hide();
+            //FrmIngreso form = FrmIngreso.GetInstancia();
+            //string par1, par2;
+            //par1 = Convert.ToString(this.dataListado.CurrentRow.Cells["idproveedor"].Value);
+            //par2 = Convert.ToString(this.dataListado.CurrentRow.Cells["razon_social"].Value);
+            //form.setProveedor(par1,par2);
+            //this.Hide();
+
+
+            if (this.dataListado.CurrentRow != null)
+            {
+                string id = Convert.ToString(this.dataListado.CurrentRow.Cells["idproveedor"].Value);
+                string nombre = Convert.ToString(this.dataListado.CurrentRow.Cells["razon_social"].Value);
+
+                receptor.setProovedor(id, nombre); // 👈 Se lo pasas al formulario original
+                this.Close(); // o this.Hide();
+            }
+
         }
     }
 }
