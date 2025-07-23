@@ -48,7 +48,7 @@
             // 
             this.pictureBox1.BackgroundImage = global::CapaPresentacion.Properties.Resources.leather_bag;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(218, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(311, 11);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(68, 48);
@@ -159,9 +159,9 @@
             this.label1.Location = new System.Drawing.Point(20, 13);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(123, 29);
+            this.label1.Size = new System.Drawing.Size(253, 29);
             this.label1.TabIndex = 6;
-            this.label1.Text = "_Clientes";
+            this.label1.Text = "Proveedor / Clientes";
             // 
             // FrmVistaProveedor_Ingreso
             // 
@@ -176,7 +176,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmVistaProveedor_Ingreso";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = ".:. Seleccione un Proveedor .:.";
+            this.Text = ".:. Seleccione un Proveedor  / Cliente.:.";
             this.Load += new System.EventHandler(this.FrmVistaProveedor_Ingreso_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabControl1.ResumeLayout(false);

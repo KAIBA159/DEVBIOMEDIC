@@ -165,7 +165,7 @@
             this.groupBox1.Size = new System.Drawing.Size(528, 284);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Proveedores";
+            this.groupBox1.Text = "Proveedores / Clientes";
             // 
             // txtEmail
             // 
@@ -517,15 +517,15 @@
             this.label1.Location = new System.Drawing.Point(24, 24);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 29);
+            this.label1.Size = new System.Drawing.Size(240, 29);
             this.label1.TabIndex = 3;
-            this.label1.Text = "_Cliente";
+            this.label1.Text = "Proveedor / Cliente";
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::CapaPresentacion.Properties.Resources.leather_bag;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(213, 15);
+            this.pictureBox1.Location = new System.Drawing.Point(377, 11);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(68, 48);
@@ -543,7 +543,7 @@
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmProveedor";
-            this.Text = ".:. Mantenimiento de Proveedores .:.";
+            this.Text = ".:. Mantenimiento de Proveedores/Cliente .:.";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.frmProveedor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).EndInit();

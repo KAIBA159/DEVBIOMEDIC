@@ -72,15 +72,15 @@ namespace CapaNegocio
             DVenta Obj = new DVenta();
             return Obj.MostrarDetalle(textobuscar);
         }
-        public static DataTable MostrarArticulo_Venta_Nombre(string textobuscar)
+        public static DataTable MostrarArticulo_Venta_Nombre(string textobuscar, string idClienteb)
         {
             DVenta Obj = new DVenta();
-            return Obj.MostrarArticulo_Venta_Nombre(textobuscar);
+            return Obj.MostrarArticulo_Venta_Nombre(textobuscar, idClienteb);
         }
-        public static DataTable MostrarArticulo_Venta_Codigo(string textobuscar)
+        public static DataTable MostrarArticulo_Venta_Codigo(string textobuscar ,string idClientec)
         {
             DVenta Obj = new DVenta();
-            return Obj.MostrarArticulo_Venta_codigo(textobuscar);
+            return Obj.MostrarArticulo_Venta_codigo(textobuscar, idClientec);
         }
         
     }

@@ -395,7 +395,7 @@ namespace CapaDatos
         }
 
         //Mostrar Artículos por su nombre
-        public DataTable MostrarArticulo_Venta_Nombre(String TextoBuscar)
+        public DataTable MostrarArticulo_Venta_Nombre(String TextoBuscar ,string idClienteb)
         {
             DataTable DtResultado = new DataTable("articulos");
             SqlConnection SqlCon = new SqlConnection();
@@ -414,6 +414,15 @@ namespace CapaDatos
                 ParTextoBuscar.Value = TextoBuscar;
                 SqlCmd.Parameters.Add(ParTextoBuscar);
 
+
+                SqlParameter ParidCliented = new SqlParameter();
+                ParidCliented.ParameterName = "@idcliente";
+                ParidCliented.SqlDbType = SqlDbType.Int;
+                //ParidCliented.Size = 50;
+                ParidCliented.Value = Convert.ToInt32(idClienteb);
+                SqlCmd.Parameters.Add(ParidCliented);
+
+
                 SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
                 SqlDat.Fill(DtResultado);
 
@@ -426,7 +435,7 @@ namespace CapaDatos
 
         }
 
-        public DataTable MostrarArticulo_Venta_codigo(String TextoBuscar)
+        public DataTable MostrarArticulo_Venta_codigo(String TextoBuscar , string idCliented)
         {
             DataTable DtResultado = new DataTable("articulos");
             SqlConnection SqlCon = new SqlConnection();
@@ -444,6 +453,14 @@ namespace CapaDatos
                 ParTextoBuscar.Size = 50;
                 ParTextoBuscar.Value = TextoBuscar;
                 SqlCmd.Parameters.Add(ParTextoBuscar);
+
+                SqlParameter ParidCliented = new SqlParameter();
+                ParidCliented.ParameterName = "@idcliente";
+                ParidCliented.SqlDbType = SqlDbType.Int;
+                //ParidCliented.Size = 50;
+                ParidCliented.Value = Convert.ToInt32(idCliented);
+                SqlCmd.Parameters.Add(ParidCliented);
+
 
                 SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
                 SqlDat.Fill(DtResultado);

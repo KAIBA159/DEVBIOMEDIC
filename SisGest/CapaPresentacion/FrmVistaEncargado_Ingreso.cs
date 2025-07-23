@@ -34,8 +34,26 @@ namespace CapaPresentacion
         private void Mostrar()
         {
             this.dataListado.DataSource = NEncargadoTransportista.Mostrar();
-            this.OcultarColumnas();
-            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+
+            if (dataListado != null)
+            {
+                foreach (DataGridViewColumn col in dataListado.Columns)
+                {
+                    col.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+
+                    // Limitar el ancho máximo
+                    if (col.Width > 300)
+                    {
+                        col.Width = 300;
+                    }
+                }
+
+                this.OcultarColumnas();
+                lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+
+            }
+
+            
         }
 
         //Método BuscarRazon_Social

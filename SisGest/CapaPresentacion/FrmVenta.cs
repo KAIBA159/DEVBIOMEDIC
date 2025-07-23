@@ -305,8 +305,20 @@ namespace CapaPresentacion
 
         private void btnBuscarArticulo_Click(object sender, EventArgs e)
         {
-            FrmVistaArticulo_Venta vista = new FrmVistaArticulo_Venta();
-            vista.ShowDialog();
+
+            if (this.txtIdcliente.Text.Trim() == string.Empty || this.txtCliente.Text == string.Empty)
+            {
+                MessageBox.Show("Se debe escoger un cliente/proveedor antes de escoger un articulo/producto ", "Sistema de Gestión", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else {
+
+                FrmVistaArticulo_Venta vista = new FrmVistaArticulo_Venta(this.txtIdcliente.Text);
+                vista.ShowDialog();
+            }
+                
+
+
+           
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -319,7 +331,7 @@ namespace CapaPresentacion
             try
             {
                 DialogResult Opcion;
-                Opcion = MessageBox.Show("Realmente Desea Eliminar los Registros", "Sistema de Ventas", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                Opcion = MessageBox.Show("Realmente Desea Eliminar los Registros", "Sistema de Gestión", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
 
                 if (Opcion == DialogResult.OK)
                 {
@@ -335,7 +347,7 @@ namespace CapaPresentacion
 
                             if (Rpta.Equals("OK"))
                             {
-                                this.MensajeOk("Se Eliminó Correctamente la venta");
+                                this.MensajeOk("Se Eliminó Correctamente la salida");
                             }
                             else
                             {
@@ -424,8 +436,11 @@ namespace CapaPresentacion
                 errorIcono.Clear();
 
                 string rpta = "";
-                if (this.txtIdcliente.Text == string.Empty || this.txtSerie.Text == string.Empty
-                    || this.txtCorrelativo.Text == string.Empty || this.txtIgv.Text == string.Empty
+                if (
+                    this.txtIdcliente.Text == string.Empty || 
+                    this.txtSerie.Text == string.Empty || 
+                    this.txtCorrelativo.Text == string.Empty || 
+                    this.txtIgv.Text == string.Empty
 
                     )
                 {
@@ -447,10 +462,14 @@ namespace CapaPresentacion
 
                         if (this.IsNuevo)
                         {
-                            rpta = NVenta.Insertar(Convert.ToInt32(this.txtIdcliente.Text), Idtrabajador,
-                                dtFecha.Value, cbTipo_Comprobante.Text, txtSerie.Text, txtCorrelativo.Text,
+                            rpta = NVenta.Insertar(
+                                Convert.ToInt32(this.txtIdcliente.Text), 
+                                Idtrabajador,
+                                dtFecha.Value, 
+                                cbTipo_Comprobante.Text,
+                                txtSerie.Text, 
+                                txtCorrelativo.Text,
                                 Convert.ToDecimal(txtIgv.Text),
-
 
 
                                 dtDetalle);

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,9 +16,11 @@ namespace CapaPresentacion
 {
     public partial class FrmVistaArticulo_Venta : Form
     {
-        public FrmVistaArticulo_Venta()
+        private string idCliente;
+        public FrmVistaArticulo_Venta(string idClientet)
         {
             InitializeComponent();
+            this.idCliente = idClientet;
         }
 
 
@@ -29,9 +32,9 @@ namespace CapaPresentacion
         }
 
         //Método BuscarNombre
-        private void MostrarArticulo_Venta_Nombre()
+        private void MostrarArticulo_Venta_Nombre(string idClienteb)
         {
-            this.dataListado.DataSource = NVenta.MostrarArticulo_Venta_Nombre(this.txtBuscar.Text);
+            this.dataListado.DataSource = NVenta.MostrarArticulo_Venta_Nombre(this.txtBuscar.Text, idClienteb);
             
 
             if (dataListado.DataSource != null)
@@ -55,9 +58,9 @@ namespace CapaPresentacion
 
         }
 
-        private void MostrarArticulo_Venta_Codigo()
+        private void MostrarArticulo_Venta_Codigo(string idClienteb)
         {
-            this.dataListado.DataSource = NVenta.MostrarArticulo_Venta_Codigo(this.txtBuscar.Text);
+            this.dataListado.DataSource = NVenta.MostrarArticulo_Venta_Codigo(this.txtBuscar.Text, idClienteb);
            
 
             if (dataListado.DataSource != null)
@@ -82,7 +85,6 @@ namespace CapaPresentacion
 
         }
 
-
         private void FrmVistaArticulo_Venta_Load(object sender, EventArgs e)
         {
 
@@ -92,11 +94,11 @@ namespace CapaPresentacion
         {
             if (cbBuscar.Text.Equals("Codigo"))
             {
-                this.MostrarArticulo_Venta_Codigo();
+                this.MostrarArticulo_Venta_Codigo(idCliente);
             }
             else if (cbBuscar.Text.Equals("Nombre"))
             {
-                this.MostrarArticulo_Venta_Nombre();
+                this.MostrarArticulo_Venta_Nombre(idCliente);
             }
         }
 

@@ -920,7 +920,10 @@ namespace CapaPresentacion
                 try
                 {
                     Reportes.FrmReporteIngresoCargo frm2 = new Reportes.FrmReporteIngresoCargo();
-                    frm2.idingreso = Convert.ToInt32(this.dataListado.CurrentRow.Cells["idingreso"].Value);
+                    //frm2.idingreso = Convert.ToInt32(this.dataListado.CurrentRow.Cells["idingreso"].Value);
+
+                    frm2.idingreso = 3016;
+
                     frm2.ShowDialog();
                 }
                 catch (Exception ex)
