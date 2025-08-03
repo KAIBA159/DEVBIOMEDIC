@@ -73,19 +73,19 @@
             // 
             this.txtDescripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtDescripcion.Location = new System.Drawing.Point(88, 110);
+            this.txtDescripcion.Location = new System.Drawing.Point(156, 92);
             this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtDescripcion.Size = new System.Drawing.Size(226, 43);
+            this.txtDescripcion.Size = new System.Drawing.Size(226, 63);
             this.txtDescripcion.TabIndex = 5;
             // 
             // txtNombre
             // 
             this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNombre.Location = new System.Drawing.Point(88, 71);
+            this.txtNombre.Location = new System.Drawing.Point(156, 61);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(226, 20);
@@ -95,7 +95,7 @@
             // 
             this.txtIdpresentacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.txtIdpresentacion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtIdpresentacion.Location = new System.Drawing.Point(88, 32);
+            this.txtIdpresentacion.Location = new System.Drawing.Point(156, 30);
             this.txtIdpresentacion.Margin = new System.Windows.Forms.Padding(2);
             this.txtIdpresentacion.Name = "txtIdpresentacion";
             this.txtIdpresentacion.Size = new System.Drawing.Size(94, 20);
@@ -104,7 +104,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(22, 110);
+            this.label5.Location = new System.Drawing.Point(86, 95);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(66, 13);
@@ -114,22 +114,22 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(20, 71);
+            this.label4.Location = new System.Drawing.Point(25, 64);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 13);
+            this.label4.Size = new System.Drawing.Size(127, 13);
             this.label4.TabIndex = 1;
-            this.label4.Text = "Nombre:";
+            this.label4.Text = "Nombre de Presentación:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(18, 37);
+            this.label3.Location = new System.Drawing.Point(69, 33);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 13);
+            this.label3.Size = new System.Drawing.Size(83, 13);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Código:";
+            this.label3.Text = "Código Sistema:";
             // 
             // ttMensaje
             // 
@@ -232,6 +232,7 @@
             this.chkEliminar.TabIndex = 5;
             this.chkEliminar.Text = "Eliminar";
             this.chkEliminar.UseVisualStyleBackColor = true;
+            this.chkEliminar.Visible = false;
             this.chkEliminar.CheckedChanged += new System.EventHandler(this.chkEliminar_CheckedChanged);
             // 
             // txtBuscar
@@ -311,6 +312,7 @@
             this.btnImprimir.TabIndex = 4;
             this.btnImprimir.Text = "&Imprimir";
             this.btnImprimir.UseVisualStyleBackColor = false;
+            this.btnImprimir.Visible = false;
             this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // btnEliminar

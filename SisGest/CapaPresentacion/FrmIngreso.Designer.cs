@@ -81,9 +81,9 @@
             this.label15 = new System.Windows.Forms.Label();
             this.dtFecha_Produccion = new System.Windows.Forms.DateTimePicker();
             this.label14 = new System.Windows.Forms.Label();
-            this.txtPrecio_Venta = new System.Windows.Forms.TextBox();
+            this.txtCantidad_Diferencia = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.txtPrecio_Compra = new System.Windows.Forms.TextBox();
+            this.txtCantidad_Manifestada = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtStock = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -114,6 +114,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label26 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataListado)).BeginInit();
@@ -323,6 +324,7 @@
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.label26);
             this.groupBox1.Controls.Add(this.label25);
             this.groupBox1.Controls.Add(this.txtBultos);
             this.groupBox1.Controls.Add(this.label24);
@@ -367,11 +369,12 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ingresos Almacén";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(584, 64);
+            this.label25.Location = new System.Drawing.Point(621, 64);
             this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(42, 13);
@@ -382,7 +385,7 @@
             // 
             this.txtBultos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.txtBultos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtBultos.Location = new System.Drawing.Point(627, 60);
+            this.txtBultos.Location = new System.Drawing.Point(664, 60);
             this.txtBultos.Margin = new System.Windows.Forms.Padding(2);
             this.txtBultos.Name = "txtBultos";
             this.txtBultos.Size = new System.Drawing.Size(97, 20);
@@ -391,7 +394,7 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(254, 19);
+            this.label24.Location = new System.Drawing.Point(289, 19);
             this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(88, 13);
@@ -402,16 +405,16 @@
             // 
             this.txtCorrelativoUnico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.txtCorrelativoUnico.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCorrelativoUnico.Location = new System.Drawing.Point(346, 15);
+            this.txtCorrelativoUnico.Location = new System.Drawing.Point(381, 15);
             this.txtCorrelativoUnico.Margin = new System.Windows.Forms.Padding(2);
             this.txtCorrelativoUnico.Name = "txtCorrelativoUnico";
-            this.txtCorrelativoUnico.Size = new System.Drawing.Size(196, 20);
+            this.txtCorrelativoUnico.Size = new System.Drawing.Size(202, 20);
             this.txtCorrelativoUnico.TabIndex = 58;
             // 
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(264, 85);
+            this.label23.Location = new System.Drawing.Point(299, 85);
             this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(78, 13);
@@ -422,10 +425,10 @@
             // 
             this.txtDUA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.txtDUA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtDUA.Location = new System.Drawing.Point(346, 82);
+            this.txtDUA.Location = new System.Drawing.Point(381, 82);
             this.txtDUA.Margin = new System.Windows.Forms.Padding(2);
             this.txtDUA.Name = "txtDUA";
-            this.txtDUA.Size = new System.Drawing.Size(196, 20);
+            this.txtDUA.Size = new System.Drawing.Size(202, 20);
             this.txtDUA.TabIndex = 56;
             // 
             // cbTipo_Producto
@@ -436,27 +439,27 @@
             "DISPOSITIVOS MEDICOS",
             "PRODUCTOS SANITARIOS",
             "RECURSOS TERAPEUTICOS NATURALES"});
-            this.cbTipo_Producto.Location = new System.Drawing.Point(81, 82);
+            this.cbTipo_Producto.Location = new System.Drawing.Point(104, 82);
             this.cbTipo_Producto.Margin = new System.Windows.Forms.Padding(2);
             this.cbTipo_Producto.Name = "cbTipo_Producto";
-            this.cbTipo_Producto.Size = new System.Drawing.Size(163, 21);
+            this.cbTipo_Producto.Size = new System.Drawing.Size(175, 21);
             this.cbTipo_Producto.TabIndex = 55;
             this.cbTipo_Producto.Text = "DISPOSITIVOS MEDICOS";
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(3, 85);
+            this.label22.Location = new System.Drawing.Point(8, 85);
             this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(74, 13);
+            this.label22.Size = new System.Drawing.Size(92, 13);
             this.label22.TabIndex = 54;
-            this.label22.Text = "TipoProducto:";
+            this.label22.Text = "Tipo de Producto:";
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(820, 23);
+            this.label21.Location = new System.Drawing.Point(857, 23);
             this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(47, 13);
@@ -466,7 +469,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(734, 23);
+            this.label20.Location = new System.Drawing.Point(771, 23);
             this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(58, 13);
@@ -476,7 +479,7 @@
             // dtp_fin
             // 
             this.dtp_fin.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtp_fin.Location = new System.Drawing.Point(818, 38);
+            this.dtp_fin.Location = new System.Drawing.Point(855, 38);
             this.dtp_fin.Margin = new System.Windows.Forms.Padding(2);
             this.dtp_fin.Name = "dtp_fin";
             this.dtp_fin.ShowUpDown = true;
@@ -486,7 +489,7 @@
             // dtp_inicio
             // 
             this.dtp_inicio.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtp_inicio.Location = new System.Drawing.Point(732, 38);
+            this.dtp_inicio.Location = new System.Drawing.Point(769, 38);
             this.dtp_inicio.Margin = new System.Windows.Forms.Padding(2);
             this.dtp_inicio.Name = "dtp_inicio";
             this.dtp_inicio.ShowUpDown = true;
@@ -496,7 +499,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(562, 85);
+            this.label19.Location = new System.Drawing.Point(599, 85);
             this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(62, 13);
@@ -506,7 +509,7 @@
             // btnBuscarEncargado
             // 
             this.btnBuscarEncargado.Image = global::CapaPresentacion.Properties.Resources.Buscar_p;
-            this.btnBuscarEncargado.Location = new System.Drawing.Point(852, 79);
+            this.btnBuscarEncargado.Location = new System.Drawing.Point(889, 79);
             this.btnBuscarEncargado.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscarEncargado.Name = "btnBuscarEncargado";
             this.btnBuscarEncargado.Size = new System.Drawing.Size(32, 25);
@@ -518,7 +521,7 @@
             // 
             this.txtEncargado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.txtEncargado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtEncargado.Location = new System.Drawing.Point(627, 82);
+            this.txtEncargado.Location = new System.Drawing.Point(664, 82);
             this.txtEncargado.Margin = new System.Windows.Forms.Padding(2);
             this.txtEncargado.Name = "txtEncargado";
             this.txtEncargado.Size = new System.Drawing.Size(221, 20);
@@ -532,22 +535,22 @@
             "COMPRA LOCAL",
             "DEVOLUCIÓN",
             "TRASLADO DE ALMACEN"});
-            this.cbTipo_Ingreso.Location = new System.Drawing.Point(81, 59);
+            this.cbTipo_Ingreso.Location = new System.Drawing.Point(104, 59);
             this.cbTipo_Ingreso.Margin = new System.Windows.Forms.Padding(2);
             this.cbTipo_Ingreso.Name = "cbTipo_Ingreso";
-            this.cbTipo_Ingreso.Size = new System.Drawing.Size(163, 21);
+            this.cbTipo_Ingreso.Size = new System.Drawing.Size(175, 21);
             this.cbTipo_Ingreso.TabIndex = 45;
             this.cbTipo_Ingreso.Text = "COMPRA LOCAL";
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(11, 62);
+            this.label18.Location = new System.Drawing.Point(16, 62);
             this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(66, 13);
+            this.label18.Size = new System.Drawing.Size(84, 13);
             this.label18.TabIndex = 44;
-            this.label18.Text = "TipoIngreso:";
+            this.label18.Text = "Tipo de Ingreso:";
             // 
             // lblTotal_Pagado
             // 
@@ -558,6 +561,7 @@
             this.lblTotal_Pagado.Size = new System.Drawing.Size(22, 13);
             this.lblTotal_Pagado.TabIndex = 43;
             this.lblTotal_Pagado.Text = "0.0";
+            this.lblTotal_Pagado.Visible = false;
             // 
             // label16
             // 
@@ -568,6 +572,7 @@
             this.label16.Size = new System.Drawing.Size(95, 13);
             this.label16.TabIndex = 42;
             this.label16.Text = "Total Pagado: S/. ";
+            this.label16.Visible = false;
             // 
             // dataListadoDetalle
             // 
@@ -595,9 +600,9 @@
             this.groupBox2.Controls.Add(this.label15);
             this.groupBox2.Controls.Add(this.dtFecha_Produccion);
             this.groupBox2.Controls.Add(this.label14);
-            this.groupBox2.Controls.Add(this.txtPrecio_Venta);
+            this.groupBox2.Controls.Add(this.txtCantidad_Diferencia);
             this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Controls.Add(this.txtPrecio_Compra);
+            this.groupBox2.Controls.Add(this.txtCantidad_Manifestada);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.txtStock);
             this.groupBox2.Controls.Add(this.label5);
@@ -618,9 +623,9 @@
             // 
             this.groupBox4.Controls.Add(this.cb_sanitario);
             this.groupBox4.Controls.Add(this.cb_certanalisis);
-            this.groupBox4.Location = new System.Drawing.Point(554, 24);
+            this.groupBox4.Location = new System.Drawing.Point(658, 24);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(132, 58);
+            this.groupBox4.Size = new System.Drawing.Size(154, 58);
             this.groupBox4.TabIndex = 47;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "DocumentosRecibidos";
@@ -628,11 +633,11 @@
             // cb_sanitario
             // 
             this.cb_sanitario.AutoSize = true;
-            this.cb_sanitario.Location = new System.Drawing.Point(7, 35);
+            this.cb_sanitario.Location = new System.Drawing.Point(6, 35);
             this.cb_sanitario.Name = "cb_sanitario";
-            this.cb_sanitario.Size = new System.Drawing.Size(93, 17);
+            this.cb_sanitario.Size = new System.Drawing.Size(109, 17);
             this.cb_sanitario.TabIndex = 45;
-            this.cb_sanitario.Text = "Reg. Sanitario";
+            this.cb_sanitario.Text = "Registro Sanitario";
             this.cb_sanitario.UseVisualStyleBackColor = true;
             // 
             // cb_certanalisis
@@ -640,9 +645,9 @@
             this.cb_certanalisis.AutoSize = true;
             this.cb_certanalisis.Location = new System.Drawing.Point(6, 16);
             this.cb_certanalisis.Name = "cb_certanalisis";
-            this.cb_certanalisis.Size = new System.Drawing.Size(101, 17);
+            this.cb_certanalisis.Size = new System.Drawing.Size(129, 17);
             this.cb_certanalisis.TabIndex = 44;
-            this.cb_certanalisis.Text = "Cert. de Analisis";
+            this.cb_certanalisis.Text = "Certificado de Análisis";
             this.cb_certanalisis.UseVisualStyleBackColor = true;
             // 
             // groupBox3
@@ -650,9 +655,9 @@
             this.groupBox3.Controls.Add(this.cb_envasecerrado);
             this.groupBox3.Controls.Add(this.cb_deteriorado);
             this.groupBox3.Controls.Add(this.cb_limpio);
-            this.groupBox3.Location = new System.Drawing.Point(389, 21);
+            this.groupBox3.Location = new System.Drawing.Point(494, 21);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(132, 78);
+            this.groupBox3.Size = new System.Drawing.Size(139, 78);
             this.groupBox3.TabIndex = 45;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "EstadoProducto";
@@ -672,9 +677,9 @@
             this.cb_deteriorado.AutoSize = true;
             this.cb_deteriorado.Location = new System.Drawing.Point(6, 35);
             this.cb_deteriorado.Name = "cb_deteriorado";
-            this.cb_deteriorado.Size = new System.Drawing.Size(81, 17);
+            this.cb_deteriorado.Size = new System.Drawing.Size(127, 17);
             this.cb_deteriorado.TabIndex = 45;
-            this.cb_deteriorado.Text = "Deteriorado";
+            this.cb_deteriorado.Text = "Deteriorado Arrugado";
             this.cb_deteriorado.UseVisualStyleBackColor = true;
             // 
             // cb_limpio
@@ -691,16 +696,16 @@
             // 
             this.txtLote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.txtLote.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtLote.Location = new System.Drawing.Point(215, 43);
+            this.txtLote.Location = new System.Drawing.Point(282, 43);
             this.txtLote.Margin = new System.Windows.Forms.Padding(2);
             this.txtLote.Name = "txtLote";
-            this.txtLote.Size = new System.Drawing.Size(112, 20);
+            this.txtLote.Size = new System.Drawing.Size(142, 20);
             this.txtLote.TabIndex = 43;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(176, 46);
+            this.label17.Location = new System.Drawing.Point(246, 46);
             this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(31, 13);
@@ -732,16 +737,16 @@
             // dtFecha_Vencimiento
             // 
             this.dtFecha_Vencimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtFecha_Vencimiento.Location = new System.Drawing.Point(215, 88);
+            this.dtFecha_Vencimiento.Location = new System.Drawing.Point(282, 88);
             this.dtFecha_Vencimiento.Margin = new System.Windows.Forms.Padding(2);
             this.dtFecha_Vencimiento.Name = "dtFecha_Vencimiento";
-            this.dtFecha_Vencimiento.Size = new System.Drawing.Size(112, 20);
+            this.dtFecha_Vencimiento.Size = new System.Drawing.Size(142, 20);
             this.dtFecha_Vencimiento.TabIndex = 39;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(147, 91);
+            this.label15.Location = new System.Drawing.Point(217, 91);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(71, 13);
@@ -751,89 +756,91 @@
             // dtFecha_Produccion
             // 
             this.dtFecha_Produccion.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtFecha_Produccion.Location = new System.Drawing.Point(215, 65);
+            this.dtFecha_Produccion.Location = new System.Drawing.Point(282, 65);
             this.dtFecha_Produccion.Margin = new System.Windows.Forms.Padding(2);
             this.dtFecha_Produccion.Name = "dtFecha_Produccion";
-            this.dtFecha_Produccion.Size = new System.Drawing.Size(112, 20);
+            this.dtFecha_Produccion.Size = new System.Drawing.Size(142, 20);
             this.dtFecha_Produccion.TabIndex = 33;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(147, 69);
+            this.label14.Location = new System.Drawing.Point(217, 69);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(68, 13);
             this.label14.TabIndex = 32;
             this.label14.Text = "Fecha Prod.:";
             // 
-            // txtPrecio_Venta
+            // txtCantidad_Diferencia
             // 
-            this.txtPrecio_Venta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.txtPrecio_Venta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPrecio_Venta.Location = new System.Drawing.Point(68, 87);
-            this.txtPrecio_Venta.Margin = new System.Windows.Forms.Padding(2);
-            this.txtPrecio_Venta.Name = "txtPrecio_Venta";
-            this.txtPrecio_Venta.Size = new System.Drawing.Size(75, 20);
-            this.txtPrecio_Venta.TabIndex = 37;
+            this.txtCantidad_Diferencia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.txtCantidad_Diferencia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCantidad_Diferencia.Location = new System.Drawing.Point(135, 87);
+            this.txtCantidad_Diferencia.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCantidad_Diferencia.Name = "txtCantidad_Diferencia";
+            this.txtCantidad_Diferencia.Size = new System.Drawing.Size(78, 20);
+            this.txtCantidad_Diferencia.TabIndex = 37;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(14, 90);
+            this.label13.Location = new System.Drawing.Point(73, 90);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(51, 13);
+            this.label13.Size = new System.Drawing.Size(58, 13);
             this.label13.TabIndex = 36;
-            this.label13.Text = "P. Venta:";
+            this.label13.Text = "Diferencia:";
             // 
-            // txtPrecio_Compra
+            // txtCantidad_Manifestada
             // 
-            this.txtPrecio_Compra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.txtPrecio_Compra.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPrecio_Compra.Location = new System.Drawing.Point(68, 65);
-            this.txtPrecio_Compra.Margin = new System.Windows.Forms.Padding(2);
-            this.txtPrecio_Compra.Name = "txtPrecio_Compra";
-            this.txtPrecio_Compra.Size = new System.Drawing.Size(75, 20);
-            this.txtPrecio_Compra.TabIndex = 35;
+            this.txtCantidad_Manifestada.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.txtCantidad_Manifestada.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCantidad_Manifestada.Location = new System.Drawing.Point(135, 43);
+            this.txtCantidad_Manifestada.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCantidad_Manifestada.Name = "txtCantidad_Manifestada";
+            this.txtCantidad_Manifestada.Size = new System.Drawing.Size(78, 20);
+            this.txtCantidad_Manifestada.TabIndex = 35;
+            this.txtCantidad_Manifestada.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_Manifestada_KeyPress);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(6, 68);
+            this.label12.Location = new System.Drawing.Point(35, 68);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(59, 13);
+            this.label12.Size = new System.Drawing.Size(97, 13);
             this.label12.TabIndex = 34;
-            this.label12.Text = "P. Compra:";
+            this.label12.Text = "Cantidad Recibida:";
             // 
             // txtStock
             // 
             this.txtStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.txtStock.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtStock.Location = new System.Drawing.Point(68, 43);
+            this.txtStock.Location = new System.Drawing.Point(135, 65);
             this.txtStock.Margin = new System.Windows.Forms.Padding(2);
             this.txtStock.Name = "txtStock";
-            this.txtStock.Size = new System.Drawing.Size(75, 20);
+            this.txtStock.Size = new System.Drawing.Size(78, 20);
             this.txtStock.TabIndex = 33;
+            this.txtStock.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtStock_KeyPress);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 46);
+            this.label5.Location = new System.Drawing.Point(19, 46);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 13);
+            this.label5.Size = new System.Drawing.Size(113, 13);
             this.label5.TabIndex = 32;
-            this.label5.Text = "Cantidad:";
+            this.label5.Text = "Cantidad Manifestada:";
             // 
             // btnBuscarArticulo
             // 
             this.btnBuscarArticulo.Image = global::CapaPresentacion.Properties.Resources.Buscar_p;
-            this.btnBuscarArticulo.Location = new System.Drawing.Point(296, 20);
+            this.btnBuscarArticulo.Location = new System.Drawing.Point(383, 20);
             this.btnBuscarArticulo.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscarArticulo.Name = "btnBuscarArticulo";
-            this.btnBuscarArticulo.Size = new System.Drawing.Size(32, 22);
+            this.btnBuscarArticulo.Size = new System.Drawing.Size(41, 22);
             this.btnBuscarArticulo.TabIndex = 32;
             this.btnBuscarArticulo.UseVisualStyleBackColor = true;
             this.btnBuscarArticulo.Click += new System.EventHandler(this.btnBuscarArticulo_Click);
@@ -841,42 +848,42 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(18, 24);
+            this.label4.Location = new System.Drawing.Point(21, 24);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 13);
+            this.label4.Size = new System.Drawing.Size(111, 13);
             this.label4.TabIndex = 29;
-            this.label4.Text = "Artículo:";
+            this.label4.Text = "Nombre de Producto :";
             // 
             // txtArticulo
             // 
             this.txtArticulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.txtArticulo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtArticulo.Location = new System.Drawing.Point(68, 21);
+            this.txtArticulo.Location = new System.Drawing.Point(135, 21);
             this.txtArticulo.Margin = new System.Windows.Forms.Padding(2);
             this.txtArticulo.Name = "txtArticulo";
-            this.txtArticulo.Size = new System.Drawing.Size(223, 20);
+            this.txtArticulo.Size = new System.Drawing.Size(244, 20);
             this.txtArticulo.TabIndex = 30;
             // 
             // txtCorrelativo
             // 
             this.txtCorrelativo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.txtCorrelativo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCorrelativo.Location = new System.Drawing.Point(416, 60);
+            this.txtCorrelativo.Location = new System.Drawing.Point(505, 60);
             this.txtCorrelativo.Margin = new System.Windows.Forms.Padding(2);
             this.txtCorrelativo.Name = "txtCorrelativo";
-            this.txtCorrelativo.Size = new System.Drawing.Size(126, 20);
+            this.txtCorrelativo.Size = new System.Drawing.Size(78, 20);
             this.txtCorrelativo.TabIndex = 25;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(295, 63);
+            this.label8.Location = new System.Drawing.Point(343, 63);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(47, 13);
+            this.label8.Size = new System.Drawing.Size(34, 13);
             this.label8.TabIndex = 24;
-            this.label8.Text = "Número:";
+            this.label8.Text = "Serie:";
             // 
             // cbTipo_Comprobante
             // 
@@ -886,17 +893,17 @@
             "BOLETA",
             "FACTURA",
             "GUIA REMISION"});
-            this.cbTipo_Comprobante.Location = new System.Drawing.Point(81, 37);
+            this.cbTipo_Comprobante.Location = new System.Drawing.Point(104, 37);
             this.cbTipo_Comprobante.Margin = new System.Windows.Forms.Padding(2);
             this.cbTipo_Comprobante.Name = "cbTipo_Comprobante";
-            this.cbTipo_Comprobante.Size = new System.Drawing.Size(163, 21);
+            this.cbTipo_Comprobante.Size = new System.Drawing.Size(175, 21);
             this.cbTipo_Comprobante.TabIndex = 23;
             this.cbTipo_Comprobante.Text = "GUIA REMISION";
             // 
             // dtFecha
             // 
             this.dtFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtFecha.Location = new System.Drawing.Point(627, 39);
+            this.dtFecha.Location = new System.Drawing.Point(664, 39);
             this.dtFecha.Margin = new System.Windows.Forms.Padding(2);
             this.dtFecha.Name = "dtFecha";
             this.dtFecha.Size = new System.Drawing.Size(97, 20);
@@ -905,7 +912,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(584, 43);
+            this.label10.Location = new System.Drawing.Point(621, 43);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(40, 13);
@@ -915,7 +922,7 @@
             // btnBuscarProveedor
             // 
             this.btnBuscarProveedor.Image = global::CapaPresentacion.Properties.Resources.Buscar_p;
-            this.btnBuscarProveedor.Location = new System.Drawing.Point(546, 34);
+            this.btnBuscarProveedor.Location = new System.Drawing.Point(587, 34);
             this.btnBuscarProveedor.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscarProveedor.Name = "btnBuscarProveedor";
             this.btnBuscarProveedor.Size = new System.Drawing.Size(32, 25);
@@ -928,16 +935,16 @@
             // 
             this.txtProveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.txtProveedor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtProveedor.Location = new System.Drawing.Point(346, 37);
+            this.txtProveedor.Location = new System.Drawing.Point(381, 37);
             this.txtProveedor.Margin = new System.Windows.Forms.Padding(2);
             this.txtProveedor.Name = "txtProveedor";
-            this.txtProveedor.Size = new System.Drawing.Size(196, 20);
+            this.txtProveedor.Size = new System.Drawing.Size(202, 20);
             this.txtProveedor.TabIndex = 16;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(300, 40);
+            this.label7.Location = new System.Drawing.Point(335, 40);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(42, 13);
@@ -948,16 +955,16 @@
             // 
             this.txtSerie.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.txtSerie.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSerie.Location = new System.Drawing.Point(346, 60);
+            this.txtSerie.Location = new System.Drawing.Point(381, 60);
             this.txtSerie.Margin = new System.Windows.Forms.Padding(2);
             this.txtSerie.Name = "txtSerie";
-            this.txtSerie.Size = new System.Drawing.Size(66, 20);
+            this.txtSerie.Size = new System.Drawing.Size(54, 20);
             this.txtSerie.TabIndex = 11;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(4, 41);
+            this.label6.Location = new System.Drawing.Point(27, 41);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(73, 13);
@@ -1010,21 +1017,21 @@
             // 
             this.txtIdingreso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.txtIdingreso.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtIdingreso.Location = new System.Drawing.Point(81, 16);
+            this.txtIdingreso.Location = new System.Drawing.Point(104, 16);
             this.txtIdingreso.Margin = new System.Windows.Forms.Padding(2);
             this.txtIdingreso.Name = "txtIdingreso";
-            this.txtIdingreso.Size = new System.Drawing.Size(163, 20);
+            this.txtIdingreso.Size = new System.Drawing.Size(175, 20);
             this.txtIdingreso.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(34, 19);
+            this.label3.Location = new System.Drawing.Point(20, 19);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 13);
+            this.label3.Size = new System.Drawing.Size(80, 13);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Código:";
+            this.label3.Text = "CódigoSistema:";
             // 
             // txtIdencargado
             // 
@@ -1110,6 +1117,16 @@
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(441, 63);
+            this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(60, 13);
+            this.label26.TabIndex = 62;
+            this.label26.Text = "Correlativo:";
+            // 
             // FrmIngreso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1176,9 +1193,9 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.DateTimePicker dtFecha_Produccion;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox txtPrecio_Venta;
+        private System.Windows.Forms.TextBox txtCantidad_Diferencia;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox txtPrecio_Compra;
+        private System.Windows.Forms.TextBox txtCantidad_Manifestada;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtStock;
         private System.Windows.Forms.Label label5;
@@ -1239,5 +1256,6 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.CheckBox cb_envasecerrado;
         private System.Windows.Forms.CheckBox cb_deteriorado;
+        private System.Windows.Forms.Label label26;
     }
 }

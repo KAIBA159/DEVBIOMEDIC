@@ -102,6 +102,11 @@ namespace CapaPresentacion
             this.txtDUA.Text = string.Empty;
 
 
+            //
+            this.txtCantidad_Diferencia.Text = string.Empty;
+            this.txtCantidad_Manifestada.Text = string.Empty;
+            //
+
             this.txtCorrelativoUnico.Text = string.Empty;
             this.txtCorrelativoUnico.Text = obtenercorrelativoUnico();
 
@@ -140,8 +145,8 @@ namespace CapaPresentacion
             this.txtIdarticulo.Text = string.Empty;
             this.txtArticulo.Text = string.Empty;
             this.txtStock.Text = string.Empty;
-            this.txtPrecio_Compra.Text = string.Empty;
-            this.txtPrecio_Venta.Text = string.Empty;
+            this.txtCantidad_Manifestada.Text = string.Empty;
+            this.txtCantidad_Diferencia.Text = string.Empty;
 
             this.txtLote.Text = string.Empty;
 
@@ -178,6 +183,10 @@ namespace CapaPresentacion
             this.txtIdingreso.ReadOnly = true;
             this.txtCorrelativoUnico.ReadOnly = true;
 
+            //
+            
+           //this.txtCantidad_Manifestada.Text = string.Empty;
+            //
 
             this.cbTipo_Producto.Enabled = valor;  
             //
@@ -194,8 +203,9 @@ namespace CapaPresentacion
             this.cbTipo_Ingreso.Enabled = valor;
 
             this.txtStock.ReadOnly = !valor;
-            this.txtPrecio_Compra.ReadOnly = !valor;
-            this.txtPrecio_Venta.ReadOnly = !valor;
+            this.txtCantidad_Manifestada.ReadOnly = !valor;
+            this.txtCantidad_Diferencia.ReadOnly = true;
+            //this.txtCantidad_Diferencia.ReadOnly = !valor;
 
             this.txtLote.ReadOnly = !valor;
 
@@ -451,16 +461,40 @@ namespace CapaPresentacion
             this.dtDetalle.Columns.Add("precio_venta", System.Type.GetType("System.Decimal"));
             this.dtDetalle.Columns["precio_venta"].ReadOnly = true;
 
+
             this.dtDetalle.Columns.Add("stock_inicial", System.Type.GetType("System.Int32"));
+            //this.dtDetalle.Columns["stock_inicial"].Hear HeaderText = "Stock Inicial";
             this.dtDetalle.Columns["stock_inicial"].ReadOnly = true;
+
+            
+
+            //var col = this.dtDetalle.Columns.Add("stock_inicial", typeof(int));
+            //col.ReadOnly = true;
+            //col.Caption = "Cantidad Recibida";
+
+
+
+            //agregado
+            this.dtDetalle.Columns.Add("CantidadManifestada", System.Type.GetType("System.Int32"));
+            this.dtDetalle.Columns["CantidadManifestada"].ReadOnly = true;
+
+            this.dtDetalle.Columns.Add("CantidadDiferencia", System.Type.GetType("System.Int32"));
+            this.dtDetalle.Columns["CantidadDiferencia"].ReadOnly = true;
+
+            //agregado
+
+
             this.dtDetalle.Columns.Add("fecha_produccion", System.Type.GetType("System.DateTime"));
             this.dtDetalle.Columns["fecha_produccion"].ReadOnly = true;
             this.dtDetalle.Columns.Add("fecha_vencimiento", System.Type.GetType("System.DateTime"));
             this.dtDetalle.Columns["fecha_vencimiento"].ReadOnly = true;
+
             this.dtDetalle.Columns.Add("subtotal", System.Type.GetType("System.Decimal"));
             this.dtDetalle.Columns["subtotal"].ReadOnly = true;
+
             this.dtDetalle.Columns.Add("Impuesto", System.Type.GetType("System.Decimal"));
             this.dtDetalle.Columns["Impuesto"].ReadOnly = true;
+            //this.dtDetalle.Columns["Impuesto"].OCU = true;
 
 
             //this.dtDetalle.Columns.Add("limpio", System.Type.GetType("System.String"));
@@ -483,6 +517,27 @@ namespace CapaPresentacion
 
             //Relacionar nuestro DataGRidView con nuestro DataTable
             this.dataListadoDetalle.DataSource = this.dtDetalle;
+
+            this.dataListadoDetalle.Columns["stock_inicial"].HeaderText         = "Cantidad Recibida";
+            this.dataListadoDetalle.Columns["CantidadManifestada"].HeaderText   = "Cantidad Manifestada";
+            this.dataListadoDetalle.Columns["CantidadDiferencia"].HeaderText    = "Diferencia";
+
+            this.dataListadoDetalle.Columns["articulo"].HeaderText = "Nombre de Producto";
+            this.dataListadoDetalle.Columns["lote"].HeaderText = "Lote";
+            this.dataListadoDetalle.Columns["fecha_produccion"].HeaderText = "Fecha Prod.";
+            this.dataListadoDetalle.Columns["fecha_vencimiento"].HeaderText = "Fecha Venc.";
+
+
+            //ocultar
+            this.dataListadoDetalle.Columns["Impuesto"].Visible = false;
+            this.dataListadoDetalle.Columns["subtotal"].Visible = false;
+
+            this.dataListadoDetalle.Columns["precio_compra"].Visible = false;
+            this.dataListadoDetalle.Columns["precio_venta"].Visible = false;
+
+
+
+
 
         }
 
@@ -723,14 +778,19 @@ namespace CapaPresentacion
             try
             {
                 
-                if (this.txtIdarticulo.Text == string.Empty || this.txtStock.Text == string.Empty
-                    || this.txtPrecio_Compra.Text == string.Empty || this.txtPrecio_Venta.Text == string.Empty)
+                if (
+                    this.txtIdarticulo.Text == string.Empty || 
+                    this.txtStock.Text == string.Empty || 
+                    this.txtCantidad_Manifestada.Text == string.Empty //|| 
+                    //this.txtCantidad_Diferencia.Text == string.Empty
+
+                    )
                 {
                     MensajeError("Falta ingresar algunos datos, serán remarcados");
                     errorIcono.SetError(txtIdarticulo, "Ingrese un Valor");
                     errorIcono.SetError(txtStock, "Ingrese un Valor");
-                    errorIcono.SetError(txtPrecio_Compra, "Ingrese un Valor");
-                    errorIcono.SetError(txtPrecio_Venta, "Ingrese un Valor");
+                    errorIcono.SetError(txtCantidad_Manifestada, "Ingrese un Valor");
+                    //errorIcono.SetError(txtCantidad_Diferencia, "Ingrese un Valor");
                     errorIcono.SetError(txtLote, "Ingrese un Lote");
                 }
                 else
@@ -748,6 +808,8 @@ namespace CapaPresentacion
                     }
                     if (registrar)
                     {
+
+
 
                         //bool estaMarcado = cb_limpio.Checked;
 
@@ -780,18 +842,32 @@ namespace CapaPresentacion
                         //bool cb_sanitario_b = cb_sanitario.Checked;
                         //string txt_cb_sanitario = cb_sanitario_b ? "Activo" : "Inactivo"; 
 
+                        this.txtCantidad_Diferencia.Text = "0";
 
-
-                        decimal subTotal=Convert.ToDecimal(this.txtStock.Text)*Convert.ToDecimal(this.txtPrecio_Compra.Text);
+                        decimal subTotal=Convert.ToDecimal(this.txtStock.Text)*Convert.ToDecimal(this.txtCantidad_Manifestada.Text);
                         totalPagado = totalPagado + subTotal;
                         this.lblTotal_Pagado.Text = totalPagado.ToString("#0.00#");
                         //Agregar ese detalle al datalistadoDetalle
                         DataRow row = this.dtDetalle.NewRow();
                         row["idarticulo"] = Convert.ToInt32(this.txtIdarticulo.Text);
                         row["articulo"] = this.txtArticulo.Text;
-                        row["precio_compra"] = Convert.ToDecimal(this.txtPrecio_Compra.Text);
-                        row["precio_venta"] = Convert.ToDecimal(this.txtPrecio_Venta.Text);
+
+                        //row["precio_compra"] = Convert.ToDecimal(this.txtCantidad_Manifestada.Text);
+                        //row["precio_venta"] = Convert.ToDecimal(this.txtCantidad_Diferencia.Text);
+
+                        //
+                        row["CantidadManifestada"] = Convert.ToDecimal(this.txtCantidad_Manifestada.Text);
+                        //row["CantidadDiferencia"] = Convert.ToDecimal(this.txtCantidad_Diferencia.Text);
+
+
+                        //
+
+
                         row["stock_inicial"] = Convert.ToInt32(this.txtStock.Text);
+
+                        row["CantidadDiferencia"] = (Convert.ToDecimal(this.txtCantidad_Manifestada.Text) - Convert.ToInt32(this.txtStock.Text));
+
+
                         row["fecha_produccion"] = dtFecha_Produccion.Value;
                         row["fecha_vencimiento"] = dtFecha_Vencimiento.Value;
                         row["subtotal"] = subTotal;
@@ -864,8 +940,8 @@ namespace CapaPresentacion
             this.cbTipo_Comprobante.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["tipo_comprobante"].Value);
             this.txtSerie.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["serie"].Value);
             this.txtCorrelativo.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["correlativo"].Value);
-            this.lblTotal_Pagado.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["total"].Value);
-            this.txtIgv.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["Impuesto"].Value);
+            this.lblTotal_Pagado.Text = "1";//Convert.ToString(this.dataListado.CurrentRow.Cells["total"].Value);
+            this.txtIgv.Text = "1";  //Convert.ToString(this.dataListado.CurrentRow.Cells["Impuesto"].Value);
 
             this.txtEncargado .Text = Convert.ToString(this.dataListado.CurrentRow.Cells["EncargadoTransportista"].Value);
 
@@ -920,9 +996,9 @@ namespace CapaPresentacion
                 try
                 {
                     Reportes.FrmReporteIngresoCargo frm2 = new Reportes.FrmReporteIngresoCargo();
-                    //frm2.idingreso = Convert.ToInt32(this.dataListado.CurrentRow.Cells["idingreso"].Value);
+                    frm2.idingreso = Convert.ToInt32(this.dataListado.CurrentRow.Cells["idingreso"].Value);
 
-                    frm2.idingreso = 3016;
+                    //frm2.idingreso = 3016;
 
                     frm2.ShowDialog();
                 }
@@ -947,6 +1023,27 @@ namespace CapaPresentacion
         private void tabPage1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCantidad_Manifestada_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true; // ignora la tecla
+            }
+        }
+
+        private void txtStock_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true; // ignora la tecla
+            }
         }
     }
 }

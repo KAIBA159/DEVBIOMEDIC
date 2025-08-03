@@ -24,6 +24,10 @@ namespace CapaDatos
         private DateTime _Fecha_Vencimiento;
 
 
+        private int _cantidadManifestada;
+        private int _cantidadDiferencia;
+
+
         private string _Limpio;
         private string _Deteriorado;
         private string _Envasecerrado;
@@ -31,6 +35,26 @@ namespace CapaDatos
         private string _Sanitario;
 
         //Propiedades
+
+
+        //private int _cantidadManifestada;
+        //private int _cantidadDiferencia;
+
+
+        public int CantidadManifestada
+        {
+            get { return _cantidadManifestada; }
+            set { _cantidadManifestada = value; }
+        }
+
+        public int CantidadDiferencia
+        {
+            get { return _cantidadDiferencia; }
+            set { _cantidadDiferencia = value; }
+        }
+
+
+        //
 
 
         public string Sanitario
@@ -203,13 +227,13 @@ namespace CapaDatos
                 SqlParameter ParPrecio_Compra = new SqlParameter();
                 ParPrecio_Compra.ParameterName = "@precio_compra";
                 ParPrecio_Compra.SqlDbType = SqlDbType.Money;
-                ParPrecio_Compra.Value = Detalle_Ingreso.Precio_Compra;
+                ParPrecio_Compra.Value = 1; // Detalle_Ingreso.Precio_Compra;
                 SqlCmd.Parameters.Add(ParPrecio_Compra);
 
                 SqlParameter ParPrecio_Venta = new SqlParameter();
                 ParPrecio_Venta.ParameterName = "@precio_venta";
                 ParPrecio_Venta.SqlDbType = SqlDbType.Money;
-                ParPrecio_Venta.Value = Detalle_Ingreso.Precio_Venta;
+                ParPrecio_Venta.Value = 1;// Detalle_Ingreso.Precio_Venta;
                 SqlCmd.Parameters.Add(ParPrecio_Venta);
 
                 
@@ -225,6 +249,23 @@ namespace CapaDatos
                 ParStock_Inicial.Value = Detalle_Ingreso.Stock_Inicial;
                 SqlCmd.Parameters.Add(ParStock_Inicial);
 
+                //
+
+                SqlParameter ParcantidadManifestada = new SqlParameter();
+                ParcantidadManifestada.ParameterName = "@cantidadManifestada";
+                ParcantidadManifestada.SqlDbType = SqlDbType.Int;
+                ParcantidadManifestada.Value = Detalle_Ingreso.CantidadManifestada;
+                SqlCmd.Parameters.Add(ParcantidadManifestada);
+
+                SqlParameter ParcantidadDiferencia = new SqlParameter();
+                ParcantidadDiferencia.ParameterName = "@cantidadDiferencia";
+                ParcantidadDiferencia.SqlDbType = SqlDbType.Int;
+                ParcantidadDiferencia.Value = Detalle_Ingreso.CantidadDiferencia;
+                SqlCmd.Parameters.Add(ParcantidadDiferencia);
+                
+
+
+                //
                 SqlParameter ParFecha_Produccion = new SqlParameter();
                 ParFecha_Produccion.ParameterName = "@fecha_produccion";
                 ParFecha_Produccion.SqlDbType = SqlDbType.Date;

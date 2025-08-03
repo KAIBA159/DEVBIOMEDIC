@@ -69,13 +69,24 @@ namespace CapaNegocio
             {
                 DDetalle_Ingreso detalle = new DDetalle_Ingreso();
                 detalle.Idarticulo = Convert.ToInt32(row["idarticulo"].ToString());
-                detalle.Precio_Compra = Convert.ToDecimal(row["precio_compra"].ToString());
-                detalle.Precio_Venta = Convert.ToDecimal(row["precio_venta"].ToString());
+                //detalle.Precio_Compra = Convert.ToDecimal(row["precio_compra"].ToString());
+                //detalle.Precio_Venta = Convert.ToDecimal(row["precio_venta"].ToString());
                 detalle.Stock_Inicial = Convert.ToInt32(row["stock_inicial"].ToString());
                 detalle.Stock_Actual = Convert.ToInt32(row["stock_inicial"].ToString());
                 detalle.Fecha_Produccion = Convert.ToDateTime(row["fecha_produccion"].ToString());
                 detalle.Fecha_Vencimiento = Convert.ToDateTime(row["fecha_vencimiento"].ToString());
 
+
+
+                //
+
+                //this.dataListadoDetalle.Columns["CantidadManifestada"].HeaderText = "Cantidad Manifestada";
+                //this.dataListadoDetalle.Columns["CantidadDiferencia"].HeaderText = "Diferencia";
+
+                detalle.CantidadManifestada = Convert.ToInt32(row["CantidadManifestada"].ToString());
+                detalle.CantidadDiferencia = (Convert.ToInt32(row["CantidadManifestada"].ToString()) - Convert.ToInt32(row["stock_inicial"].ToString())) ;// Convert.ToInt32(row["CantidadDiferencia"].ToString());
+
+                //
 
                 //detalle. = Convert.ToString(row["guia_remisioncliente"].ToString());
                 //detalle. = Convert.ToString(row["subcliente"].ToString());

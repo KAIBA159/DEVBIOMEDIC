@@ -7,24 +7,68 @@
       "RelativeMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\frmingreso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\capapresentacion\\reportes\\rptreporteingresocargo.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}",
-      "RelativeMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\reportes\\rptreporteingresocargo.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}"
+      "AbsoluteMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|c:\\users\\administrador\\documents\\ws\\biomedic\\devbiomedic\\sisgest\\capapresentacion\\frmingreso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\frmingreso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\capapresentacion\\consultarkardex.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\consultarkardex.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{D35DF176-3931-4849-BD9E-970B0013953B}|CapaDatos\\CapaDatos.csproj|c:\\users\\administrador\\documents\\ws\\biomedic\\devbiomedic\\sisgest\\capadatos\\dingreso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D35DF176-3931-4849-BD9E-970B0013953B}|CapaDatos\\CapaDatos.csproj|solutionrelative:capadatos\\dingreso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\capapresentacion\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{809C35A5-4BDE-4824-AB6F-80888C9AE30E}|CapaNegocio\\CapaNegocio.csproj|C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\capanegocio\\ningreso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{809C35A5-4BDE-4824-AB6F-80888C9AE30E}|CapaNegocio\\CapaNegocio.csproj|solutionrelative:capanegocio\\ningreso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{809C35A5-4BDE-4824-AB6F-80888C9AE30E}|CapaNegocio\\CapaNegocio.csproj|C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\capanegocio\\nventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{809C35A5-4BDE-4824-AB6F-80888C9AE30E}|CapaNegocio\\CapaNegocio.csproj|solutionrelative:capanegocio\\nventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\capapresentacion\\frmvistaarticulo_venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\frmvistaarticulo_venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D35DF176-3931-4849-BD9E-970B0013953B}|CapaDatos\\CapaDatos.csproj|C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\capadatos\\dventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D35DF176-3931-4849-BD9E-970B0013953B}|CapaDatos\\CapaDatos.csproj|solutionrelative:capadatos\\dventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\capapresentacion\\frmventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\frmventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\capapresentacion\\frmventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\frmventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\capapresentacion\\frmvistaproveedor_ingreso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\frmvistaproveedor_ingreso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D35DF176-3931-4849-BD9E-970B0013953B}|CapaDatos\\CapaDatos.csproj|C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\capadatos\\ddetalle_ingreso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D35DF176-3931-4849-BD9E-970B0013953B}|CapaDatos\\CapaDatos.csproj|solutionrelative:capadatos\\ddetalle_ingreso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\capapresentacion\\frmvistaarticulo_ingreso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\frmvistaarticulo_ingreso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{809C35A5-4BDE-4824-AB6F-80888C9AE30E}|CapaNegocio\\CapaNegocio.csproj|C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\capanegocio\\narticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{809C35A5-4BDE-4824-AB6F-80888C9AE30E}|CapaNegocio\\CapaNegocio.csproj|solutionrelative:capanegocio\\narticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\capapresentacion\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\capapresentacion\\reportes\\rptreporteingresocargo.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}",
+      "RelativeMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\reportes\\rptreporteingresocargo.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\capapresentacion\\reportes\\frmreportefactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\reportes\\frmreportefactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D35DF176-3931-4849-BD9E-970B0013953B}|CapaDatos\\CapaDatos.csproj|C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\capadatos\\ddetalle_venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D35DF176-3931-4849-BD9E-970B0013953B}|CapaDatos\\CapaDatos.csproj|solutionrelative:capadatos\\ddetalle_venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\capapresentacion\\dsprincipal.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}",
@@ -35,48 +79,52 @@
       "RelativeMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\capapresentacion\\frmvistaarticulo_venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\frmvistaarticulo_venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\capapresentacion\\consultarkardex.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\consultarkardex.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\capapresentacion\\consultarkardex.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\consultarkardex.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\capapresentacion\\frmencargadotransportista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\frmencargadotransportista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\capapresentacion\\reportes\\frmreportefactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\reportes\\frmreportefactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\capapresentacion\\frmproveedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\frmproveedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{809C35A5-4BDE-4824-AB6F-80888C9AE30E}|CapaNegocio\\CapaNegocio.csproj|C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\capanegocio\\narticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{809C35A5-4BDE-4824-AB6F-80888C9AE30E}|CapaNegocio\\CapaNegocio.csproj|solutionrelative:capanegocio\\narticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\capapresentacion\\frmarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\frmarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\capapresentacion\\frmpresentacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\frmpresentacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\capapresentacion\\frmpresentacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\frmpresentacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\capapresentacion\\frmvistaproveedor_ingreso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\frmvistaproveedor_ingreso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\capapresentacion\\frmtrabajador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\frmtrabajador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\capapresentacion\\frmproveedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\frmproveedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\capapresentacion\\frmventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\frmventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\capapresentacion\\frmpresentacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\frmpresentacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\capapresentacion\\frmcategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\frmcategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\capapresentacion\\frmarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\frmarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\capapresentacion\\frmarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\frmarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\capapresentacion\\reportes\\frmreporteingresocargo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\reportes\\frmreporteingresocargo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\capapresentacion\\consultarkardex.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\consultarkardex.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\capapresentacion\\frmproveedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\frmproveedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\capapresentacion\\frmpresentacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\frmpresentacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\capapresentacion\\frmvistaencargado_ingreso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -119,32 +167,12 @@
       "RelativeMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\consultas\\frmconsultacompras.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D35DF176-3931-4849-BD9E-970B0013953B}|CapaDatos\\CapaDatos.csproj|C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\capadatos\\dventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D35DF176-3931-4849-BD9E-970B0013953B}|CapaDatos\\CapaDatos.csproj|solutionrelative:capadatos\\dventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{809C35A5-4BDE-4824-AB6F-80888C9AE30E}|CapaNegocio\\CapaNegocio.csproj|C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\capanegocio\\nventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{809C35A5-4BDE-4824-AB6F-80888C9AE30E}|CapaNegocio\\CapaNegocio.csproj|solutionrelative:capanegocio\\nventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\capapresentacion\\frmvistaarticulo_venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\frmvistaarticulo_venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{809C35A5-4BDE-4824-AB6F-80888C9AE30E}|CapaNegocio\\CapaNegocio.csproj|C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\capanegocio\\ningreso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{809C35A5-4BDE-4824-AB6F-80888C9AE30E}|CapaNegocio\\CapaNegocio.csproj|solutionrelative:capanegocio\\ningreso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\capapresentacion\\frmarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\frmarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\capapresentacion\\frmvistaarticulo_ingreso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\frmvistaarticulo_ingreso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\capapresentacion\\frmingreso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\frmingreso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\capapresentacion\\interfaces\\iformularioreceptorproveedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -153,10 +181,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\capapresentacion\\interfaces\\iformularioreceptorarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\interfaces\\iformularioreceptorarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\capapresentacion\\frmcategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\frmcategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\capapresentacion\\reportes\\rptcliente.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}",
@@ -177,14 +201,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\capapresentacion\\reportes\\frmreporteingresocargo.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\reportes\\frmreporteingresocargo.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D35DF176-3931-4849-BD9E-970B0013953B}|CapaDatos\\CapaDatos.csproj|C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\capadatos\\ddetalle_ingreso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D35DF176-3931-4849-BD9E-970B0013953B}|CapaDatos\\CapaDatos.csproj|solutionrelative:capadatos\\ddetalle_ingreso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D35DF176-3931-4849-BD9E-970B0013953B}|CapaDatos\\CapaDatos.csproj|C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\capadatos\\ddetalle_venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D35DF176-3931-4849-BD9E-970B0013953B}|CapaDatos\\CapaDatos.csproj|solutionrelative:capadatos\\ddetalle_venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{579FB337-AB3A-4B7F-BC6A-FDAF3D3CFF8C}|CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\capapresentacion\\frmcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -246,30 +262,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "FrmIngreso.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\FrmIngreso.cs",
-              "RelativeDocumentMoniker": "CapaPresentacion\\FrmIngreso.cs",
-              "ToolTip": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\FrmIngreso.cs [Dise\u00F1o]",
-              "RelativeToolTip": "CapaPresentacion\\FrmIngreso.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T03:25:42.217Z",
-              "IsPinned": true,
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 7,
               "Title": "FrmVenta.cs",
               "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\FrmVenta.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\FrmVenta.cs",
               "ToolTip": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\FrmVenta.cs",
               "RelativeToolTip": "CapaPresentacion\\FrmVenta.cs",
-              "ViewState": "AgIAAGIBAAAAAAAAAADwv3ABAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAKsAAAAAAAAAAAAawMAAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-21T19:22:33.227Z",
               "IsPinned": true,
@@ -277,7 +280,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "FrmVenta.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\FrmVenta.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\FrmVenta.cs",
@@ -290,7 +293,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 17,
               "Title": "dsPrincipal.xsd",
               "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\dsPrincipal.xsd",
               "RelativeDocumentMoniker": "CapaPresentacion\\dsPrincipal.xsd",
@@ -303,7 +306,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 16,
               "Title": "DDetalle_Venta.cs",
               "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaDatos\\DDetalle_Venta.cs",
               "RelativeDocumentMoniker": "CapaDatos\\DDetalle_Venta.cs",
@@ -312,11 +315,12 @@
               "ViewState": "AgIAAKYAAAAAAAAAAAAjwMEAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-14T22:40:53.123Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 15,
               "Title": "FrmReporteFactura.cs",
               "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\Reportes\\FrmReporteFactura.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\Reportes\\FrmReporteFactura.cs",
@@ -325,7 +329,8 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-24T04:10:44.428Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -335,7 +340,7 @@
               "RelativeDocumentMoniker": "CapaPresentacion\\FrmIngreso.cs",
               "ToolTip": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\FrmIngreso.cs",
               "RelativeToolTip": "CapaPresentacion\\FrmIngreso.cs",
-              "ViewState": "AgIAAHYDAAAAAAAAAAAQwJwDAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAEICAAAAAAAAAAAswFoCAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-11T05:14:18.016Z",
               "IsPinned": true,
@@ -343,7 +348,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 18,
               "Title": "frmPrincipal.cs",
               "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\frmPrincipal.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\frmPrincipal.cs",
@@ -357,7 +362,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 13,
               "Title": "frmPrincipal.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\frmPrincipal.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\frmPrincipal.cs",
@@ -370,7 +375,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 19,
               "Title": "ConsultarKardex.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\ConsultarKardex.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\ConsultarKardex.cs",
@@ -383,13 +388,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 11,
               "Title": "FrmVistaArticulo_Ingreso.cs",
               "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\FrmVistaArticulo_Ingreso.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\FrmVistaArticulo_Ingreso.cs",
               "ToolTip": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\FrmVistaArticulo_Ingreso.cs",
               "RelativeToolTip": "CapaPresentacion\\FrmVistaArticulo_Ingreso.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAewCsAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAhwGIAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-15T04:51:54.584Z",
               "IsPinned": true,
@@ -397,7 +402,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 28,
               "Title": "ConsultarKardex.cs",
               "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\ConsultarKardex.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\ConsultarKardex.cs",
@@ -411,7 +416,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 29,
               "Title": "frmProveedor.cs",
               "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\frmProveedor.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\frmProveedor.cs",
@@ -425,13 +430,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 5,
               "Title": "FrmVistaArticulo_Venta.cs",
               "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\FrmVistaArticulo_Venta.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\FrmVistaArticulo_Venta.cs",
               "ToolTip": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\FrmVistaArticulo_Venta.cs",
               "RelativeToolTip": "CapaPresentacion\\FrmVistaArticulo_Venta.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAwwF0AAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAhwGAAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-17T20:19:49.378Z",
               "IsPinned": true,
@@ -439,16 +444,44 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 4,
               "Title": "NVenta.cs",
               "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaNegocio\\NVenta.cs",
               "RelativeDocumentMoniker": "CapaNegocio\\NVenta.cs",
               "ToolTip": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaNegocio\\NVenta.cs",
               "RelativeToolTip": "CapaNegocio\\NVenta.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAvwE0AAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAADcAAAAAAAAAAIA9wFAAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-14T22:01:58.157Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "rptReporteIngresoCargo.rdlc [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\Reportes\\rptReporteIngresoCargo.rdlc",
+              "RelativeDocumentMoniker": "CapaPresentacion\\Reportes\\rptReporteIngresoCargo.rdlc",
+              "ToolTip": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\Reportes\\rptReporteIngresoCargo.rdlc [Dise\u00F1o]",
+              "RelativeToolTip": "CapaPresentacion\\Reportes\\rptReporteIngresoCargo.rdlc [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001755|",
+              "WhenOpened": "2025-07-22T23:53:39.773Z",
+              "IsPinned": true,
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "NIngreso.cs",
+              "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaNegocio\\NIngreso.cs",
+              "RelativeDocumentMoniker": "CapaNegocio\\NIngreso.cs",
+              "ToolTip": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaNegocio\\NIngreso.cs",
+              "RelativeToolTip": "CapaNegocio\\NIngreso.cs",
+              "ViewState": "AgIAAHQAAAAAAAAAAAApwIkAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-17T14:23:22.272Z",
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -492,19 +525,118 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "rptReporteIngresoCargo.rdlc [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\Reportes\\rptReporteIngresoCargo.rdlc",
-              "RelativeDocumentMoniker": "CapaPresentacion\\Reportes\\rptReporteIngresoCargo.rdlc",
-              "ToolTip": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\Reportes\\rptReporteIngresoCargo.rdlc [Dise\u00F1o]",
-              "RelativeToolTip": "CapaPresentacion\\Reportes\\rptReporteIngresoCargo.rdlc [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001755|",
-              "WhenOpened": "2025-07-22T23:53:39.773Z",
+              "DocumentIndex": 2,
+              "Title": "DIngreso.cs",
+              "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaDatos\\DIngreso.cs",
+              "RelativeDocumentMoniker": "CapaDatos\\DIngreso.cs",
+              "ToolTip": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaDatos\\DIngreso.cs",
+              "RelativeToolTip": "CapaDatos\\DIngreso.cs",
+              "ViewState": "AgIAAHQBAAAAAAAAAAAswIkBAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-03T20:33:09.239Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "NArticulo.cs",
+              "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaNegocio\\NArticulo.cs",
+              "RelativeDocumentMoniker": "CapaNegocio\\NArticulo.cs",
+              "ToolTip": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaNegocio\\NArticulo.cs",
+              "RelativeToolTip": "CapaNegocio\\NArticulo.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAIAwwEIAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T22:45:46.3Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "frmTrabajador.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\frmTrabajador.cs",
+              "RelativeDocumentMoniker": "CapaPresentacion\\frmTrabajador.cs",
+              "ToolTip": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\frmTrabajador.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CapaPresentacion\\frmTrabajador.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-31T18:42:04.68Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DDetalle_Ingreso.cs",
+              "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaDatos\\DDetalle_Ingreso.cs",
+              "RelativeDocumentMoniker": "CapaDatos\\DDetalle_Ingreso.cs",
+              "ToolTip": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaDatos\\DDetalle_Ingreso.cs",
+              "RelativeToolTip": "CapaDatos\\DDetalle_Ingreso.cs",
+              "ViewState": "AgIAAPMAAAAAAAAAAAAswP4AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T22:59:33.108Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FrmVistaProveedor_Ingreso.cs",
+              "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\FrmVistaProveedor_Ingreso.cs",
+              "RelativeDocumentMoniker": "CapaPresentacion\\FrmVistaProveedor_Ingreso.cs",
+              "ToolTip": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\FrmVistaProveedor_Ingreso.cs",
+              "RelativeToolTip": "CapaPresentacion\\FrmVistaProveedor_Ingreso.cs",
+              "ViewState": "AgIAAFsAAAAAAAAAAIAwwHMAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T13:59:27.503Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "FrmCategoria.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\FrmCategoria.cs",
+              "RelativeDocumentMoniker": "CapaPresentacion\\FrmCategoria.cs",
+              "ToolTip": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\FrmCategoria.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CapaPresentacion\\FrmCategoria.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-16T04:31:52.406Z",
               "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 6,
+              "Title": "DVenta.cs",
+              "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaDatos\\DVenta.cs",
+              "RelativeDocumentMoniker": "CapaDatos\\DVenta.cs",
+              "ToolTip": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaDatos\\DVenta.cs",
+              "RelativeToolTip": "CapaDatos\\DVenta.cs",
+              "ViewState": "AgIAAHYBAAAAAAAAAAApwIUBAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T14:57:38.708Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "frmArticulo.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\frmArticulo.cs",
+              "RelativeDocumentMoniker": "CapaPresentacion\\frmArticulo.cs",
+              "ToolTip": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\frmArticulo.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CapaPresentacion\\frmArticulo.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-16T04:29:07.55Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "frmEncargadoTransportista.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\frmEncargadoTransportista.cs",
+              "RelativeDocumentMoniker": "CapaPresentacion\\frmEncargadoTransportista.cs",
+              "ToolTip": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\frmEncargadoTransportista.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CapaPresentacion\\frmEncargadoTransportista.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-31T18:51:38.649Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
               "Title": "frmProveedor.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\frmProveedor.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\frmProveedor.cs",
@@ -516,33 +648,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "frmArticulo.cs",
-              "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\frmArticulo.cs",
-              "RelativeDocumentMoniker": "CapaPresentacion\\frmArticulo.cs",
-              "ToolTip": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\frmArticulo.cs",
-              "RelativeToolTip": "CapaPresentacion\\frmArticulo.cs",
-              "ViewState": "AgIAAHYAAAAAAAAAAAAjwIYAAAAIAAAAAAAAAA==",
+              "DocumentIndex": 23,
+              "Title": "frmPresentacion.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\frmPresentacion.cs",
+              "RelativeDocumentMoniker": "CapaPresentacion\\frmPresentacion.cs",
+              "ToolTip": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\frmPresentacion.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CapaPresentacion\\frmPresentacion.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T16:42:13.184Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-31T17:16:24.823Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "NArticulo.cs",
-              "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaNegocio\\NArticulo.cs",
-              "RelativeDocumentMoniker": "CapaNegocio\\NArticulo.cs",
-              "ToolTip": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaNegocio\\NArticulo.cs",
-              "RelativeToolTip": "CapaNegocio\\NArticulo.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAjwEIAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T22:45:46.3Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 30,
               "Title": "frmPresentacion.cs",
               "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\frmPresentacion.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\frmPresentacion.cs",
@@ -555,7 +673,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 26,
+              "Title": "frmArticulo.cs",
+              "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\frmArticulo.cs",
+              "RelativeDocumentMoniker": "CapaPresentacion\\frmArticulo.cs",
+              "ToolTip": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\frmArticulo.cs",
+              "RelativeToolTip": "CapaPresentacion\\frmArticulo.cs",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAawIYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T16:42:13.184Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "FrmReporteIngresoCargo.cs",
+              "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\Reportes\\FrmReporteIngresoCargo.cs",
+              "RelativeDocumentMoniker": "CapaPresentacion\\Reportes\\FrmReporteIngresoCargo.cs",
+              "ToolTip": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\Reportes\\FrmReporteIngresoCargo.cs",
+              "RelativeToolTip": "CapaPresentacion\\Reportes\\FrmReporteIngresoCargo.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAEwDYAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T00:11:01.092Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
               "Title": "frmVistaCategoria_Articulo.cs",
               "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\frmVistaCategoria_Articulo.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\frmVistaCategoria_Articulo.cs",
@@ -567,32 +711,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "frmPresentacion.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\frmPresentacion.cs",
-              "RelativeDocumentMoniker": "CapaPresentacion\\frmPresentacion.cs",
-              "ToolTip": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\frmPresentacion.cs [Dise\u00F1o]",
-              "RelativeToolTip": "CapaPresentacion\\frmPresentacion.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T04:33:50.227Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "FrmVistaProveedor_Ingreso.cs",
-              "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\FrmVistaProveedor_Ingreso.cs",
-              "RelativeDocumentMoniker": "CapaPresentacion\\FrmVistaProveedor_Ingreso.cs",
-              "ToolTip": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\FrmVistaProveedor_Ingreso.cs",
-              "RelativeToolTip": "CapaPresentacion\\FrmVistaProveedor_Ingreso.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAewCsAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T13:59:27.503Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 34,
               "Title": "frmTrabajador.cs",
               "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\frmTrabajador.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\frmTrabajador.cs",
@@ -604,7 +723,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 32,
               "Title": "FrmVistaCliente_Venta.cs",
               "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\FrmVistaCliente_Venta.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\FrmVistaCliente_Venta.cs",
@@ -616,7 +735,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 31,
               "Title": "FrmVistaEncargado_Ingreso.cs",
               "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\FrmVistaEncargado_Ingreso.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\FrmVistaEncargado_Ingreso.cs",
@@ -628,7 +747,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 35,
               "Title": "frmEncargadoTransportista.cs",
               "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\frmEncargadoTransportista.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\frmEncargadoTransportista.cs",
@@ -640,7 +759,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 38,
               "Title": "FrmConsulta_Stock_Articulos.cs",
               "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\Consultas\\FrmConsulta_Stock_Articulos.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\Consultas\\FrmConsulta_Stock_Articulos.cs",
@@ -652,7 +771,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 39,
               "Title": "FrmConsultaVentas.cs",
               "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\Consultas\\FrmConsultaVentas.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\Consultas\\FrmConsultaVentas.cs",
@@ -664,7 +783,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 37,
               "Title": "FrmCategoria.cs",
               "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\FrmCategoria.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\FrmCategoria.cs",
@@ -677,7 +796,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 40,
               "Title": "FrmConsultaCompras.cs",
               "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\Consultas\\FrmConsultaCompras.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\Consultas\\FrmConsultaCompras.cs",
@@ -690,7 +809,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 36,
               "Title": "frmCliente.cs",
               "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\frmCliente.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\frmCliente.cs",
@@ -702,7 +821,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 41,
               "Title": "FrmVistaArticulo_Venta.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\FrmVistaArticulo_Venta.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\FrmVistaArticulo_Venta.cs",
@@ -714,45 +833,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "DVenta.cs",
-              "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaDatos\\DVenta.cs",
-              "RelativeDocumentMoniker": "CapaDatos\\DVenta.cs",
-              "ToolTip": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaDatos\\DVenta.cs",
-              "RelativeToolTip": "CapaDatos\\DVenta.cs",
-              "ViewState": "AgIAAMQAAAAAAAAAAAAiwO4AAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T14:57:38.708Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "NIngreso.cs",
-              "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaNegocio\\NIngreso.cs",
-              "RelativeDocumentMoniker": "CapaNegocio\\NIngreso.cs",
-              "ToolTip": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaNegocio\\NIngreso.cs",
-              "RelativeToolTip": "CapaNegocio\\NIngreso.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAArwFQAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-17T14:23:22.272Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "frmArticulo.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\frmArticulo.cs",
-              "RelativeDocumentMoniker": "CapaPresentacion\\frmArticulo.cs",
-              "ToolTip": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\frmArticulo.cs [Dise\u00F1o]",
-              "RelativeToolTip": "CapaPresentacion\\frmArticulo.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T04:29:07.55Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 42,
               "Title": "FrmVistaArticulo_Ingreso.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\FrmVistaArticulo_Ingreso.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\FrmVistaArticulo_Ingreso.cs",
@@ -764,7 +845,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 43,
               "Title": "IFormularioReceptorProveedor.cs",
               "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\Interfaces\\IFormularioReceptorProveedor.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\Interfaces\\IFormularioReceptorProveedor.cs",
@@ -776,7 +857,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 44,
               "Title": "IFormularioReceptorArticulo.cs",
               "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\Interfaces\\IFormularioReceptorArticulo.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\Interfaces\\IFormularioReceptorArticulo.cs",
@@ -788,19 +869,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "FrmCategoria.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\FrmCategoria.cs",
-              "RelativeDocumentMoniker": "CapaPresentacion\\FrmCategoria.cs",
-              "ToolTip": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\FrmCategoria.cs [Dise\u00F1o]",
-              "RelativeToolTip": "CapaPresentacion\\FrmCategoria.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T04:31:52.406Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 46,
               "Title": "FrmReporteVentas.cs",
               "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\Reportes\\FrmReporteVentas.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\Reportes\\FrmReporteVentas.cs",
@@ -812,7 +881,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 49,
               "Title": "FrmReporteIngresoCargo.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\Reportes\\FrmReporteIngresoCargo.Designer.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\Reportes\\FrmReporteIngresoCargo.Designer.cs",
@@ -824,7 +893,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 45,
               "Title": "rptCliente.rdlc [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\Reportes\\rptCliente.rdlc",
               "RelativeDocumentMoniker": "CapaPresentacion\\Reportes\\rptCliente.rdlc",
@@ -835,7 +904,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 48,
               "Title": "FrmReporteFactura.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\Reportes\\FrmReporteFactura.Designer.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\Reportes\\FrmReporteFactura.Designer.cs",
@@ -847,7 +916,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 47,
               "Title": "FrmReporteVentas.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\Reportes\\FrmReporteVentas.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\Reportes\\FrmReporteVentas.cs",
@@ -858,19 +927,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "DDetalle_Ingreso.cs",
-              "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaDatos\\DDetalle_Ingreso.cs",
-              "RelativeDocumentMoniker": "CapaDatos\\DDetalle_Ingreso.cs",
-              "ToolTip": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaDatos\\DDetalle_Ingreso.cs",
-              "RelativeToolTip": "CapaDatos\\DDetalle_Ingreso.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAACAAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-14T22:59:33.108Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 50,
               "Title": "frmCliente.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\frmCliente.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\frmCliente.cs",
@@ -881,7 +938,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 52,
               "Title": "dsPrincipal.cs",
               "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\dsPrincipal.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\dsPrincipal.cs",
@@ -894,7 +951,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 51,
               "Title": "dbventasDataSet.xsd",
               "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\dbventasDataSet.xsd",
               "RelativeDocumentMoniker": "CapaPresentacion\\dbventasDataSet.xsd",
@@ -905,19 +962,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 53,
               "Title": "FrmIngreso.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\FrmIngreso.Designer.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\FrmIngreso.Designer.cs",
               "ToolTip": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\FrmIngreso.Designer.cs",
               "RelativeToolTip": "CapaPresentacion\\FrmIngreso.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAABhwBYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T16:51:37.65Z"
+              "WhenOpened": "2025-06-17T16:51:37.65Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 56,
               "Title": "FrmVistaEncargado_Ingreso.resx",
               "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\FrmVistaEncargado_Ingreso.resx",
               "RelativeDocumentMoniker": "CapaPresentacion\\FrmVistaEncargado_Ingreso.resx",
@@ -928,7 +986,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 54,
               "Title": "DProveedor.cs",
               "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaDatos\\DProveedor.cs",
               "RelativeDocumentMoniker": "CapaDatos\\DProveedor.cs",
@@ -940,7 +998,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 55,
               "Title": "FrmVistaEncargado_Ingreso.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\FrmVistaEncargado_Ingreso.Designer.cs",
               "RelativeDocumentMoniker": "CapaPresentacion\\FrmVistaEncargado_Ingreso.Designer.cs",
@@ -952,7 +1010,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 57,
               "Title": "app.config",
               "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaDatos\\app.config",
               "RelativeDocumentMoniker": "CapaDatos\\app.config",
@@ -965,7 +1023,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 58,
               "Title": "DTrabajador.cs",
               "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaDatos\\DTrabajador.cs",
               "RelativeDocumentMoniker": "CapaDatos\\DTrabajador.cs",
@@ -977,7 +1035,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 60,
               "Title": "app.config",
               "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\app.config",
               "RelativeDocumentMoniker": "CapaPresentacion\\app.config",
@@ -990,7 +1048,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 59,
               "Title": "App.config",
               "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\SisVentas\\App.config",
               "RelativeDocumentMoniker": "SisVentas\\App.config",
@@ -1002,7 +1060,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 61,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\SisVentas\\Program.cs",
               "RelativeDocumentMoniker": "SisVentas\\Program.cs",
@@ -1014,7 +1072,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 62,
               "Title": "Form1.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\SisVentas\\Form1.cs",
               "RelativeDocumentMoniker": "SisVentas\\Form1.cs",
@@ -1032,6 +1090,39 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "dea873ad-3010-4d63-9a9e-7597b10289cd",
+        "Display": 0,
+        "X": 18,
+        "Y": 49,
+        "Width": 1077,
+        "Height": 811,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FrmIngreso.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\FrmIngreso.cs",
+              "RelativeDocumentMoniker": "CapaPresentacion\\FrmIngreso.cs",
+              "ToolTip": "C:\\Users\\Administrador\\Documents\\WS\\BIOMEDIC\\DEVBIOMEDIC\\SisGest\\CapaPresentacion\\FrmIngreso.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CapaPresentacion\\FrmIngreso.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T03:25:42.217Z",
+              "EditorCaption": " [Dise\u00F1o]"
             }
           ]
         }

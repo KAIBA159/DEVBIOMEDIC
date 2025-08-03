@@ -382,8 +382,8 @@ namespace CapaPresentacion
             this.cbTipo_Comprobante.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["tipo_comprobante"].Value);
             this.txtSerie.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["serie"].Value);
             this.txtCorrelativo.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["correlativo"].Value);
-            this.lblTotal_Pagado.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["total"].Value);
-            this.txtIgv.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["Impuesto"].Value);
+            //this.lblTotal_Pagado.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["total"].Value);
+            //this.txtIgv.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["Impuesto"].Value);
 
             this.MostrarDetalle();
             this.tabControl1.SelectedIndex = 1;
@@ -632,6 +632,11 @@ namespace CapaPresentacion
             frm.Texto = Convert.ToString(dtFecha1.Value);
             frm.Texto2 = Convert.ToString(dtFecha2.Value);
             frm.ShowDialog();
+        }
+
+        private void dataListado_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

@@ -4774,6 +4774,8 @@ namespace CapaPresentacion {
             
             private global::System.Data.DataColumn columncodigo;
             
+            private global::System.Data.DataColumn columnpresentacion1;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public spbuscar_ingresoCargoDataTable() {
@@ -5065,6 +5067,14 @@ namespace CapaPresentacion {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn presentacion1Column {
+                get {
+                    return this.columnpresentacion1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -5131,7 +5141,8 @@ namespace CapaPresentacion {
                         System.DateTime fecha_vencimiento, 
                         string Transportista_num_documento, 
                         string Transportista_placa, 
-                        string codigo) {
+                        string codigo, 
+                        string presentacion1) {
                 spbuscar_ingresoCargoRow rowspbuscar_ingresoCargoRow = ((spbuscar_ingresoCargoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -5165,7 +5176,8 @@ namespace CapaPresentacion {
                         fecha_vencimiento,
                         Transportista_num_documento,
                         Transportista_placa,
-                        codigo};
+                        codigo,
+                        presentacion1};
                 rowspbuscar_ingresoCargoRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowspbuscar_ingresoCargoRow);
                 return rowspbuscar_ingresoCargoRow;
@@ -5227,6 +5239,7 @@ namespace CapaPresentacion {
                 this.columnTransportista_num_documento = base.Columns["Transportista_num_documento"];
                 this.columnTransportista_placa = base.Columns["Transportista_placa"];
                 this.columncodigo = base.Columns["codigo"];
+                this.columnpresentacion1 = base.Columns["presentacion1"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5296,6 +5309,8 @@ namespace CapaPresentacion {
                 base.Columns.Add(this.columnTransportista_placa);
                 this.columncodigo = new global::System.Data.DataColumn("codigo", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncodigo);
+                this.columnpresentacion1 = new global::System.Data.DataColumn("presentacion1", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpresentacion1);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnidingreso}, true));
                 this.columnidingreso.AutoIncrement = true;
@@ -5350,6 +5365,8 @@ namespace CapaPresentacion {
                 this.columnTransportista_placa.MaxLength = 50;
                 this.columncodigo.ReadOnly = true;
                 this.columncodigo.MaxLength = 50;
+                this.columnpresentacion1.ReadOnly = true;
+                this.columnpresentacion1.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8002,6 +8019,23 @@ namespace CapaPresentacion {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string presentacion1 {
+                get {
+                    try {
+                        return ((string)(this[this.tablespbuscar_ingresoCargo.presentacion1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'presentacion1\' de la tabla \'spbuscar_ingresoCargo\' es DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespbuscar_ingresoCargo.presentacion1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsTrabajadorNull() {
                 return this.IsNull(this.tablespbuscar_ingresoCargo.TrabajadorColumn);
             }
@@ -8358,6 +8392,18 @@ namespace CapaPresentacion {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetcodigoNull() {
                 this[this.tablespbuscar_ingresoCargo.codigoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Ispresentacion1Null() {
+                return this.IsNull(this.tablespbuscar_ingresoCargo.presentacion1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setpresentacion1Null() {
+                this[this.tablespbuscar_ingresoCargo.presentacion1Column] = global::System.Convert.DBNull;
             }
         }
         
@@ -10808,6 +10854,7 @@ namespace CapaPresentacion.dsPrincipalTableAdapters {
             tableMapping.ColumnMappings.Add("Transportista_num_documento", "Transportista_num_documento");
             tableMapping.ColumnMappings.Add("Transportista_placa", "Transportista_placa");
             tableMapping.ColumnMappings.Add("codigo", "codigo");
+            tableMapping.ColumnMappings.Add("presentacion1", "presentacion1");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
