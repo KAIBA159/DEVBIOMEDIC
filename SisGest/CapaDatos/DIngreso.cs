@@ -32,6 +32,9 @@ namespace CapaDatos
         private string _Dua;
         private string _CorrelativoUnico;
 
+        private string _Conclusion;
+        
+
 
         //Propiedades
         public int Idingreso
@@ -143,7 +146,13 @@ namespace CapaDatos
             set { _CorrelativoUnico = value; }
         }
 
+        public string Conclusion
+        {
+            get { return _Conclusion; }
+            set { _Conclusion = value; }
+        }
 
+        //tb_conclusion
 
         //Constructores
         public DIngreso()
@@ -337,6 +346,14 @@ namespace CapaDatos
                 SqlCmd.Parameters.Add(ParcorrelativoUnico);
 
 
+                SqlParameter ParConclusion = new SqlParameter();
+                ParConclusion.ParameterName = "@conclusion";
+                ParConclusion.SqlDbType = SqlDbType.VarChar;
+                ParConclusion.Size = 50;
+                ParConclusion.Value = Ingreso.Conclusion;
+                SqlCmd.Parameters.Add(ParConclusion);
+
+
                 //Ejecutamos nuestro comando
 
                 rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "NO se Ingreso el Registro";
@@ -417,6 +434,44 @@ namespace CapaDatos
             }
             return rpta;
         }
+
+        public static string AnularEnBloque(List<int> ids)
+        {
+            string rpta = "";
+            try
+            {
+                using (SqlConnection SqlCon = new SqlConnection(Conexion.Cn))
+                {
+                    SqlCon.Open();
+                    using (SqlCommand SqlCmd = new SqlCommand("spanular_ingreso_bloque", SqlCon))
+                    {
+                        SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                        // Crear DataTable para el parámetro tipo tabla
+                        DataTable tvp = new DataTable();
+                        tvp.Columns.Add("idingreso", typeof(int));
+                        foreach (int id in ids)
+                        {
+                            tvp.Rows.Add(id);
+                        }
+
+                        SqlParameter param = SqlCmd.Parameters.AddWithValue("@Ids", tvp);
+                        param.SqlDbType = SqlDbType.Structured;
+                        param.TypeName = "dbo.IdIngresoTable"; // Debe coincidir con el TYPE en SQL
+
+                        SqlCmd.ExecuteNonQuery();
+                        rpta = "OK";
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                rpta = ex.Message;
+            }
+            return rpta;
+        }
+
+
 
         //Método Mostrar
         public DataTable Mostrar()

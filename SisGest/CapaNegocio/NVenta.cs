@@ -12,7 +12,7 @@ namespace CapaNegocio
     public class NVenta
     {
         public static string Insertar(int idcliente, int idtrabajador, DateTime fecha,
-            string tipo_comprobante, string serie, string correlativo, decimal igv,
+            string tipo_comprobante, string serie, string correlativo, decimal igv, string estado,
             DataTable dtDetalles)
         {
             DVenta Obj = new DVenta();
@@ -23,6 +23,8 @@ namespace CapaNegocio
             Obj.Serie = serie;
             Obj.Correlativo = correlativo;
             Obj.Igv = igv;
+
+            Obj.Estado = estado;
 
             List<DDetalle_Venta> detalles = new List<DDetalle_Venta>();
 
@@ -66,6 +68,18 @@ namespace CapaNegocio
             DVenta Obj = new DVenta();
             return Obj.BuscarFechas(textobuscar, textobuscar2);
         }
+
+        public static DataTable BuscarFechas2(string textobuscar, string textobuscar2)
+        {
+            DVenta Obj = new DVenta();
+            return Obj.BuscarFechas2(textobuscar, textobuscar2);
+        }
+
+        public static string AnularEnBloque(List<int> ids)
+        {
+            return DVenta.AnularEnBloque(ids);
+        }
+        
 
         public static DataTable MostrarDetalle(string textobuscar)
         {

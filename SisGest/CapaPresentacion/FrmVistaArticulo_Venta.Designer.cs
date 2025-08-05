@@ -47,11 +47,11 @@
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Location = new System.Drawing.Point(9, 50);
+            this.tabControl1.Location = new System.Drawing.Point(9, 70);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(826, 515);
+            this.tabControl1.Size = new System.Drawing.Size(826, 495);
             this.tabControl1.TabIndex = 13;
             // 
             // tabPage1
@@ -65,7 +65,7 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage1.Size = new System.Drawing.Size(818, 489);
+            this.tabPage1.Size = new System.Drawing.Size(818, 469);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Listado";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -98,7 +98,7 @@
             this.dataListado.ReadOnly = true;
             this.dataListado.RowTemplate.Height = 24;
             this.dataListado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataListado.Size = new System.Drawing.Size(792, 389);
+            this.dataListado.Size = new System.Drawing.Size(792, 369);
             this.dataListado.TabIndex = 7;
             this.dataListado.DoubleClick += new System.EventHandler(this.dataListado_DoubleClick);
             // 

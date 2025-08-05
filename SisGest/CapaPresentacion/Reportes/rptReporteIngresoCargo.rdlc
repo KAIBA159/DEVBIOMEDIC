@@ -149,6 +149,18 @@
           <DataField>presentacion1</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="conclusion">
+          <DataField>conclusion</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cantidadManifestada">
+          <DataField>cantidadManifestada</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="cantidadDiferencia">
+          <DataField>cantidadDiferencia</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>dsPrincipal</rd:DataSetName>
@@ -1068,7 +1080,42 @@ sanitario/NSO</Value>
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Stockingreso1">
+                        <Textbox Name="cantidadManifestada1">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!cantidadManifestada.Value</Value>
+                                  <Style>
+                                    <FontSize>7pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>cantidadManifestada1</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Stockingreso">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -1086,7 +1133,7 @@ sanitario/NSO</Value>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Stockingreso1</rd:DefaultName>
+                          <rd:DefaultName>Stockingreso</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -1103,14 +1150,14 @@ sanitario/NSO</Value>
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox33">
+                        <Textbox Name="cantidadDiferencia">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value />
+                                  <Value>=Fields!cantidadDiferencia.Value</Value>
                                   <Style>
                                     <FontSize>7pt</FontSize>
                                   </Style>
@@ -1121,42 +1168,7 @@ sanitario/NSO</Value>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox33</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <VerticalAlign>Middle</VerticalAlign>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox48">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value />
-                                  <Style>
-                                    <FontSize>7pt</FontSize>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox48</rd:DefaultName>
+                          <rd:DefaultName>cantidadDiferencia</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -1382,7 +1394,7 @@ sanitario/NSO</Value>
             <DataSetName>DataSet1</DataSetName>
             <Left>0.18205cm</Left>
             <Height>3.02562cm</Height>
-            <Width>25.72978cm</Width>
+            <Width>25.7298cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1839,7 +1851,7 @@ sanitario/NSO</Value>
       <Width>26.54515cm</Width>
       <Page>
         <PageHeader>
-          <Height>7.15349cm</Height>
+          <Height>7.23287cm</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <ReportItems>
             <Image Name="biomedic">
@@ -1897,16 +1909,18 @@ sanitario/NSO</Value>
                     <TextRun>
                       <Value>FECHA :</Value>
                       <Style>
-                        <FontSize>9pt</FontSize>
+                        <FontSize>8pt</FontSize>
                       </Style>
                     </TextRun>
                   </TextRuns>
-                  <Style />
+                  <Style>
+                    <TextAlign>Right</TextAlign>
+                  </Style>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox11</rd:DefaultName>
               <Top>3.1975cm</Top>
-              <Left>2.53682cm</Left>
+              <Left>1.90182cm</Left>
               <Height>0.6cm</Height>
               <Width>1.41521cm</Width>
               <ZIndex>2</ZIndex>
@@ -1929,18 +1943,20 @@ sanitario/NSO</Value>
                     <TextRun>
                       <Value>  TIPO DE PRODUCTO :</Value>
                       <Style>
-                        <FontSize>9pt</FontSize>
+                        <FontSize>8pt</FontSize>
                       </Style>
                     </TextRun>
                   </TextRuns>
-                  <Style />
+                  <Style>
+                    <TextAlign>Right</TextAlign>
+                  </Style>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox11</rd:DefaultName>
               <Top>3.7975cm</Top>
-              <Left>0.18203cm</Left>
+              <Left>0.04338cm</Left>
               <Height>0.6cm</Height>
-              <Width>3.77cm</Width>
+              <Width>3.27365cm</Width>
               <ZIndex>3</ZIndex>
               <Style>
                 <Border>
@@ -1961,16 +1977,18 @@ sanitario/NSO</Value>
                     <TextRun>
                       <Value>   N DE BULTOS :</Value>
                       <Style>
-                        <FontSize>9pt</FontSize>
+                        <FontSize>8pt</FontSize>
                       </Style>
                     </TextRun>
                   </TextRuns>
-                  <Style />
+                  <Style>
+                    <TextAlign>Right</TextAlign>
+                  </Style>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox11</rd:DefaultName>
               <Top>4.3975cm</Top>
-              <Left>1.13453cm</Left>
+              <Left>0.49953cm</Left>
               <Height>0.6cm</Height>
               <Width>2.8175cm</Width>
               <ZIndex>4</ZIndex>
@@ -1993,16 +2011,18 @@ sanitario/NSO</Value>
                     <TextRun>
                       <Value>    DUA/ INVOCE :</Value>
                       <Style>
-                        <FontSize>9pt</FontSize>
+                        <FontSize>8pt</FontSize>
                       </Style>
                     </TextRun>
                   </TextRuns>
-                  <Style />
+                  <Style>
+                    <TextAlign>Right</TextAlign>
+                  </Style>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox11</rd:DefaultName>
               <Top>4.9975cm</Top>
-              <Left>1.13135cm</Left>
+              <Left>0.49635cm</Left>
               <Height>0.6cm</Height>
               <Width>2.82068cm</Width>
               <ZIndex>5</ZIndex>
@@ -2025,18 +2045,20 @@ sanitario/NSO</Value>
                     <TextRun>
                       <Value>N DE GUIA REMISION :</Value>
                       <Style>
-                        <FontSize>9pt</FontSize>
+                        <FontSize>8pt</FontSize>
                       </Style>
                     </TextRun>
                   </TextRuns>
-                  <Style />
+                  <Style>
+                    <TextAlign>Right</TextAlign>
+                  </Style>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox11</rd:DefaultName>
               <Top>5.5975cm</Top>
-              <Left>0.18203cm</Left>
+              <Left>0.04656cm</Left>
               <Height>0.6cm</Height>
-              <Width>3.77cm</Width>
+              <Width>3.27047cm</Width>
               <ZIndex>6</ZIndex>
               <Style>
                 <Border>
@@ -2057,7 +2079,7 @@ sanitario/NSO</Value>
                     <TextRun>
                       <Value>=First(Fields!fecha.Value, "DataSet1")</Value>
                       <Style>
-                        <FontSize>9pt</FontSize>
+                        <FontSize>8pt</FontSize>
                         <Format>d</Format>
                       </Style>
                     </TextRun>
@@ -2069,7 +2091,7 @@ sanitario/NSO</Value>
               </Paragraphs>
               <rd:DefaultName>fecha</rd:DefaultName>
               <Top>3.1975cm</Top>
-              <Left>4.36245cm</Left>
+              <Left>3.40995cm</Left>
               <Height>0.6cm</Height>
               <Width>3.05246cm</Width>
               <ZIndex>7</ZIndex>
@@ -2092,7 +2114,7 @@ sanitario/NSO</Value>
                     <TextRun>
                       <Value>=First(Fields!serie.Value, "DataSet1")</Value>
                       <Style>
-                        <FontSize>9pt</FontSize>
+                        <FontSize>8pt</FontSize>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -2103,7 +2125,7 @@ sanitario/NSO</Value>
               </Paragraphs>
               <rd:DefaultName>serie1</rd:DefaultName>
               <Top>5.5975cm</Top>
-              <Left>4.36245cm</Left>
+              <Left>3.40995cm</Left>
               <Height>0.6cm</Height>
               <Width>1.41521cm</Width>
               <ZIndex>8</ZIndex>
@@ -2126,7 +2148,7 @@ sanitario/NSO</Value>
                     <TextRun>
                       <Value>=First(Fields!correlativo.Value, "DataSet1")</Value>
                       <Style>
-                        <FontSize>9pt</FontSize>
+                        <FontSize>8pt</FontSize>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -2137,7 +2159,7 @@ sanitario/NSO</Value>
               </Paragraphs>
               <rd:DefaultName>correlativo1</rd:DefaultName>
               <Top>5.5975cm</Top>
-              <Left>5.98399cm</Left>
+              <Left>5.03149cm</Left>
               <Height>0.6cm</Height>
               <Width>1.43092cm</Width>
               <ZIndex>9</ZIndex>
@@ -2160,7 +2182,7 @@ sanitario/NSO</Value>
                     <TextRun>
                       <Value>-</Value>
                       <Style>
-                        <FontSize>9pt</FontSize>
+                        <FontSize>8pt</FontSize>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -2169,7 +2191,7 @@ sanitario/NSO</Value>
               </Paragraphs>
               <rd:DefaultName>Textbox42</rd:DefaultName>
               <Top>5.5975cm</Top>
-              <Left>5.38078cm</Left>
+              <Left>4.42828cm</Left>
               <Height>0.6cm</Height>
               <Width>0.64792cm</Width>
               <ZIndex>10</ZIndex>
@@ -2192,7 +2214,7 @@ sanitario/NSO</Value>
                     <TextRun>
                       <Value>  Tipo de Ingreso : </Value>
                       <Style>
-                        <FontSize>9pt</FontSize>
+                        <FontSize>8pt</FontSize>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -2202,10 +2224,10 @@ sanitario/NSO</Value>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox11</rd:DefaultName>
-              <Top>4.9925cm</Top>
-              <Left>14.3595cm</Left>
+              <Top>3.1975cm</Top>
+              <Left>7.66554cm</Left>
               <Height>0.6cm</Height>
-              <Width>2.85278cm</Width>
+              <Width>2.45591cm</Width>
               <ZIndex>11</ZIndex>
               <Style>
                 <Border>
@@ -2226,7 +2248,7 @@ sanitario/NSO</Value>
                     <TextRun>
                       <Value>=First(Fields!Tipo_Ingreso.Value, "DataSet1")</Value>
                       <Style>
-                        <FontSize>9pt</FontSize>
+                        <FontSize>8pt</FontSize>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -2234,10 +2256,10 @@ sanitario/NSO</Value>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Tipo_Ingreso</rd:DefaultName>
-              <Top>4.9925cm</Top>
-              <Left>17.68391cm</Left>
+              <Top>3.1975cm</Top>
+              <Left>10.15672cm</Left>
               <Height>0.6cm</Height>
-              <Width>6.40589cm</Width>
+              <Width>3.82309cm</Width>
               <ZIndex>12</ZIndex>
               <Style>
                 <Border>
@@ -2258,7 +2280,7 @@ sanitario/NSO</Value>
                     <TextRun>
                       <Value>=First(Fields!bultos.Value, "DataSet1")</Value>
                       <Style>
-                        <FontSize>9pt</FontSize>
+                        <FontSize>8pt</FontSize>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -2269,7 +2291,7 @@ sanitario/NSO</Value>
               </Paragraphs>
               <rd:DefaultName>bultos</rd:DefaultName>
               <Top>4.46806cm</Top>
-              <Left>4.36245cm</Left>
+              <Left>3.40995cm</Left>
               <Height>0.49417cm</Height>
               <Width>4.82483cm</Width>
               <ZIndex>13</ZIndex>
@@ -2292,7 +2314,7 @@ sanitario/NSO</Value>
                     <TextRun>
                       <Value>=First(Fields!Tipo_Producto.Value, "DataSet1")</Value>
                       <Style>
-                        <FontSize>9pt</FontSize>
+                        <FontSize>8pt</FontSize>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -2303,7 +2325,7 @@ sanitario/NSO</Value>
               </Paragraphs>
               <rd:DefaultName>Tipo_Producto</rd:DefaultName>
               <Top>3.7975cm</Top>
-              <Left>4.36245cm</Left>
+              <Left>3.40995cm</Left>
               <Height>0.6cm</Height>
               <Width>4.82483cm</Width>
               <ZIndex>14</ZIndex>
@@ -2326,7 +2348,7 @@ sanitario/NSO</Value>
                     <TextRun>
                       <Value>=First(Fields!dua.Value, "DataSet1")</Value>
                       <Style>
-                        <FontSize>9pt</FontSize>
+                        <FontSize>8pt</FontSize>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -2337,7 +2359,7 @@ sanitario/NSO</Value>
               </Paragraphs>
               <rd:DefaultName>dua</rd:DefaultName>
               <Top>4.9975cm</Top>
-              <Left>4.36245cm</Left>
+              <Left>3.40995cm</Left>
               <Height>0.52944cm</Height>
               <Width>4.82483cm</Width>
               <ZIndex>15</ZIndex>
@@ -2425,9 +2447,9 @@ sanitario/NSO</Value>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>Entregado por :</Value>
+                      <Value>Entregado por:</Value>
                       <Style>
-                        <FontSize>9pt</FontSize>
+                        <FontSize>8pt</FontSize>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -2437,8 +2459,8 @@ sanitario/NSO</Value>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox4</rd:DefaultName>
-              <Top>2.26342cm</Top>
-              <Left>14.1562cm</Left>
+              <Top>3.21592cm</Top>
+              <Left>14.7912cm</Left>
               <Height>0.6cm</Height>
               <Width>3.05608cm</Width>
               <ZIndex>18</ZIndex>
@@ -2461,7 +2483,7 @@ sanitario/NSO</Value>
                     <TextRun>
                       <Value>Recepcionado por:</Value>
                       <Style>
-                        <FontSize>9pt</FontSize>
+                        <FontSize>8pt</FontSize>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -2471,8 +2493,8 @@ sanitario/NSO</Value>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox4</rd:DefaultName>
-              <Top>3.7925cm</Top>
-              <Left>14.1562cm</Left>
+              <Top>4.4275cm</Top>
+              <Left>14.7912cm</Left>
               <Height>0.6cm</Height>
               <Width>3.05608cm</Width>
               <ZIndex>19</ZIndex>
@@ -2495,7 +2517,7 @@ sanitario/NSO</Value>
                     <TextRun>
                       <Value>Fabricante :</Value>
                       <Style>
-                        <FontSize>9pt</FontSize>
+                        <FontSize>8pt</FontSize>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -2505,8 +2527,8 @@ sanitario/NSO</Value>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox4</rd:DefaultName>
-              <Top>4.3925cm</Top>
-              <Left>15.13561cm</Left>
+              <Top>5.0275cm</Top>
+              <Left>15.77061cm</Left>
               <Height>0.6cm</Height>
               <Width>2.07667cm</Width>
               <ZIndex>20</ZIndex>
@@ -2531,7 +2553,7 @@ sanitario/NSO</Value>
                         <TextRun>
                           <Value>=First(Fields!horaInicio.Value, "DataSet1")</Value>
                           <Style>
-                            <FontSize>9pt</FontSize>
+                            <FontSize>8pt</FontSize>
                             <Format>HH:mm</Format>
                           </Style>
                         </TextRun>
@@ -2562,7 +2584,7 @@ sanitario/NSO</Value>
                         <TextRun>
                           <Value>Hora de recepción : </Value>
                           <Style>
-                            <FontSize>9pt</FontSize>
+                            <FontSize>8pt</FontSize>
                           </Style>
                         </TextRun>
                       </TextRuns>
@@ -2593,7 +2615,7 @@ sanitario/NSO</Value>
                         <TextRun>
                           <Value>Fin de recepción :</Value>
                           <Style>
-                            <FontSize>9pt</FontSize>
+                            <FontSize>8pt</FontSize>
                           </Style>
                         </TextRun>
                       </TextRuns>
@@ -2624,7 +2646,7 @@ sanitario/NSO</Value>
                         <TextRun>
                           <Value>=First(Fields!horaFin.Value, "DataSet1")</Value>
                           <Style>
-                            <FontSize>9pt</FontSize>
+                            <FontSize>8pt</FontSize>
                             <Format>HH:mm</Format>
                           </Style>
                         </TextRun>
@@ -2656,7 +2678,7 @@ sanitario/NSO</Value>
                         <TextRun>
                           <Value>Conclusión :</Value>
                           <Style>
-                            <FontSize>9pt</FontSize>
+                            <FontSize>8pt</FontSize>
                           </Style>
                         </TextRun>
                       </TextRuns>
@@ -2678,16 +2700,16 @@ sanitario/NSO</Value>
                     <PaddingBottom>2pt</PaddingBottom>
                   </Style>
                 </Textbox>
-                <Textbox Name="Textbox28">
+                <Textbox Name="conclusion">
                   <CanGrow>true</CanGrow>
                   <KeepTogether>true</KeepTogether>
                   <Paragraphs>
                     <Paragraph>
                       <TextRuns>
                         <TextRun>
-                          <Value>CONFORME.</Value>
+                          <Value>=First(Fields!conclusion.Value, "DataSet1")</Value>
                           <Style>
-                            <FontSize>9pt</FontSize>
+                            <FontSize>8pt</FontSize>
                           </Style>
                         </TextRun>
                       </TextRuns>
@@ -2696,10 +2718,10 @@ sanitario/NSO</Value>
                       </Style>
                     </Paragraph>
                   </Paragraphs>
-                  <rd:DefaultName>Textbox11</rd:DefaultName>
-                  <Left>20.6529cm</Left>
+                  <rd:DefaultName>conclusion</rd:DefaultName>
+                  <Left>20.61762cm</Left>
                   <Height>0.49417cm</Height>
-                  <Width>2.66358cm</Width>
+                  <Width>3.15384cm</Width>
                   <ZIndex>5</ZIndex>
                   <Style>
                     <Border>
@@ -2711,11 +2733,214 @@ sanitario/NSO</Value>
                     <PaddingBottom>2pt</PaddingBottom>
                   </Style>
                 </Textbox>
+                <Rectangle Name="Rectangle4">
+                  <ReportItems>
+                    <Textbox Name="horaInicio2">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=First(Fields!horaInicio.Value, "DataSet1")</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                                <Format>HH:mm</Format>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>horaInicio</rd:DefaultName>
+                      <Left>4.04495cm</Left>
+                      <Height>0.49417cm</Height>
+                      <Width>1.32536cm</Width>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                    <Textbox Name="Textbox25">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Hora de recepción : </Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox11</rd:DefaultName>
+                      <Left>0.47614cm</Left>
+                      <Height>0.49417cm</Height>
+                      <Width>3.15839cm</Width>
+                      <ZIndex>1</ZIndex>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                    <Textbox Name="Textbox26">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Fin de recepción :</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox11</rd:DefaultName>
+                      <Left>9.29322cm</Left>
+                      <Height>0.49417cm</Height>
+                      <Width>2.73089cm</Width>
+                      <ZIndex>2</ZIndex>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                    <Textbox Name="horaFin2">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=First(Fields!horaFin.Value, "DataSet1")</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                                <Format>HH:mm</Format>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>horaFin</rd:DefaultName>
+                      <Left>12.2005cm</Left>
+                      <Height>0.49417cm</Height>
+                      <Width>1.52402cm</Width>
+                      <ZIndex>3</ZIndex>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                    <Textbox Name="Textbox28">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Conclusión :</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox11</rd:DefaultName>
+                      <Left>18.33812cm</Left>
+                      <Height>0.49417cm</Height>
+                      <Width>2.13839cm</Width>
+                      <ZIndex>4</ZIndex>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                    <Textbox Name="conclusion2">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=First(Fields!conclusion.Value, "DataSet1")</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>conclusion</rd:DefaultName>
+                      <Left>20.61762cm</Left>
+                      <Height>0.49417cm</Height>
+                      <Width>3.15384cm</Width>
+                      <ZIndex>5</ZIndex>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                  <KeepTogether>true</KeepTogether>
+                  <Top>0cm</Top>
+                  <Height>0.68319cm</Height>
+                  <Width>25.33329cm</Width>
+                  <ZIndex>6</ZIndex>
+                  <Style>
+                    <Border>
+                      <Style>Double</Style>
+                    </Border>
+                  </Style>
+                </Rectangle>
               </ReportItems>
               <KeepTogether>true</KeepTogether>
               <Top>6.29391cm</Top>
               <Left>0.3175cm</Left>
-              <Height>0.62146cm</Height>
+              <Height>0.68319cm</Height>
               <Width>25.33329cm</Width>
               <ZIndex>21</ZIndex>
               <Style>
@@ -2732,7 +2957,9 @@ sanitario/NSO</Value>
                   <TextRuns>
                     <TextRun>
                       <Value>=First(Fields!proveedor.Value, "DataSet1")</Value>
-                      <Style />
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                      </Style>
                     </TextRun>
                   </TextRuns>
                   <Style>
@@ -2741,8 +2968,8 @@ sanitario/NSO</Value>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>proveedor</rd:DefaultName>
-              <Top>2.26342cm</Top>
-              <Left>17.68391cm</Left>
+              <Top>3.21592cm</Top>
+              <Left>18.31891cm</Left>
               <Height>1.235cm</Height>
               <Width>6.77905cm</Width>
               <ZIndex>22</ZIndex>
@@ -2756,6 +2983,19 @@ sanitario/NSO</Value>
                 <PaddingBottom>2pt</PaddingBottom>
               </Style>
             </Textbox>
+            <Rectangle Name="Rectangle5">
+              <KeepTogether>true</KeepTogether>
+              <Top>2.89842cm</Top>
+              <Left>14.60749cm</Left>
+              <Height>3.00271cm</Height>
+              <Width>11.0433cm</Width>
+              <ZIndex>23</ZIndex>
+              <Style>
+                <Border>
+                  <Style>Double</Style>
+                </Border>
+              </Style>
+            </Rectangle>
             <Textbox Name="Textbox15">
               <CanGrow>true</CanGrow>
               <KeepTogether>true</KeepTogether>
@@ -2765,7 +3005,7 @@ sanitario/NSO</Value>
                     <TextRun>
                       <Value>Biomedica Representación SAC</Value>
                       <Style>
-                        <FontSize>9pt</FontSize>
+                        <FontSize>8pt</FontSize>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -2775,11 +3015,11 @@ sanitario/NSO</Value>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox15</rd:DefaultName>
-              <Top>3.7975cm</Top>
-              <Left>17.68391cm</Left>
+              <Top>4.4325cm</Top>
+              <Left>18.31891cm</Left>
               <Height>0.6cm</Height>
               <Width>5.45587cm</Width>
-              <ZIndex>23</ZIndex>
+              <ZIndex>24</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>

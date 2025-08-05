@@ -21,6 +21,7 @@ namespace CapaDatos
         private string _Correlativo;
         private decimal _Igv;
 
+        private string _Estado; 
         public int Idventa
         {
             get { return _Idventa; }
@@ -69,6 +70,12 @@ namespace CapaDatos
             get { return _Igv; }
             set { _Igv = value; }
         }
+
+        public string Estado
+        {
+            get { return _Estado; }
+            set { _Estado = value; }
+        }
         //Constructores 
         public DVenta()
         {
@@ -76,7 +83,7 @@ namespace CapaDatos
         }
         public DVenta(int idventa,int idcliente,int idtrabajador,
             DateTime fecha,string tipo_comprobante,string serie,
-            string correlativo,decimal igv)
+            string correlativo,decimal igv, string estado)
         {
             this.Idventa = idventa;
             this.Idcliente = idcliente;
@@ -86,6 +93,7 @@ namespace CapaDatos
             this.Serie = serie;
             this.Correlativo = correlativo;
             this.Igv = igv;
+            this.Estado = estado;
             
         }
         //Métodos
@@ -133,6 +141,9 @@ namespace CapaDatos
             }
             return rpta;
         }
+
+
+
 
         public string Insertar(DVenta Venta, List<DDetalle_Venta> Detalle)
         {
@@ -197,6 +208,18 @@ namespace CapaDatos
                 ParCorrelativo.Value = Venta.Correlativo;
                 SqlCmd.Parameters.Add(ParCorrelativo);
 
+
+                //
+
+                SqlParameter Parestado = new SqlParameter();
+                Parestado.ParameterName = "@estado";
+                Parestado.SqlDbType = SqlDbType.VarChar;
+                Parestado.Size = 7;
+                Parestado.Value = Venta.Estado;
+                SqlCmd.Parameters.Add(Parestado);
+                //
+
+
                 SqlParameter ParIgv = new SqlParameter();
                 ParIgv.ParameterName = "@igv";
                 ParIgv.SqlDbType = SqlDbType.Decimal;
@@ -257,6 +280,44 @@ namespace CapaDatos
             return rpta;
 
         }
+
+
+
+        public static string AnularEnBloque(List<int> ids)
+        {
+            string rpta = "";
+            try
+            {
+                using (SqlConnection SqlCon = new SqlConnection(Conexion.Cn))
+                {
+                    SqlCon.Open();
+                    using (SqlCommand SqlCmd = new SqlCommand("spanular_venta_bloque", SqlCon))
+                    {
+                        SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                        // Crear DataTable para el parámetro tipo tabla
+                        DataTable tvp = new DataTable();
+                        tvp.Columns.Add("idventa", typeof(int));
+                        foreach (int id in ids)
+                            tvp.Rows.Add(id);
+
+                        SqlParameter param = SqlCmd.Parameters.AddWithValue("@Ids", tvp);
+                        param.SqlDbType = SqlDbType.Structured;
+                        param.TypeName = "dbo.IdVentaTable";
+
+                        SqlCmd.ExecuteNonQuery();
+                        rpta = "OK";
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                rpta = ex.Message;
+            }
+
+            return rpta;
+        }
+
         //Método Eliminar
         public string Eliminar(DVenta Venta)
         {
@@ -334,6 +395,44 @@ namespace CapaDatos
                 SqlCommand SqlCmd = new SqlCommand();
                 SqlCmd.Connection = SqlCon;
                 SqlCmd.CommandText = "spbuscar_venta_fecha";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter ParTextoBuscar = new SqlParameter();
+                ParTextoBuscar.ParameterName = "@textobuscar";
+                ParTextoBuscar.SqlDbType = SqlDbType.VarChar;
+                ParTextoBuscar.Size = 50;
+                ParTextoBuscar.Value = TextoBuscar;
+                SqlCmd.Parameters.Add(ParTextoBuscar);
+
+                SqlParameter ParTextoBuscar2 = new SqlParameter();
+                ParTextoBuscar2.ParameterName = "@textobuscar2";
+                ParTextoBuscar2.SqlDbType = SqlDbType.VarChar;
+                ParTextoBuscar2.Size = 50;
+                ParTextoBuscar2.Value = TextoBuscar2;
+                SqlCmd.Parameters.Add(ParTextoBuscar2);
+
+                SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                SqlDat.Fill(DtResultado);
+
+            }
+            catch (Exception ex)
+            {
+                DtResultado = null;
+            }
+            return DtResultado;
+
+        }
+
+        public DataTable BuscarFechas2(String TextoBuscar, String TextoBuscar2)
+        {
+            DataTable DtResultado = new DataTable("venta");
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                SqlCon.ConnectionString = Conexion.Cn;
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "spbuscar_venta_fecha2";
                 SqlCmd.CommandType = CommandType.StoredProcedure;
 
                 SqlParameter ParTextoBuscar = new SqlParameter();

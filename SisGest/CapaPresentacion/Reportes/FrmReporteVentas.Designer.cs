@@ -30,13 +30,27 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.spbuscarventafechaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dsPrincipal = new CapaPresentacion.dsPrincipal();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.spbuscar_venta_fechaTableAdapter = new CapaPresentacion.dsPrincipalTableAdapters.spbuscar_venta_fechaTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.spbuscarventafechaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsPrincipal)).BeginInit();
             this.SuspendLayout();
+            // 
+            // reportViewer1
+            // 
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.spbuscarventafechaBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "CapaPresentacion.Reportes.rptVentas.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Margin = new System.Windows.Forms.Padding(2);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(789, 480);
+            this.reportViewer1.TabIndex = 0;
             // 
             // spbuscarventafechaBindingSource
             // 
@@ -48,19 +62,6 @@
             this.dsPrincipal.DataSetName = "dsPrincipal";
             this.dsPrincipal.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // reportViewer1
-            // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.spbuscarventafechaBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "CapaPresentacion.Reportes.rptVentas.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(789, 480);
-            this.reportViewer1.TabIndex = 0;
-            // 
             // spbuscar_venta_fechaTableAdapter
             // 
             this.spbuscar_venta_fechaTableAdapter.ClearBeforeFill = true;
@@ -71,9 +72,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(789, 480);
             this.Controls.Add(this.reportViewer1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmReporteVentas";
-            this.Text = ".:: Reporte de Ventas ::.";
+            this.Text = ".:: Reporte de Salida ::.";
             this.Load += new System.EventHandler(this.FrmReporteVentas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.spbuscarventafechaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsPrincipal)).EndInit();

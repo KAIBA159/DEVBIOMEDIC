@@ -288,6 +288,7 @@
               <Mapping SourceColumn="FechaInicio" DataSetColumn="FechaInicio" />
               <Mapping SourceColumn="FechaFin" DataSetColumn="FechaFin" />
               <Mapping SourceColumn="guia_remisioncliente" DataSetColumn="guia_remisioncliente" />
+              <Mapping SourceColumn="estado" DataSetColumn="estado" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -339,6 +340,9 @@
               <Mapping SourceColumn="Transportista_placa" DataSetColumn="Transportista_placa" />
               <Mapping SourceColumn="codigo" DataSetColumn="codigo" />
               <Mapping SourceColumn="presentacion1" DataSetColumn="presentacion1" />
+              <Mapping SourceColumn="conclusion" DataSetColumn="conclusion" />
+              <Mapping SourceColumn="cantidadManifestada" DataSetColumn="cantidadManifestada" />
+              <Mapping SourceColumn="cantidadDiferencia" DataSetColumn="cantidadDiferencia" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -847,7 +851,7 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Cliente" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="ClienteColumn" msprop:Generator_ColumnPropNameInRow="Cliente" msprop:Generator_UserColumnName="Cliente" msprop:Generator_ColumnVarNameInTable="columnCliente" minOccurs="0">
+              <xs:element name="Cliente" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="ClienteColumn" msprop:Generator_ColumnPropNameInRow="Cliente" msprop:Generator_UserColumnName="Cliente" msprop:Generator_ColumnVarNameInTable="columnCliente">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="91" />
@@ -915,6 +919,13 @@
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="estado" msprop:Generator_ColumnPropNameInRow="estado" msprop:Generator_ColumnPropNameInTable="estadoColumn" msprop:Generator_ColumnVarNameInTable="columnestado" msprop:Generator_UserColumnName="estado" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
@@ -1106,13 +1117,22 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="presentacion1" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="presentacion1" msprop:Generator_ColumnPropNameInTable="presentacion1Column" msprop:Generator_ColumnVarNameInTable="columnpresentacion1" msprop:Generator_UserColumnName="presentacion1" minOccurs="0">
+              <xs:element name="presentacion1" msdata:ReadOnly="true" msprop:Generator_UserColumnName="presentacion1" msprop:Generator_ColumnPropNameInTable="presentacion1Column" msprop:Generator_ColumnPropNameInRow="presentacion1" msprop:Generator_ColumnVarNameInTable="columnpresentacion1" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="conclusion" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="conclusion" msprop:Generator_ColumnPropNameInTable="conclusionColumn" msprop:Generator_ColumnVarNameInTable="columnconclusion" msprop:Generator_UserColumnName="conclusion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cantidadManifestada" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="cantidadManifestada" msprop:Generator_ColumnPropNameInTable="cantidadManifestadaColumn" msprop:Generator_ColumnVarNameInTable="columncantidadManifestada" msprop:Generator_UserColumnName="cantidadManifestada" type="xs:int" minOccurs="0" />
+              <xs:element name="cantidadDiferencia" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="cantidadDiferencia" msprop:Generator_ColumnPropNameInTable="cantidadDiferenciaColumn" msprop:Generator_ColumnVarNameInTable="columncantidadDiferencia" msprop:Generator_UserColumnName="cantidadDiferencia" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

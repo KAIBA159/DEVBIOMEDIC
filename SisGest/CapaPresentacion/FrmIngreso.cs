@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.UI.WebControls;
@@ -99,9 +100,11 @@ namespace CapaPresentacion
 
 
             this.txtBultos.Text = string.Empty;
-            this.txtDUA.Text = string.Empty;
+            this.tb_conclusion.Text = string.Empty;
 
+            this.txtDUA.Text    = string.Empty;
 
+            this.llb_estado.Text = "EMITIDO";
             //
             this.txtCantidad_Diferencia.Text = string.Empty;
             this.txtCantidad_Manifestada.Text = string.Empty;
@@ -176,6 +179,8 @@ namespace CapaPresentacion
 
             //
             this.txtBultos.ReadOnly = !valor;
+            this.tb_conclusion.ReadOnly = !valor;
+
             this.txtDUA.ReadOnly = !valor;
             this.txtCorrelativoUnico.ReadOnly = !valor;
 
@@ -448,9 +453,15 @@ namespace CapaPresentacion
             this.dtDetalle.Columns.Add("idarticulo",System.Type.GetType("System.Int32"));
             this.dtDetalle.Columns["idarticulo"].ReadOnly = true;
 
+            //
+
+            this.dtDetalle.Columns.Add("codigo", System.Type.GetType("System.String"));
+            this.dtDetalle.Columns["codigo"].ReadOnly = true;
 
             this.dtDetalle.Columns.Add("articulo", System.Type.GetType("System.String"));
             this.dtDetalle.Columns["articulo"].ReadOnly = true;
+
+
 
             this.dtDetalle.Columns.Add("lote", System.Type.GetType("System.String"));
             this.dtDetalle.Columns["lote"].ReadOnly = true;
@@ -518,6 +529,11 @@ namespace CapaPresentacion
             //Relacionar nuestro DataGRidView con nuestro DataTable
             this.dataListadoDetalle.DataSource = this.dtDetalle;
 
+            this.dataListadoDetalle.Columns["idarticulo"].HeaderText = "CodigoSistema";
+
+            this.dataListadoDetalle.Columns["codigo"].HeaderText = "codigo";
+            //this.dtDetalle.Columns.Add("articulo", System.Type.GetType("System.String"));
+
             this.dataListadoDetalle.Columns["stock_inicial"].HeaderText         = "Cantidad Recibida";
             this.dataListadoDetalle.Columns["CantidadManifestada"].HeaderText   = "Cantidad Manifestada";
             this.dataListadoDetalle.Columns["CantidadDiferencia"].HeaderText    = "Diferencia";
@@ -582,41 +598,93 @@ namespace CapaPresentacion
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+
+
             try
             {
-                DialogResult Opcion;
-                Opcion = MessageBox.Show("Realmente Desea Anular los Registros", "Sistema de Ventas", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-
-                if (Opcion == DialogResult.OK)
+                // 1. Obtener IDs seleccionados
+                List<int> idsSeleccionados = new List<int>();
+                foreach (DataGridViewRow row in dataListado.Rows)
                 {
-                    string Codigo;
-                    string Rpta = "";
-
-                    foreach (DataGridViewRow row in dataListado.Rows)
+                    if (Convert.ToBoolean(row.Cells[0].Value))
                     {
-                        if (Convert.ToBoolean(row.Cells[0].Value))
-                        {
-                            Codigo = Convert.ToString(row.Cells[1].Value);
-                            Rpta = NIngreso.Anular(Convert.ToInt32(Codigo));
-
-                            if (Rpta.Equals("OK"))
-                            {
-                                this.MensajeOk("Se Anuló Correctamente el Ingreso");
-                            }
-                            else
-                            {
-                                this.MensajeError(Rpta);
-                            }
-
-                        }
+                        idsSeleccionados.Add(Convert.ToInt32(row.Cells[1].Value));
                     }
+                }
+
+                if (idsSeleccionados.Count == 0)
+                {
+                    MessageBox.Show("Debe seleccionar al menos un ingreso para anular.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+
+                // 2. Confirmación
+                var confirm = MessageBox.Show(
+                    $"Se anularán {idsSeleccionados.Count} ingresos seleccionados.\n¿Desea continuar?",
+                    "Confirmación de anulación",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question
+                );
+
+                if (confirm != DialogResult.Yes)
+                    return;
+
+                // 3. Llamada a capa de negocio: se maneja todo en una transacción
+                string rpta = NIngreso.AnularEnBloque(idsSeleccionados);
+
+                if (rpta.Equals("OK", StringComparison.OrdinalIgnoreCase))
+                {
+                    MessageBox.Show("Se anularon correctamente los ingresos seleccionados.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Mostrar();
+                }
+                else
+                {
+                    MessageBox.Show("No se anuló ningún ingreso. Detalle: " + rpta, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message + ex.StackTrace);
+                MessageBox.Show("Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+
+
+
+            //try
+            //{
+            //    DialogResult Opcion;
+            //    Opcion = MessageBox.Show("Realmente Desea Anular los Registros", "Sistema de Ventas", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+            //    if (Opcion == DialogResult.OK)
+            //    {
+            //        string Codigo;
+            //        string Rpta = "";
+
+            //        foreach (DataGridViewRow row in dataListado.Rows)
+            //        {
+            //            if (Convert.ToBoolean(row.Cells[0].Value))
+            //            {
+            //                Codigo = Convert.ToString(row.Cells[1].Value);
+            //                Rpta = NIngreso.Anular(Convert.ToInt32(Codigo));
+
+            //                if (Rpta.Equals("OK"))
+            //                {
+            //                    this.MensajeOk("Se Anuló Correctamente el Ingreso");
+            //                }
+            //                else
+            //                {
+            //                    this.MensajeError(Rpta);
+            //                }
+
+            //            }
+            //        }
+            //        this.Mostrar();
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message + ex.StackTrace);
+            //}
         }
 
         private void chkEliminar_CheckedChanged(object sender, EventArgs e)
@@ -710,13 +778,15 @@ namespace CapaPresentacion
 
                         if (this.IsNuevo)
                         {
-                            rpta = NIngreso.Insertar(Idtrabajador, 
+                            rpta = NIngreso.Insertar(
+                                Idtrabajador, 
                                 Convert.ToInt32(this.txtIdproveedor.Text),
                                 dtFecha.Value, 
                                 cbTipo_Comprobante.Text,
                                 txtSerie.Text,
                                 txtCorrelativo.Text,
-                                Convert.ToDecimal(txtIgv.Text), "EMITIDO",
+                                Convert.ToDecimal(txtIgv.Text), 
+                                "EMITIDO",
 
                                 cbTipo_Ingreso.Text,
                                 Convert.ToInt32(this.txtIdencargado.Text),
@@ -729,6 +799,7 @@ namespace CapaPresentacion
                                 txtBultos.Text,
                                 txtDUA.Text,
                                 txtCorrelativoUnico.Text,
+                                tb_conclusion.Text,
 
 
                                 dtDetalle
@@ -948,15 +1019,29 @@ namespace CapaPresentacion
             this.dtp_inicio.Value = Convert.ToDateTime(this.dataListado.CurrentRow.Cells["horaInicio"].Value);
             this.dtp_fin.Value = Convert.ToDateTime(this.dataListado.CurrentRow.Cells["horaFin"].Value);
 
+            this.llb_estado.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["estado"].Value);
+
+            if (Convert.ToString(this.dataListado.CurrentRow.Cells["estado"].Value) =="ANULADO")
+            {
+                llb_estado.ForeColor = Color.Red;
+            }
+            else
+            {
+                llb_estado.ForeColor = Color.Black; // o el color que quieras cuando no cumple
+            }
+
 
             this.cbTipo_Producto.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["cbTipo_Producto"].Value);
             this.txtBultos.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["bultos"].Value);
             this.txtDUA.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["dua"].Value);
             this.txtCorrelativoUnico.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["correlativoUnico"].Value);
-   //         isnull(i.cbTipo_Producto, '') as 'cbTipo_Producto',
-			//isnull(i.bultos, '') as 'bultos',
-			//isnull(i.dua, '') as 'dua',
-			//isnull(i.correlativoUnico, '') as 'correlativoUnico'
+
+            this.tb_conclusion.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["conclusion"].Value);
+
+            //         isnull(i.cbTipo_Producto, '') as 'cbTipo_Producto',
+            //isnull(i.bultos, '') as 'bultos',
+            //isnull(i.dua, '') as 'dua',
+            //isnull(i.correlativoUnico, '') as 'correlativoUnico'
 
 
             this.MostrarDetalle();

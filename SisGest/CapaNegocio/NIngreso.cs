@@ -31,6 +31,8 @@ namespace CapaNegocio
             string dUA,
             string correlativoUnico,
 
+            string conclusion,
+
 
 
             DataTable dtDetalles
@@ -57,6 +59,8 @@ namespace CapaNegocio
             Obj.Bultos = bultos;
             Obj.Dua = dUA;
             Obj.CorrelativoUnico = correlativoUnico;
+
+            Obj.Conclusion = conclusion;
 
             //DateTime horaInicioDT,
             //DateTime horaFinDT,
@@ -131,6 +135,26 @@ namespace CapaNegocio
             }
             return Obj.Insertar(Obj,detalles);
         }
+
+
+        //AnularEnBloque
+
+        public static string AnularEnBloque(List<int> idingresos)
+        {
+
+            ////List<int> idsSeleccionados = new List<int>();
+
+            //DIngreso Obj = new DIngreso();
+            //Obj.Idingreso = idingreso;
+            //return Obj.Anular(Obj);
+
+            return DIngreso.AnularEnBloque(idingresos);
+
+        }
+
+
+
+
         public static string Anular(int idingreso)
         {
             DIngreso Obj = new DIngreso();

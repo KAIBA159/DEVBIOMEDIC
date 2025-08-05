@@ -988,7 +988,6 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox32</rd:DefaultName>
-          <Top>0cm</Top>
           <Left>0.53243cm</Left>
           <Height>0.6cm</Height>
           <Width>3.00271cm</Width>
@@ -1023,7 +1022,6 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox22</rd:DefaultName>
-          <Top>0cm</Top>
           <Left>3.49934cm</Left>
           <Height>0.6cm</Height>
           <Width>8.16247cm</Width>
@@ -1177,6 +1175,10 @@
         </Field>
         <Field Name="guia_remisioncliente">
           <DataField>guia_remisioncliente</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="estado">
+          <DataField>estado</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>

@@ -104,6 +104,7 @@ namespace CapaPresentacion
             this.txtSerie.Text = string.Empty;
             this.txtCorrelativo.Text = string.Empty;
             this.txtIgv.Text = string.Empty;
+            this.llb_estado.Text = "EMITIDO";
 
             //this.txtGuia_Cliente.Text = string.Empty;
             //this.txtSubCliente.Text = string.Empty;
@@ -237,6 +238,25 @@ namespace CapaPresentacion
             //lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
         }
 
+        private void BuscarFechas2()
+        {
+            this.dataListado.DataSource = NVenta.BuscarFechas2(this.dtFecha1.Value.ToString("dd/MM/yyyy"),
+                this.dtFecha2.Value.ToString("dd/MM/yyyy"));
+
+
+            if (dataListado.DataSource != null)
+            {
+
+                //this.OcultarColumnas();
+                //lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+                this.OcultarColumnas();
+                lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+            }
+
+            //this.OcultarColumnas();
+            //lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+        }
+
         private void MostrarDetalle()
         {
             this.dataListadoDetalle.DataSource = NVenta.MostrarDetalle(this.txtIdventa.Text);
@@ -323,46 +343,117 @@ namespace CapaPresentacion
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            this.BuscarFechas();
+            //this.BuscarFechas();
+
+            this.BuscarFechas2();
+
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+
+
             try
             {
-                DialogResult Opcion;
-                Opcion = MessageBox.Show("Realmente Desea Eliminar los Registros", "Sistema de Gestión", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-
-                if (Opcion == DialogResult.OK)
+                // 1. Obtener los IDs seleccionados
+                List<int> idsSeleccionados = new List<int>();
+                foreach (DataGridViewRow row in dataListado.Rows)
                 {
-                    string Codigo;
-                    string Rpta = "";
+                    bool seleccionado = false;
+                    if (row.Cells[0].Value != null)
+                        seleccionado = Convert.ToBoolean(row.Cells[0].Value);
 
-                    foreach (DataGridViewRow row in dataListado.Rows)
+                    if (seleccionado)
                     {
-                        if (Convert.ToBoolean(row.Cells[0].Value))
-                        {
-                            Codigo = Convert.ToString(row.Cells[1].Value);
-                            Rpta = NVenta.Eliminar(Convert.ToInt32(Codigo));
-
-                            if (Rpta.Equals("OK"))
-                            {
-                                this.MensajeOk("Se Eliminó Correctamente la salida");
-                            }
-                            else
-                            {
-                                this.MensajeError(Rpta);
-                            }
-
-                        }
+                        idsSeleccionados.Add(Convert.ToInt32(row.Cells[1].Value)); // idventa
                     }
-                    this.Mostrar();
+                }
+
+                if (idsSeleccionados.Count == 0)
+                {
+                    MessageBox.Show("Debe seleccionar al menos una salida para anular.",
+                                    "Aviso",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information);
+                    return;
+                }
+
+                // 2. Confirmación
+                DialogResult confirm = MessageBox.Show(
+                    $"Se anularán {idsSeleccionados.Count} salidas seleccionadas.\n¿Desea continuar?",
+                    "Confirmación de anulación",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question
+                );
+
+                if (confirm != DialogResult.Yes)
+                    return;
+
+                // 3. Llamar a la capa de negocio
+                string rpta = NVenta.AnularEnBloque(idsSeleccionados);
+
+                if (rpta.Equals("OK", StringComparison.OrdinalIgnoreCase))
+                {
+                    MessageBox.Show("Se anularon correctamente las salidas seleccionadas.",
+                                    "Éxito",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information);
+                    this.Mostrar(); // Recargar la grilla
+                }
+                else
+                {
+                    MessageBox.Show("No se anuló ninguna salida. Detalle: " + rpta,
+                                    "Error",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message + ex.StackTrace);
+                MessageBox.Show("Ocurrió un error: " + ex.Message,
+                                "Error",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
             }
+
+
+
+
+            //try
+            //{
+            //    DialogResult Opcion;
+            //    Opcion = MessageBox.Show("Realmente Desea Eliminar los Registros", "Sistema de Gestión", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+            //    if (Opcion == DialogResult.OK)
+            //    {
+            //        string Codigo;
+            //        string Rpta = "";
+
+            //        foreach (DataGridViewRow row in dataListado.Rows)
+            //        {
+            //            if (Convert.ToBoolean(row.Cells[0].Value))
+            //            {
+            //                Codigo = Convert.ToString(row.Cells[1].Value);
+            //                Rpta = NVenta.Eliminar(Convert.ToInt32(Codigo));
+
+            //                if (Rpta.Equals("OK"))
+            //                {
+            //                    this.MensajeOk("Se Eliminó Correctamente la salida");
+            //                }
+            //                else
+            //                {
+            //                    this.MensajeError(Rpta);
+            //                }
+
+            //            }
+            //        }
+            //        this.Mostrar();
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message + ex.StackTrace);
+            //}
         }
 
         private void dataListado_DoubleClick(object sender, EventArgs e)
@@ -384,6 +475,16 @@ namespace CapaPresentacion
             this.txtCorrelativo.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["correlativo"].Value);
             //this.lblTotal_Pagado.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["total"].Value);
             //this.txtIgv.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["Impuesto"].Value);
+
+            if (Convert.ToString(this.dataListado.CurrentRow.Cells["estado"].Value) == "ANULADO")
+            {
+                llb_estado.ForeColor = Color.Red;
+            }
+            else
+            {
+                llb_estado.ForeColor = Color.Black; // o el color que quieras cuando no cumple
+            }
+
 
             this.MostrarDetalle();
             this.tabControl1.SelectedIndex = 1;
@@ -470,6 +571,8 @@ namespace CapaPresentacion
                                 txtSerie.Text, 
                                 txtCorrelativo.Text,
                                 Convert.ToDecimal(txtIgv.Text),
+
+                                llb_estado.Text,
 
 
                                 dtDetalle);
