@@ -279,22 +279,54 @@ namespace CapaPresentacion
         {
             this.dtDetalle = new DataTable("Detalle");
             this.dtDetalle.Columns.Add("iddetalle_ingreso", System.Type.GetType("System.Int32"));
+            this.dtDetalle.Columns["iddetalle_ingreso"].ReadOnly = true;
             this.dtDetalle.Columns.Add("articulo", System.Type.GetType("System.String"));
+            this.dtDetalle.Columns["articulo"].ReadOnly = true;
+
 
             this.dtDetalle.Columns.Add("guia_remisioncliente", System.Type.GetType("System.String"));
+            this.dtDetalle.Columns["guia_remisioncliente"].ReadOnly = true;
             this.dtDetalle.Columns.Add("subcliente", System.Type.GetType("System.String"));
+            this.dtDetalle.Columns["subcliente"].ReadOnly = true;
 
             this.dtDetalle.Columns.Add("cantidad", System.Type.GetType("System.Int32"));
+            this.dtDetalle.Columns["cantidad"].ReadOnly = true;
+
             this.dtDetalle.Columns.Add("precio_venta", System.Type.GetType("System.Decimal"));
+            this.dtDetalle.Columns["precio_venta"].ReadOnly = true;
             this.dtDetalle.Columns.Add("descuento", System.Type.GetType("System.Decimal"));
+            this.dtDetalle.Columns["descuento"].ReadOnly = true;
             this.dtDetalle.Columns.Add("subtotal", System.Type.GetType("System.Decimal"));
+            this.dtDetalle.Columns["subtotal"].ReadOnly = true;
             this.dtDetalle.Columns.Add("Impuesto", System.Type.GetType("System.Decimal"));
+            this.dtDetalle.Columns["Impuesto"].ReadOnly = true;
+
 
             this.dtDetalle.Columns.Add("lote", System.Type.GetType("System.String"));
+            this.dtDetalle.Columns["lote"].ReadOnly = true;
 
 
             //Relacionar nuestro DataGRidView con nuestro DataTable
             this.dataListadoDetalle.DataSource = this.dtDetalle;
+
+
+            this.dataListadoDetalle.Columns["iddetalle_ingreso"].HeaderText = "iddetalle_ingreso";
+            this.dataListadoDetalle.Columns["articulo"].HeaderText = "Nombre de Producto";
+            this.dataListadoDetalle.Columns["guia_remisioncliente"].HeaderText = "Guía Cliente";
+            this.dataListadoDetalle.Columns["subcliente"].HeaderText = "Subcliente";
+            this.dataListadoDetalle.Columns["lote"].HeaderText = "Lote";
+            this.dataListadoDetalle.Columns["cantidad"].HeaderText = "Cantidad";
+
+
+            //ocultar
+            this.dataListadoDetalle.Columns["Impuesto"].Visible = false;
+            this.dataListadoDetalle.Columns["subtotal"].Visible = false;
+
+            this.dataListadoDetalle.Columns["precio_venta"].Visible = false;
+            this.dataListadoDetalle.Columns["descuento"].Visible = false;
+
+            //this.dtDetalle.Columns.Add("guia_remisioncliente", System.Type.GetType("System.String"));
+
 
         }
 
@@ -475,6 +507,8 @@ namespace CapaPresentacion
             this.txtCorrelativo.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["correlativo"].Value);
             //this.lblTotal_Pagado.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["total"].Value);
             //this.txtIgv.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["Impuesto"].Value);
+
+            this.llb_estado.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["estado"].Value);
 
             if (Convert.ToString(this.dataListado.CurrentRow.Cells["estado"].Value) == "ANULADO")
             {

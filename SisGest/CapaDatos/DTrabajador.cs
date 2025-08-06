@@ -232,7 +232,7 @@ namespace CapaDatos
                 SqlParameter ParPassword= new SqlParameter();
                 ParPassword.ParameterName = "@password";
                 ParPassword.SqlDbType = SqlDbType.VarChar;
-                ParPassword.Size = 50;
+                ParPassword.Size = 100;
                 ParPassword.Value = Trabajador.Password;
                 SqlCmd.Parameters.Add(ParPassword);
 
@@ -350,7 +350,7 @@ namespace CapaDatos
                 SqlParameter ParPassword = new SqlParameter();
                 ParPassword.ParameterName = "@password";
                 ParPassword.SqlDbType = SqlDbType.VarChar;
-                ParPassword.Size = 50;
+                ParPassword.Size = 100;
                 ParPassword.Value = Trabajador.Password;
                 SqlCmd.Parameters.Add(ParPassword);
 
@@ -504,7 +504,7 @@ namespace CapaDatos
 
         }
 
-        public DataTable Login(DTrabajador Trabajador)
+        public DataTable Login(string usuario)
         {
             DataTable DtResultado = new DataTable("trabajador");
             SqlConnection SqlCon = new SqlConnection();
@@ -520,26 +520,30 @@ namespace CapaDatos
                 ParUsuario.ParameterName = "@usuario";
                 ParUsuario.SqlDbType = SqlDbType.VarChar;
                 ParUsuario.Size = 20;
-                ParUsuario.Value = Trabajador.Usuario;
+                ParUsuario.Value = usuario;
                 SqlCmd.Parameters.Add(ParUsuario);
-
-                SqlParameter ParPassword = new SqlParameter();
-                ParPassword.ParameterName = "@password";
-                ParPassword.SqlDbType = SqlDbType.VarChar;
-                ParPassword.Size = 20;
-                ParPassword.Value = Trabajador.Password;
-                SqlCmd.Parameters.Add(ParPassword);
 
                 SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
                 SqlDat.Fill(DtResultado);
-
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 DtResultado = null;
             }
             return DtResultado;
+        }
 
+
+        public static void ActualizarPassword(string usuario, string nuevoHash)
+        {
+            using (SqlConnection SqlCon = new SqlConnection(Conexion.Cn))
+            {
+                SqlCon.Open();
+                SqlCommand SqlCmd = new SqlCommand("UPDATE trabajador SET password = @password WHERE usuario = @usuario", SqlCon);
+                SqlCmd.Parameters.AddWithValue("@password", nuevoHash);
+                SqlCmd.Parameters.AddWithValue("@usuario", usuario);
+                SqlCmd.ExecuteNonQuery();
+            }
         }
     }
 }

@@ -1,14 +1,20 @@
-﻿using System;
+﻿using CapaNegocio;
+using OpenQA.Selenium;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Chrome;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 using System.Windows.Forms;
-
-using CapaNegocio;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace CapaPresentacion
 {
@@ -58,6 +64,9 @@ namespace CapaPresentacion
             this.txtDireccion.ReadOnly = !valor;
             this.cbSector_Comercial.Enabled = valor;
             this.cbTipo_Documento.Enabled = valor;
+
+            this.consultarRuc.Enabled = valor;
+
             this.txtNum_Documento.ReadOnly = !valor;
             this.txtTelefono.ReadOnly = !valor;
             this.txtUrl.ReadOnly = !valor;
@@ -365,5 +374,125 @@ namespace CapaPresentacion
             frm.Texto = txtBuscar.Text;
             frm.ShowDialog();
         }
+
+        //private void button1_Click(object sender, EventArgs e)
+        //{
+        //    string rpta = string.Empty; 
+
+        //    Contribuyente contribuyente = ObtenerDatosSunatv3("20100190797", "6", rpta);
+
+        //    string rs = contribuyente.Razon;
+
+        //}
+        private async void button1_Click(object sender, EventArgs e)
+        {
+
+
+
+            if (cbTipo_Documento.Text == "RUC" && txtNum_Documento.Text.Trim().Length != 11)
+            {
+                // = "El RUC ingresado es inválido";
+                MensajeError("El RUC ingresado es inválido");
+
+                 return;
+            }
+            if (cbTipo_Documento.Text != "RUC")
+            {
+                MensajeError("Debe ser RUC");
+
+                return;
+            }
+
+            if (cbTipo_Documento.Text == "RUC" && txtNum_Documento.Text.Trim().Length == 11)
+            {
+                string texto = txtNum_Documento.Text.Trim();
+
+                bool esNumerico = texto.All(char.IsDigit);
+
+                if (esNumerico)
+                {
+                    // Solo contiene números
+                    string rpta = string.Empty;
+                    Contribuyente contribuyente = await ObtenerDatosSunatv3(txtNum_Documento.Text.Trim(), "6", rpta);
+
+                    //string rs = contribuyente.Razon;
+                    //string df = contribuyente.Direccion +" - "+ contribuyente.Distrito + " - " + contribuyente.Provincia + " - " + contribuyente.Departamento;
+
+
+                    txtRazon_Social.Text = contribuyente.Razon ?? "";
+
+                    txtDireccion.Text = (contribuyente.Direccion ?? "") + " - " +
+                                       (contribuyente.Distrito ?? "") + " - " +
+                                       (contribuyente.Provincia ?? "") + " - " +
+                                       (contribuyente.Departamento ?? "");
+
+
+
+                }
+                else
+                {
+                    // Contiene letras u otros caracteres
+                    MensajeError("Solo debe ser numeros");
+                }
+
+
+
+                return;
+            }
+            else
+            {
+                MensajeError("RUC no Valido");
+            }
+
+
+            
+            
+
+            
+
+            //MessageBox.Show("Razón Social: " + rs);
+        }
+
+        //public  Contribuyente ObtenerDatosSunatv3(string RUC, string tipdoc, string Excepcion = "")
+        //{
+        //    Contribuyente contrib = ObtenerDatosSunatv3T(RUC, tipdoc, Excepcion);
+
+        //    return contrib;
+        //}
+        public async Task<Contribuyente> ObtenerDatosSunatv3(string RUC, string tipdoc, string Excepcion = "")
+        {
+            Contribuyente contrib = await ObtenerDatosSunatv3T(RUC, tipdoc, Excepcion);
+            return contrib;
+        }
+
+        //public Contribuyente ObtenerDatosSunatv3T(string RUC, string tipdoc, string excepcion = "")
+        public async Task<Contribuyente> ObtenerDatosSunatv3T(string RUC, string tipdoc, string excepcion = "")
+
+        {
+            Contribuyente sunat = new Contribuyente();
+            if (tipdoc == "6" && RUC.Length != 11)
+            {
+                sunat.Mensaje = "El RUC ingresado es inválido";
+
+                goto retornar;
+            }
+            if (tipdoc == "4" && RUC.Length < 5)
+            {
+                sunat.Mensaje = "El Carnet de extrajeria ingresado es inválido";
+                goto retornar;
+            }
+            for (int i = 1; i <= 10; i++)
+            {
+                SunatDLv3 sunatDLv = new SunatDLv3();
+                //sunat = sunatDLv.ObtenerDatos(RUC, tipdoc);
+                sunat = await sunatDLv.ObtenerDatosAsync(RUC, tipdoc);
+
+                if (string.IsNullOrEmpty(sunat.Mensaje) || sunat.Mensaje == "No Existe RUC") goto retornar;
+            }
+        retornar:
+            return sunat;
+        }
+
+
     }
 }

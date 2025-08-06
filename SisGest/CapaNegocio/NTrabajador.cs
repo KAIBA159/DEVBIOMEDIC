@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 using System.Data;
 using CapaDatos;
-
+using BCrypt.Net;
 
 namespace CapaNegocio
 {
@@ -31,7 +31,10 @@ namespace CapaNegocio
             Obj.Email = email;
             Obj.Acceso = acceso;
             Obj.Usuario = usuario;
-            Obj.Password = password;
+            //Obj.Password = password;
+            //Obj.Password = password;
+            Obj.Password = BCrypt.Net.BCrypt.HashPassword(password);
+
 
             return Obj.Insertar(Obj);
         }
@@ -56,8 +59,12 @@ namespace CapaNegocio
             Obj.Email = email;
             Obj.Acceso = acceso;
             Obj.Usuario = usuario;
-            Obj.Password = password;
+            //Obj.Password = password;
+            Obj.Password = BCrypt.Net.BCrypt.HashPassword(password);
+
             return Obj.Editar(Obj);
+
+
         }
 
         //Método Eliminar que llama al método Eliminar de la clase DTrabajador
@@ -95,14 +102,25 @@ namespace CapaNegocio
             Obj.TextoBuscar = textobuscar;
             return Obj.BuscarNum_Documento(Obj);
         }
-
-        public static DataTable Login(string usuario,string password)
+        //public static DataTable Login(string usuario, string password)
+        public static DataTable Login(string usuario)
         {
+            //DTrabajador Obj = new DTrabajador();
+            //Obj.Usuario = usuario;
+            //Obj.Password = password;
+            //return Obj.Login(Obj);
+
             DTrabajador Obj = new DTrabajador();
-            Obj.Usuario = usuario;
-            Obj.Password = password;
-            return Obj.Login(Obj);
+            return Obj.Login(usuario);
+
+
         }
+
+        public static void ActualizarPassword(string usuario, string nuevoHash)
+        {
+            CapaDatos.DTrabajador.ActualizarPassword(usuario, nuevoHash);
+        }
+
 
     }
 }

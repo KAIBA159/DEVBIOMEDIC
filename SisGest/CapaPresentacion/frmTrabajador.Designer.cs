@@ -157,7 +157,7 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(9, 62);
+            this.tabControl1.Location = new System.Drawing.Point(9, 65);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -284,6 +284,7 @@
             this.txtPassword.Location = new System.Drawing.Point(269, 197);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(95, 20);
             this.txtPassword.TabIndex = 51;
             // 
@@ -360,7 +361,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(353, 100);
+            this.label11.Location = new System.Drawing.Point(352, 100);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(52, 13);
@@ -413,7 +414,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(308, 75);
+            this.label8.Location = new System.Drawing.Point(294, 75);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(111, 13);
@@ -617,7 +618,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(671, 415);
+            this.ClientSize = new System.Drawing.Size(671, 430);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);

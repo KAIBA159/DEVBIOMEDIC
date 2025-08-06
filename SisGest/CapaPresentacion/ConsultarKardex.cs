@@ -43,6 +43,17 @@ namespace CapaPresentacion
         private void ck_btnclic_event(object sender, EventArgs e)
         {
 
+            Reportes.FrmReporteKardexv1 frm = new Reportes.FrmReporteKardexv1();
+            frm.Texto = Convert.ToString(dtp_desde.Value);
+            frm.Texto2 = Convert.ToString(dtp_hasta.Value);
+            frm.ShowDialog();
+
+            //Reportes.FrmReporteVentas frm = new Reportes.FrmReporteVentas();
+            //frm.Texto = Convert.ToString(dtp_desde.Value);
+            //frm.Texto2 = Convert.ToString(dtp_hasta.Value);
+            //frm.ShowDialog();
+
+
 
         }
 
@@ -70,5 +81,44 @@ namespace CapaPresentacion
             this.txtbox_cliente.Text = nombre;  // Asegúrate de tener este TextBox
         }
 
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            Reportes.FrmReporteKardexv1 frm = new Reportes.FrmReporteKardexv1();
+
+
+            frm.Texto = Convert.ToString(dtp_desde.Value);
+            frm.Texto2 = Convert.ToString(dtp_hasta.Value);
+
+            if (txtbox_producto.Text ==string.Empty)
+            {
+                //MessageBox.Show(      ("Falta ingresar algunos datos, serán remarcados");
+                MessageBox.Show("Escoger Producto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (txtbox_cliente.Text == string.Empty)
+            {
+                //MessageBox.Show(      ("Falta ingresar algunos datos, serán remarcados");
+                MessageBox.Show("Escoger Cliente.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            
+
+            frm.idproducto = Convert.ToInt32(txt_idproducto.Text);
+            frm.idCliente = Convert.ToInt32(txt_idcliente.Text);
+
+
+            frm.ShowDialog();
+
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.txtbox_producto.Text = string.Empty;
+            this.txtbox_cliente.Text = string.Empty;
+            this.txt_idproducto.Text = string.Empty;
+            this.txt_idcliente.Text = string.Empty;
+
+        }
     }
 }

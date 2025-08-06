@@ -46,6 +46,8 @@ namespace CapaPresentacion {
         
         private spbuscar_ingresoCargoDataTable tablespbuscar_ingresoCargo;
         
+        private sp_kardex_productoDataTable tablesp_kardex_producto;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -106,6 +108,9 @@ namespace CapaPresentacion {
                 }
                 if ((ds.Tables["spbuscar_ingresoCargo"] != null)) {
                     base.Tables.Add(new spbuscar_ingresoCargoDataTable(ds.Tables["spbuscar_ingresoCargo"]));
+                }
+                if ((ds.Tables["sp_kardex_producto"] != null)) {
+                    base.Tables.Add(new sp_kardex_productoDataTable(ds.Tables["sp_kardex_producto"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -237,6 +242,16 @@ namespace CapaPresentacion {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public sp_kardex_productoDataTable sp_kardex_producto {
+            get {
+                return this.tablesp_kardex_producto;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -334,6 +349,9 @@ namespace CapaPresentacion {
                 }
                 if ((ds.Tables["spbuscar_ingresoCargo"] != null)) {
                     base.Tables.Add(new spbuscar_ingresoCargoDataTable(ds.Tables["spbuscar_ingresoCargo"]));
+                }
+                if ((ds.Tables["sp_kardex_producto"] != null)) {
+                    base.Tables.Add(new sp_kardex_productoDataTable(ds.Tables["sp_kardex_producto"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -434,6 +452,12 @@ namespace CapaPresentacion {
                     this.tablespbuscar_ingresoCargo.InitVars();
                 }
             }
+            this.tablesp_kardex_producto = ((sp_kardex_productoDataTable)(base.Tables["sp_kardex_producto"]));
+            if ((initTable == true)) {
+                if ((this.tablesp_kardex_producto != null)) {
+                    this.tablesp_kardex_producto.InitVars();
+                }
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -466,6 +490,8 @@ namespace CapaPresentacion {
             base.Tables.Add(this.tablespbuscar_venta_fecha);
             this.tablespbuscar_ingresoCargo = new spbuscar_ingresoCargoDataTable();
             base.Tables.Add(this.tablespbuscar_ingresoCargo);
+            this.tablesp_kardex_producto = new sp_kardex_productoDataTable();
+            base.Tables.Add(this.tablesp_kardex_producto);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -531,6 +557,12 @@ namespace CapaPresentacion {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private bool ShouldSerializespbuscar_ingresoCargo() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializesp_kardex_producto() {
             return false;
         }
         
@@ -621,6 +653,9 @@ namespace CapaPresentacion {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void spbuscar_ingresoCargoRowChangeEventHandler(object sender, spbuscar_ingresoCargoRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void sp_kardex_productoRowChangeEventHandler(object sender, sp_kardex_productoRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -5560,6 +5595,521 @@ namespace CapaPresentacion {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class sp_kardex_productoDataTable : global::System.Data.TypedTableBase<sp_kardex_productoRow> {
+            
+            private global::System.Data.DataColumn columnfecha;
+            
+            private global::System.Data.DataColumn columnTipo;
+            
+            private global::System.Data.DataColumn columnNDocumento;
+            
+            private global::System.Data.DataColumn columnCliente;
+            
+            private global::System.Data.DataColumn columnlote;
+            
+            private global::System.Data.DataColumn columnVcto;
+            
+            private global::System.Data.DataColumn columnEntrada;
+            
+            private global::System.Data.DataColumn columnSalida;
+            
+            private global::System.Data.DataColumn columnStock;
+            
+            private global::System.Data.DataColumn columnFechaInicio;
+            
+            private global::System.Data.DataColumn columnFechaFin;
+            
+            private global::System.Data.DataColumn columnnombre;
+            
+            private global::System.Data.DataColumn columndescripcion;
+            
+            private global::System.Data.DataColumn columnregistrosanitario;
+            
+            private global::System.Data.DataColumn columncliente2;
+            
+            private global::System.Data.DataColumn columncodigo;
+            
+            private global::System.Data.DataColumn columnfabricante;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public sp_kardex_productoDataTable() {
+                this.TableName = "sp_kardex_producto";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal sp_kardex_productoDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected sp_kardex_productoDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn fechaColumn {
+                get {
+                    return this.columnfecha;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn TipoColumn {
+                get {
+                    return this.columnTipo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn NDocumentoColumn {
+                get {
+                    return this.columnNDocumento;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ClienteColumn {
+                get {
+                    return this.columnCliente;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn loteColumn {
+                get {
+                    return this.columnlote;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn VctoColumn {
+                get {
+                    return this.columnVcto;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn EntradaColumn {
+                get {
+                    return this.columnEntrada;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn SalidaColumn {
+                get {
+                    return this.columnSalida;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn StockColumn {
+                get {
+                    return this.columnStock;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn FechaInicioColumn {
+                get {
+                    return this.columnFechaInicio;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn FechaFinColumn {
+                get {
+                    return this.columnFechaFin;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn nombreColumn {
+                get {
+                    return this.columnnombre;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn descripcionColumn {
+                get {
+                    return this.columndescripcion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn registrosanitarioColumn {
+                get {
+                    return this.columnregistrosanitario;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn cliente2Column {
+                get {
+                    return this.columncliente2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn codigoColumn {
+                get {
+                    return this.columncodigo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn fabricanteColumn {
+                get {
+                    return this.columnfabricante;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public sp_kardex_productoRow this[int index] {
+                get {
+                    return ((sp_kardex_productoRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event sp_kardex_productoRowChangeEventHandler sp_kardex_productoRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event sp_kardex_productoRowChangeEventHandler sp_kardex_productoRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event sp_kardex_productoRowChangeEventHandler sp_kardex_productoRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event sp_kardex_productoRowChangeEventHandler sp_kardex_productoRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Addsp_kardex_productoRow(sp_kardex_productoRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public sp_kardex_productoRow Addsp_kardex_productoRow(
+                        System.DateTime fecha, 
+                        string Tipo, 
+                        string NDocumento, 
+                        string Cliente, 
+                        string lote, 
+                        System.DateTime Vcto, 
+                        int Entrada, 
+                        int Salida, 
+                        int Stock, 
+                        System.DateTime FechaInicio, 
+                        System.DateTime FechaFin, 
+                        string nombre, 
+                        string descripcion, 
+                        string registrosanitario, 
+                        string cliente2, 
+                        string codigo, 
+                        string fabricante) {
+                sp_kardex_productoRow rowsp_kardex_productoRow = ((sp_kardex_productoRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        fecha,
+                        Tipo,
+                        NDocumento,
+                        Cliente,
+                        lote,
+                        Vcto,
+                        Entrada,
+                        Salida,
+                        Stock,
+                        FechaInicio,
+                        FechaFin,
+                        nombre,
+                        descripcion,
+                        registrosanitario,
+                        cliente2,
+                        codigo,
+                        fabricante};
+                rowsp_kardex_productoRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowsp_kardex_productoRow);
+                return rowsp_kardex_productoRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                sp_kardex_productoDataTable cln = ((sp_kardex_productoDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new sp_kardex_productoDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnfecha = base.Columns["fecha"];
+                this.columnTipo = base.Columns["Tipo"];
+                this.columnNDocumento = base.Columns["NDocumento"];
+                this.columnCliente = base.Columns["Cliente"];
+                this.columnlote = base.Columns["lote"];
+                this.columnVcto = base.Columns["Vcto"];
+                this.columnEntrada = base.Columns["Entrada"];
+                this.columnSalida = base.Columns["Salida"];
+                this.columnStock = base.Columns["Stock"];
+                this.columnFechaInicio = base.Columns["FechaInicio"];
+                this.columnFechaFin = base.Columns["FechaFin"];
+                this.columnnombre = base.Columns["nombre"];
+                this.columndescripcion = base.Columns["descripcion"];
+                this.columnregistrosanitario = base.Columns["registrosanitario"];
+                this.columncliente2 = base.Columns["cliente2"];
+                this.columncodigo = base.Columns["codigo"];
+                this.columnfabricante = base.Columns["fabricante"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnfecha = new global::System.Data.DataColumn("fecha", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfecha);
+                this.columnTipo = new global::System.Data.DataColumn("Tipo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTipo);
+                this.columnNDocumento = new global::System.Data.DataColumn("NDocumento", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNDocumento);
+                this.columnCliente = new global::System.Data.DataColumn("Cliente", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCliente);
+                this.columnlote = new global::System.Data.DataColumn("lote", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnlote);
+                this.columnVcto = new global::System.Data.DataColumn("Vcto", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVcto);
+                this.columnEntrada = new global::System.Data.DataColumn("Entrada", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEntrada);
+                this.columnSalida = new global::System.Data.DataColumn("Salida", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSalida);
+                this.columnStock = new global::System.Data.DataColumn("Stock", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnStock);
+                this.columnFechaInicio = new global::System.Data.DataColumn("FechaInicio", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFechaInicio);
+                this.columnFechaFin = new global::System.Data.DataColumn("FechaFin", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFechaFin);
+                this.columnnombre = new global::System.Data.DataColumn("nombre", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnombre);
+                this.columndescripcion = new global::System.Data.DataColumn("descripcion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndescripcion);
+                this.columnregistrosanitario = new global::System.Data.DataColumn("registrosanitario", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnregistrosanitario);
+                this.columncliente2 = new global::System.Data.DataColumn("cliente2", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncliente2);
+                this.columncodigo = new global::System.Data.DataColumn("codigo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncodigo);
+                this.columnfabricante = new global::System.Data.DataColumn("fabricante", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfabricante);
+                this.columnfecha.ReadOnly = true;
+                this.columnTipo.ReadOnly = true;
+                this.columnTipo.MaxLength = 4;
+                this.columnNDocumento.ReadOnly = true;
+                this.columnNDocumento.MaxLength = 12;
+                this.columnCliente.ReadOnly = true;
+                this.columnCliente.MaxLength = 91;
+                this.columnlote.ReadOnly = true;
+                this.columnlote.MaxLength = 50;
+                this.columnVcto.ReadOnly = true;
+                this.columnEntrada.ReadOnly = true;
+                this.columnSalida.ReadOnly = true;
+                this.columnStock.ReadOnly = true;
+                this.columnFechaInicio.ReadOnly = true;
+                this.columnFechaFin.ReadOnly = true;
+                this.columnnombre.ReadOnly = true;
+                this.columnnombre.MaxLength = 50;
+                this.columndescripcion.ReadOnly = true;
+                this.columndescripcion.MaxLength = 1024;
+                this.columnregistrosanitario.ReadOnly = true;
+                this.columnregistrosanitario.MaxLength = 100;
+                this.columncliente2.ReadOnly = true;
+                this.columncliente2.MaxLength = 150;
+                this.columncodigo.ReadOnly = true;
+                this.columncodigo.MaxLength = 50;
+                this.columnfabricante.ReadOnly = true;
+                this.columnfabricante.MaxLength = 100;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public sp_kardex_productoRow Newsp_kardex_productoRow() {
+                return ((sp_kardex_productoRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new sp_kardex_productoRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(sp_kardex_productoRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.sp_kardex_productoRowChanged != null)) {
+                    this.sp_kardex_productoRowChanged(this, new sp_kardex_productoRowChangeEvent(((sp_kardex_productoRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.sp_kardex_productoRowChanging != null)) {
+                    this.sp_kardex_productoRowChanging(this, new sp_kardex_productoRowChangeEvent(((sp_kardex_productoRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.sp_kardex_productoRowDeleted != null)) {
+                    this.sp_kardex_productoRowDeleted(this, new sp_kardex_productoRowChangeEvent(((sp_kardex_productoRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.sp_kardex_productoRowDeleting != null)) {
+                    this.sp_kardex_productoRowDeleting(this, new sp_kardex_productoRowChangeEvent(((sp_kardex_productoRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Removesp_kardex_productoRow(sp_kardex_productoRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                dsPrincipal ds = new dsPrincipal();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "sp_kardex_productoDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class spreporte_facturaRow : global::System.Data.DataRow {
@@ -8572,6 +9122,498 @@ namespace CapaPresentacion {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class sp_kardex_productoRow : global::System.Data.DataRow {
+            
+            private sp_kardex_productoDataTable tablesp_kardex_producto;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal sp_kardex_productoRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablesp_kardex_producto = ((sp_kardex_productoDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime fecha {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tablesp_kardex_producto.fechaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'fecha\' de la tabla \'sp_kardex_producto\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_kardex_producto.fechaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Tipo {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_kardex_producto.TipoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Tipo\' de la tabla \'sp_kardex_producto\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_kardex_producto.TipoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string NDocumento {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_kardex_producto.NDocumentoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'NDocumento\' de la tabla \'sp_kardex_producto\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_kardex_producto.NDocumentoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Cliente {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_kardex_producto.ClienteColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Cliente\' de la tabla \'sp_kardex_producto\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_kardex_producto.ClienteColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string lote {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_kardex_producto.loteColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'lote\' de la tabla \'sp_kardex_producto\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_kardex_producto.loteColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime Vcto {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tablesp_kardex_producto.VctoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Vcto\' de la tabla \'sp_kardex_producto\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_kardex_producto.VctoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Entrada {
+                get {
+                    try {
+                        return ((int)(this[this.tablesp_kardex_producto.EntradaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Entrada\' de la tabla \'sp_kardex_producto\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_kardex_producto.EntradaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Salida {
+                get {
+                    try {
+                        return ((int)(this[this.tablesp_kardex_producto.SalidaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Salida\' de la tabla \'sp_kardex_producto\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_kardex_producto.SalidaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Stock {
+                get {
+                    try {
+                        return ((int)(this[this.tablesp_kardex_producto.StockColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Stock\' de la tabla \'sp_kardex_producto\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_kardex_producto.StockColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime FechaInicio {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tablesp_kardex_producto.FechaInicioColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'FechaInicio\' de la tabla \'sp_kardex_producto\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_kardex_producto.FechaInicioColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime FechaFin {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tablesp_kardex_producto.FechaFinColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'FechaFin\' de la tabla \'sp_kardex_producto\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_kardex_producto.FechaFinColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string nombre {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_kardex_producto.nombreColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'nombre\' de la tabla \'sp_kardex_producto\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_kardex_producto.nombreColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string descripcion {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_kardex_producto.descripcionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'descripcion\' de la tabla \'sp_kardex_producto\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_kardex_producto.descripcionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string registrosanitario {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_kardex_producto.registrosanitarioColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'registrosanitario\' de la tabla \'sp_kardex_producto\' es DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_kardex_producto.registrosanitarioColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string cliente2 {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_kardex_producto.cliente2Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'cliente2\' de la tabla \'sp_kardex_producto\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_kardex_producto.cliente2Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string codigo {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_kardex_producto.codigoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'codigo\' de la tabla \'sp_kardex_producto\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_kardex_producto.codigoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string fabricante {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_kardex_producto.fabricanteColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'fabricante\' de la tabla \'sp_kardex_producto\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_kardex_producto.fabricanteColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsfechaNull() {
+                return this.IsNull(this.tablesp_kardex_producto.fechaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetfechaNull() {
+                this[this.tablesp_kardex_producto.fechaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsTipoNull() {
+                return this.IsNull(this.tablesp_kardex_producto.TipoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetTipoNull() {
+                this[this.tablesp_kardex_producto.TipoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsNDocumentoNull() {
+                return this.IsNull(this.tablesp_kardex_producto.NDocumentoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetNDocumentoNull() {
+                this[this.tablesp_kardex_producto.NDocumentoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsClienteNull() {
+                return this.IsNull(this.tablesp_kardex_producto.ClienteColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetClienteNull() {
+                this[this.tablesp_kardex_producto.ClienteColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsloteNull() {
+                return this.IsNull(this.tablesp_kardex_producto.loteColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetloteNull() {
+                this[this.tablesp_kardex_producto.loteColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsVctoNull() {
+                return this.IsNull(this.tablesp_kardex_producto.VctoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetVctoNull() {
+                this[this.tablesp_kardex_producto.VctoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsEntradaNull() {
+                return this.IsNull(this.tablesp_kardex_producto.EntradaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetEntradaNull() {
+                this[this.tablesp_kardex_producto.EntradaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsSalidaNull() {
+                return this.IsNull(this.tablesp_kardex_producto.SalidaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetSalidaNull() {
+                this[this.tablesp_kardex_producto.SalidaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsStockNull() {
+                return this.IsNull(this.tablesp_kardex_producto.StockColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetStockNull() {
+                this[this.tablesp_kardex_producto.StockColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsFechaInicioNull() {
+                return this.IsNull(this.tablesp_kardex_producto.FechaInicioColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetFechaInicioNull() {
+                this[this.tablesp_kardex_producto.FechaInicioColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsFechaFinNull() {
+                return this.IsNull(this.tablesp_kardex_producto.FechaFinColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetFechaFinNull() {
+                this[this.tablesp_kardex_producto.FechaFinColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsnombreNull() {
+                return this.IsNull(this.tablesp_kardex_producto.nombreColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetnombreNull() {
+                this[this.tablesp_kardex_producto.nombreColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsdescripcionNull() {
+                return this.IsNull(this.tablesp_kardex_producto.descripcionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetdescripcionNull() {
+                this[this.tablesp_kardex_producto.descripcionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsregistrosanitarioNull() {
+                return this.IsNull(this.tablesp_kardex_producto.registrosanitarioColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetregistrosanitarioNull() {
+                this[this.tablesp_kardex_producto.registrosanitarioColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Iscliente2Null() {
+                return this.IsNull(this.tablesp_kardex_producto.cliente2Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setcliente2Null() {
+                this[this.tablesp_kardex_producto.cliente2Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IscodigoNull() {
+                return this.IsNull(this.tablesp_kardex_producto.codigoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetcodigoNull() {
+                this[this.tablesp_kardex_producto.codigoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsfabricanteNull() {
+                return this.IsNull(this.tablesp_kardex_producto.fabricanteColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetfabricanteNull() {
+                this[this.tablesp_kardex_producto.fabricanteColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -8931,6 +9973,40 @@ namespace CapaPresentacion {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public spbuscar_ingresoCargoRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class sp_kardex_productoRowChangeEvent : global::System.EventArgs {
+            
+            private sp_kardex_productoRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public sp_kardex_productoRowChangeEvent(sp_kardex_productoRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public sp_kardex_productoRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -11077,6 +12153,242 @@ namespace CapaPresentacion.dsPrincipalTableAdapters {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             dsPrincipal.spbuscar_ingresoCargoDataTable dataTable = new dsPrincipal.spbuscar_ingresoCargoDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class sp_kardex_productoTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public sp_kardex_productoTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "sp_kardex_producto";
+            tableMapping.ColumnMappings.Add("fecha", "fecha");
+            tableMapping.ColumnMappings.Add("Tipo", "Tipo");
+            tableMapping.ColumnMappings.Add("NDocumento", "NDocumento");
+            tableMapping.ColumnMappings.Add("Cliente", "Cliente");
+            tableMapping.ColumnMappings.Add("lote", "lote");
+            tableMapping.ColumnMappings.Add("Vcto", "Vcto");
+            tableMapping.ColumnMappings.Add("Entrada", "Entrada");
+            tableMapping.ColumnMappings.Add("Salida", "Salida");
+            tableMapping.ColumnMappings.Add("Stock", "Stock");
+            tableMapping.ColumnMappings.Add("FechaInicio", "FechaInicio");
+            tableMapping.ColumnMappings.Add("FechaFin", "FechaFin");
+            tableMapping.ColumnMappings.Add("nombre", "nombre");
+            tableMapping.ColumnMappings.Add("descripcion", "descripcion");
+            tableMapping.ColumnMappings.Add("registrosanitario", "registrosanitario");
+            tableMapping.ColumnMappings.Add("cliente2", "cliente2");
+            tableMapping.ColumnMappings.Add("codigo", "codigo");
+            tableMapping.ColumnMappings.Add("fabricante", "fabricante");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::CapaPresentacion.Properties.Settings.Default.dbventasConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "dbo.sp_kardex_producto";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FechaInicio", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FechaFin", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdProducto", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdCliente", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(dsPrincipal.sp_kardex_productoDataTable dataTable, global::System.Nullable<global::System.DateTime> FechaInicio, global::System.Nullable<global::System.DateTime> FechaFin, global::System.Nullable<int> IdProducto, global::System.Nullable<int> IdCliente) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((FechaInicio.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(FechaInicio.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((FechaFin.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(FechaFin.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((IdProducto.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((int)(IdProducto.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((IdCliente.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[4].Value = ((int)(IdCliente.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual dsPrincipal.sp_kardex_productoDataTable GetData(global::System.Nullable<global::System.DateTime> FechaInicio, global::System.Nullable<global::System.DateTime> FechaFin, global::System.Nullable<int> IdProducto, global::System.Nullable<int> IdCliente) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((FechaInicio.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(FechaInicio.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((FechaFin.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(FechaFin.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((IdProducto.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((int)(IdProducto.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((IdCliente.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[4].Value = ((int)(IdCliente.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            dsPrincipal.sp_kardex_productoDataTable dataTable = new dsPrincipal.sp_kardex_productoDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }

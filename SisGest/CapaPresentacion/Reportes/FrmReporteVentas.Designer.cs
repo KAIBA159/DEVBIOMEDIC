@@ -34,8 +34,10 @@
             this.spbuscarventafechaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dsPrincipal = new CapaPresentacion.dsPrincipal();
             this.spbuscar_venta_fechaTableAdapter = new CapaPresentacion.dsPrincipalTableAdapters.spbuscar_venta_fechaTableAdapter();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.spbuscarventafechaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsPrincipal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer1
@@ -78,6 +80,7 @@
             this.Load += new System.EventHandler(this.FrmReporteVentas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.spbuscarventafechaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsPrincipal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -88,5 +91,6 @@
         private System.Windows.Forms.BindingSource spbuscarventafechaBindingSource;
         private dsPrincipal dsPrincipal;
         private dsPrincipalTableAdapters.spbuscar_venta_fechaTableAdapter spbuscar_venta_fechaTableAdapter;
+        private System.Windows.Forms.BindingSource bindingSource1;
     }
 }

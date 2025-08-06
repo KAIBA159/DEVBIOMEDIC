@@ -74,7 +74,7 @@ namespace CapaPresentacion
         //Habilita los controles de los formularios
         private void Habilitar(bool Valor)
         {
-            this.txtIdtrabajador.ReadOnly = !Valor;
+            this.txtIdtrabajador.ReadOnly = true;
             this.txtNombre.ReadOnly = !Valor;
             this.txtDireccion.ReadOnly = !Valor;
             this.cbSexo.Enabled = Valor;
@@ -204,6 +204,8 @@ namespace CapaPresentacion
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
+            errorIcono.Clear();
+
             this.IsNuevo = true;
             this.IsEditar = false;
             this.Botones();
@@ -241,7 +243,11 @@ namespace CapaPresentacion
                         this.txtApellidos.Text.Trim().ToUpper(), cbSexo.Text,
                         dtFecha_Nacimiento.Value,
                         txtNum_Documento.Text, txtDireccion.Text,
-                        txtTelefono.Text, txtEmail.Text, cbAcceso.Text, txtUsuario.Text, txtPassword.Text);
+                        txtTelefono.Text, 
+                        txtEmail.Text, 
+                        cbAcceso.Text, 
+                        txtUsuario.Text, 
+                        txtPassword.Text);
 
                     }
                     else
@@ -251,7 +257,11 @@ namespace CapaPresentacion
                         this.txtApellidos.Text.Trim().ToUpper(), cbSexo.Text,
                         dtFecha_Nacimiento.Value,
                         txtNum_Documento.Text, txtDireccion.Text,
-                        txtTelefono.Text, txtEmail.Text, cbAcceso.Text, txtUsuario.Text, txtPassword.Text);
+                        txtTelefono.Text, 
+                        txtEmail.Text, 
+                        cbAcceso.Text, 
+                        txtUsuario.Text, 
+                        txtPassword.Text);
                     }
                     //Si la respuesta fue OK, fue porque se modifico 
                     //o inserto el Cliente
@@ -306,6 +316,8 @@ namespace CapaPresentacion
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
+
+            errorIcono.Clear();
 
             this.IsNuevo = false;
             this.IsEditar = false;

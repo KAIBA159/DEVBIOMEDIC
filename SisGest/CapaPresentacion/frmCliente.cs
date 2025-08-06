@@ -1,13 +1,17 @@
-﻿using System;
+﻿using CapaNegocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CapaNegocio;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 
 namespace CapaPresentacion
 {
@@ -345,5 +349,344 @@ namespace CapaPresentacion
             frm.Texto = txtBuscar.Text;
             frm.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //20100190797 
+
+            string numeroRuc = "20123456789"; // Ejemplo RUC
+
+            var options = new ChromeOptions();
+            options.AddArgument("--start-maximized");
+
+            using (IWebDriver driver = new ChromeDriver(options))
+            {
+                // Ir a la página de SUNAT
+                driver.Navigate().GoToUrl("https://e-consultaruc.sunat.gob.pe/cl-ti-itmrconsruc/FrameCriterioBusquedaWeb.jsp");
+
+                // Esperar que cargue el frame y cambiarlo
+                driver.SwitchTo().Frame("main");
+
+                // Seleccionar la pestaña por RUC
+                IWebElement rucInput = driver.FindElement(By.Id("txtRuc"));
+                rucInput.SendKeys(numeroRuc);
+
+                Console.WriteLine("✅ Ingresa el CAPTCHA manualmente y presiona ENTER aquí cuando esté listo.");
+                Console.ReadLine(); // Pausa para que el usuario resuelva el CAPTCHA
+
+                // Presionar el botón "Consultar"
+                IWebElement botonConsultar = driver.FindElement(By.Name("btnAceptar"));
+                botonConsultar.Click();
+
+                // Esperar a que cargue la respuesta (puedes ajustar el tiempo)
+                Thread.Sleep(3000);
+
+                // Obtener datos: Número de RUC y Domicilio Fiscal
+                string rucResultado = driver.FindElement(By.XPath("//td[contains(text(),'Número de RUC')]/following-sibling::td")).Text;
+                string domicilioFiscal = driver.FindElement(By.XPath("//td[contains(text(),'Dirección del Domicilio Fiscal')]/following-sibling::td")).Text;
+
+                Console.WriteLine($"Número de RUC: {rucResultado}");
+                Console.WriteLine($"Domicilio Fiscal: {domicilioFiscal}");
+            }
+
+        }
+
+        //public Contribuyente ObtenerDatos(string Ruc, string tipdoc)
+        //{
+        //    Contribuyente contrib = new Contribuyente();
+        //    try
+        //    {
+        //        var myTask = ExtraerDatosAsync(Ruc, tipdoc);
+        //        string result = myTask.Result;
+
+        //        CuTexto oCuTexto = new CuTexto();
+
+        //        string nombreInicio = "<HEAD><TITLE>";
+        //        string nombreFin = "</TITLE></HEAD>";
+        //        string contenidoBusqueda = oCuTexto.ExtraerContenidoEntreTagString(result, 0, nombreInicio, nombreFin);
+        //        if (contenidoBusqueda == ".:: Pagina de Mensajes ::.")
+        //        {
+        //            nombreInicio = "<p class=\"error\">";
+        //            nombreFin = "</p>";
+        //            contrib.TipoRespuesta = 2;
+        //            contrib.Mensaje = oCuTexto.ExtraerContenidoEntreTagString(result, 0, nombreInicio, nombreFin);
+        //        }
+        //        else if (contenidoBusqueda == ".:: Pagina de Error ::.")
+        //        {
+        //            nombreInicio = "<p class=\"error\">";
+        //            nombreFin = "</p>";
+        //            contrib.TipoRespuesta = 3;
+        //            contrib.Mensaje = oCuTexto.ExtraerContenidoEntreTagString(result, 0, nombreInicio, nombreFin);
+        //        }
+        //        else
+        //        {
+        //            contrib.TipoRespuesta = 2;
+        //            nombreInicio = "<div class=\"list-group\">";
+        //            nombreFin = "<div class=\"panel-footer text-center\">";
+        //            contenidoBusqueda = oCuTexto.ExtraerContenidoEntreTagString(result, 0, nombreInicio, nombreFin);
+        //            if (contenidoBusqueda == "")
+        //            {
+        //                nombreInicio = "<strong>";
+        //                nombreFin = "</strong>";
+        //                contrib.Mensaje = oCuTexto.ExtraerContenidoEntreTagString(result, 0, nombreInicio, nombreFin);
+        //                if (contrib.Mensaje == "")
+        //                    contrib.Mensaje = "No se encuentra las cabeceras principales del contenido HTML";
+        //            }
+        //            else
+        //            {
+        //                result = contenidoBusqueda;
+        //                contrib.Mensaje = "Mensaje del inconveniente no especificado";
+        //                nombreInicio = "<h4 class=\"list-group-item-heading\">";
+        //                nombreFin = "</h4>";
+        //                int resultadoBusqueda = result.IndexOf(nombreInicio, 0, StringComparison.OrdinalIgnoreCase);
+        //                if (resultadoBusqueda > -1)
+        //                {
+        //                    // Modificar cuando el estado del Contribuyente es "BAJA DE OFICIO", porque se agrega un elemento con clase "list-group-item"
+        //                    resultadoBusqueda += nombreInicio.Length;
+        //                    string[] arrResultado = oCuTexto.ExtraerContenidoEntreTag(result, resultadoBusqueda,
+        //                        nombreInicio, nombreFin);
+
+        //                    string razon = "";
+        //                    if (arrResultado != null)
+        //                    {
+        //                        contrib.RUC = arrResultado[1].Substring(0, 11);
+        //                        string[] razonsoc = arrResultado[1].Split('-');
+
+        //                        for (int i = 1; i < razonsoc.Length; i++)
+        //                        {
+        //                            if (i == 1)
+        //                            {
+        //                                razon += razonsoc[i];
+        //                            }
+        //                            else
+        //                            {
+        //                                razon += "-" + razonsoc[i];
+        //                            }
+        //                        }
+
+        //                        //contrib.Razon = "’" + razon;
+        //                        contrib.Razon = razon.Replace("\u0092", "’");
+
+        //                        contrib.TipoDoc = (contrib.RUC.Substring(0, 1).ToString() == "1") ? "DNI" : "";
+        //                        contrib.NumDoc = (contrib.TipoDoc == "DNI") ? contrib.RUC.Substring(2, 8) : "";
+
+
+        //                        // Tipo Contribuyente
+        //                        nombreInicio = "<p class=\"list-group-item-text\">";
+        //                        nombreFin = "</p>";
+        //                        arrResultado = oCuTexto.ExtraerContenidoEntreTag(result, Convert.ToInt32(arrResultado[0]),
+        //                            nombreInicio, nombreFin);
+        //                        if (arrResultado != null)
+        //                        {
+        //                            contrib.Tipo = arrResultado[1];
+        //                            try
+        //                            {
+        //                                contrib.TieneNegocio = (contrib.Tipo.Substring(16, 11).ToString() == "CON NEGOCIO") ? "Y" : "N";
+        //                            }
+        //                            catch (Exception)
+        //                            {
+
+        //                                contrib.TieneNegocio = "N";
+        //                            }
+
+        //                            // Nombre Comercial
+        //                            arrResultado = oCuTexto.ExtraerContenidoEntreTag(result, Convert.ToInt32(arrResultado[0]),
+        //                                nombreInicio, nombreFin);
+        //                            if (arrResultado != null)
+        //                            {
+        //                                if (contrib.TipoDoc != "DNI")
+        //                                {
+        //                                    contrib.NombreComercial = arrResultado[1].Replace("\r\n", "").Replace("\t", "").Trim();
+        //                                }
+
+        //                                // Fecha de Inscripción
+        //                                arrResultado = oCuTexto.ExtraerContenidoEntreTag(result, Convert.ToInt32(arrResultado[0]),
+        //                                    nombreInicio, nombreFin);
+        //                                if (arrResultado != null)
+        //                                {
+        //                                    //oEnSUNAT.f = arrResultado[1];
+
+        //                                    // Fecha de Inicio de Actividades: 
+        //                                    arrResultado = oCuTexto.ExtraerContenidoEntreTag(result, Convert.ToInt32(arrResultado[0]),
+        //                                        nombreInicio, nombreFin);
+        //                                    if (arrResultado != null)
+        //                                    {
+        //                                        // oEnSUNAT.FechaInicioActividades = arrResultado[1];
+
+        //                                        // Estado del Contribuyente                                               
+
+        //                                        if (Ruc.Substring(0, 2) == "10")
+        //                                        {
+        //                                            arrResultado = oCuTexto.ExtraerContenidoEntreTag(result, 3101,
+        //                                            nombreInicio, nombreFin);
+
+
+        //                                        }
+        //                                        else
+        //                                        {
+        //                                            arrResultado = oCuTexto.ExtraerContenidoEntreTag(result, Convert.ToInt32(arrResultado[0]),
+        //                                            nombreInicio, nombreFin);
+        //                                        }
+
+        //                                        if (arrResultado != null)
+        //                                        {
+        //                                            contrib.Estado = arrResultado[1].Trim();
+
+        //                                            // Condición del Contribuyente
+
+
+        //                                            if (Ruc.Substring(0, 2) == "10")
+        //                                            {
+        //                                                arrResultado = oCuTexto.ExtraerContenidoEntreTag(result, 3728,
+        //                                                nombreInicio, nombreFin);
+        //                                            }
+        //                                            else
+        //                                            {
+        //                                                arrResultado = oCuTexto.ExtraerContenidoEntreTag(result, Convert.ToInt32(arrResultado[0]),
+        //                                                nombreInicio, nombreFin);
+        //                                            }
+
+        //                                            if (arrResultado != null)
+        //                                            {
+        //                                                string[] stringSeparators = new string[] { "\r\n\t\t" };
+        //                                                string[] condicionLines = arrResultado[1].Trim().Split(stringSeparators, StringSplitOptions.None);
+        //                                                contrib.Condicion = condicionLines[0].Trim();
+
+        //                                                // Domicilio Fiscal
+        //                                                if (Ruc.Substring(0, 2) == "10")
+        //                                                {
+        //                                                    arrResultado = oCuTexto.ExtraerContenidoEntreTag(result, 4048,
+        //                                                    nombreInicio, nombreFin);
+        //                                                }
+        //                                                else
+        //                                                {
+        //                                                    arrResultado = oCuTexto.ExtraerContenidoEntreTag(result, Convert.ToInt32(arrResultado[0]),
+        //                                                    nombreInicio, nombreFin);
+        //                                                }
+
+        //                                                if (arrResultado != null)
+        //                                                {
+        //                                                    contrib.Direccion = arrResultado[1].Trim();
+        //                                                    Ciudad(ref contrib, contrib.Direccion);
+
+        //                                                    // Actividad(es) Económica(s)
+        //                                                    nombreInicio = "<tbody>";
+        //                                                    nombreFin = "</tbody>";
+        //                                                    arrResultado = oCuTexto.ExtraerContenidoEntreTag(result, Convert.ToInt32(arrResultado[0]),
+        //                                                        nombreInicio, nombreFin);
+        //                                                    if (arrResultado != null)
+        //                                                    {
+        //                                                        //oEnSUNAT.ActividadesEconomicas = arrResultado[1].Replace("\r\n", "").Replace("\t", "").Trim();
+
+        //                                                        // Comprobantes de Pago c/aut. de impresión (F. 806 u 816)
+        //                                                        arrResultado = oCuTexto.ExtraerContenidoEntreTag(result, Convert.ToInt32(arrResultado[0]),
+        //                                                            nombreInicio, nombreFin);
+        //                                                        if (arrResultado != null)
+        //                                                        {
+        //                                                            //  oEnSUNAT.ComprobantesPago = arrResultado[1].Replace("\r\n", "").Replace("\t", "").Trim();
+
+        //                                                            // Sistema de Emisión Electrónica
+        //                                                            arrResultado = oCuTexto.ExtraerContenidoEntreTag(result, Convert.ToInt32(arrResultado[0]),
+        //                                                                nombreInicio, nombreFin);
+        //                                                            if (arrResultado != null)
+        //                                                            {
+        //                                                                // oEnSUNAT.SistemaEmisionComprobante = arrResultado[1].Replace("\r\n", "").Replace("\t", "").Trim();
+
+        //                                                                // Afiliado al PLE desde
+        //                                                                nombreInicio = "<p class=\"list-group-item-text\">";
+        //                                                                nombreFin = "</p>";
+        //                                                                arrResultado = oCuTexto.ExtraerContenidoEntreTag(result, Convert.ToInt32(arrResultado[0]),
+        //                                                                    nombreInicio, nombreFin);
+        //                                                                if (arrResultado != null)
+        //                                                                {
+        //                                                                    // oEnSUNAT.AfiliadoPLEDesde = arrResultado[1];
+
+        //                                                                    // Padrones 
+        //                                                                    nombreInicio = "<tbody>";
+        //                                                                    nombreFin = "</tbody>";
+        //                                                                    arrResultado = oCuTexto.ExtraerContenidoEntreTag(result, Convert.ToInt32(arrResultado[0]),
+        //                                                                        nombreInicio, nombreFin);
+        //                                                                    if (arrResultado != null)
+        //                                                                    {
+        //                                                                        nombreInicio = "<tr>";
+        //                                                                        nombreFin = "</tr>";
+        //                                                                        string[] values = arrResultado[1].Replace("\r\n", "").Replace("\t", "").Trim().Split(new string[] { "<tr>", "</tr>", "<td>", "</td>" }, StringSplitOptions.RemoveEmptyEntries);
+
+        //                                                                        foreach (var value in values)
+        //                                                                        {
+        //                                                                            if (value.Contains("Excluido") && value.Contains("Retención"))
+        //                                                                            {
+        //                                                                                contrib.Retencion = "NO";
+        //                                                                            }
+
+        //                                                                            if (value.Contains("Incorporado") && value.Contains("Retención"))
+        //                                                                            {
+        //                                                                                contrib.Retencion = "SI";
+        //                                                                            }
+
+        //                                                                            if (value.Contains("Excluido") && value.Contains("Percepción"))
+        //                                                                            {
+        //                                                                                contrib.Percepcion = "NO";
+        //                                                                            }
+
+        //                                                                            if (value.Contains("Incorporado") && value.Contains("Percepción"))
+        //                                                                            {
+        //                                                                                contrib.Percepcion = "SI";
+        //                                                                            }
+        //                                                                            if (value.Contains("Incorporado") && value.Contains("Buenos Contribuyentes"))
+        //                                                                            {
+        //                                                                                contrib.BuenContribuyente = "SI";
+        //                                                                            }
+        //                                                                        }
+        //                                                                        if (string.IsNullOrEmpty(contrib.Percepcion))
+        //                                                                            contrib.Percepcion = "NO";
+
+        //                                                                        if (string.IsNullOrEmpty(contrib.Retencion))
+        //                                                                            contrib.Retencion = "NO";
+
+        //                                                                        if (string.IsNullOrEmpty(contrib.BuenContribuyente))
+        //                                                                            contrib.BuenContribuyente = "NO";
+
+        //                                                                        //contrib.BuenContribuyente = (arrResultado[1].Replace("\r\n", "").Replace("\t", "").Trim().Contains("Buenos Contribuyentes")) ? "SI" : "NO";
+        //                                                                        //contrib.Retencion = (arrResultado[1].Replace("\r\n", "").Replace("\t", "").Trim().Contains("Retención")) ? "SI" : "NO";
+        //                                                                        //contrib.Percepcion = (arrResultado[1].Replace("\r\n", "").Replace("\t", "").Trim().Contains("Percepción")) ? "SI" : "NO";
+        //                                                                    }
+        //                                                                    else
+        //                                                                    {
+        //                                                                        contrib.BuenContribuyente = "NO";
+        //                                                                        contrib.Retencion = "NO";
+        //                                                                        contrib.Percepcion = "NO";
+        //                                                                    }
+        //                                                                }
+
+        //                                                                contrib.TipoRespuesta = 1;
+        //                                                                contrib.Mensaje = "";
+        //                                                            }
+        //                                                        }
+        //                                                    }
+        //                                                }
+        //                                            }
+        //                                        }
+        //                                    }
+        //                                }
+        //                            }
+        //                        }
+        //                    }
+        //                }
+        //            }
+        //        }
+
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        contrib.Mensaje = ex.Message;
+        //    }
+
+        //    return contrib;
+        //}
+
+
+
+
     }
 }

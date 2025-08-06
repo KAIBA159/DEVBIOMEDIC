@@ -40,15 +40,19 @@
             this.btnBuscarCliente = new System.Windows.Forms.Button();
             this.txtbox_producto = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtp_hasta = new System.Windows.Forms.DateTimePicker();
+            this.dtp_desde = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnImprimir = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnCancelar);
+            this.groupBox1.Controls.Add(this.btnImprimir);
             this.groupBox1.Controls.Add(this.txt_idcliente);
             this.groupBox1.Controls.Add(this.txt_idproducto);
             this.groupBox1.Controls.Add(this.button2);
@@ -60,13 +64,13 @@
             this.groupBox1.Controls.Add(this.btnBuscarCliente);
             this.groupBox1.Controls.Add(this.txtbox_producto);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.dateTimePicker2);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.dtp_hasta);
+            this.groupBox1.Controls.Add(this.dtp_desde);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(32, 14);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(573, 172);
+            this.groupBox1.Size = new System.Drawing.Size(573, 213);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Consulta";
@@ -74,22 +78,24 @@
             // 
             // txt_idcliente
             // 
-            this.txt_idcliente.Location = new System.Drawing.Point(475, 100);
+            this.txt_idcliente.Location = new System.Drawing.Point(507, 82);
             this.txt_idcliente.Name = "txt_idcliente";
             this.txt_idcliente.Size = new System.Drawing.Size(60, 20);
             this.txt_idcliente.TabIndex = 27;
+            this.txt_idcliente.Visible = false;
             // 
             // txt_idproducto
             // 
-            this.txt_idproducto.Location = new System.Drawing.Point(475, 50);
+            this.txt_idproducto.Location = new System.Drawing.Point(507, 47);
             this.txt_idproducto.Name = "txt_idproducto";
             this.txt_idproducto.Size = new System.Drawing.Size(60, 20);
             this.txt_idproducto.TabIndex = 26;
+            this.txt_idproducto.Visible = false;
             // 
             // button2
             // 
             this.button2.Image = global::CapaPresentacion.Properties.Resources.Buscar_p;
-            this.button2.Location = new System.Drawing.Point(411, 97);
+            this.button2.Location = new System.Drawing.Point(417, 82);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(46, 25);
@@ -99,15 +105,16 @@
             // 
             // txtbox_cliente
             // 
-            this.txtbox_cliente.Location = new System.Drawing.Point(108, 99);
+            this.txtbox_cliente.Location = new System.Drawing.Point(114, 84);
             this.txtbox_cliente.Name = "txtbox_cliente";
+            this.txtbox_cliente.ReadOnly = true;
             this.txtbox_cliente.Size = new System.Drawing.Size(292, 20);
             this.txtbox_cliente.TabIndex = 24;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(61, 103);
+            this.label5.Location = new System.Drawing.Point(61, 88);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(45, 13);
             this.label5.TabIndex = 23;
@@ -115,35 +122,38 @@
             // 
             // ck_btnclic
             // 
-            this.ck_btnclic.Location = new System.Drawing.Point(231, 133);
+            this.ck_btnclic.Location = new System.Drawing.Point(382, 162);
             this.ck_btnclic.Name = "ck_btnclic";
             this.ck_btnclic.Size = new System.Drawing.Size(169, 23);
             this.ck_btnclic.TabIndex = 22;
             this.ck_btnclic.Text = "Consultar";
             this.ck_btnclic.UseVisualStyleBackColor = true;
+            this.ck_btnclic.Visible = false;
             this.ck_btnclic.Click += new System.EventHandler(this.ck_btnclic_event);
             // 
             // txtbox_rs
             // 
-            this.txtbox_rs.Location = new System.Drawing.Point(108, 73);
+            this.txtbox_rs.Location = new System.Drawing.Point(447, 136);
             this.txtbox_rs.Name = "txtbox_rs";
             this.txtbox_rs.Size = new System.Drawing.Size(120, 20);
             this.txtbox_rs.TabIndex = 21;
+            this.txtbox_rs.Visible = false;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(10, 77);
+            this.label4.Location = new System.Drawing.Point(349, 140);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(96, 13);
             this.label4.TabIndex = 20;
             this.label4.Text = "Registro Sanitario :";
+            this.label4.Visible = false;
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // btnBuscarCliente
             // 
             this.btnBuscarCliente.Image = global::CapaPresentacion.Properties.Resources.Buscar_p;
-            this.btnBuscarCliente.Location = new System.Drawing.Point(411, 47);
+            this.btnBuscarCliente.Location = new System.Drawing.Point(417, 47);
             this.btnBuscarCliente.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscarCliente.Name = "btnBuscarCliente";
             this.btnBuscarCliente.Size = new System.Drawing.Size(46, 25);
@@ -153,8 +163,9 @@
             // 
             // txtbox_producto
             // 
-            this.txtbox_producto.Location = new System.Drawing.Point(108, 49);
+            this.txtbox_producto.Location = new System.Drawing.Point(114, 49);
             this.txtbox_producto.Name = "txtbox_producto";
+            this.txtbox_producto.ReadOnly = true;
             this.txtbox_producto.Size = new System.Drawing.Size(292, 20);
             this.txtbox_producto.TabIndex = 5;
             // 
@@ -167,21 +178,21 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Producto :";
             // 
-            // dateTimePicker2
+            // dtp_hasta
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(301, 21);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(99, 20);
-            this.dateTimePicker2.TabIndex = 3;
+            this.dtp_hasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_hasta.Location = new System.Drawing.Point(301, 21);
+            this.dtp_hasta.Name = "dtp_hasta";
+            this.dtp_hasta.Size = new System.Drawing.Size(99, 20);
+            this.dtp_hasta.TabIndex = 3;
             // 
-            // dateTimePicker1
+            // dtp_desde
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(108, 21);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(99, 20);
-            this.dateTimePicker1.TabIndex = 2;
+            this.dtp_desde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_desde.Location = new System.Drawing.Point(108, 21);
+            this.dtp_desde.Name = "dtp_desde";
+            this.dtp_desde.Size = new System.Drawing.Size(99, 20);
+            this.dtp_desde.TabIndex = 2;
             // 
             // label2
             // 
@@ -201,11 +212,39 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Desde : ";
             // 
+            // btnImprimir
+            // 
+            this.btnImprimir.BackColor = System.Drawing.Color.Silver;
+            this.btnImprimir.Image = global::CapaPresentacion.Properties.Resources.imprimir;
+            this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnImprimir.Location = new System.Drawing.Point(51, 139);
+            this.btnImprimir.Margin = new System.Windows.Forms.Padding(2);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(126, 29);
+            this.btnImprimir.TabIndex = 28;
+            this.btnImprimir.Text = "&Consulta Kardex";
+            this.btnImprimir.UseVisualStyleBackColor = false;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnCancelar.Image = global::CapaPresentacion.Properties.Resources.error2;
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelar.Location = new System.Drawing.Point(201, 140);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(126, 28);
+            this.btnCancelar.TabIndex = 29;
+            this.btnCancelar.Text = "&Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
             // ConsultarKardex
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(615, 205);
+            this.ClientSize = new System.Drawing.Size(615, 243);
             this.Controls.Add(this.groupBox1);
             this.Name = "ConsultarKardex";
             this.Text = "ConsultarKardex";
@@ -218,12 +257,12 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtp_desde;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtbox_producto;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtp_hasta;
         private System.Windows.Forms.TextBox txtbox_rs;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnBuscarCliente;
@@ -233,5 +272,7 @@
         private System.Windows.Forms.Button ck_btnclic;
         private System.Windows.Forms.TextBox txt_idcliente;
         private System.Windows.Forms.TextBox txt_idproducto;
+        private System.Windows.Forms.Button btnImprimir;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }
