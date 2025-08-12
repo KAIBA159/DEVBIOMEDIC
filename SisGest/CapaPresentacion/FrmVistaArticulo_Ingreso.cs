@@ -54,9 +54,9 @@ namespace CapaPresentacion
                     col.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
 
                     // Limitar el ancho máximo
-                    if (col.Width > 300)
+                    if (col.Width > 50)
                     {
-                        col.Width = 300;
+                        col.Width = 50;
                     }
                 }
 

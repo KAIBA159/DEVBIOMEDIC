@@ -33,6 +33,11 @@ namespace CapaPresentacion.Consultas
 
             if (dataListado != null)
             {
+                dataListado.Columns["Cantidad_Ingreso"].HeaderText = "Cantidad Ingreso";
+                dataListado.Columns["Cantidad_Stock"].HeaderText = "Cantidad Stock";
+                dataListado.Columns["Cantidad_Venta"].HeaderText = "Cantidad Salida";
+
+
                 foreach (DataGridViewColumn col in dataListado.Columns)
                 {
                     col.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
