@@ -318,6 +318,46 @@ namespace CapaDatos
             return rpta;
         }
 
+        public static int Consulta_Stock_iddetalle_ingreso(int iddetalle_ingreso)
+        {
+            //string rpta = "";
+            int stockDisponible = 0;
+            try
+            {
+                using (SqlConnection SqlCon = new SqlConnection(Conexion.Cn))
+                {
+                    SqlCon.Open();
+
+
+                    string query = @"
+                SELECT ISNULL(stock_actual, 0)
+                FROM detalle_ingreso
+                WHERE iddetalle_ingreso = @IdDetalleIngreso";
+
+                    using (SqlCommand SqlCmd = new SqlCommand(query, SqlCon))
+                    {
+                        SqlCmd.Parameters.AddWithValue("@IdDetalleIngreso", iddetalle_ingreso);
+
+                        object result = SqlCmd.ExecuteScalar();
+                        if (result != null && result != DBNull.Value)
+                            stockDisponible = Convert.ToInt32(result);
+                    }
+
+
+
+                }
+            }
+            catch (Exception ex)
+            {
+                stockDisponible = 0;
+                throw new Exception("Error al consultar stock: " + ex.Message);
+               
+            }
+
+            return stockDisponible;
+        }
+
+
         //Método Eliminar
         public string Eliminar(DVenta Venta)
         {

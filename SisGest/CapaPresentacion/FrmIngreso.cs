@@ -263,7 +263,7 @@ namespace CapaPresentacion
         private void OcultarColumnas()
         {
               this.dataListado.Columns[0].Visible = false;
-              this.dataListado.Columns[1].Visible = false;
+              //this.dataListado.Columns[1].Visible = false;
                  
         }
 
@@ -450,10 +450,15 @@ namespace CapaPresentacion
         {
             this.dtDetalle = new DataTable("Detalle");
 
-            this.dtDetalle.Columns.Add("idarticulo",System.Type.GetType("System.Int32"));
-            this.dtDetalle.Columns["idarticulo"].ReadOnly = true;
+
 
             //
+            this.dtDetalle.Columns.Add("iddetalle_ingreso", System.Type.GetType("System.Int32"));
+            this.dtDetalle.Columns["iddetalle_ingreso"].ReadOnly = true;
+
+            //
+            this.dtDetalle.Columns.Add("idarticulo", System.Type.GetType("System.Int32"));
+            this.dtDetalle.Columns["idarticulo"].ReadOnly = true;
 
             this.dtDetalle.Columns.Add("codigo", System.Type.GetType("System.String"));
             this.dtDetalle.Columns["codigo"].ReadOnly = true;
@@ -528,6 +533,10 @@ namespace CapaPresentacion
 
             //Relacionar nuestro DataGRidView con nuestro DataTable
             this.dataListadoDetalle.DataSource = this.dtDetalle;
+
+            
+
+            this.dataListadoDetalle.Columns["iddetalle_ingreso"].HeaderText = "iddetalle_ingreso";
 
             this.dataListadoDetalle.Columns["idarticulo"].HeaderText = "CodigoSistema";
 
@@ -869,14 +878,17 @@ namespace CapaPresentacion
                     errorIcono.Clear();
 
                     bool registrar = true;
-                    foreach (DataRow row in dtDetalle.Rows)
-                    {
-                        if (Convert.ToInt32(row["idarticulo"])==Convert.ToInt32(this.txtIdarticulo.Text))
-                        {
-                            registrar = false;
-                            this.MensajeError("YA se encuentra el artículo en el detalle");
-                        }
-                    }
+
+                    //foreach (DataRow row in dtDetalle.Rows)
+                    //{
+                    //    if (Convert.ToInt32(row["idarticulo"])==Convert.ToInt32(this.txtIdarticulo.Text))
+                    //    {
+                    //        registrar = false;
+                    //        this.MensajeError("YA se encuentra el artículo en el detalle");
+                    //    }
+                    //}
+
+
                     if (registrar)
                     {
 

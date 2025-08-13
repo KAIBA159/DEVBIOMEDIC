@@ -28,7 +28,7 @@ namespace CapaPresentacion
         private void OcultarColumnas()
         {
             this.dataListado.Columns[0].Visible = false;
-            this.dataListado.Columns[1].Visible = false;
+            //this.dataListado.Columns[1].Visible = false;
         }
 
         //Método BuscarNombre
@@ -41,7 +41,7 @@ namespace CapaPresentacion
             {
 
                 this.OcultarColumnas();
-                lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+                lblTotal.Text = "Total de detalle de Ingreso : " + Convert.ToString(dataListado.Rows.Count);
 
                 foreach (DataGridViewColumn col in dataListado.Columns)
                 {
@@ -67,7 +67,7 @@ namespace CapaPresentacion
             {
 
                 this.OcultarColumnas();
-                lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+                lblTotal.Text = "Total de detalle de Ingreso : " + Convert.ToString(dataListado.Rows.Count);
 
                 foreach(DataGridViewColumn col in dataListado.Columns)
                 {   
@@ -112,14 +112,14 @@ namespace CapaPresentacion
             DateTime par6;
             par1 = Convert.ToString(this.dataListado.CurrentRow.Cells["iddetalle_ingreso"].Value);
             par2 = Convert.ToString(this.dataListado.CurrentRow.Cells["nombre"].Value);
-            par3 = Convert.ToDecimal(this.dataListado.CurrentRow.Cells["precio_compra"].Value);
-            par4 = Convert.ToDecimal(this.dataListado.CurrentRow.Cells["precio_venta"].Value);
+            //par3 = Convert.ToDecimal(this.dataListado.CurrentRow.Cells["precio_compra"].Value);
+            //par4 = Convert.ToDecimal(this.dataListado.CurrentRow.Cells["precio_venta"].Value);
             par5 = Convert.ToInt32(this.dataListado.CurrentRow.Cells["stock_actual"].Value);
             par6 = Convert.ToDateTime(this.dataListado.CurrentRow.Cells["fecha_vencimiento"].Value);
 
             par7 = Convert.ToString(this.dataListado.CurrentRow.Cells["Lote"].Value);
 
-            form.setArticulo(par1, par2, par3, par4, par5, par6,par7);
+            form.setArticulo(par1, par2, par5, par6,par7);
             this.Hide();
         }
     }

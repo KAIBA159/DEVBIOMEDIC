@@ -96,6 +96,13 @@ namespace CapaNegocio
             DVenta Obj = new DVenta();
             return Obj.MostrarArticulo_Venta_codigo(textobuscar, idClientec);
         }
-        
+
+
+        public static int consultarStockIddetalle_ingreso(int idDetalleIngreso)
+        {
+            return DVenta.Consulta_Stock_iddetalle_ingreso(idDetalleIngreso);
+        }
+
+
     }
 }

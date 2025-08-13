@@ -46,13 +46,17 @@ namespace CapaPresentacion
         
 
         public void setArticulo (string iddetalle_ingreso,string nombre,
-            decimal precio_compra,decimal precio_venta,int stock,
+            //decimal precio_compra,
+            //decimal precio_venta,
+            int stock,
             DateTime fecha_vencimiento,string lotet)
         {
             this.txtIdarticulo.Text = iddetalle_ingreso;
             this.txtArticulo.Text = nombre;
-            this.txtPrecio_Compra.Text = Convert.ToString(precio_compra);
-            this.txtPrecio_Venta.Text = Convert.ToString(precio_venta);
+
+            //this.txtPrecio_Compra.Text = Convert.ToString(precio_compra);
+            //this.txtPrecio_Venta.Text = Convert.ToString(precio_venta);
+
             this.txtStock_Actual.Text = Convert.ToString(stock);
             this.dtFecha_Vencimiento.Value = fecha_vencimiento;
             this.txtLote.Text = lotet;
@@ -661,8 +665,9 @@ namespace CapaPresentacion
 
                 if (this.txtIdarticulo.Text == string.Empty 
                     || this.txtCantidad.Text == string.Empty
-                    || this.txtDescuento.Text == string.Empty
-                    || this.txtPrecio_Venta.Text == string.Empty
+
+                    //|| this.txtDescuento.Text == string.Empty
+                    //|| this.txtPrecio_Venta.Text == string.Empty
 
                     || this.txtGuia_Cliente.Text == string.Empty 
                     || this.txtSubCliente.Text == string.Empty
@@ -673,8 +678,8 @@ namespace CapaPresentacion
                     MensajeError("Falta ingresar algunos datos, serán remarcados");
                     errorIcono.SetError(txtIdarticulo, "Ingrese un Valor");
                     errorIcono.SetError(txtCantidad, "Ingrese un Valor");
-                    errorIcono.SetError(txtDescuento, "Ingrese un Valor");
-                    errorIcono.SetError(txtPrecio_Venta, "Ingrese un Valor");
+                    //errorIcono.SetError(txtDescuento, "Ingrese un Valor");
+                    //errorIcono.SetError(txtPrecio_Venta, "Ingrese un Valor");
 
                     errorIcono.SetError(txtGuia_Cliente, "Ingrese una Guia de Cliente");
                     errorIcono.SetError(txtSubCliente, "Ingrese un SubCliente");
@@ -683,20 +688,74 @@ namespace CapaPresentacion
                 else
                 {
                     bool registrar = true;
-                    foreach (DataRow row in dtDetalle.Rows)
-                    {
-                        if (Convert.ToInt32(row["iddetalle_ingreso"])==Convert.ToInt32(this.txtIdarticulo.Text))
-                        {
-                            registrar = false;
-                            this.MensajeError("Ya se encuentra el artículo en el detalle");
-                        }
-                    }
+
+
+                    //foreach (DataRow row in dtDetalle.Rows)
+                    //{
+                    //    if (Convert.ToInt32(row["iddetalle_ingreso"])==Convert.ToInt32(this.txtIdarticulo.Text))
+                    //    {
+                    //        registrar = false;
+                    //        this.MensajeError("Ya se encuentra el artículo en el detalle");
+                    //    }
+                    //}
+
+
                     if (registrar && Convert.ToInt32(txtCantidad.Text)<=Convert.ToInt32(txtStock_Actual.Text))
                     {
+                        this.txtPrecio_Venta.Text = "1";
+                        this.txtDescuento.Text = "1";
+
                         decimal subTotal=Convert.ToDecimal(this.txtCantidad.Text)*Convert.ToDecimal(this.txtPrecio_Venta.Text)-Convert.ToDecimal(this.txtDescuento.Text);
                         totalPagado = totalPagado + subTotal;
+
                         this.lblTotal_Pagado.Text = totalPagado.ToString("#0.00#");
+
+
+
+                        //INI
+                        string txtIdarticuloTemp = this.txtIdarticulo.Text;
+                        // Leer datos de la interfaz
+                        int idDetalleIngreso = Convert.ToInt32(txtIdarticuloTemp.Trim());
+                        //string producto = txtProducto.Text.Trim();
+                        int cantidadNueva = Convert.ToInt32(txtCantidad.Text.Trim());
+
+                        // Stock disponible desde base de datos o lógica interna
+                        int stockDisponible = ObtenerStockDisponible(idDetalleIngreso);
+
+                        // Sumar lo que ya está en el DataGridView para este idDetalleIngreso
+                        int cantidadAcumulada = 0;
+                        foreach (DataGridViewRow row2 in dataListadoDetalle.Rows)
+                        {
+                            if (row2.Cells["iddetalle_ingreso"].Value != null &&
+                                Convert.ToInt32(row2.Cells["iddetalle_ingreso"].Value) == idDetalleIngreso)
+                            {
+                                cantidadAcumulada += Convert.ToInt32(row2.Cells["cantidad"].Value);
+                            }
+                        }
+
+                        // Validar antes de agregar
+                        if (cantidadAcumulada + cantidadNueva > stockDisponible)
+                        {
+                            MessageBox.Show(
+                                $"No hay stock suficiente.\n" +
+                                $"Stock disponible: {stockDisponible}\n" +
+                                $"Ya agregado: {cantidadAcumulada}\n" +
+                                $"Intentas agregar: {cantidadNueva}",
+                                "Stock insuficiente",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning
+                            );
+                            return;
+                        }
+
+
+
+                        //FIN
+
+
+
                         //Agregar ese detalle al datalistadoDetalle
+
                         DataRow row = this.dtDetalle.NewRow();
                         row["iddetalle_ingreso"] = Convert.ToInt32(this.txtIdarticulo.Text);
                         row["articulo"] = this.txtArticulo.Text;
@@ -732,6 +791,15 @@ namespace CapaPresentacion
             {
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
+        }
+
+
+        private int ObtenerStockDisponible(int idDetalleIngreso)
+        {
+            int stokc_disponible = 0;
+            stokc_disponible = NVenta.consultarStockIddetalle_ingreso(idDetalleIngreso);
+
+            return stokc_disponible;
         }
 
         private void btnQuitar_Click(object sender, EventArgs e)
