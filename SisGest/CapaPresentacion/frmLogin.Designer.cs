@@ -42,6 +42,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -63,6 +64,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.LblHora);
             this.groupBox1.Controls.Add(this.BtnSalir);
             this.groupBox1.Controls.Add(this.BtnIngresar);
@@ -71,9 +73,9 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(174, 71);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(365, 153);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
@@ -96,8 +98,8 @@
             this.BtnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSalir.ForeColor = System.Drawing.Color.White;
-            this.BtnSalir.Location = new System.Drawing.Point(199, 110);
-            this.BtnSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnSalir.Location = new System.Drawing.Point(188, 104);
+            this.BtnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.BtnSalir.Name = "BtnSalir";
             this.BtnSalir.Size = new System.Drawing.Size(89, 23);
             this.BtnSalir.TabIndex = 5;
@@ -111,8 +113,8 @@
             this.BtnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnIngresar.ForeColor = System.Drawing.Color.White;
-            this.BtnIngresar.Location = new System.Drawing.Point(88, 110);
-            this.BtnIngresar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnIngresar.Location = new System.Drawing.Point(77, 104);
+            this.BtnIngresar.Margin = new System.Windows.Forms.Padding(2);
             this.BtnIngresar.Name = "BtnIngresar";
             this.BtnIngresar.Size = new System.Drawing.Size(89, 23);
             this.BtnIngresar.TabIndex = 4;
@@ -123,7 +125,7 @@
             // TxtPassword
             // 
             this.TxtPassword.Location = new System.Drawing.Point(106, 72);
-            this.TxtPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtPassword.Margin = new System.Windows.Forms.Padding(2);
             this.TxtPassword.Name = "TxtPassword";
             this.TxtPassword.PasswordChar = '*';
             this.TxtPassword.Size = new System.Drawing.Size(212, 20);
@@ -132,7 +134,7 @@
             // TxtUsuario
             // 
             this.TxtUsuario.Location = new System.Drawing.Point(106, 41);
-            this.TxtUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.TxtUsuario.Name = "TxtUsuario";
             this.TxtUsuario.Size = new System.Drawing.Size(212, 20);
             this.TxtUsuario.TabIndex = 2;
@@ -162,7 +164,7 @@
             this.pictureBox3.BackgroundImage = global::CapaPresentacion.Properties.Resources.Banned_User;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3.Location = new System.Drawing.Point(10, 71);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(135, 141);
             this.pictureBox3.TabIndex = 4;
@@ -172,7 +174,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.SlateBlue;
             this.pictureBox2.Location = new System.Drawing.Point(-2, 228);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(550, 24);
             this.pictureBox2.TabIndex = 1;
@@ -182,7 +184,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.SlateBlue;
             this.pictureBox1.Location = new System.Drawing.Point(-2, -2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(550, 57);
             this.pictureBox1.TabIndex = 0;
@@ -193,6 +195,16 @@
             this.timer1.Enabled = true;
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(310, 130);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(48, 13);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "V 1.0.0";
             // 
             // frmLogin
             // 
@@ -206,7 +218,7 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmLogin";
@@ -236,5 +248,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label LblHora;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label4;
     }
 }

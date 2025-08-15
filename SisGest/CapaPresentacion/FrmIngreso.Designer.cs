@@ -45,6 +45,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.tb_conclusion = new System.Windows.Forms.TextBox();
+            this.llb_estado = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.txtBultos = new System.Windows.Forms.TextBox();
@@ -115,10 +119,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.llb_estado = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.tb_conclusion = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataListado)).BeginInit();
@@ -162,7 +162,7 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage1.Size = new System.Drawing.Size(948, 485);
+            this.tabPage1.Size = new System.Drawing.Size(948, 553);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Listado";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -227,7 +227,7 @@
             this.dataListado.ReadOnly = true;
             this.dataListado.RowTemplate.Height = 24;
             this.dataListado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataListado.Size = new System.Drawing.Size(934, 328);
+            this.dataListado.Size = new System.Drawing.Size(916, 415);
             this.dataListado.TabIndex = 7;
             this.dataListado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataListado_CellContentClick);
             this.dataListado.DoubleClick += new System.EventHandler(this.dataListado_DoubleClick);
@@ -378,6 +378,46 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ingresos Almacén";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(599, 107);
+            this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(62, 13);
+            this.label28.TabIndex = 66;
+            this.label28.Text = "Conclusión:";
+            // 
+            // tb_conclusion
+            // 
+            this.tb_conclusion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.tb_conclusion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tb_conclusion.Location = new System.Drawing.Point(664, 104);
+            this.tb_conclusion.Margin = new System.Windows.Forms.Padding(2);
+            this.tb_conclusion.Name = "tb_conclusion";
+            this.tb_conclusion.Size = new System.Drawing.Size(221, 20);
+            this.tb_conclusion.TabIndex = 65;
+            // 
+            // llb_estado
+            // 
+            this.llb_estado.AutoSize = true;
+            this.llb_estado.Location = new System.Drawing.Point(666, 19);
+            this.llb_estado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.llb_estado.Name = "llb_estado";
+            this.llb_estado.Size = new System.Drawing.Size(52, 13);
+            this.llb_estado.TabIndex = 64;
+            this.llb_estado.Text = "EMITIDO";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(618, 19);
+            this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(46, 13);
+            this.label27.TabIndex = 63;
+            this.label27.Text = "Estado: ";
             // 
             // label26
             // 
@@ -926,6 +966,7 @@
             this.dtFecha.Name = "dtFecha";
             this.dtFecha.Size = new System.Drawing.Size(97, 20);
             this.dtFecha.TabIndex = 22;
+            this.dtFecha.ValueChanged += new System.EventHandler(this.dtFecha_ValueChanged);
             // 
             // label10
             // 
@@ -1134,46 +1175,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(68, 48);
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(618, 19);
-            this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(46, 13);
-            this.label27.TabIndex = 63;
-            this.label27.Text = "Estado: ";
-            // 
-            // llb_estado
-            // 
-            this.llb_estado.AutoSize = true;
-            this.llb_estado.Location = new System.Drawing.Point(666, 19);
-            this.llb_estado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.llb_estado.Name = "llb_estado";
-            this.llb_estado.Size = new System.Drawing.Size(52, 13);
-            this.llb_estado.TabIndex = 64;
-            this.llb_estado.Text = "EMITIDO";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(599, 107);
-            this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(62, 13);
-            this.label28.TabIndex = 66;
-            this.label28.Text = "Conclusión:";
-            // 
-            // tb_conclusion
-            // 
-            this.tb_conclusion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.tb_conclusion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tb_conclusion.Location = new System.Drawing.Point(664, 104);
-            this.tb_conclusion.Margin = new System.Windows.Forms.Padding(2);
-            this.tb_conclusion.Name = "tb_conclusion";
-            this.tb_conclusion.Size = new System.Drawing.Size(221, 20);
-            this.tb_conclusion.TabIndex = 65;
             // 
             // FrmIngreso
             // 

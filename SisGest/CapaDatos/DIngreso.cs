@@ -565,6 +565,44 @@ namespace CapaDatos
         }
 
 
+        public string DObtenerCorrelativoUnicov2(DateTime fechaT)
+        {
+
+            // Validar entrada
+            if (fechaT == DateTime.MinValue)
+                throw new ArgumentException("La fecha proporcionada no es válida.", nameof(fechaT));
+
+            try
+            {
+                using (SqlConnection SqlCon = new SqlConnection(Conexion.Cn))
+                using (SqlCommand SqlCmd = new SqlCommand("sp_generar_correlativo_unico", SqlCon))
+                {
+                    SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                    // Pasar la fecha como parámetro tipado
+                    SqlCmd.Parameters.Add("@fechaDocumento", SqlDbType.Date).Value = fechaT;
+
+                    SqlCon.Open();
+                    object result = SqlCmd.ExecuteScalar();
+
+                    return (result != null && result != DBNull.Value)
+                        ? result.ToString()
+                        : string.Empty;
+                }
+            }
+            catch (SqlException ex)
+            {
+                // Manejo de errores SQL
+                throw new Exception($"Error en base de datos: {ex.Message}", ex);
+            }
+            catch (Exception ex)
+            {
+                // Manejo de otros errores
+                throw new Exception($"Error al obtener correlativo único: {ex.Message}", ex);
+            }
+        }
+
+
         public DataTable MostrarDetalle(String TextoBuscar)
         {
             DataTable DtResultado = new DataTable("detalle_ingreso");

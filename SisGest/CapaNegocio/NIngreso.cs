@@ -184,7 +184,14 @@ namespace CapaNegocio
 
             return Obj.DObtenerCorrelativoUnico();
         }
-        
+
+        public static string GenerarcorrelativoUnico(DateTime fechaT)
+        {
+            DIngreso Obj = new DIngreso();
+
+            return Obj.DObtenerCorrelativoUnicov2(fechaT);
+        }
+
 
         public static DataTable MostrarDetalle(string textobuscar)
         {

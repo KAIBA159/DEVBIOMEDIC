@@ -111,9 +111,10 @@ namespace CapaPresentacion
             //
 
             this.txtCorrelativoUnico.Text = string.Empty;
-            this.txtCorrelativoUnico.Text = obtenercorrelativoUnico();
 
+            //this.txtCorrelativoUnico.Text = obtenercorrelativoUnico();
 
+            GenerarCorrelativo(dtFecha.Value);
             //
 
 
@@ -1141,6 +1142,25 @@ namespace CapaPresentacion
             {
                 e.Handled = true; // ignora la tecla
             }
+        }
+
+        private void dtFecha_ValueChanged(object sender, EventArgs e)
+        {
+
+
+            GenerarCorrelativo(dtFecha.Value);
+
+
+        }
+
+        private void GenerarCorrelativo(DateTime  dtFecha)
+        {
+
+
+            txtCorrelativoUnico.Text = NIngreso.GenerarcorrelativoUnico(dtFecha);
+
+
+
         }
     }
 }

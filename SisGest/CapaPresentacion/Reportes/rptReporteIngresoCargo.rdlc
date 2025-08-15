@@ -183,10 +183,10 @@
                   <Width>2.36378cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>3.91353cm</Width>
+                  <Width>3.70296cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.31932cm</Width>
+                  <Width>2.1793cm</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>2.24548cm</Width>
@@ -210,28 +210,28 @@
                   <Width>1.30436cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1cm</Width>
+                  <Width>1.13014cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1cm</Width>
+                  <Width>0.95939cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1cm</Width>
+                  <Width>0.84051cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1cm</Width>
+                  <Width>1.0397cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1cm</Width>
+                  <Width>1.11979cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
                 <TablixRow>
-                  <Height>2.42562cm</Height>
+                  <Height>3.80398cm</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox39">
+                        <Textbox Name="Textbox48">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -626,200 +626,381 @@ sanitario/NSO</Value>
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox8">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>Certificado Analisis</Value>
-                                  <Style>
-                                    <FontFamily>verdana</FontFamily>
-                                    <FontSize>7pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox8</rd:DefaultName>
+                        <Tablix Name="Tablix6">
+                          <TablixBody>
+                            <TablixColumns>
+                              <TablixColumn>
+                                <Width>1.13014cm</Width>
+                              </TablixColumn>
+                              <TablixColumn>
+                                <Width>0.95939cm</Width>
+                              </TablixColumn>
+                            </TablixColumns>
+                            <TablixRows>
+                              <TablixRow>
+                                <Height>1.24683cm</Height>
+                                <TablixCells>
+                                  <TablixCell>
+                                    <CellContents>
+                                      <Textbox Name="Textbox78">
+                                        <CanGrow>true</CanGrow>
+                                        <KeepTogether>true</KeepTogether>
+                                        <Paragraphs>
+                                          <Paragraph>
+                                            <TextRuns>
+                                              <TextRun>
+                                                <Value>DOCUMENTOS RECIBIDOS</Value>
+                                                <Style>
+                                                  <FontSize>7pt</FontSize>
+                                                  <FontWeight>Bold</FontWeight>
+                                                </Style>
+                                              </TextRun>
+                                            </TextRuns>
+                                            <Style>
+                                              <TextAlign>Center</TextAlign>
+                                            </Style>
+                                          </Paragraph>
+                                        </Paragraphs>
+                                        <rd:DefaultName>Textbox78</rd:DefaultName>
+                                        <Style>
+                                          <Border>
+                                            <Color>LightGrey</Color>
+                                            <Style>Solid</Style>
+                                          </Border>
+                                          <BackgroundColor>Yellow</BackgroundColor>
+                                          <VerticalAlign>Middle</VerticalAlign>
+                                          <PaddingLeft>2pt</PaddingLeft>
+                                          <PaddingRight>2pt</PaddingRight>
+                                          <PaddingTop>2pt</PaddingTop>
+                                          <PaddingBottom>2pt</PaddingBottom>
+                                        </Style>
+                                      </Textbox>
+                                      <ColSpan>2</ColSpan>
+                                    </CellContents>
+                                  </TablixCell>
+                                  <TablixCell />
+                                </TablixCells>
+                              </TablixRow>
+                              <TablixRow>
+                                <Height>2.55715cm</Height>
+                                <TablixCells>
+                                  <TablixCell>
+                                    <CellContents>
+                                      <Textbox Name="Textbox79">
+                                        <CanGrow>true</CanGrow>
+                                        <KeepTogether>true</KeepTogether>
+                                        <Paragraphs>
+                                          <Paragraph>
+                                            <TextRuns>
+                                              <TextRun>
+                                                <Value>Certificado de analisis</Value>
+                                                <Style>
+                                                  <FontSize>7pt</FontSize>
+                                                  <FontWeight>Bold</FontWeight>
+                                                </Style>
+                                              </TextRun>
+                                            </TextRuns>
+                                            <Style>
+                                              <TextAlign>Center</TextAlign>
+                                            </Style>
+                                          </Paragraph>
+                                        </Paragraphs>
+                                        <rd:DefaultName>Textbox79</rd:DefaultName>
+                                        <Style>
+                                          <Border>
+                                            <Color>LightGrey</Color>
+                                            <Style>Solid</Style>
+                                          </Border>
+                                          <BackgroundColor>Yellow</BackgroundColor>
+                                          <VerticalAlign>Middle</VerticalAlign>
+                                          <PaddingLeft>2pt</PaddingLeft>
+                                          <PaddingRight>2pt</PaddingRight>
+                                          <PaddingTop>2pt</PaddingTop>
+                                          <PaddingBottom>2pt</PaddingBottom>
+                                          <WritingMode>Rotate270</WritingMode>
+                                        </Style>
+                                      </Textbox>
+                                    </CellContents>
+                                  </TablixCell>
+                                  <TablixCell>
+                                    <CellContents>
+                                      <Textbox Name="Textbox87">
+                                        <CanGrow>true</CanGrow>
+                                        <KeepTogether>true</KeepTogether>
+                                        <Paragraphs>
+                                          <Paragraph>
+                                            <TextRuns>
+                                              <TextRun>
+                                                <Value>Registro sanitario</Value>
+                                                <Style>
+                                                  <FontSize>7pt</FontSize>
+                                                  <FontWeight>Bold</FontWeight>
+                                                </Style>
+                                              </TextRun>
+                                            </TextRuns>
+                                            <Style>
+                                              <TextAlign>Center</TextAlign>
+                                            </Style>
+                                          </Paragraph>
+                                        </Paragraphs>
+                                        <rd:DefaultName>Textbox87</rd:DefaultName>
+                                        <Style>
+                                          <Border>
+                                            <Color>LightGrey</Color>
+                                            <Style>Solid</Style>
+                                          </Border>
+                                          <BackgroundColor>Yellow</BackgroundColor>
+                                          <VerticalAlign>Middle</VerticalAlign>
+                                          <PaddingLeft>2pt</PaddingLeft>
+                                          <PaddingRight>2pt</PaddingRight>
+                                          <PaddingTop>2pt</PaddingTop>
+                                          <PaddingBottom>2pt</PaddingBottom>
+                                          <WritingMode>Rotate270</WritingMode>
+                                        </Style>
+                                      </Textbox>
+                                    </CellContents>
+                                  </TablixCell>
+                                </TablixCells>
+                              </TablixRow>
+                            </TablixRows>
+                          </TablixBody>
+                          <TablixColumnHierarchy>
+                            <TablixMembers>
+                              <TablixMember />
+                              <TablixMember />
+                            </TablixMembers>
+                          </TablixColumnHierarchy>
+                          <TablixRowHierarchy>
+                            <TablixMembers>
+                              <TablixMember>
+                                <KeepWithGroup>After</KeepWithGroup>
+                              </TablixMember>
+                              <TablixMember>
+                                <Group Name="Detalles1" />
+                              </TablixMember>
+                            </TablixMembers>
+                          </TablixRowHierarchy>
+                          <ZIndex>16</ZIndex>
                           <Style>
                             <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
+                              <Style>None</Style>
                             </Border>
-                            <BackgroundColor>Yellow</BackgroundColor>
-                            <VerticalAlign>Middle</VerticalAlign>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                            <Direction>RTL</Direction>
-                            <WritingMode>Rotate270</WritingMode>
                           </Style>
-                        </Textbox>
+                        </Tablix>
+                        <ColSpan>2</ColSpan>
                       </CellContents>
                     </TablixCell>
+                    <TablixCell />
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox12">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>Registro Sanitario</Value>
-                                  <Style>
-                                    <FontFamily>verdana</FontFamily>
-                                    <FontSize>7pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox12</rd:DefaultName>
+                        <Tablix Name="Tablix8">
+                          <TablixBody>
+                            <TablixColumns>
+                              <TablixColumn>
+                                <Width>0.84051cm</Width>
+                              </TablixColumn>
+                              <TablixColumn>
+                                <Width>1.0397cm</Width>
+                              </TablixColumn>
+                              <TablixColumn>
+                                <Width>1.11979cm</Width>
+                              </TablixColumn>
+                            </TablixColumns>
+                            <TablixRows>
+                              <TablixRow>
+                                <Height>1.24683cm</Height>
+                                <TablixCells>
+                                  <TablixCell>
+                                    <CellContents>
+                                      <Textbox Name="Textbox107">
+                                        <CanGrow>true</CanGrow>
+                                        <KeepTogether>true</KeepTogether>
+                                        <Paragraphs>
+                                          <Paragraph>
+                                            <TextRuns>
+                                              <TextRun>
+                                                <Value>ESTADO DEL PRODUCTO</Value>
+                                                <Style>
+                                                  <FontSize>7pt</FontSize>
+                                                  <FontWeight>Bold</FontWeight>
+                                                </Style>
+                                              </TextRun>
+                                            </TextRuns>
+                                            <Style>
+                                              <TextAlign>Center</TextAlign>
+                                            </Style>
+                                          </Paragraph>
+                                        </Paragraphs>
+                                        <rd:DefaultName>Textbox107</rd:DefaultName>
+                                        <Style>
+                                          <Border>
+                                            <Color>LightGrey</Color>
+                                            <Style>Solid</Style>
+                                          </Border>
+                                          <BackgroundColor>Yellow</BackgroundColor>
+                                          <VerticalAlign>Middle</VerticalAlign>
+                                          <PaddingLeft>2pt</PaddingLeft>
+                                          <PaddingRight>2pt</PaddingRight>
+                                          <PaddingTop>2pt</PaddingTop>
+                                          <PaddingBottom>2pt</PaddingBottom>
+                                        </Style>
+                                      </Textbox>
+                                      <ColSpan>3</ColSpan>
+                                    </CellContents>
+                                  </TablixCell>
+                                  <TablixCell />
+                                  <TablixCell />
+                                </TablixCells>
+                              </TablixRow>
+                              <TablixRow>
+                                <Height>2.55715cm</Height>
+                                <TablixCells>
+                                  <TablixCell>
+                                    <CellContents>
+                                      <Textbox Name="Textbox108">
+                                        <CanGrow>true</CanGrow>
+                                        <KeepTogether>true</KeepTogether>
+                                        <Paragraphs>
+                                          <Paragraph>
+                                            <TextRuns>
+                                              <TextRun>
+                                                <Value>LIMPIO</Value>
+                                                <Style>
+                                                  <FontSize>7pt</FontSize>
+                                                  <FontWeight>Bold</FontWeight>
+                                                </Style>
+                                              </TextRun>
+                                            </TextRuns>
+                                            <Style>
+                                              <TextAlign>Center</TextAlign>
+                                            </Style>
+                                          </Paragraph>
+                                        </Paragraphs>
+                                        <rd:DefaultName>Textbox108</rd:DefaultName>
+                                        <Style>
+                                          <Border>
+                                            <Color>LightGrey</Color>
+                                            <Style>Solid</Style>
+                                          </Border>
+                                          <BackgroundColor>Yellow</BackgroundColor>
+                                          <VerticalAlign>Middle</VerticalAlign>
+                                          <PaddingLeft>2pt</PaddingLeft>
+                                          <PaddingRight>2pt</PaddingRight>
+                                          <PaddingTop>2pt</PaddingTop>
+                                          <PaddingBottom>2pt</PaddingBottom>
+                                          <WritingMode>Rotate270</WritingMode>
+                                        </Style>
+                                      </Textbox>
+                                    </CellContents>
+                                  </TablixCell>
+                                  <TablixCell>
+                                    <CellContents>
+                                      <Textbox Name="Textbox112">
+                                        <CanGrow>true</CanGrow>
+                                        <KeepTogether>true</KeepTogether>
+                                        <Paragraphs>
+                                          <Paragraph>
+                                            <TextRuns>
+                                              <TextRun>
+                                                <Value>DETERIORADO ARRUGADO</Value>
+                                                <Style>
+                                                  <FontSize>7pt</FontSize>
+                                                  <FontWeight>Bold</FontWeight>
+                                                </Style>
+                                              </TextRun>
+                                            </TextRuns>
+                                            <Style>
+                                              <TextAlign>Center</TextAlign>
+                                            </Style>
+                                          </Paragraph>
+                                        </Paragraphs>
+                                        <rd:DefaultName>Textbox112</rd:DefaultName>
+                                        <Style>
+                                          <Border>
+                                            <Color>LightGrey</Color>
+                                            <Style>Solid</Style>
+                                          </Border>
+                                          <BackgroundColor>Yellow</BackgroundColor>
+                                          <VerticalAlign>Middle</VerticalAlign>
+                                          <PaddingLeft>2pt</PaddingLeft>
+                                          <PaddingRight>2pt</PaddingRight>
+                                          <PaddingTop>2pt</PaddingTop>
+                                          <PaddingBottom>2pt</PaddingBottom>
+                                          <WritingMode>Rotate270</WritingMode>
+                                        </Style>
+                                      </Textbox>
+                                    </CellContents>
+                                  </TablixCell>
+                                  <TablixCell>
+                                    <CellContents>
+                                      <Textbox Name="Textbox114">
+                                        <CanGrow>true</CanGrow>
+                                        <KeepTogether>true</KeepTogether>
+                                        <Paragraphs>
+                                          <Paragraph>
+                                            <TextRuns>
+                                              <TextRun>
+                                                <Value>ENVASE CERRADO</Value>
+                                                <Style>
+                                                  <FontSize>7pt</FontSize>
+                                                  <FontWeight>Bold</FontWeight>
+                                                </Style>
+                                              </TextRun>
+                                            </TextRuns>
+                                            <Style>
+                                              <TextAlign>Center</TextAlign>
+                                            </Style>
+                                          </Paragraph>
+                                        </Paragraphs>
+                                        <rd:DefaultName>Textbox114</rd:DefaultName>
+                                        <Style>
+                                          <Border>
+                                            <Color>LightGrey</Color>
+                                            <Style>Solid</Style>
+                                          </Border>
+                                          <BackgroundColor>Yellow</BackgroundColor>
+                                          <VerticalAlign>Middle</VerticalAlign>
+                                          <PaddingLeft>2pt</PaddingLeft>
+                                          <PaddingRight>2pt</PaddingRight>
+                                          <PaddingTop>2pt</PaddingTop>
+                                          <PaddingBottom>2pt</PaddingBottom>
+                                          <WritingMode>Rotate270</WritingMode>
+                                        </Style>
+                                      </Textbox>
+                                    </CellContents>
+                                  </TablixCell>
+                                </TablixCells>
+                              </TablixRow>
+                            </TablixRows>
+                          </TablixBody>
+                          <TablixColumnHierarchy>
+                            <TablixMembers>
+                              <TablixMember />
+                              <TablixMember />
+                              <TablixMember />
+                            </TablixMembers>
+                          </TablixColumnHierarchy>
+                          <TablixRowHierarchy>
+                            <TablixMembers>
+                              <TablixMember>
+                                <KeepWithGroup>After</KeepWithGroup>
+                              </TablixMember>
+                              <TablixMember>
+                                <Group Name="Detalles2" />
+                              </TablixMember>
+                            </TablixMembers>
+                          </TablixRowHierarchy>
                           <Style>
                             <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
+                              <Style>None</Style>
                             </Border>
-                            <BackgroundColor>Yellow</BackgroundColor>
-                            <VerticalAlign>Middle</VerticalAlign>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                            <WritingMode>Rotate270</WritingMode>
                           </Style>
-                        </Textbox>
+                        </Tablix>
+                        <ColSpan>3</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox19">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>Limpio</Value>
-                                  <Style>
-                                    <FontFamily>verdana</FontFamily>
-                                    <FontSize>7pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox19</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <BackgroundColor>Yellow</BackgroundColor>
-                            <VerticalAlign>Middle</VerticalAlign>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                            <WritingMode>Rotate270</WritingMode>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox21">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>Deteriorado Arrugado</Value>
-                                  <Style>
-                                    <FontFamily>verdana</FontFamily>
-                                    <FontSize>7pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox21</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <BackgroundColor>Yellow</BackgroundColor>
-                            <VerticalAlign>Middle</VerticalAlign>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                            <WritingMode>Rotate270</WritingMode>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox24">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>Envase cerrado </Value>
-                                  <Style>
-                                    <FontFamily>verdana</FontFamily>
-                                    <FontSize>7pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox24</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <BackgroundColor>Yellow</BackgroundColor>
-                            <VerticalAlign>Middle</VerticalAlign>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                            <WritingMode>Rotate270</WritingMode>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
+                    <TablixCell />
+                    <TablixCell />
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
@@ -1393,8 +1574,8 @@ sanitario/NSO</Value>
             </TablixRowHierarchy>
             <DataSetName>DataSet1</DataSetName>
             <Left>0.18205cm</Left>
-            <Height>3.02562cm</Height>
-            <Width>25.7298cm</Width>
+            <Height>4.40398cm</Height>
+            <Width>25.46874cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1418,7 +1599,7 @@ sanitario/NSO</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox36</rd:DefaultName>
-            <Top>6.58632cm</Top>
+            <Top>7.76655cm</Top>
             <Left>0.44979cm</Left>
             <Height>0.6cm</Height>
             <Width>1.44167cm</Width>
@@ -1452,7 +1633,7 @@ sanitario/NSO</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>EncargadoTransportista</rd:DefaultName>
-            <Top>4.20438cm</Top>
+            <Top>5.38461cm</Top>
             <Left>2.28578cm</Left>
             <Height>0.5cm</Height>
             <Width>4.89417cm</Width>
@@ -1482,8 +1663,8 @@ sanitario/NSO</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox36</rd:DefaultName>
-            <Top>6.30589cm</Top>
-            <Left>13.92732cm</Left>
+            <Top>7.48612cm</Top>
+            <Left>12.97482cm</Left>
             <Height>0.6cm</Height>
             <Width>3.24084cm</Width>
             <ZIndex>3</ZIndex>
@@ -1512,8 +1693,8 @@ sanitario/NSO</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox37</rd:DefaultName>
-            <Top>5.56478cm</Top>
-            <Left>12.92141cm</Left>
+            <Top>6.74501cm</Top>
+            <Left>11.96891cm</Left>
             <Height>0.6cm</Height>
             <Width>5.59563cm</Width>
             <ZIndex>4</ZIndex>
@@ -1542,8 +1723,8 @@ sanitario/NSO</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox37</rd:DefaultName>
-            <Top>5.56478cm</Top>
-            <Left>20.05516cm</Left>
+            <Top>6.74501cm</Top>
+            <Left>19.10266cm</Left>
             <Height>0.6cm</Height>
             <Width>5.59563cm</Width>
             <ZIndex>5</ZIndex>
@@ -1572,8 +1753,8 @@ sanitario/NSO</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox36</rd:DefaultName>
-            <Top>6.30589cm</Top>
-            <Left>20.84812cm</Left>
+            <Top>7.48612cm</Top>
+            <Left>19.89562cm</Left>
             <Height>0.6cm</Height>
             <Width>3.24084cm</Width>
             <ZIndex>6</ZIndex>
@@ -1589,8 +1770,8 @@ sanitario/NSO</Value>
           </Textbox>
           <Rectangle Name="Rectangle1">
             <KeepTogether>true</KeepTogether>
-            <Top>3.83396cm</Top>
-            <Left>12.33933cm</Left>
+            <Top>5.01419cm</Top>
+            <Left>11.38683cm</Left>
             <Height>3.39425cm</Height>
             <Width>6.56105cm</Width>
             <ZIndex>7</ZIndex>
@@ -1618,7 +1799,7 @@ sanitario/NSO</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox35</rd:DefaultName>
-            <Top>3.56028cm</Top>
+            <Top>4.74051cm</Top>
             <Left>0.3175cm</Left>
             <Height>0.46771cm</Height>
             <Width>4.88125cm</Width>
@@ -1652,7 +1833,7 @@ sanitario/NSO</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox45</rd:DefaultName>
-            <Top>4.20438cm</Top>
+            <Top>5.38461cm</Top>
             <Left>0.3175cm</Left>
             <Height>0.5cm</Height>
             <Width>1.57396cm</Width>
@@ -1686,7 +1867,7 @@ sanitario/NSO</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox45</rd:DefaultName>
-            <Top>4.77493cm</Top>
+            <Top>5.95516cm</Top>
             <Left>0.3175cm</Left>
             <Height>0.5cm</Height>
             <Width>1.57396cm</Width>
@@ -1720,7 +1901,7 @@ sanitario/NSO</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox45</rd:DefaultName>
-            <Top>5.27493cm</Top>
+            <Top>6.45516cm</Top>
             <Left>0.3175cm</Left>
             <Height>0.5cm</Height>
             <Width>1.57396cm</Width>
@@ -1752,7 +1933,7 @@ sanitario/NSO</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Transportista_num_documento</rd:DefaultName>
-            <Top>4.77493cm</Top>
+            <Top>5.95516cm</Top>
             <Left>2.28578cm</Left>
             <Height>0.5cm</Height>
             <Width>4.37854cm</Width>
@@ -1782,7 +1963,7 @@ sanitario/NSO</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Transportista_placa</rd:DefaultName>
-            <Top>5.27493cm</Top>
+            <Top>6.45516cm</Top>
             <Left>2.28578cm</Left>
             <Height>0.5cm</Height>
             <Width>4.37854cm</Width>
@@ -1812,7 +1993,7 @@ sanitario/NSO</Value>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox50</rd:DefaultName>
-            <Top>6.58632cm</Top>
+            <Top>7.76655cm</Top>
             <Left>2.28578cm</Left>
             <Height>0.6cm</Height>
             <Width>4.89417cm</Width>
@@ -1829,8 +2010,8 @@ sanitario/NSO</Value>
           </Textbox>
           <Rectangle Name="Rectangle2">
             <KeepTogether>true</KeepTogether>
-            <Top>3.83396cm</Top>
-            <Left>19.35078cm</Left>
+            <Top>5.01419cm</Top>
+            <Left>18.39828cm</Left>
             <Height>3.39425cm</Height>
             <Width>6.56105cm</Width>
             <ZIndex>15</ZIndex>
@@ -1841,14 +2022,14 @@ sanitario/NSO</Value>
             </Style>
           </Rectangle>
         </ReportItems>
-        <Height>8.05242cm</Height>
+        <Height>9.03798cm</Height>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
         </Style>
       </Body>
-      <Width>26.54515cm</Width>
+      <Width>25.95789cm</Width>
       <Page>
         <PageHeader>
           <Height>7.23287cm</Height>
@@ -2926,7 +3107,6 @@ sanitario/NSO</Value>
                     </Textbox>
                   </ReportItems>
                   <KeepTogether>true</KeepTogether>
-                  <Top>0cm</Top>
                   <Height>0.68319cm</Height>
                   <Width>25.33329cm</Width>
                   <ZIndex>6</ZIndex>
@@ -3038,7 +3218,7 @@ sanitario/NSO</Value>
           </Style>
         </PageHeader>
         <PageFooter>
-          <Height>1.33562cm</Height>
+          <Height>1.62099cm</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
