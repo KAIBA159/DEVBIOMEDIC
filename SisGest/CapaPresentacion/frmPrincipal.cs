@@ -296,5 +296,18 @@ namespace CapaPresentacion
             frm.Show();
 
         }
+
+        private void MnuCompras_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kardexProducctoLoteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ConsultarKardexLote frm = new ConsultarKardexLote();
+            frm.MdiParent = this;
+            frm.Show();
+            
+        }
     }
 }

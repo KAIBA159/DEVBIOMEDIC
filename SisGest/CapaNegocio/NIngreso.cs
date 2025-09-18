@@ -185,11 +185,11 @@ namespace CapaNegocio
             return Obj.DObtenerCorrelativoUnico();
         }
 
-        public static string GenerarcorrelativoUnico(DateTime fechaT)
+        public static string GenerarcorrelativoUnico(DateTime fechaT, int idcliente)
         {
             DIngreso Obj = new DIngreso();
 
-            return Obj.DObtenerCorrelativoUnicov2(fechaT);
+            return Obj.DObtenerCorrelativoUnicov2(fechaT, idcliente);
         }
 
 

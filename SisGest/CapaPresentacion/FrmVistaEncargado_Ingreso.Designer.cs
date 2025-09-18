@@ -85,14 +85,14 @@
             // 
             this.cbBuscar.FormattingEnabled = true;
             this.cbBuscar.Items.AddRange(new object[] {
-            "Documento",
-            "Razon Social"});
+            "Encargado_Transportista",
+            "Num_Documento"});
             this.cbBuscar.Location = new System.Drawing.Point(10, 24);
             this.cbBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.cbBuscar.Name = "cbBuscar";
-            this.cbBuscar.Size = new System.Drawing.Size(92, 21);
+            this.cbBuscar.Size = new System.Drawing.Size(150, 21);
             this.cbBuscar.TabIndex = 8;
-            this.cbBuscar.Text = "Documento";
+            this.cbBuscar.Text = "Encargado_Transportista";
             // 
             // dataListado
             // 
@@ -134,7 +134,7 @@
             this.btnBuscar.BackColor = System.Drawing.Color.Silver;
             this.btnBuscar.Image = global::CapaPresentacion.Properties.Resources.Buscar_p;
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(320, 24);
+            this.btnBuscar.Location = new System.Drawing.Point(401, 20);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(79, 28);
@@ -145,11 +145,12 @@
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(124, 28);
+            this.txtBuscar.Location = new System.Drawing.Point(184, 24);
             this.txtBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(133, 20);
+            this.txtBuscar.Size = new System.Drawing.Size(192, 20);
             this.txtBuscar.TabIndex = 1;
+            this.txtBuscar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBuscar_KeyDown);
             // 
             // label1
             // 

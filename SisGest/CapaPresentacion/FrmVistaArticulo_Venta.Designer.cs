@@ -75,13 +75,14 @@
             this.cbBuscar.FormattingEnabled = true;
             this.cbBuscar.Items.AddRange(new object[] {
             "Nombre",
-            "Codigo"});
+            "Codigo",
+            "Lote"});
             this.cbBuscar.Location = new System.Drawing.Point(10, 24);
             this.cbBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.cbBuscar.Name = "cbBuscar";
             this.cbBuscar.Size = new System.Drawing.Size(109, 21);
             this.cbBuscar.TabIndex = 8;
-            this.cbBuscar.Text = "Codigo";
+            this.cbBuscar.Text = "Nombre";
             // 
             // dataListado
             // 
@@ -123,7 +124,7 @@
             this.btnBuscar.BackColor = System.Drawing.Color.Silver;
             this.btnBuscar.Image = global::CapaPresentacion.Properties.Resources.Buscar_p;
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(311, 19);
+            this.btnBuscar.Location = new System.Drawing.Point(353, 19);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(79, 28);
@@ -137,8 +138,9 @@
             this.txtBuscar.Location = new System.Drawing.Point(132, 23);
             this.txtBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(174, 20);
+            this.txtBuscar.Size = new System.Drawing.Size(217, 20);
             this.txtBuscar.TabIndex = 1;
+            this.txtBuscar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBuscar_KeyDown);
             // 
             // label1
             // 

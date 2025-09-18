@@ -118,5 +118,24 @@ namespace CapaPresentacion
             }
 
         }
+
+        private void txtBuscar_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true; // Evita el sonido de "ding" al presionar Enter
+
+                // Ejecutar el método de búsqueda directamente
+                //Buscar();
+
+                e.SuppressKeyPress = true; // Evita el sonido "ding" de Windows
+                btnBuscar.PerformClick();  // Simula hacer clic en el botón Buscar
+
+                // O simular el click del botón Buscar
+                // btnBuscar.PerformClick();
+            }
+
+        }
     }
 }

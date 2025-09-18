@@ -91,6 +91,14 @@ namespace CapaNegocio
             DVenta Obj = new DVenta();
             return Obj.MostrarArticulo_Venta_Nombre(textobuscar, idClienteb);
         }
+
+        public static DataTable MostrarArticulo_Venta_Lote(string textobuscar, string idClienteb)
+        {
+            DVenta Obj = new DVenta();
+            return Obj.MostrarArticulo_Venta_Lote(textobuscar, idClienteb);
+        }
+        
+
         public static DataTable MostrarArticulo_Venta_Codigo(string textobuscar ,string idClientec)
         {
             DVenta Obj = new DVenta();

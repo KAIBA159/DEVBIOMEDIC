@@ -574,6 +574,49 @@ namespace CapaDatos
 
         }
 
+        public DataTable MostrarArticulo_Venta_Lote(String TextoBuscar, string idClienteb)
+        {
+            DataTable DtResultado = new DataTable("articulos");
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                SqlCon.ConnectionString = Conexion.Cn;
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "spbuscararticulo_venta_lote";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter ParTextoBuscar = new SqlParameter();
+                ParTextoBuscar.ParameterName = "@textobuscar";
+                ParTextoBuscar.SqlDbType = SqlDbType.VarChar;
+                ParTextoBuscar.Size = 50;
+                ParTextoBuscar.Value = TextoBuscar;
+                SqlCmd.Parameters.Add(ParTextoBuscar);
+
+
+                SqlParameter ParidCliented = new SqlParameter();
+                ParidCliented.ParameterName = "@idcliente";
+                ParidCliented.SqlDbType = SqlDbType.Int;
+                //ParidCliented.Size = 50;
+                ParidCliented.Value = Convert.ToInt32(idClienteb);
+                SqlCmd.Parameters.Add(ParidCliented);
+
+
+                SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                SqlDat.Fill(DtResultado);
+
+            }
+            catch (Exception ex)
+            {
+                DtResultado = null;
+            }
+            return DtResultado;
+
+        }
+
+        
+
+
         public DataTable MostrarArticulo_Venta_codigo(String TextoBuscar , string idCliented)
         {
             DataTable DtResultado = new DataTable("articulos");

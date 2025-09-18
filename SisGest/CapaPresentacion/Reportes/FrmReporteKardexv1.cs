@@ -75,6 +75,7 @@ namespace CapaPresentacion.Reportes
             }
 
 
+            //this.reportViewer2.RefreshReport();
         }
     }
 }

@@ -51,6 +51,7 @@
             this.comprasPorFechasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stockDeArtículosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.karteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kardexProducctoLoteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MnuVer = new System.Windows.Forms.ToolStripMenuItem();
             this.toolBarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusBarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -131,7 +132,7 @@
             // 
             this.artículosToolStripMenuItem.Image = global::CapaPresentacion.Properties.Resources.productos_m1;
             this.artículosToolStripMenuItem.Name = "artículosToolStripMenuItem";
-            this.artículosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.artículosToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.artículosToolStripMenuItem.Text = "Artículos";
             this.artículosToolStripMenuItem.Click += new System.EventHandler(this.artículosToolStripMenuItem_Click);
             // 
@@ -139,7 +140,7 @@
             // 
             this.categoríasToolStripMenuItem.Image = global::CapaPresentacion.Properties.Resources.categoria;
             this.categoríasToolStripMenuItem.Name = "categoríasToolStripMenuItem";
-            this.categoríasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.categoríasToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.categoríasToolStripMenuItem.Text = "Categorías";
             this.categoríasToolStripMenuItem.Click += new System.EventHandler(this.categoríasToolStripMenuItem_Click);
             // 
@@ -147,7 +148,7 @@
             // 
             this.presentacionesToolStripMenuItem.Image = global::CapaPresentacion.Properties.Resources.Ver_recibo;
             this.presentacionesToolStripMenuItem.Name = "presentacionesToolStripMenuItem";
-            this.presentacionesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.presentacionesToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.presentacionesToolStripMenuItem.Text = "Presentaciones";
             this.presentacionesToolStripMenuItem.Click += new System.EventHandler(this.presentacionesToolStripMenuItem_Click);
             // 
@@ -160,12 +161,13 @@
             this.MnuCompras.Name = "MnuCompras";
             this.MnuCompras.Size = new System.Drawing.Size(74, 20);
             this.MnuCompras.Text = "Ingreso";
+            this.MnuCompras.Click += new System.EventHandler(this.MnuCompras_Click);
             // 
             // ingresosToolStripMenuItem
             // 
             this.ingresosToolStripMenuItem.Image = global::CapaPresentacion.Properties.Resources.compra_m;
             this.ingresosToolStripMenuItem.Name = "ingresosToolStripMenuItem";
-            this.ingresosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ingresosToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.ingresosToolStripMenuItem.Text = "Ingreso";
             this.ingresosToolStripMenuItem.Click += new System.EventHandler(this.ingresosToolStripMenuItem_Click);
             // 
@@ -173,7 +175,7 @@
             // 
             this.proveedorToolStripMenuItem.Image = global::CapaPresentacion.Properties.Resources.proveedores_m;
             this.proveedorToolStripMenuItem.Name = "proveedorToolStripMenuItem";
-            this.proveedorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.proveedorToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.proveedorToolStripMenuItem.Text = "Proveedor/Cliente";
             this.proveedorToolStripMenuItem.Click += new System.EventHandler(this.proveedorToolStripMenuItem_Click);
             // 
@@ -234,7 +236,8 @@
             this.ventasPorFechasToolStripMenuItem,
             this.comprasPorFechasToolStripMenuItem,
             this.stockDeArtículosToolStripMenuItem,
-            this.karteToolStripMenuItem});
+            this.karteToolStripMenuItem,
+            this.kardexProducctoLoteToolStripMenuItem});
             this.MnuConsultas.Image = global::CapaPresentacion.Properties.Resources.consultas;
             this.MnuConsultas.Name = "MnuConsultas";
             this.MnuConsultas.Size = new System.Drawing.Size(87, 20);
@@ -244,7 +247,7 @@
             // 
             this.ventasPorFechasToolStripMenuItem.Image = global::CapaPresentacion.Properties.Resources.ventasrealizadas1;
             this.ventasPorFechasToolStripMenuItem.Name = "ventasPorFechasToolStripMenuItem";
-            this.ventasPorFechasToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.ventasPorFechasToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.ventasPorFechasToolStripMenuItem.Text = "Ventas por Fechas";
             this.ventasPorFechasToolStripMenuItem.Click += new System.EventHandler(this.ventasPorFechasToolStripMenuItem_Click);
             // 
@@ -252,7 +255,7 @@
             // 
             this.comprasPorFechasToolStripMenuItem.Image = global::CapaPresentacion.Properties.Resources.comprasrealizadas;
             this.comprasPorFechasToolStripMenuItem.Name = "comprasPorFechasToolStripMenuItem";
-            this.comprasPorFechasToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.comprasPorFechasToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.comprasPorFechasToolStripMenuItem.Text = "Compras por Fechas";
             this.comprasPorFechasToolStripMenuItem.Click += new System.EventHandler(this.comprasPorFechasToolStripMenuItem_Click);
             // 
@@ -260,16 +263,23 @@
             // 
             this.stockDeArtículosToolStripMenuItem.Image = global::CapaPresentacion.Properties.Resources.comprasdetalladas;
             this.stockDeArtículosToolStripMenuItem.Name = "stockDeArtículosToolStripMenuItem";
-            this.stockDeArtículosToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.stockDeArtículosToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.stockDeArtículosToolStripMenuItem.Text = "Stock de Artículos";
             this.stockDeArtículosToolStripMenuItem.Click += new System.EventHandler(this.stockDeArtículosToolStripMenuItem_Click);
             // 
             // karteToolStripMenuItem
             // 
             this.karteToolStripMenuItem.Name = "karteToolStripMenuItem";
-            this.karteToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.karteToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.karteToolStripMenuItem.Text = "Kardex_Producto";
             this.karteToolStripMenuItem.Click += new System.EventHandler(this.karteToolStripMenuItem_Click);
+            // 
+            // kardexProducctoLoteToolStripMenuItem
+            // 
+            this.kardexProducctoLoteToolStripMenuItem.Name = "kardexProducctoLoteToolStripMenuItem";
+            this.kardexProducctoLoteToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.kardexProducctoLoteToolStripMenuItem.Text = "Kardex_Produccto_Lote";
+            this.kardexProducctoLoteToolStripMenuItem.Click += new System.EventHandler(this.kardexProducctoLoteToolStripMenuItem_Click);
             // 
             // MnuVer
             // 
@@ -530,6 +540,7 @@
         private System.Windows.Forms.ToolStripButton TsVentas;
         private System.Windows.Forms.ToolStripMenuItem encargadoTransportistaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem karteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem kardexProducctoLoteToolStripMenuItem;
     }
 }
 

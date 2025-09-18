@@ -58,6 +58,33 @@ namespace CapaPresentacion
 
         }
 
+
+        private void MostrarArticulo_Venta_Lote(string idClienteb)
+        {
+            this.dataListado.DataSource = NVenta.MostrarArticulo_Venta_Lote(this.txtBuscar.Text, idClienteb);
+
+
+            if (dataListado.DataSource != null)
+            {
+
+                this.OcultarColumnas();
+                lblTotal.Text = "Total de detalle de Ingreso : " + Convert.ToString(dataListado.Rows.Count);
+
+                foreach (DataGridViewColumn col in dataListado.Columns)
+                {
+                    col.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+
+                    // Limitar el ancho máximo
+                    if (col.Width > 300)
+                    {
+                        col.Width = 300;
+                    }
+                }
+
+            }
+
+        }
+
         private void MostrarArticulo_Venta_Codigo(string idClienteb)
         {
             this.dataListado.DataSource = NVenta.MostrarArticulo_Venta_Codigo(this.txtBuscar.Text, idClienteb);
@@ -100,6 +127,12 @@ namespace CapaPresentacion
             {
                 this.MostrarArticulo_Venta_Nombre(idCliente);
             }
+
+            else if (cbBuscar.Text.Equals("Lote"))
+            {
+                this.MostrarArticulo_Venta_Lote(idCliente);
+            }
+
         }
 
         private void dataListado_DoubleClick(object sender, EventArgs e)
@@ -121,6 +154,17 @@ namespace CapaPresentacion
 
             form.setArticulo(par1, par2, par5, par6,par7);
             this.Hide();
+        }
+
+        private void txtBuscar_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true; // Evita el sonido "ding" de Windows
+                btnBuscar.PerformClick();  // Simula hacer clic en el botón Buscar
+            }
+
         }
     }
 }

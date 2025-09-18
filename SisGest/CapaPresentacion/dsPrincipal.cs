@@ -4,6 +4,10 @@
 
     partial class dsPrincipal
     {
+        partial class DataTable1DataTable
+        {
+        }
+
         partial class sp_kardex_productoDataTable
         {
         }

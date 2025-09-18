@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.HtmlControls;
 using System.Windows.Forms;
 
 using CapaNegocio;
@@ -130,6 +131,8 @@ namespace CapaPresentacion
             this.txtGuia_Cliente.Text = string.Empty;
             this.txtSubCliente.Text = string.Empty;
             this.txtLote.Text = string.Empty;
+            
+
 
         }
 
@@ -156,8 +159,11 @@ namespace CapaPresentacion
             this.txtSubCliente.ReadOnly = !valor;
 
             this.txtStock_Actual.ReadOnly = true;
+            
+            //this.dtFecha_Vencimiento.Enabled = true;
+
             this.txtDescuento.ReadOnly = !valor;
-            this.dtFecha_Vencimiento.Enabled = valor;
+            this.dtFecha_Vencimiento.Enabled = false;
 
             this.btnBuscarArticulo.Enabled = valor;
             this.btnBuscarCliente.Enabled = valor;
@@ -204,7 +210,7 @@ namespace CapaPresentacion
 
 
                 this.OcultarColumnas();
-                lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+                lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count) +" recientes " ;
 
                 foreach (DataGridViewColumn col in dataListado.Columns)
                 {
@@ -254,7 +260,7 @@ namespace CapaPresentacion
                 //this.OcultarColumnas();
                 //lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
                 this.OcultarColumnas();
-                lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+                lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count) +" encontrados" ;
             }
 
             //this.OcultarColumnas();

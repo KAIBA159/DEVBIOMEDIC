@@ -74,11 +74,11 @@ namespace CapaPresentacion
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            if (cbBuscar.Text.Equals("Razon Social"))
+            if (cbBuscar.Text.Equals("Encargado_Transportista"))
             {
                 this.BuscarRazon_Social();
             }
-            else if (cbBuscar.Text.Equals("Documento"))
+            else if (cbBuscar.Text.Equals("Num_Documento"))
             {
                 this.BuscarNum_Documento();
             }
@@ -92,6 +92,17 @@ namespace CapaPresentacion
             par2 = Convert.ToString(this.dataListado.CurrentRow.Cells["EncargadoTransportista"].Value);
             form.setEncargado(par1,par2);
             this.Hide();
+        }
+
+        private void txtBuscar_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true; // Evita el sonido "ding" de Windows
+                btnBuscar.PerformClick();  // Simula hacer clic en el botón Buscar
+            }
+
         }
     }
 }

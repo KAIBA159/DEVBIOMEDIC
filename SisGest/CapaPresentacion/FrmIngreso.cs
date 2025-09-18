@@ -69,7 +69,7 @@ namespace CapaPresentacion
         //Mostrar Mensaje de Confirmación
         private void MensajeOk(string mensaje)
         {
-            MessageBox.Show(mensaje, "Sistema de Ventas", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(mensaje, "Sistema de Gestión", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
 
@@ -77,7 +77,7 @@ namespace CapaPresentacion
         //Mostrar Mensaje de Error
         private void MensajeError(string mensaje)
         {
-            MessageBox.Show(mensaje, "Sistema de Ventas", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show(mensaje, "Sistema de Gestión", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         //Limpiar todos los controles del formulario
@@ -114,7 +114,7 @@ namespace CapaPresentacion
 
             //this.txtCorrelativoUnico.Text = obtenercorrelativoUnico();
 
-            GenerarCorrelativo(dtFecha.Value);
+            GenerarCorrelativo(dtFecha.Value, this.txtIdproveedor.Text);
             //
 
 
@@ -289,7 +289,7 @@ namespace CapaPresentacion
 
 
                 this.OcultarColumnas();
-                lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+                lblTotal.Text = " Total de Registros: " + Convert.ToString(dataListado.Rows.Count) +" recientes";
             }
 
             
@@ -322,7 +322,7 @@ namespace CapaPresentacion
                 }
 
                 this.OcultarColumnas();
-                lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+                lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count) + "encontrados";
 
             }
 
@@ -1147,19 +1147,32 @@ namespace CapaPresentacion
         private void dtFecha_ValueChanged(object sender, EventArgs e)
         {
 
+            if (txtIdproveedor.Text != string.Empty)
+            {
+                GenerarCorrelativo(dtFecha.Value, txtIdproveedor.Text);
+            }
+            
 
-            GenerarCorrelativo(dtFecha.Value);
 
 
         }
 
-        private void GenerarCorrelativo(DateTime  dtFecha)
+        private void GenerarCorrelativo(DateTime  dtFecha ,string idproveedor)
         {
+            if (txtIdproveedor.Text != string.Empty)
+            {
+                txtCorrelativoUnico.Text = NIngreso.GenerarcorrelativoUnico(dtFecha, Convert.ToInt32( idproveedor));
+            }
 
+           
+        }
 
-            txtCorrelativoUnico.Text = NIngreso.GenerarcorrelativoUnico(dtFecha);
-
-
+        private void txtProveedor_TextChanged(object sender, EventArgs e)
+        {
+            if (txtIdproveedor.Text != string.Empty)
+            {
+                GenerarCorrelativo(dtFecha.Value, txtIdproveedor.Text);
+            }
 
         }
     }
