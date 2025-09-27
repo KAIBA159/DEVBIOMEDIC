@@ -75,6 +75,7 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.consultarKardexAgrupadoFabricanteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -193,7 +194,7 @@
             // 
             this.ventasToolStripMenuItem1.Image = global::CapaPresentacion.Properties.Resources.ventas2;
             this.ventasToolStripMenuItem1.Name = "ventasToolStripMenuItem1";
-            this.ventasToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.ventasToolStripMenuItem1.Size = new System.Drawing.Size(105, 22);
             this.ventasToolStripMenuItem1.Text = "Salida";
             this.ventasToolStripMenuItem1.Click += new System.EventHandler(this.ventasToolStripMenuItem1_Click);
             // 
@@ -201,7 +202,7 @@
             // 
             this.clientesToolStripMenuItem.Image = global::CapaPresentacion.Properties.Resources.cliente_m;
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
             this.clientesToolStripMenuItem.Text = "--";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
@@ -237,7 +238,8 @@
             this.comprasPorFechasToolStripMenuItem,
             this.stockDeArtículosToolStripMenuItem,
             this.karteToolStripMenuItem,
-            this.kardexProducctoLoteToolStripMenuItem});
+            this.kardexProducctoLoteToolStripMenuItem,
+            this.consultarKardexAgrupadoFabricanteToolStripMenuItem});
             this.MnuConsultas.Image = global::CapaPresentacion.Properties.Resources.consultas;
             this.MnuConsultas.Name = "MnuConsultas";
             this.MnuConsultas.Size = new System.Drawing.Size(87, 20);
@@ -247,7 +249,7 @@
             // 
             this.ventasPorFechasToolStripMenuItem.Image = global::CapaPresentacion.Properties.Resources.ventasrealizadas1;
             this.ventasPorFechasToolStripMenuItem.Name = "ventasPorFechasToolStripMenuItem";
-            this.ventasPorFechasToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.ventasPorFechasToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
             this.ventasPorFechasToolStripMenuItem.Text = "Ventas por Fechas";
             this.ventasPorFechasToolStripMenuItem.Click += new System.EventHandler(this.ventasPorFechasToolStripMenuItem_Click);
             // 
@@ -255,7 +257,7 @@
             // 
             this.comprasPorFechasToolStripMenuItem.Image = global::CapaPresentacion.Properties.Resources.comprasrealizadas;
             this.comprasPorFechasToolStripMenuItem.Name = "comprasPorFechasToolStripMenuItem";
-            this.comprasPorFechasToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.comprasPorFechasToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
             this.comprasPorFechasToolStripMenuItem.Text = "Compras por Fechas";
             this.comprasPorFechasToolStripMenuItem.Click += new System.EventHandler(this.comprasPorFechasToolStripMenuItem_Click);
             // 
@@ -263,21 +265,21 @@
             // 
             this.stockDeArtículosToolStripMenuItem.Image = global::CapaPresentacion.Properties.Resources.comprasdetalladas;
             this.stockDeArtículosToolStripMenuItem.Name = "stockDeArtículosToolStripMenuItem";
-            this.stockDeArtículosToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.stockDeArtículosToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
             this.stockDeArtículosToolStripMenuItem.Text = "Stock de Artículos";
             this.stockDeArtículosToolStripMenuItem.Click += new System.EventHandler(this.stockDeArtículosToolStripMenuItem_Click);
             // 
             // karteToolStripMenuItem
             // 
             this.karteToolStripMenuItem.Name = "karteToolStripMenuItem";
-            this.karteToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.karteToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
             this.karteToolStripMenuItem.Text = "Kardex_Producto";
             this.karteToolStripMenuItem.Click += new System.EventHandler(this.karteToolStripMenuItem_Click);
             // 
             // kardexProducctoLoteToolStripMenuItem
             // 
             this.kardexProducctoLoteToolStripMenuItem.Name = "kardexProducctoLoteToolStripMenuItem";
-            this.kardexProducctoLoteToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.kardexProducctoLoteToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
             this.kardexProducctoLoteToolStripMenuItem.Text = "Kardex_Produccto_Lote";
             this.kardexProducctoLoteToolStripMenuItem.Click += new System.EventHandler(this.kardexProducctoLoteToolStripMenuItem_Click);
             // 
@@ -468,6 +470,13 @@
             this.toolStripStatusLabel.Size = new System.Drawing.Size(107, 17);
             this.toolStripStatusLabel.Text = "Sistema de Gestión";
             // 
+            // consultarKardexAgrupadoFabricanteToolStripMenuItem
+            // 
+            this.consultarKardexAgrupadoFabricanteToolStripMenuItem.Name = "consultarKardexAgrupadoFabricanteToolStripMenuItem";
+            this.consultarKardexAgrupadoFabricanteToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
+            this.consultarKardexAgrupadoFabricanteToolStripMenuItem.Text = "Kardex_Agrupado_Fabricante";
+            this.consultarKardexAgrupadoFabricanteToolStripMenuItem.Click += new System.EventHandler(this.consultarKardexAgrupadoFabricanteToolStripMenuItem_Click);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -541,6 +550,7 @@
         private System.Windows.Forms.ToolStripMenuItem encargadoTransportistaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem karteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kardexProducctoLoteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultarKardexAgrupadoFabricanteToolStripMenuItem;
     }
 }
 

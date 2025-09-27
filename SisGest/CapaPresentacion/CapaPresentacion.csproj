@@ -42,6 +42,7 @@
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="log4net, Version=2.0.17.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\packages\log4net.2.0.17\lib\net45\log4net.dll</HintPath>
     </Reference>
@@ -117,6 +118,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="ConsultarKardex3AgrupadoFabricante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarKardex3AgrupadoFabricante.Designer.cs">
+      <DependentUpon>ConsultarKardex3AgrupadoFabricante.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConsultarKardexLote.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -343,6 +350,12 @@
     <Compile Include="Reportes\FrmReporteKardexv2xLote.Designer.cs">
       <DependentUpon>FrmReporteKardexv2xLote.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reportes\FrmReporteKardexv3xFabricante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\FrmReporteKardexv3xFabricante.Designer.cs">
+      <DependentUpon>FrmReporteKardexv3xFabricante.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\FrmReportePresentacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -377,6 +390,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ConsultarKardex3AgrupadoFabricante.resx">
+      <DependentUpon>ConsultarKardex3AgrupadoFabricante.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConsultarKardexLote.resx">
       <DependentUpon>ConsultarKardexLote.cs</DependentUpon>
     </EmbeddedResource>
@@ -482,6 +498,9 @@
     <EmbeddedResource Include="Reportes\FrmReporteKardexv2xLote.resx">
       <DependentUpon>FrmReporteKardexv2xLote.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\FrmReporteKardexv3xFabricante.resx">
+      <DependentUpon>FrmReporteKardexv3xFabricante.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\FrmReportePresentacion.resx">
       <DependentUpon>FrmReportePresentacion.cs</DependentUpon>
     </EmbeddedResource>
@@ -497,6 +516,7 @@
     <EmbeddedResource Include="Reportes\rptArticulos.rdlc" />
     <EmbeddedResource Include="Reportes\rptCategoria.rdlc" />
     <EmbeddedResource Include="Reportes\rptCliente.rdlc" />
+    <EmbeddedResource Include="Reportes\rptKardexv3_fabricante.rdlc" />
     <EmbeddedResource Include="Reportes\rptKardexv2_lote.rdlc" />
     <EmbeddedResource Include="Reportes\rptReporteIngresoCargo.rdlc" />
     <EmbeddedResource Include="Reportes\rptCompras.rdlc" />

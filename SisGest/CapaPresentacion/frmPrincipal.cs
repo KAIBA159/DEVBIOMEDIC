@@ -309,5 +309,12 @@ namespace CapaPresentacion
             frm.Show();
             
         }
+
+        private void consultarKardexAgrupadoFabricanteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ConsultarKardex3AgrupadoFabricante frm = new ConsultarKardex3AgrupadoFabricante();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }

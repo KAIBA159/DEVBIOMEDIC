@@ -280,7 +280,7 @@
             this.txtBuscar.Location = new System.Drawing.Point(124, 28);
             this.txtBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(133, 20);
+            this.txtBuscar.Size = new System.Drawing.Size(183, 20);
             this.txtBuscar.TabIndex = 1;
             // 
             // Eliminar
@@ -334,7 +334,7 @@
             this.cbBuscar.Items.AddRange(new object[] {
             "Documento",
             "Razon Social"});
-            this.cbBuscar.Location = new System.Drawing.Point(10, 24);
+            this.cbBuscar.Location = new System.Drawing.Point(10, 28);
             this.cbBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.cbBuscar.Name = "cbBuscar";
             this.cbBuscar.Size = new System.Drawing.Size(92, 21);
