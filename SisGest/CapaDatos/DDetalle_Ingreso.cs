@@ -191,7 +191,7 @@ namespace CapaDatos
         }
 
         //Método Insertar
-        public string Insertar(DDetalle_Ingreso Detalle_Ingreso,
+        public string Insertar1(DDetalle_Ingreso Detalle_Ingreso,
             ref SqlConnection SqlCon,ref SqlTransaction SqlTra)
         {
             string rpta = "";
@@ -224,17 +224,17 @@ namespace CapaDatos
                 SqlCmd.Parameters.Add(ParIdarticulo);
 
 
-                SqlParameter ParPrecio_Compra = new SqlParameter();
-                ParPrecio_Compra.ParameterName = "@precio_compra";
-                ParPrecio_Compra.SqlDbType = SqlDbType.Money;
-                ParPrecio_Compra.Value = 1; // Detalle_Ingreso.Precio_Compra;
-                SqlCmd.Parameters.Add(ParPrecio_Compra);
+                //SqlParameter ParPrecio_Compra = new SqlParameter();
+                //ParPrecio_Compra.ParameterName = "@precio_compra";
+                //ParPrecio_Compra.SqlDbType = SqlDbType.Money;
+                //ParPrecio_Compra.Value = 1; // Detalle_Ingreso.Precio_Compra;
+                //SqlCmd.Parameters.Add(ParPrecio_Compra);
 
-                SqlParameter ParPrecio_Venta = new SqlParameter();
-                ParPrecio_Venta.ParameterName = "@precio_venta";
-                ParPrecio_Venta.SqlDbType = SqlDbType.Money;
-                ParPrecio_Venta.Value = 1;// Detalle_Ingreso.Precio_Venta;
-                SqlCmd.Parameters.Add(ParPrecio_Venta);
+                //SqlParameter ParPrecio_Venta = new SqlParameter();
+                //ParPrecio_Venta.ParameterName = "@precio_venta";
+                //ParPrecio_Venta.SqlDbType = SqlDbType.Money;
+                //ParPrecio_Venta.Value = 1;// Detalle_Ingreso.Precio_Venta;
+                //SqlCmd.Parameters.Add(ParPrecio_Venta);
 
                 
                 SqlParameter ParStock_Actual = new SqlParameter();
@@ -353,6 +353,122 @@ namespace CapaDatos
             return rpta;
 
         }
+
+
+        public string Insertar(DDetalle_Ingreso Detalle_Ingreso,
+    ref SqlConnection SqlCon, ref SqlTransaction SqlTra)
+        {
+            string rpta = "";
+            try
+            {
+                using (SqlCommand SqlCmd = new SqlCommand("spinsertar_detalle_ingreso", SqlCon, SqlTra))
+                {
+                    SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                    // Parámetro OUTPUT
+                    SqlParameter ParIddetalle_Ingreso = new SqlParameter("@iddetalle_ingreso", SqlDbType.Int);
+                    ParIddetalle_Ingreso.Direction = ParameterDirection.Output;
+                    SqlCmd.Parameters.Add(ParIddetalle_Ingreso);
+
+                    // Parámetros obligatorios
+                    SqlCmd.Parameters.AddWithValue("@idingreso", Detalle_Ingreso.Idingreso);
+                    SqlCmd.Parameters.AddWithValue("@idarticulo", Detalle_Ingreso.Idarticulo);
+                    SqlCmd.Parameters.AddWithValue("@stock_inicial", Detalle_Ingreso.Stock_Inicial);
+                    SqlCmd.Parameters.AddWithValue("@stock_actual", Detalle_Ingreso.Stock_Actual);
+                    SqlCmd.Parameters.AddWithValue("@fecha_produccion", Detalle_Ingreso.Fecha_Produccion);
+                    SqlCmd.Parameters.AddWithValue("@fecha_vencimiento", Detalle_Ingreso.Fecha_Vencimiento);
+                    SqlCmd.Parameters.AddWithValue("@lote", Detalle_Ingreso.Lote ?? (object)DBNull.Value);
+                    SqlCmd.Parameters.AddWithValue("@limpio", Detalle_Ingreso.Limpio ?? (object)DBNull.Value);
+                    SqlCmd.Parameters.AddWithValue("@deteriorado", Detalle_Ingreso.Deteriorado ?? (object)DBNull.Value);
+                    SqlCmd.Parameters.AddWithValue("@envasecerrado", Detalle_Ingreso.Envasecerrado ?? (object)DBNull.Value);
+                    SqlCmd.Parameters.AddWithValue("@certanalisis", Detalle_Ingreso.Certanalisis ?? (object)DBNull.Value);
+                    SqlCmd.Parameters.AddWithValue("@sanitario", Detalle_Ingreso.Sanitario ?? (object)DBNull.Value);
+                    SqlCmd.Parameters.AddWithValue("@cantidadManifestada", Detalle_Ingreso.CantidadManifestada);
+                    SqlCmd.Parameters.AddWithValue("@cantidadDiferencia", Detalle_Ingreso.CantidadDiferencia);
+
+                    //// Ejecutar
+                    //rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "No se ingresó el registro";
+
+                    //// Si necesitas el id generado:
+                    //int idGenerado = (int)ParIddetalle_Ingreso.Value;
+                    //// podrías guardarlo en el objeto si lo necesitas
+                    //Detalle_Ingreso.Iddetalle_Ingreso = idGenerado;
+
+
+                    rpta = "OK";
+
+                    // Ejecutar
+                    SqlCmd.ExecuteNonQuery();
+
+                    // Obtener el ID generado desde el parámetro OUTPUT
+                    int idGenerado = (int)ParIddetalle_Ingreso.Value;
+                    Detalle_Ingreso.Iddetalle_Ingreso = idGenerado;
+
+                    //int filasAfectadas = SqlCmd.ExecuteNonQuery();
+
+                    //if (filasAfectadas > 0)
+                    //{
+                    //    rpta = "OK";
+                    //    int idGenerado = (int)ParIddetalle_Ingreso.Value; // el OUTPUT del SP
+                    //    Detalle_Ingreso.Iddetalle_Ingreso = idGenerado;
+                    //}
+                    //else
+                    //{
+                    //    rpta = "No se ingresó el registro";
+                    //}
+
+
+
+                }
+            }
+            catch (Exception ex)
+            {
+                rpta = ex.Message;
+            }
+
+            return rpta;
+        }
+
+        public string Editar(DDetalle_Ingreso Detalle_Ingreso,
+                     ref SqlConnection SqlCon, ref SqlTransaction SqlTra)
+        {
+            string rpta = "";
+            try
+            {
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.Transaction = SqlTra;
+                SqlCmd.CommandText = "speditar_detalle_ingreso";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                SqlCmd.Parameters.AddWithValue("@iddetalle_ingreso", Detalle_Ingreso.Iddetalle_Ingreso);
+                SqlCmd.Parameters.AddWithValue("@idingreso", Detalle_Ingreso.Idingreso);
+                SqlCmd.Parameters.AddWithValue("@idarticulo", Detalle_Ingreso.Idarticulo);
+                SqlCmd.Parameters.AddWithValue("@stock_inicial", Detalle_Ingreso.Stock_Inicial);
+                SqlCmd.Parameters.AddWithValue("@stock_actual", Detalle_Ingreso.Stock_Actual);
+                SqlCmd.Parameters.AddWithValue("@cantidadManifestada", Detalle_Ingreso.CantidadManifestada);
+                SqlCmd.Parameters.AddWithValue("@cantidadDiferencia", Detalle_Ingreso.CantidadDiferencia);
+                SqlCmd.Parameters.AddWithValue("@fecha_produccion", Detalle_Ingreso.Fecha_Produccion);
+                SqlCmd.Parameters.AddWithValue("@fecha_vencimiento", Detalle_Ingreso.Fecha_Vencimiento);
+                SqlCmd.Parameters.AddWithValue("@lote", Detalle_Ingreso.Lote);
+                SqlCmd.Parameters.AddWithValue("@limpio", Detalle_Ingreso.Limpio);
+                SqlCmd.Parameters.AddWithValue("@deteriorado", Detalle_Ingreso.Deteriorado);
+                SqlCmd.Parameters.AddWithValue("@envasecerrado", Detalle_Ingreso.Envasecerrado);
+                SqlCmd.Parameters.AddWithValue("@certanalisis", Detalle_Ingreso.Certanalisis);
+                SqlCmd.Parameters.AddWithValue("@sanitario", Detalle_Ingreso.Sanitario);
+
+                rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "No se actualizó el detalle";
+            }
+            catch (Exception ex)
+            {
+                rpta = ex.Message;
+            }
+
+            return rpta;
+        }
+
+
+
 
     }
 }

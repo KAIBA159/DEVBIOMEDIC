@@ -4,9 +4,11 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Reflection.Emit;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.UI.WebControls;
@@ -18,6 +20,7 @@ namespace CapaPresentacion
     {
         public int Idtrabajador;
         private bool IsNuevo;
+        private bool IsEditar = false;
         private DataTable dtDetalle;
         private decimal totalPagado = 0;
 
@@ -238,6 +241,81 @@ namespace CapaPresentacion
 
             this.btnAgregar.Enabled = valor;
             this.btnQuitar.Enabled = valor;
+
+
+        }
+
+        private void Habilitar_Editar(bool valor)
+        {
+            this.txtIdingreso.ReadOnly = !valor;
+            this.txtSerie.ReadOnly = false;
+            this.txtCorrelativo.ReadOnly = false;
+
+
+            //
+            this.txtBultos.ReadOnly = false;
+            this.tb_conclusion.ReadOnly = false;
+
+            this.txtDUA.ReadOnly = false;
+            this.txtDUA.Enabled = true;
+
+
+            this.txtIdingreso.ReadOnly = true;
+            this.txtCorrelativoUnico.Enabled = false;
+            this.txtCorrelativoUnico.ReadOnly = false;
+
+            //
+
+            //this.txtCantidad_Manifestada.Text = string.Empty;
+            //
+
+            
+            //
+
+            this.dtp_inicio.Enabled = true;
+            this.dtp_fin.Enabled = true;
+
+
+            this.txtIgv.ReadOnly = !valor;
+
+            this.dtFecha.Enabled = false;
+
+            this.cbTipo_Producto.Enabled = true;
+            this.cbTipo_Comprobante.Enabled = true;
+            this.cbTipo_Ingreso.Enabled = true;
+
+
+            //this.txtCantidad_Diferencia.ReadOnly = !valor;
+
+
+
+
+            //
+
+            this.txtLote.Enabled = false;
+            this.dtFecha_Produccion.Enabled = false;
+            this.dtFecha_Vencimiento.Enabled = false;
+            this.txtStock.Enabled = false;
+            this.txtCantidad_Manifestada.Enabled = false;
+            this.txtCantidad_Diferencia.Enabled = false;
+
+            this.cb_limpio.Enabled = false;
+            this.cb_deteriorado.Enabled = false;
+            this.cb_envasecerrado.Enabled = false;
+            this.cb_certanalisis.Enabled = false;
+            this.cb_sanitario.Enabled = false;
+
+            //
+
+            this.btnBuscarProveedor.Enabled = false;
+            this.btnBuscarArticulo.Enabled = false;
+            this.btnBuscarEncargado.Enabled = true;
+
+
+            this.btnAgregar.Enabled = false;
+            this.btnQuitar.Enabled = false;
+
+
         }
 
         //Habilitar los botones
@@ -245,17 +323,45 @@ namespace CapaPresentacion
         {
             if (this.IsNuevo ) //Alt + 124
             {
+
                 this.Habilitar(true);
                 this.btnNuevo.Enabled = false;
                 this.btnGuardar.Enabled = true;
                 this.btnCancelar.Enabled = true;
+                this.btnEditar.Enabled = false  ;
+                
+                this.IsEditar = false;
+
             }
             else
             {
-                this.Habilitar(false);
-                this.btnNuevo.Enabled = true;
-                this.btnGuardar.Enabled = false;
-                this.btnCancelar.Enabled = false;
+
+                if (this.IsEditar)
+                {
+                    //this.Habilitar_Editar(false);
+                    this.btnNuevo.Enabled = true;
+                    this.btnGuardar.Enabled = true;
+                    this.btnEditar.Enabled = true;
+                    this.btnCancelar.Enabled = false;
+
+                    this.IsNuevo = false;
+                    this.IsEditar = false;
+
+                }
+                else
+                {
+                    this.Habilitar(false);
+                    this.btnNuevo.Enabled = true;
+                    this.btnGuardar.Enabled = false;
+                    this.btnCancelar.Enabled = false;
+                    this.btnEditar.Enabled = false;
+
+                    //this.IsNuevo = false;
+                    this.IsEditar = false;
+
+                }
+
+                
             }
 
         }
@@ -360,7 +466,7 @@ namespace CapaPresentacion
         //}
 
 
-        private void MostrarDetalle()
+        private void MostrarDetallev2()
         {
 
 
@@ -447,6 +553,75 @@ namespace CapaPresentacion
             
 
         }
+
+        private void MostrarDetalle()
+        {
+            // 1. Obtener los datos originales desde la capa de negocio
+            DataTable dtOriginal = NIngreso.MostrarDetalle(this.txtIdingreso.Text);
+
+            if (dtOriginal == null || dtOriginal.Rows.Count == 0)
+            {
+                MessageBox.Show("No se encontraron detalles para este ingreso.");
+                return;
+            }
+
+            // 2. Clonar estructura y cambiar tipos de columnas específicas a boolean
+            DataTable dtClon = dtOriginal.Clone();
+            dtClon.Columns["limpio"].DataType = typeof(bool);
+            dtClon.Columns["deteriorado"].DataType = typeof(bool);
+            dtClon.Columns["envasecerrado"].DataType = typeof(bool);
+            dtClon.Columns["certanalisis"].DataType = typeof(bool);
+            dtClon.Columns["sanitario"].DataType = typeof(bool);
+
+            // 3. Transferir datos al nuevo DataTable, convirtiendo texto a boolean
+            foreach (DataRow filaOriginal in dtOriginal.Rows)
+            {
+                DataRow filaNueva = dtClon.NewRow();
+
+                foreach (DataColumn columna in dtOriginal.Columns)
+                {
+                    string nombreColumna = columna.ColumnName;
+
+                    // Si la columna es booleana, convertir "Activo" a true
+                    if (dtClon.Columns[nombreColumna].DataType == typeof(bool))
+                    {
+                        string valorTexto = filaOriginal[nombreColumna]?.ToString().Trim().ToLower();
+                        filaNueva[nombreColumna] = (valorTexto == "activo");
+                    }
+                    else
+                    {
+                        filaNueva[nombreColumna] = filaOriginal[nombreColumna];
+                    }
+                }
+
+                dtClon.Rows.Add(filaNueva);
+            }
+
+            // 4. Actualizar el DataTable global que se usará para guardar cambios
+            this.dtDetalle = dtClon;
+
+            // 5. Asignar al DataGridView
+            this.dataListadoDetalle.DataSource = this.dtDetalle;
+
+            // 6. Ajuste visual de columnas
+            if (this.dataListadoDetalle.DataSource != null)
+            {
+                foreach (DataGridViewColumn col in dataListadoDetalle.Columns)
+                {
+                    col.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+
+                    // Limitar el ancho máximo
+                    if (col.Width > 300)
+                    {
+                        col.Width = 300;
+                    }
+                }
+            }
+
+            // 7. Depuración: verificar que dtDetalle tiene datos
+            MessageBox.Show("Filas cargadas en dtDetalle: " + this.dtDetalle.Rows.Count);
+        }
+
         private void crearTabla()
         {
             this.dtDetalle = new DataTable("Detalle");
@@ -786,6 +961,7 @@ namespace CapaPresentacion
                     {
                         errorIcono.Clear();
 
+                        //editar para nuevo
                         if (this.IsNuevo)
                         {
                             rpta = NIngreso.Insertar(
@@ -818,6 +994,42 @@ namespace CapaPresentacion
                         }
 
 
+                        //editar para nuevo
+                        if (this.IsEditar)
+                        {
+                            rpta = NIngreso.Editar(
+                                Convert.ToInt32( txtIdingreso.Text),
+                                Idtrabajador,
+                                Convert.ToInt32(this.txtIdproveedor.Text),
+                                dtFecha.Value,
+                                cbTipo_Comprobante.Text,
+                                txtSerie.Text,
+                                txtCorrelativo.Text,
+                                Convert.ToDecimal(txtIgv.Text),
+                                "EMITIDO",
+
+                                cbTipo_Ingreso.Text,
+                                Convert.ToInt32(this.txtIdencargado.Text),
+
+                                horaInicioDT,
+                                horaFinDT,
+
+
+                                cbTipo_Producto.Text,
+                                txtBultos.Text,
+                                txtDUA.Text,
+                                txtCorrelativoUnico.Text,
+                                tb_conclusion.Text,
+
+
+                                dtDetalle
+                                );
+
+                        }
+
+
+
+
                         if (rpta.Equals("OK"))
                         {
                             if (this.IsNuevo)
@@ -825,6 +1037,10 @@ namespace CapaPresentacion
                                 this.MensajeOk("Se Insertó de forma correcta el registro");
                             }
 
+                            if (this.IsEditar)
+                            {
+                                this.MensajeOk("Se Edito/Actualizo el Ingreso correctamente");
+                            }
 
                         }
                         else
@@ -833,6 +1049,8 @@ namespace CapaPresentacion
                         }
 
                         this.IsNuevo = false;
+                        this.IsEditar = false;
+
                         this.Botones();
                         this.Limpiar();
                         this.limpiarDetalle();
@@ -1010,7 +1228,12 @@ namespace CapaPresentacion
             //ES EL EVENTO CANCELAR
             //INI
 
+            //this.btnEditar.Enabled = true;
+
             this.IsNuevo = false;
+
+            this.IsEditar = false;
+
             this.Botones();
             this.Limpiar();
             this.Habilitar(false);
@@ -1019,7 +1242,14 @@ namespace CapaPresentacion
 
 
             this.txtIdingreso.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["idingreso"].Value);
+
             this.txtProveedor.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["proveedor"].Value);
+
+            this.txtIdproveedor.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["idproveedor"].Value);
+            this.txtIdencargado.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["idEncargadoTransportista"].Value);
+
+
+
             this.dtFecha.Value = Convert.ToDateTime(this.dataListado.CurrentRow.Cells["fecha"].Value);
             this.cbTipo_Comprobante.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["tipo_comprobante"].Value);
             this.txtSerie.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["serie"].Value);
@@ -1041,6 +1271,7 @@ namespace CapaPresentacion
             else
             {
                 llb_estado.ForeColor = Color.Black; // o el color que quieras cuando no cumple
+                this.btnEditar.Enabled = true;
             }
 
 
@@ -1050,6 +1281,11 @@ namespace CapaPresentacion
             this.txtCorrelativoUnico.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["correlativoUnico"].Value);
 
             this.tb_conclusion.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["conclusion"].Value);
+
+
+
+            
+
 
             //         isnull(i.cbTipo_Producto, '') as 'cbTipo_Producto',
             //isnull(i.bultos, '') as 'bultos',
@@ -1175,5 +1411,79 @@ namespace CapaPresentacion
             }
 
         }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            //falta definir en que momento puedes ser TRUE = IsEditar
+
+
+            if (llb_estado.Text != "ANULADO")
+            {
+                if (!this.txtIdingreso.Text.Equals(""))
+                {
+
+                    if (ValidarMovimiento(Convert.ToInt32(txtIdingreso.Text)))
+                    {
+
+                        this.MensajeError("No se puede editar, ya tuvo movimiento esta ingreso");
+                    }
+                    else
+                    {
+                        this.IsEditar = true;
+
+                        this.Botones();
+                        this.Habilitar_Editar(true);
+
+
+                        //editar o no detalles
+
+                        // Bloquear todas
+                        foreach (DataGridViewColumn col in dataListadoDetalle.Columns)
+                        {
+                            col.ReadOnly = true;
+                        }
+
+                    //    fecha vencimiento
+                    //fecha_produccion
+                    //lote
+
+                        // Solo permitir edición en algunas
+                        dataListadoDetalle.Columns["fecha_vencimiento"].ReadOnly = false;
+                        dataListadoDetalle.Columns["fecha_produccion"].ReadOnly = false;
+                        dataListadoDetalle.Columns["lote"].ReadOnly = false;
+
+                        //
+
+                        this.IsEditar = true;
+
+                        
+                    }
+
+
+                }
+                else
+                {
+                    this.MensajeError("Debe de seleccionar primero el registro a Modificar");
+                }
+            }
+            else
+            {
+                this.MensajeError("No se puede editar un ingreso ANULADO");
+            }
+
+            
+
+
+        }
+
+        public bool ValidarMovimiento(int idIngreso)
+        {
+            bool val = false;
+
+            NIngreso a = new NIngreso();
+            val = a.validar_movimiento_ingreso(idIngreso);
+            return val;
+        }
+
     }
 }

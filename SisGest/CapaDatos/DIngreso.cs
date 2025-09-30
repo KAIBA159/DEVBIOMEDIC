@@ -396,6 +396,162 @@ namespace CapaDatos
             return rpta;
 
         }
+
+        public string Editarv1(DIngreso Ingreso, List<DDetalle_Ingreso> Detalle)
+        {
+            string rpta = "";
+            SqlConnection SqlCon = new SqlConnection();
+
+            try
+            {
+                SqlCon.ConnectionString = Conexion.Cn;
+                SqlCon.Open();
+
+                SqlTransaction SqlTra = SqlCon.BeginTransaction();
+
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.Transaction = SqlTra;
+                SqlCmd.CommandText = "speditar_ingreso";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                SqlCmd.Parameters.AddWithValue("@idingreso", Ingreso.Idingreso);
+                SqlCmd.Parameters.AddWithValue("@idtrabajador", Ingreso.Idtrabajador);
+                SqlCmd.Parameters.AddWithValue("@idproveedor", Ingreso.Idproveedor);
+                SqlCmd.Parameters.AddWithValue("@idencargadotransportista", Ingreso.IdencargadoTransportista);
+                SqlCmd.Parameters.AddWithValue("@fecha", Ingreso.Fecha);
+                SqlCmd.Parameters.AddWithValue("@tipo_comprobante", Ingreso.Tipo_Comprobante);
+                SqlCmd.Parameters.AddWithValue("@serie", Ingreso.Serie);
+                SqlCmd.Parameters.AddWithValue("@correlativo", Ingreso.Correlativo);
+                SqlCmd.Parameters.AddWithValue("@igv", Ingreso.Igv);
+                SqlCmd.Parameters.AddWithValue("@estado", Ingreso.Estado);
+                SqlCmd.Parameters.AddWithValue("@tipo_ingreso", Ingreso.Tipo_Ingreso);
+                SqlCmd.Parameters.AddWithValue("@horaInicio", Ingreso.HoraInicioDT);
+                SqlCmd.Parameters.AddWithValue("@horaFin", Ingreso.HoraFinDT);
+                SqlCmd.Parameters.AddWithValue("@cbTipo_Producto", Ingreso.CbTipo_Producto);
+                SqlCmd.Parameters.AddWithValue("@bultos", Ingreso.Bultos);
+                SqlCmd.Parameters.AddWithValue("@dua", Ingreso.Dua);
+                SqlCmd.Parameters.AddWithValue("@correlativoUnico", Ingreso.CorrelativoUnico);
+                SqlCmd.Parameters.AddWithValue("@conclusion", Ingreso.Conclusion);
+
+                rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "No se actualizó el registro";
+
+                // Si la cabecera se actualizó correctamente, actualizamos el detalle
+                if (rpta.Equals("OK"))
+                {
+                    foreach (DDetalle_Ingreso det in Detalle)
+                    {
+                        det.Idingreso = Ingreso.Idingreso;
+                        rpta = det.Editar(det, ref SqlCon, ref SqlTra);
+
+                        if (!rpta.Equals("OK"))
+                        {
+                            break;
+                        }
+                    }
+                }
+
+                if (rpta.Equals("OK"))
+                {
+                    SqlTra.Commit();
+                }
+                else
+                {
+                    SqlTra.Rollback();
+                }
+            }
+            catch (Exception ex)
+            {
+                rpta = ex.Message;
+            }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
+            }
+
+            return rpta;
+        }
+
+        public string Editar(DIngreso Ingreso, List<DDetalle_Ingreso> Detalle)
+        {
+            string rpta = "";
+            SqlConnection SqlCon = new SqlConnection();
+
+            try
+            {
+                SqlCon.ConnectionString = Conexion.Cn;
+                SqlCon.Open();
+
+                // Iniciamos la transacción
+                SqlTransaction SqlTra = SqlCon.BeginTransaction();
+
+                using (SqlCommand SqlCmd = new SqlCommand("speditar_ingreso", SqlCon, SqlTra))
+                {
+                    SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                    // Parámetros de cabecera
+                    SqlCmd.Parameters.AddWithValue("@idingreso", Ingreso.Idingreso);
+                    SqlCmd.Parameters.AddWithValue("@idtrabajador", Ingreso.Idtrabajador);
+                    SqlCmd.Parameters.AddWithValue("@idproveedor", Ingreso.Idproveedor);
+                    SqlCmd.Parameters.AddWithValue("@idencargadotransportista", Ingreso.IdencargadoTransportista);
+                    SqlCmd.Parameters.AddWithValue("@fecha", Ingreso.Fecha);
+                    SqlCmd.Parameters.AddWithValue("@tipo_comprobante", Ingreso.Tipo_Comprobante);
+                    SqlCmd.Parameters.AddWithValue("@serie", Ingreso.Serie);
+                    SqlCmd.Parameters.AddWithValue("@correlativo", Ingreso.Correlativo);
+                    SqlCmd.Parameters.AddWithValue("@igv", Ingreso.Igv);
+                    SqlCmd.Parameters.AddWithValue("@estado", Ingreso.Estado);
+                    SqlCmd.Parameters.AddWithValue("@tipo_ingreso", Ingreso.Tipo_Ingreso);
+                    SqlCmd.Parameters.AddWithValue("@horaInicio", Ingreso.HoraInicioDT);
+                    SqlCmd.Parameters.AddWithValue("@horaFin", Ingreso.HoraFinDT);
+                    SqlCmd.Parameters.AddWithValue("@cbTipo_Producto", Ingreso.CbTipo_Producto);
+                    SqlCmd.Parameters.AddWithValue("@bultos", Ingreso.Bultos);
+                    SqlCmd.Parameters.AddWithValue("@dua", Ingreso.Dua);
+                    SqlCmd.Parameters.AddWithValue("@correlativoUnico", Ingreso.CorrelativoUnico);
+                    SqlCmd.Parameters.AddWithValue("@conclusion", Ingreso.Conclusion);
+
+                    // Ejecutar y capturar número de filas afectadas
+                    int filasAfectadas = SqlCmd.ExecuteNonQuery();
+
+                    if (filasAfectadas == 0)
+                    {
+                        throw new Exception("No se actualizó la cabecera. Verifique el idingreso enviado.");
+                    }
+                }
+
+                // ---- Si la cabecera se actualizó correctamente, procesamos el detalle ----
+                foreach (DDetalle_Ingreso det in Detalle)
+                {
+                    det.Idingreso = Ingreso.Idingreso;
+                    rpta = det.Editar(det, ref SqlCon, ref SqlTra);
+
+                    if (!rpta.Equals("OK"))
+                    {
+                        // Si falla un detalle, cancelamos la transacción y mostramos el error
+                        throw new Exception($"Error al actualizar detalle ID Artículo {det.Idarticulo}: {rpta}");
+                    }
+                }
+
+                // Si todo va bien, confirmamos la transacción
+                SqlTra.Commit();
+                rpta = "OK";
+            }
+            catch (SqlException ex)
+            {
+                rpta = $"Error SQL: {ex.Message} (Código: {ex.Number})";
+            }
+            catch (Exception ex)
+            {
+                rpta = $"Error General: {ex.Message}";
+            }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open)
+                    SqlCon.Close();
+            }
+
+            return rpta;
+        }
+
         public string Anular(DIngreso Ingreso)
         {
             string rpta = "";
@@ -676,6 +832,39 @@ namespace CapaDatos
 
         }
 
+        public Boolean validar_movimiento_ingreso_x(int idIngreso)
+        {
+            object result2 = 0;
+
+            using (SqlConnection SqlCon = new SqlConnection())
+            using (SqlCommand cmd = new SqlCommand("sp_validar_movimiento_ingreso", SqlCon))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@IdIngreso", idIngreso);
+
+                SqlCon.Open();
+
+                result2 = cmd.ExecuteScalar(); // Devuelve la primera columna de la primera fila
+
+                return Convert.ToBoolean(result2);
+            }
+        }
+
+        public Boolean validar_movimiento_ingreso(int idIngreso)
+        {
+            using (SqlConnection SqlCon = new SqlConnection(Conexion.Cn)) // 👈 usar la cadena de conexión
+            using (SqlCommand cmd = new SqlCommand("sp_validar_movimiento_ingreso", SqlCon))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@IdIngreso", idIngreso);
+
+                SqlCon.Open();
+
+                object result2 = cmd.ExecuteScalar(); // Devuelve la primera columna de la primera fila
+
+                return Convert.ToBoolean(result2);
+            }
+        }
 
     }
 }

@@ -137,6 +137,79 @@ namespace CapaNegocio
         }
 
 
+        public static string Editar(
+            int idingreso,
+            int idtrabajador,
+            int idproveedor,
+            DateTime fecha,
+            string tipo_comprobante,
+            string serie,
+            string correlativo,
+            decimal igv,
+            string estado,
+            string cbTipo_Ingreso,
+            int idencargadoTransportista,
+            DateTime horaInicioDT,
+            DateTime horaFinDT,
+            string cbTipo_Producto,
+            string bultos,
+            string dUA,
+            string correlativoUnico,
+            string conclusion,
+            DataTable dtDetalles
+        )
+        {
+            DIngreso Obj = new DIngreso();
+            Obj.Idingreso = idingreso;
+            Obj.Idtrabajador = idtrabajador;
+            Obj.Idproveedor = idproveedor;
+            Obj.Fecha = fecha;
+            Obj.Tipo_Comprobante = tipo_comprobante;
+            Obj.Serie = serie;
+            Obj.Correlativo = correlativo;
+            Obj.Igv = igv;
+            Obj.Estado = estado;
+            Obj.Tipo_Ingreso = cbTipo_Ingreso;
+            Obj.IdencargadoTransportista = idencargadoTransportista;
+            Obj.HoraInicioDT = horaInicioDT;
+            Obj.HoraFinDT = horaFinDT;
+            Obj.CbTipo_Producto = cbTipo_Producto;
+            Obj.Bultos = bultos;
+            Obj.Dua = dUA;
+            Obj.CorrelativoUnico = correlativoUnico;
+            Obj.Conclusion = conclusion;
+
+            List<DDetalle_Ingreso> detalles = new List<DDetalle_Ingreso>();
+
+            foreach (DataRow row in dtDetalles.Rows)
+            {
+                DDetalle_Ingreso detalle = new DDetalle_Ingreso();
+                detalle.Iddetalle_Ingreso = Convert.ToInt32(row["iddetalle_ingreso"]); // ID detalle
+                detalle.Idingreso = idingreso;
+                detalle.Idarticulo = Convert.ToInt32(row["idarticulo"]);
+                detalle.Stock_Inicial = Convert.ToInt32(row["stock_inicial"]);
+                detalle.Stock_Actual = Convert.ToInt32(row["stock_inicial"]);
+                detalle.Fecha_Produccion = Convert.ToDateTime(row["fecha_produccion"]);
+                detalle.Fecha_Vencimiento = Convert.ToDateTime(row["fecha_vencimiento"]);
+
+                detalle.CantidadManifestada = Convert.ToInt32(row["CantidadManifestada"]);
+                detalle.CantidadDiferencia = detalle.CantidadManifestada - detalle.Stock_Inicial;
+
+                detalle.Limpio = Convert.ToBoolean(row["limpio"]) ? "Activo" : "Inactivo";
+                detalle.Deteriorado = Convert.ToBoolean(row["deteriorado"]) ? "Activo" : "Inactivo";
+                detalle.Envasecerrado = Convert.ToBoolean(row["envasecerrado"]) ? "Activo" : "Inactivo";
+                detalle.Certanalisis = Convert.ToBoolean(row["certanalisis"]) ? "Activo" : "Inactivo";
+                detalle.Sanitario = Convert.ToBoolean(row["sanitario"]) ? "Activo" : "Inactivo";
+
+                detalle.Lote = row["lote"].ToString();
+
+                detalles.Add(detalle);
+            }
+
+            return Obj.Editar(Obj, detalles);
+        }
+
+
         //AnularEnBloque
 
         public static string AnularEnBloque(List<int> idingresos)
@@ -197,6 +270,12 @@ namespace CapaNegocio
         {
             DIngreso Obj = new DIngreso();
             return Obj.MostrarDetalle(textobuscar);
+        }
+
+        public  bool validar_movimiento_ingreso(int idIngreso)
+        {
+            DIngreso Obj2 = new DIngreso();
+            return Obj2.validar_movimiento_ingreso(idIngreso);
         }
     }
 }
