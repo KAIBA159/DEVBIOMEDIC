@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>favicon.ico</ApplicationIcon>
+    <ApplicationIcon>LOGO_2025_ico.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BCrypt.Net-Next, Version=4.0.3.0, Culture=neutral, PublicKeyToken=1e11be04b6288443, processorArchitecture=MSIL">
@@ -380,6 +380,12 @@
     <Compile Include="Reportes\FrmReporteVentas.Designer.cs">
       <DependentUpon>FrmReporteVentas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reportes\Frm_CR_Ingreso_CrystalReport5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Frm_CR_Ingreso_CrystalReport5.Designer.cs">
+      <DependentUpon>Frm_CR_Ingreso_CrystalReport5.cs</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="SunatDLv3.cs" />
   </ItemGroup>
@@ -512,6 +518,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\FrmReporteVentas.resx">
       <DependentUpon>FrmReporteVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Frm_CR_Ingreso_CrystalReport5.resx">
+      <DependentUpon>Frm_CR_Ingreso_CrystalReport5.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\rptArticulos.rdlc" />
     <EmbeddedResource Include="Reportes\rptCategoria.rdlc" />
@@ -728,6 +737,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
+    <Content Include="LOGO_2025_ico.ico" />
+    <Content Include="Resources\LOGO_2025_ico.ico" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

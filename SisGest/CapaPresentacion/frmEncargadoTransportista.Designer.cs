@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEncargadoTransportista));
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
             this.txtEncargadoTransportista = new System.Windows.Forms.TextBox();
             this.txtIdEncargadoTranportista = new System.Windows.Forms.TextBox();
@@ -439,6 +440,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmEncargadoTransportista";
             this.Text = ".:. Mantenimiento de Encargado-Transportista .:.";

@@ -52,6 +52,7 @@
             this.stockDeArtículosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.karteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kardexProducctoLoteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarKardexAgrupadoFabricanteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MnuVer = new System.Windows.Forms.ToolStripMenuItem();
             this.toolBarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusBarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -75,7 +76,7 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.consultarKardexAgrupadoFabricanteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -283,6 +284,13 @@
             this.kardexProducctoLoteToolStripMenuItem.Text = "Kardex_Produccto_Lote";
             this.kardexProducctoLoteToolStripMenuItem.Click += new System.EventHandler(this.kardexProducctoLoteToolStripMenuItem_Click);
             // 
+            // consultarKardexAgrupadoFabricanteToolStripMenuItem
+            // 
+            this.consultarKardexAgrupadoFabricanteToolStripMenuItem.Name = "consultarKardexAgrupadoFabricanteToolStripMenuItem";
+            this.consultarKardexAgrupadoFabricanteToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
+            this.consultarKardexAgrupadoFabricanteToolStripMenuItem.Text = "Kardex_Agrupado_Fabricante";
+            this.consultarKardexAgrupadoFabricanteToolStripMenuItem.Click += new System.EventHandler(this.consultarKardexAgrupadoFabricanteToolStripMenuItem_Click);
+            // 
             // MnuVer
             // 
             this.MnuVer.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -457,7 +465,8 @@
             // statusStrip
             // 
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel});
+            this.toolStripStatusLabel,
+            this.toolStripStatusLabel1});
             this.statusStrip.Location = new System.Drawing.Point(0, 708);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Size = new System.Drawing.Size(1110, 22);
@@ -466,16 +475,17 @@
             // 
             // toolStripStatusLabel
             // 
+            this.toolStripStatusLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.toolStripStatusLabel.Name = "toolStripStatusLabel";
-            this.toolStripStatusLabel.Size = new System.Drawing.Size(107, 17);
+            this.toolStripStatusLabel.Size = new System.Drawing.Size(114, 17);
             this.toolStripStatusLabel.Text = "Sistema de Gestión";
             // 
-            // consultarKardexAgrupadoFabricanteToolStripMenuItem
+            // toolStripStatusLabel1
             // 
-            this.consultarKardexAgrupadoFabricanteToolStripMenuItem.Name = "consultarKardexAgrupadoFabricanteToolStripMenuItem";
-            this.consultarKardexAgrupadoFabricanteToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
-            this.consultarKardexAgrupadoFabricanteToolStripMenuItem.Text = "Kardex_Agrupado_Fabricante";
-            this.consultarKardexAgrupadoFabricanteToolStripMenuItem.Click += new System.EventHandler(this.consultarKardexAgrupadoFabricanteToolStripMenuItem_Click);
+            this.toolStripStatusLabel1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(44, 17);
+            this.toolStripStatusLabel1.Text = "v 1.0.3";
             // 
             // frmPrincipal
             // 
@@ -551,6 +561,7 @@
         private System.Windows.Forms.ToolStripMenuItem karteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kardexProducctoLoteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultarKardexAgrupadoFabricanteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
     }
 }
 

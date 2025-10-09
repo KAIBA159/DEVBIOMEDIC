@@ -1122,7 +1122,7 @@
                     <Paragraph>
                       <TextRuns>
                         <TextRun>
-                          <Value>KARDEX por LOTE</Value>
+                          <Value>KARDEX </Value>
                           <Style>
                             <FontSize>16pt</FontSize>
                           </Style>
@@ -1133,9 +1133,9 @@
                   </Paragraphs>
                   <rd:DefaultName>Textbox18</rd:DefaultName>
                   <Top>0.09255cm</Top>
-                  <Left>7.10909cm</Left>
+                  <Left>8.06159cm</Left>
                   <Height>0.81696cm</Height>
-                  <Width>5.42859cm</Width>
+                  <Width>3.0738cm</Width>
                   <Style>
                     <Border>
                       <Style>None</Style>

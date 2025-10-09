@@ -1324,13 +1324,37 @@ namespace CapaPresentacion
             ////frm.Texto2 = Convert.ToString(dtFecha2.Value);
             //frm2.ShowDialog();
 
+            //////if (this.dataListado.CurrentRow != null &&
+            //////this.dataListado.CurrentRow.Cells["idingreso"].Value != DBNull.Value)
+            //////{
+            //////    try
+            //////    {
+            //////        Reportes.FrmReporteIngresoCargo frm2 = new Reportes.FrmReporteIngresoCargo();
+            //////        frm2.idingreso = Convert.ToInt32(this.dataListado.CurrentRow.Cells["idingreso"].Value);
+
+            //////        //frm2.idingreso = 3016;
+
+            //////        frm2.ShowDialog();
+            //////    }
+            //////    catch (Exception ex)
+            //////    {
+            //////        MessageBox.Show("Error al abrir el reporte: " + ex.Message);
+            //////    }
+            //////}
+            //////else
+            //////{
+            //////    MessageBox.Show("Debe seleccionar una fila válida que contenga un ID de ingreso.");
+            //////}
+
             if (this.dataListado.CurrentRow != null &&
             this.dataListado.CurrentRow.Cells["idingreso"].Value != DBNull.Value)
             {
                 try
                 {
-                    Reportes.FrmReporteIngresoCargo frm2 = new Reportes.FrmReporteIngresoCargo();
-                    frm2.idingreso = Convert.ToInt32(this.dataListado.CurrentRow.Cells["idingreso"].Value);
+                    Reportes.Frm_CR_Ingreso_CrystalReport5 frm2 = new Reportes.Frm_CR_Ingreso_CrystalReport5();
+
+                    //frm2.ShowDialog();
+                    frm2.IdIngreso = Convert.ToInt32(this.dataListado.CurrentRow.Cells["idingreso"].Value);
 
                     //frm2.idingreso = 3016;
 
@@ -1345,7 +1369,6 @@ namespace CapaPresentacion
             {
                 MessageBox.Show("Debe seleccionar una fila válida que contenga un ID de ingreso.");
             }
-
 
         }
 
