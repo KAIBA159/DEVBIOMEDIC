@@ -475,7 +475,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\CrystalReport5.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CrystalReport5.cs</LastGenOutput>
+      <LastGenOutput>CrystalReport51.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\cr_reporting1.resx">
       <DependentUpon>cr_reporting1.cs</DependentUpon>
