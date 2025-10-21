@@ -1,9 +1,11 @@
-﻿using CrystalDecisions.CrystalReports.Engine;
+﻿using CapaDatos;
+using CrystalDecisions.CrystalReports.Engine;
 using CrystalDecisions.Shared;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -38,13 +40,18 @@ namespace CapaPresentacion.Reportes
             // 1️⃣ Crear instancia del reporte
             Reportes.CrystalReport5 rpt = new Reportes.CrystalReport5();
 
+            // 2️⃣ Obtener la cadena de conexión centralizada desde CapaDatos
+            string cadena = ConfiguracionGlobal.ObtenerCadenaConexion("CapaDatos.Properties.Settings.cn");
+            SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder(cadena);
+
             // 2️⃣ Datos de conexión
             ConnectionInfo connectionInfo = new ConnectionInfo
             {
-                ServerName = "DESKTOP-IJHQVMG\\SQLSERVERMEDIC",
-                DatabaseName = "dbventas",
-                UserID = "sa",
-                Password = "Maquina50"
+                ServerName = builder.DataSource,
+                DatabaseName = builder.InitialCatalog,
+                UserID = builder.UserID,
+                Password = builder.Password,
+                IntegratedSecurity = builder.IntegratedSecurity
             };
 
             // 3️⃣ Aplicar conexión a las tablas del reporte principal
@@ -68,24 +75,24 @@ namespace CapaPresentacion.Reportes
 
             // 5️⃣ Forzar reconexión global (versión moderna)
             rpt.DataSourceConnections[0].SetConnection(
-                "DESKTOP-IJHQVMG\\SQLSERVERMEDIC",
-                "dbventas",
-                "sa",
-                "Maquina50"
+                builder.DataSource,
+                    builder.InitialCatalog,
+                    builder.UserID,
+                    builder.Password
             );
 
-            foreach (ReportDocument subreport in rpt.Subreports)
-            {
-                if (subreport.DataSourceConnections.Count > 0)
-                {
-                    subreport.DataSourceConnections[0].SetConnection(
-                        "DESKTOP-IJHQVMG\\SQLSERVERMEDIC",
-                        "dbventas",
-                        "sa",
-                        "Maquina50"
-                    );
-                }
-            }
+            //foreach (ReportDocument subreport in rpt.Subreports)
+            //{
+            //    if (subreport.DataSourceConnections.Count > 0)
+            //    {
+            //        subreport.DataSourceConnections[0].SetConnection(
+            //            "DESKTOP-IJHQVMG\\SQLSERVERMEDIC",
+            //            "dbventas",
+            //            "sa",
+            //            "Maquina50"
+            //        );
+            //    }
+            //}
 
             // 6️⃣ Pasar parámetros (usa el nombre exacto del parámetro en el reporte)
             rpt.SetParameterValue("@idIngreso", IdIngreso);

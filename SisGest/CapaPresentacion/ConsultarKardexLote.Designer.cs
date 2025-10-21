@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tbt_lote = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnImprimir = new System.Windows.Forms.Button();
             this.txt_idcliente = new System.Windows.Forms.TextBox();
@@ -46,8 +48,6 @@
             this.dtp_desde = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.tbt_lote = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,6 +79,22 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Consulta";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // tbt_lote
+            // 
+            this.tbt_lote.Location = new System.Drawing.Point(112, 120);
+            this.tbt_lote.Name = "tbt_lote";
+            this.tbt_lote.Size = new System.Drawing.Size(151, 20);
+            this.tbt_lote.TabIndex = 31;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(72, 124);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(34, 13);
+            this.label6.TabIndex = 30;
+            this.label6.Text = "Lote :";
             // 
             // btnCancelar
             // 
@@ -248,22 +264,6 @@
             this.label1.Text = "Desde : ";
             this.label1.Visible = false;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(72, 124);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(34, 13);
-            this.label6.TabIndex = 30;
-            this.label6.Text = "Lote :";
-            // 
-            // tbt_lote
-            // 
-            this.tbt_lote.Location = new System.Drawing.Point(112, 120);
-            this.tbt_lote.Name = "tbt_lote";
-            this.tbt_lote.Size = new System.Drawing.Size(151, 20);
-            this.tbt_lote.TabIndex = 31;
-            // 
             // ConsultarKardexLote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -272,6 +272,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "ConsultarKardexLote";
             this.Text = "ConsultarKardex por Lote";
+            this.Load += new System.EventHandler(this.ConsultarKardexLote_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaDatos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -51,6 +52,8 @@ namespace CapaPresentacion.Reportes
 
             try
             {
+                this.sp_kardex_resumen_por_fabricanteTableAdapter.Connection = Conexion.CrearConexion();
+
                 // TODO: esta línea de código carga datos en la tabla 'dsPrincipal.sp_kardex_resumen_por_fabricante' Puede moverla o quitarla según sea necesario.
                 this.sp_kardex_resumen_por_fabricanteTableAdapter.Fill(this.dsPrincipal.sp_kardex_resumen_por_fabricante, Convert.ToDateTime(Texto), Convert.ToDateTime(Texto2), idCliente);
                 //this.sp_kardex_producto_x_loteTableAdapter.Fill(this.dsPrincipal.sp_kardex_producto_x_lote, Lote, idproducto, idCliente);

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CapaDatos;
+using CapaPresentacion.dsPrincipalTableAdapters;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -35,6 +37,8 @@ namespace CapaPresentacion.Reportes
 
             try
             {
+                this.spbuscar_venta_fechaTableAdapter.Connection = Conexion.CrearConexion();
+
                 this.spbuscar_venta_fechaTableAdapter.Fill(this.dsPrincipal.spbuscar_venta_fecha, Texto, Texto2);
                 this.reportViewer1.RefreshReport();
             }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaDatos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -44,7 +45,11 @@ namespace CapaPresentacion.Reportes
 
             try
             {
+                
+
                 this.dsPrincipal.EnforceConstraints = false;
+
+                this.spbuscar_ingresoCargoTableAdapter.Connection = Conexion.CrearConexion();
                 //this.spbuscar_ingreso_fechaTableAdapter.Fill(this.dsPrincipal.spbuscar_ingreso_fecha, Texto,Texto2);
                 this.spbuscar_ingresoCargoTableAdapter.Fill(this.dsPrincipal.spbuscar_ingresoCargo, idingreso);
 

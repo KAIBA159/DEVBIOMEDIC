@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaDatos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -29,6 +30,8 @@ namespace CapaPresentacion.Reportes
 
             try
             {
+                this.spbuscar_proveedor_razon_socialTableAdapter.Connection = Conexion.CrearConexion();
+
                 this.spbuscar_proveedor_razon_socialTableAdapter.Fill(this.dsPrincipal.spbuscar_proveedor_razon_social, Texto);
 
                 this.reportViewer1.RefreshReport();

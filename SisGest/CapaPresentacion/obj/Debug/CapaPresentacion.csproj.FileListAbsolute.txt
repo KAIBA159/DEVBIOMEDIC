@@ -230,6 +230,7 @@ C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacio
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacion\bin\Debug\CapaPresentacion.dll
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacion\bin\Debug\CapaPresentacion.pdb
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacion\bin\Debug\BCrypt.Net-Next.dll
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacion\bin\Debug\CapaDatos.dll
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacion\bin\Debug\CapaNegocio.dll
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacion\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacion\bin\Debug\CrystalDecisions.ReportSource.dll
@@ -254,7 +255,6 @@ C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacio
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacion\bin\Debug\System.Threading.Tasks.Extensions.dll
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacion\bin\Debug\System.ValueTuple.dll
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacion\bin\Debug\WebDriver.dll
-C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacion\bin\Debug\CapaDatos.dll
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacion\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacion\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacion\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
@@ -270,6 +270,8 @@ C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacio
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacion\bin\Debug\Microsoft.ReportViewer.WebForms.dll
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacion\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacion\bin\Debug\stdole.dll
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacion\bin\Debug\CapaDatos.pdb
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacion\bin\Debug\CapaDatos.dll.config
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacion\bin\Debug\CapaNegocio.pdb
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacion\bin\Debug\BCrypt.Net-Next.xml
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacion\bin\Debug\log4net.xml
@@ -283,8 +285,6 @@ C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacio
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacion\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacion\bin\Debug\System.ValueTuple.xml
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacion\bin\Debug\WebDriver.xml
-C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacion\bin\Debug\CapaDatos.pdb
-C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacion\bin\Debug\CapaDatos.dll.config
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacion\bin\Debug\EnvDTE.xml
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacion\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacion\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaDatos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -29,6 +30,8 @@ namespace CapaPresentacion.Reportes
 
             try
             {
+                this.spbuscar_categoriaTableAdapter.Connection = Conexion.CrearConexion();
+
                 this.spbuscar_categoriaTableAdapter.Fill(this.dsPrincipal.spbuscar_categoria, Texto);
 
                 this.reportViewer1.RefreshReport();

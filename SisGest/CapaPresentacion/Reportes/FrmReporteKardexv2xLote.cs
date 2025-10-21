@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaDatos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -59,6 +60,11 @@ namespace CapaPresentacion.Reportes
             try
             {
                 //exec sp_kardex_producto '01/01/2025','01/08/2026',1008,'REG11008', 1003
+
+                // 🔹 Aplica la conexión global desde CapaDatos
+                this.sp_kardex_producto_x_loteTableAdapter.Connection = Conexion.CrearConexion();
+
+
 
                 //this.sp_kardex_productoTableAdapter.Fill(this.dsPrincipal.spbuscar_venta_fecha, Texto, Texto2);
                 //this.sp_kardex_productoTableAdapter.Fill(this.dsPrincipal.sp_kardex_producto, Convert.ToDateTime( "01/01/2025"), Convert.ToDateTime("01/08/2026") , 1008, 1003);

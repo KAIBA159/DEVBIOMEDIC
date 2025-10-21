@@ -156,11 +156,6 @@
     </Compile>
     <Compile Include="Contribuyente.cs" />
     <Compile Include="CuTexto.cs" />
-    <Compile Include="dbventasDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dbventasDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="dsPrincipal.cs">
       <DependentUpon>dsPrincipal.xsd</DependentUpon>
     </Compile>
@@ -169,6 +164,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsPrincipal.xsd</DependentUpon>
     </Compile>
+    <Compile Include="dsPrincipal_Extension.cs" />
     <Compile Include="frmArticulo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -390,6 +386,10 @@
     <Compile Include="SunatDLv3.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CapaDatos\CapaDatos.csproj">
+      <Project>{d35df176-3931-4849-bd9e-970b0013953b}</Project>
+      <Name>CapaDatos</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CapaNegocio\CapaNegocio.csproj">
       <Project>{809c35a5-4bde-4824-ab6f-80888c9ae30e}</Project>
       <Name>CapaNegocio</Name>
@@ -538,17 +538,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="dbventasDataSet.xsc">
-      <DependentUpon>dbventasDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="dbventasDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dbventasDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="dbventasDataSet.xss">
-      <DependentUpon>dbventasDataSet.xsd</DependentUpon>
-    </None>
     <None Include="dsPrincipal.xsc">
       <DependentUpon>dsPrincipal.xsd</DependentUpon>
     </None>

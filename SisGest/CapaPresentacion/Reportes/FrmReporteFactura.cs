@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaDatos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,6 +31,8 @@ namespace CapaPresentacion
             // TODO: esta línea de código carga datos en la tabla 'dsPrincipal.spreporte_factura' Puede moverla o quitarla según sea necesario.
             try
             {
+                this.spreporte_facturaTableAdapter.Connection = Conexion.CrearConexion();
+
                 this.spreporte_facturaTableAdapter.Fill(this.dsPrincipal.spreporte_factura, Idventa);
 
                 this.reportViewer1.RefreshReport();

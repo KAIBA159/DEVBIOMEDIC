@@ -129,5 +129,10 @@ namespace CapaPresentacion
             this.txt_idcliente.Text = string.Empty;
 
         }
+
+        private void ConsultarKardexLote_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

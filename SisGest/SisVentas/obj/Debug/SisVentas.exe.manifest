@@ -55,14 +55,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CapaDatos.dll" size="59392">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CapaDatos.dll" size="60416">
       <assemblyIdentity name="CapaDatos" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>rDp6kb1mnpBaDt7prQ4WfcQuQRNKS1UCSjxUhAz1Y3s=</dsig:DigestValue>
+        <dsig:DigestValue>oeCm8m/Q8cXrBJ1mVUYZQEjV5XztpmyzEtYeNyRQBRM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -74,19 +74,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>J+z2rKfIjigS0SzN3oJVbNnXigwCptWymIc2fuEF/7E=</dsig:DigestValue>
+        <dsig:DigestValue>w56aWTL2n1ihMxG91hVnbRrOwkXuoF9oVIDanxdcrjs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CapaPresentacion.dll" size="11162624">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CapaPresentacion.dll" size="11148288">
       <assemblyIdentity name="CapaPresentacion" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>25EpdnW2LqCDvEG9Wfpzzvh3xSsMYXUgmhmjWpmdrhM=</dsig:DigestValue>
+        <dsig:DigestValue>37F0NCiCxiwejFDIpikFU9Kz0lwCGmU4jSEjgIOdSxg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -734,7 +734,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Tc4vcXv+KpXqkJ2veejxpDsGmuKd6uPFMojfDyAp+OI=</dsig:DigestValue>
+        <dsig:DigestValue>n9W7MCVLDsfc59P2bJr8ECEnG3rOil3pWGve+x2cwzY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

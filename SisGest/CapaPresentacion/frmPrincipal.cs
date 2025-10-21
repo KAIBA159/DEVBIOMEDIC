@@ -1,7 +1,9 @@
-﻿using System;
+﻿using CapaDatos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -169,6 +171,41 @@ namespace CapaPresentacion
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
             GestionUsuario();
+
+            ConfigurarStatusStrip();
+        }
+
+        private void ConfigurarStatusStrip()
+        {
+            // 🔹 Alinear el label a la derecha
+            toolStripStatusLabel2.Alignment = ToolStripItemAlignment.Right;
+
+            // 🔹 Separador elástico
+            ToolStripStatusLabel separador = new ToolStripStatusLabel();
+            separador.Spring = true;
+
+            if (!statusStrip.Items.Contains(separador))
+                statusStrip.Items.Insert(statusStrip.Items.IndexOf(toolStripStatusLabel2), separador);
+
+            // 🔹 Mostrar texto base
+            toolStripStatusLabel1.Text = "v1.0.3";
+
+            // 🔹 Intentar obtener nombre de la base de datos activa
+            try
+            {
+                string cadena = ConfiguracionGlobal.ObtenerCadenaConexion("CapaDatos.Properties.Settings.cn");
+                SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder(cadena);
+
+                string nombreBD = builder.InitialCatalog; // ✅ Aquí tienes el nombre real de la BD
+
+                toolStripStatusLabel2.Text = $"BaseDatos : {nombreBD}";
+            }
+            catch (Exception ex)
+            {
+                toolStripStatusLabel2.Text = "BD: (Error de conexión)";
+                MessageBox.Show("No se pudo obtener la base de datos activa:\n" + ex.Message,
+                                "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void GestionUsuario()
@@ -315,6 +352,16 @@ namespace CapaPresentacion
             ConsultarKardex3AgrupadoFabricante frm = new ConsultarKardex3AgrupadoFabricante();
             frm.MdiParent = this;
             frm.Show();
+        }
+
+        private void toolStripStatusLabel2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripStatusLabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
