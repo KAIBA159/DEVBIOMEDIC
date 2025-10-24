@@ -76,10 +76,6 @@ C:\Users\Administrador\Documents\WS\BIOMEDIC\DEV\SisGest\SisVentas\obj\Debug\Sis
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEV\SisGest\SisVentas\obj\Debug\SisGest.csproj.Up2Date
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEV\SisGest\SisVentas\obj\Debug\SisVentas.exe
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEV\SisGest\SisVentas\obj\Debug\SisVentas.pdb
-C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\SisVentas\obj\Debug\SisGest.csproj.AssemblyReference.cache
-C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\SisVentas\obj\Debug\SisVentas.Properties.Resources.resources
-C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\SisVentas\obj\Debug\SisGest.csproj.GenerateResource.cache
-C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\SisVentas\obj\Debug\SisGest.csproj.CoreCompileInputs.cache
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\SisVentas\bin\Debug\SqlServerTypes\x64\msvcr120.dll
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\SisVentas\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\SisVentas\bin\Debug\SqlServerTypes\x86\msvcr120.dll
@@ -176,8 +172,12 @@ C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\SisVentas\bin\D
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\SisVentas\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\SisVentas\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\SisVentas\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\SisVentas\obj\Debug\SisGest.csproj.AssemblyReference.cache
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\SisVentas\obj\Debug\SisGest.csproj.SuggestedBindingRedirects.cache
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\SisVentas\obj\Debug\SisVentas.exe.config
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\SisVentas\obj\Debug\SisVentas.Properties.Resources.resources
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\SisVentas\obj\Debug\SisGest.csproj.GenerateResource.cache
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\SisVentas\obj\Debug\SisGest.csproj.CoreCompileInputs.cache
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\SisVentas\obj\Debug\SisVentas.exe.manifest
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\SisVentas\obj\Debug\SisVentas.application
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\SisVentas\obj\Debug\SisGest.csproj.Up2Date
