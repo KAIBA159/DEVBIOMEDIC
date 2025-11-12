@@ -294,7 +294,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="spbuscar_ingresoCargoTableAdapter" GeneratorDataComponentClassName="spbuscar_ingresoCargoTableAdapter" Name="spbuscar_ingresoCargo" UserDataComponentName="spbuscar_ingresoCargoTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="dbventasConnectionString (Settings)" DbObjectName="dbventas.dbo.spbuscar_ingresoCargo" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="dbventasConnectionString (Settings)" DbObjectName="dbventas3.dbo.spbuscar_ingresoCargo" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.spbuscar_ingresoCargo</CommandText>
@@ -343,6 +343,9 @@
               <Mapping SourceColumn="conclusion" DataSetColumn="conclusion" />
               <Mapping SourceColumn="cantidadManifestada" DataSetColumn="cantidadManifestada" />
               <Mapping SourceColumn="cantidadDiferencia" DataSetColumn="cantidadDiferencia" />
+              <Mapping SourceColumn="lote" DataSetColumn="lote" />
+              <Mapping SourceColumn="FabricanteResumen" DataSetColumn="FabricanteResumen" />
+              <Mapping SourceColumn="StockIngreso" DataSetColumn="StockIngreso" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -1067,28 +1070,28 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="fecha" msprop:Generator_ColumnPropNameInTable="fechaColumn" msprop:Generator_ColumnPropNameInRow="fecha" msprop:Generator_UserColumnName="fecha" msprop:Generator_ColumnVarNameInTable="columnfecha" type="xs:dateTime" />
-              <xs:element name="tipo_comprobante" msprop:Generator_ColumnPropNameInTable="tipo_comprobanteColumn" msprop:Generator_ColumnPropNameInRow="tipo_comprobante" msprop:Generator_UserColumnName="tipo_comprobante" msprop:Generator_ColumnVarNameInTable="columntipo_comprobante" minOccurs="0">
+              <xs:element name="tipo_comprobante" msprop:Generator_ColumnPropNameInTable="tipo_comprobanteColumn" msprop:Generator_ColumnPropNameInRow="tipo_comprobante" msprop:Generator_UserColumnName="tipo_comprobante" msprop:Generator_ColumnVarNameInTable="columntipo_comprobante">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="20" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="serie" msprop:Generator_ColumnPropNameInTable="serieColumn" msprop:Generator_ColumnPropNameInRow="serie" msprop:Generator_UserColumnName="serie" msprop:Generator_ColumnVarNameInTable="columnserie" minOccurs="0">
+              <xs:element name="serie" msprop:Generator_ColumnPropNameInTable="serieColumn" msprop:Generator_ColumnPropNameInRow="serie" msprop:Generator_UserColumnName="serie" msprop:Generator_ColumnVarNameInTable="columnserie">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="4" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="correlativo" msprop:Generator_ColumnPropNameInTable="correlativoColumn" msprop:Generator_ColumnPropNameInRow="correlativo" msprop:Generator_UserColumnName="correlativo" msprop:Generator_ColumnVarNameInTable="columncorrelativo" minOccurs="0">
+              <xs:element name="correlativo" msprop:Generator_ColumnPropNameInTable="correlativoColumn" msprop:Generator_ColumnPropNameInRow="correlativo" msprop:Generator_UserColumnName="correlativo" msprop:Generator_ColumnVarNameInTable="columncorrelativo">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="7" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="estado" msprop:Generator_ColumnPropNameInTable="estadoColumn" msprop:Generator_ColumnPropNameInRow="estado" msprop:Generator_UserColumnName="estado" msprop:Generator_ColumnVarNameInTable="columnestado" minOccurs="0">
+              <xs:element name="estado" msprop:Generator_ColumnPropNameInTable="estadoColumn" msprop:Generator_ColumnPropNameInRow="estado" msprop:Generator_UserColumnName="estado" msprop:Generator_ColumnVarNameInTable="columnestado">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="7" />
@@ -1211,7 +1214,7 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="fecha_vencimiento" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="fecha_vencimientoColumn" msprop:Generator_ColumnPropNameInRow="fecha_vencimiento" msprop:Generator_UserColumnName="fecha_vencimiento" msprop:Generator_ColumnVarNameInTable="columnfecha_vencimiento" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="fecha_vencimiento" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="fecha_vencimientoColumn" msprop:Generator_ColumnPropNameInRow="fecha_vencimiento" msprop:Generator_UserColumnName="fecha_vencimiento" msprop:Generator_ColumnVarNameInTable="columnfecha_vencimiento" type="xs:dateTime" />
               <xs:element name="Transportista_num_documento" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="Transportista_num_documentoColumn" msprop:Generator_ColumnPropNameInRow="Transportista_num_documento" msprop:Generator_UserColumnName="Transportista_num_documento" msprop:Generator_ColumnVarNameInTable="columnTransportista_num_documento" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -1249,6 +1252,21 @@
               </xs:element>
               <xs:element name="cantidadManifestada" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="cantidadManifestadaColumn" msprop:Generator_ColumnPropNameInRow="cantidadManifestada" msprop:Generator_UserColumnName="cantidadManifestada" msprop:Generator_ColumnVarNameInTable="columncantidadManifestada" type="xs:int" minOccurs="0" />
               <xs:element name="cantidadDiferencia" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="cantidadDiferenciaColumn" msprop:Generator_ColumnPropNameInRow="cantidadDiferencia" msprop:Generator_UserColumnName="cantidadDiferencia" msprop:Generator_ColumnVarNameInTable="columncantidadDiferencia" type="xs:int" minOccurs="0" />
+              <xs:element name="lote" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="lote" msprop:Generator_ColumnPropNameInTable="loteColumn" msprop:Generator_ColumnVarNameInTable="columnlote" msprop:Generator_UserColumnName="lote" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FabricanteResumen" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="FabricanteResumen" msprop:Generator_ColumnPropNameInTable="FabricanteResumenColumn" msprop:Generator_ColumnVarNameInTable="columnFabricanteResumen" msprop:Generator_UserColumnName="FabricanteResumen" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StockIngreso" msprop:Generator_ColumnPropNameInRow="StockIngreso" msprop:Generator_ColumnPropNameInTable="StockIngresoColumn" msprop:Generator_ColumnVarNameInTable="columnStockIngreso" msprop:Generator_UserColumnName="StockIngreso" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -1454,43 +1472,43 @@
               <xs:element name="Ingreso" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="IngresoColumn" msprop:Generator_ColumnPropNameInRow="Ingreso" msprop:Generator_UserColumnName="Ingreso" msprop:Generator_ColumnVarNameInTable="columnIngreso" type="xs:int" minOccurs="0" />
               <xs:element name="Salida" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="SalidaColumn" msprop:Generator_ColumnPropNameInRow="Salida" msprop:Generator_UserColumnName="Salida" msprop:Generator_ColumnVarNameInTable="columnSalida" type="xs:int" minOccurs="0" />
               <xs:element name="StockFinal" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="StockFinalColumn" msprop:Generator_ColumnPropNameInRow="StockFinal" msprop:Generator_UserColumnName="StockFinal" msprop:Generator_ColumnVarNameInTable="columnStockFinal" type="xs:int" minOccurs="0" />
-              <xs:element name="Presentacion1" msdata:ReadOnly="true" msdata:Caption="Presentacion" msprop:Generator_UserColumnName="Presentacion1" msprop:Generator_ColumnPropNameInTable="Presentacion1Column" msprop:Generator_ColumnPropNameInRow="Presentacion1" msprop:Generator_ColumnVarNameInTable="columnPresentacion1" minOccurs="0">
+              <xs:element name="Presentacion1" msdata:ReadOnly="true" msdata:Caption="Presentacion" msprop:Generator_ColumnPropNameInTable="Presentacion1Column" msprop:Generator_ColumnPropNameInRow="Presentacion1" msprop:Generator_UserColumnName="Presentacion1" msprop:Generator_ColumnVarNameInTable="columnPresentacion1" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="1024" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="registrosanitario" msdata:ReadOnly="true" msprop:Generator_UserColumnName="registrosanitario" msprop:Generator_ColumnPropNameInTable="registrosanitarioColumn" msprop:Generator_ColumnPropNameInRow="registrosanitario" msprop:Generator_ColumnVarNameInTable="columnregistrosanitario" minOccurs="0">
+              <xs:element name="registrosanitario" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="registrosanitarioColumn" msprop:Generator_ColumnPropNameInRow="registrosanitario" msprop:Generator_UserColumnName="registrosanitario" msprop:Generator_ColumnVarNameInTable="columnregistrosanitario" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="fecha" msdata:ReadOnly="true" msprop:Generator_UserColumnName="fecha" msprop:Generator_ColumnPropNameInTable="fechaColumn" msprop:Generator_ColumnPropNameInRow="fecha" msprop:Generator_ColumnVarNameInTable="columnfecha" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="lote" msdata:ReadOnly="true" msprop:Generator_UserColumnName="lote" msprop:Generator_ColumnPropNameInTable="loteColumn" msprop:Generator_ColumnPropNameInRow="lote" msprop:Generator_ColumnVarNameInTable="columnlote" minOccurs="0">
+              <xs:element name="fecha" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="fechaColumn" msprop:Generator_ColumnPropNameInRow="fecha" msprop:Generator_UserColumnName="fecha" msprop:Generator_ColumnVarNameInTable="columnfecha" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="lote" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="loteColumn" msprop:Generator_ColumnPropNameInRow="lote" msprop:Generator_UserColumnName="lote" msprop:Generator_ColumnVarNameInTable="columnlote" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Proveedor" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Proveedor" msprop:Generator_ColumnPropNameInTable="ProveedorColumn" msprop:Generator_ColumnPropNameInRow="Proveedor" msprop:Generator_ColumnVarNameInTable="columnProveedor" minOccurs="0">
+              <xs:element name="Proveedor" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="ProveedorColumn" msprop:Generator_ColumnPropNameInRow="Proveedor" msprop:Generator_UserColumnName="Proveedor" msprop:Generator_ColumnVarNameInTable="columnProveedor" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="150" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Entrada" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Entrada" msprop:Generator_ColumnPropNameInTable="EntradaColumn" msprop:Generator_ColumnPropNameInRow="Entrada" msprop:Generator_ColumnVarNameInTable="columnEntrada" type="xs:int" minOccurs="0" />
-              <xs:element name="Stock" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Stock" msprop:Generator_ColumnPropNameInTable="StockColumn" msprop:Generator_ColumnPropNameInRow="Stock" msprop:Generator_ColumnVarNameInTable="columnStock" type="xs:int" minOccurs="0" />
-              <xs:element name="Fila" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Fila" msprop:Generator_ColumnPropNameInTable="FilaColumn" msprop:Generator_ColumnPropNameInRow="Fila" msprop:Generator_ColumnVarNameInTable="columnFila" type="xs:long" minOccurs="0" />
-              <xs:element name="FechaInicio" msdata:ReadOnly="true" msprop:Generator_UserColumnName="FechaInicio" msprop:Generator_ColumnPropNameInTable="FechaInicioColumn" msprop:Generator_ColumnPropNameInRow="FechaInicio" msprop:Generator_ColumnVarNameInTable="columnFechaInicio" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="FechaFin" msdata:ReadOnly="true" msprop:Generator_UserColumnName="FechaFin" msprop:Generator_ColumnPropNameInTable="FechaFinColumn" msprop:Generator_ColumnPropNameInRow="FechaFin" msprop:Generator_ColumnVarNameInTable="columnFechaFin" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="FechaVencimiento" msdata:ReadOnly="true" msprop:Generator_UserColumnName="FechaVencimiento" msprop:Generator_ColumnPropNameInTable="FechaVencimientoColumn" msprop:Generator_ColumnPropNameInRow="FechaVencimiento" msprop:Generator_ColumnVarNameInTable="columnFechaVencimiento" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="idpresentacion" msprop:Generator_UserColumnName="idpresentacion" msprop:Generator_ColumnPropNameInTable="idpresentacionColumn" msprop:Generator_ColumnPropNameInRow="idpresentacion" msprop:Generator_ColumnVarNameInTable="columnidpresentacion" type="xs:int" />
-              <xs:element name="preset" msprop:Generator_UserColumnName="preset" msprop:Generator_ColumnPropNameInTable="presetColumn" msprop:Generator_ColumnPropNameInRow="preset" msprop:Generator_ColumnVarNameInTable="columnpreset">
+              <xs:element name="Entrada" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="EntradaColumn" msprop:Generator_ColumnPropNameInRow="Entrada" msprop:Generator_UserColumnName="Entrada" msprop:Generator_ColumnVarNameInTable="columnEntrada" type="xs:int" minOccurs="0" />
+              <xs:element name="Stock" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="StockColumn" msprop:Generator_ColumnPropNameInRow="Stock" msprop:Generator_UserColumnName="Stock" msprop:Generator_ColumnVarNameInTable="columnStock" type="xs:int" minOccurs="0" />
+              <xs:element name="Fila" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="FilaColumn" msprop:Generator_ColumnPropNameInRow="Fila" msprop:Generator_UserColumnName="Fila" msprop:Generator_ColumnVarNameInTable="columnFila" type="xs:long" minOccurs="0" />
+              <xs:element name="FechaInicio" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="FechaInicioColumn" msprop:Generator_ColumnPropNameInRow="FechaInicio" msprop:Generator_UserColumnName="FechaInicio" msprop:Generator_ColumnVarNameInTable="columnFechaInicio" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FechaFin" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="FechaFinColumn" msprop:Generator_ColumnPropNameInRow="FechaFin" msprop:Generator_UserColumnName="FechaFin" msprop:Generator_ColumnVarNameInTable="columnFechaFin" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FechaVencimiento" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="FechaVencimientoColumn" msprop:Generator_ColumnPropNameInRow="FechaVencimiento" msprop:Generator_UserColumnName="FechaVencimiento" msprop:Generator_ColumnVarNameInTable="columnFechaVencimiento" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="idpresentacion" msprop:Generator_ColumnPropNameInTable="idpresentacionColumn" msprop:Generator_ColumnPropNameInRow="idpresentacion" msprop:Generator_UserColumnName="idpresentacion" msprop:Generator_ColumnVarNameInTable="columnidpresentacion" type="xs:int" />
+              <xs:element name="preset" msprop:Generator_ColumnPropNameInTable="presetColumn" msprop:Generator_ColumnPropNameInRow="preset" msprop:Generator_UserColumnName="preset" msprop:Generator_ColumnVarNameInTable="columnpreset">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />

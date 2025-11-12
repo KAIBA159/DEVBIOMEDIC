@@ -21,6 +21,8 @@ namespace CapaPresentacion
         public string Nombre = "";
         public string Acceso = "";
 
+        public string Version = string.Empty;
+
         public frmPrincipal()
         {
             InitializeComponent();
@@ -188,7 +190,7 @@ namespace CapaPresentacion
                 statusStrip.Items.Insert(statusStrip.Items.IndexOf(toolStripStatusLabel2), separador);
 
             // 🔹 Mostrar texto base
-            toolStripStatusLabel1.Text = "v1.0.3";
+            toolStripStatusLabel1.Text = Version;
 
             // 🔹 Intentar obtener nombre de la base de datos activa
             try

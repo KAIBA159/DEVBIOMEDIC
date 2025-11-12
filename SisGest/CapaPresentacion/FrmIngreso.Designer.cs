@@ -144,7 +144,7 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(956, 579);
+            this.tabControl1.Size = new System.Drawing.Size(976, 680);
             this.tabControl1.TabIndex = 10;
             // 
             // tabPage1
@@ -164,7 +164,7 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage1.Size = new System.Drawing.Size(948, 553);
+            this.tabPage1.Size = new System.Drawing.Size(968, 654);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Listado";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -229,7 +229,7 @@
             this.dataListado.ReadOnly = true;
             this.dataListado.RowTemplate.Height = 24;
             this.dataListado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataListado.Size = new System.Drawing.Size(916, 397);
+            this.dataListado.Size = new System.Drawing.Size(936, 528);
             this.dataListado.TabIndex = 7;
             this.dataListado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataListado_CellContentClick);
             this.dataListado.DoubleClick += new System.EventHandler(this.dataListado_DoubleClick);
@@ -322,7 +322,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage2.Size = new System.Drawing.Size(948, 553);
+            this.tabPage2.Size = new System.Drawing.Size(968, 654);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Mantenimiento";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -377,7 +377,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(934, 522);
+            this.groupBox1.Size = new System.Drawing.Size(954, 633);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ingresos Almacén";
@@ -388,7 +388,7 @@
             this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnEditar.Image = global::CapaPresentacion.Properties.Resources.modificar;
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditar.Location = new System.Drawing.Point(654, 486);
+            this.btnEditar.Location = new System.Drawing.Point(654, 589);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(80, 27);
@@ -631,7 +631,7 @@
             // lblTotal_Pagado
             // 
             this.lblTotal_Pagado.AutoSize = true;
-            this.lblTotal_Pagado.Location = new System.Drawing.Point(115, 492);
+            this.lblTotal_Pagado.Location = new System.Drawing.Point(115, 595);
             this.lblTotal_Pagado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTotal_Pagado.Name = "lblTotal_Pagado";
             this.lblTotal_Pagado.Size = new System.Drawing.Size(22, 13);
@@ -642,7 +642,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(18, 491);
+            this.label16.Location = new System.Drawing.Point(18, 594);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(95, 13);
@@ -661,7 +661,7 @@
             this.dataListadoDetalle.Margin = new System.Windows.Forms.Padding(2);
             this.dataListadoDetalle.Name = "dataListadoDetalle";
             this.dataListadoDetalle.RowTemplate.Height = 24;
-            this.dataListadoDetalle.Size = new System.Drawing.Size(901, 200);
+            this.dataListadoDetalle.Size = new System.Drawing.Size(921, 304);
             this.dataListadoDetalle.TabIndex = 32;
             // 
             // groupBox2
@@ -1054,7 +1054,7 @@
             this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnCancelar.Image = global::CapaPresentacion.Properties.Resources.error2;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(839, 485);
+            this.btnCancelar.Location = new System.Drawing.Point(839, 588);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(80, 27);
@@ -1068,7 +1068,7 @@
             this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnGuardar.Image = global::CapaPresentacion.Properties.Resources.disco;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(749, 485);
+            this.btnGuardar.Location = new System.Drawing.Point(749, 588);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(80, 27);
@@ -1082,7 +1082,7 @@
             this.btnNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnNuevo.Image = global::CapaPresentacion.Properties.Resources.nuevo;
             this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevo.Location = new System.Drawing.Point(558, 486);
+            this.btnNuevo.Location = new System.Drawing.Point(558, 589);
             this.btnNuevo.Margin = new System.Windows.Forms.Padding(2);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(80, 27);
@@ -1200,7 +1200,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(976, 650);
+            this.ClientSize = new System.Drawing.Size(996, 751);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
@@ -1212,7 +1212,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.MaximizeBox = false;
             this.Name = "FrmIngreso";
             this.Text = " Mantenimiento de Ingresos de Producto .:.";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmIngreso_FormClosing);

@@ -17,10 +17,18 @@ using System.Windows.Forms;
 
 namespace CapaPresentacion
 {
+
+    
+        
+    
+
     public partial class frmLogin : Form
     {
         private static readonly ILog log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
 
+
+        public const string VersionSW = "v1.0.6";
+        public const string NombreApp = "Sistema de Ventas - SisGest";
 
         public frmLogin()
         {
@@ -28,7 +36,12 @@ namespace CapaPresentacion
 
             log.Debug("Mensaje de depuración");
 
+            
+
             InitializeComponent();
+
+            this.label4.Text = VersionSW;
+
             LblHora.Text = DateTime.Now.ToString();
         }
 
@@ -102,11 +115,12 @@ namespace CapaPresentacion
             frm.Apellidos = Datos.Rows[0]["apellidos"].ToString();
             frm.Nombre = Datos.Rows[0]["nombre"].ToString();
             frm.Acceso = Datos.Rows[0]["acceso"].ToString();
+            frm.Version = VersionSW;
 
             frm.Show();
             this.Hide();
 
-
+            //VersionSW
 
 
             //DataTable Datos = CapaNegocio.NTrabajador.Login(this.TxtUsuario.Text,this.TxtPassword.Text);

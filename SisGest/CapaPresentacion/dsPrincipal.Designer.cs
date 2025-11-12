@@ -4904,6 +4904,12 @@ namespace CapaPresentacion {
             
             private global::System.Data.DataColumn columncantidadDiferencia;
             
+            private global::System.Data.DataColumn columnlote;
+            
+            private global::System.Data.DataColumn columnFabricanteResumen;
+            
+            private global::System.Data.DataColumn columnStockIngreso;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public spbuscar_ingresoCargoDataTable() {
@@ -5227,6 +5233,30 @@ namespace CapaPresentacion {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn loteColumn {
+                get {
+                    return this.columnlote;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn FabricanteResumenColumn {
+                get {
+                    return this.columnFabricanteResumen;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn StockIngresoColumn {
+                get {
+                    return this.columnStockIngreso;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -5297,7 +5327,10 @@ namespace CapaPresentacion {
                         string presentacion1, 
                         string conclusion, 
                         int cantidadManifestada, 
-                        int cantidadDiferencia) {
+                        int cantidadDiferencia, 
+                        string lote1, 
+                        string FabricanteResumen, 
+                        int StockIngreso1) {
                 spbuscar_ingresoCargoRow rowspbuscar_ingresoCargoRow = ((spbuscar_ingresoCargoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -5335,7 +5368,10 @@ namespace CapaPresentacion {
                         presentacion1,
                         conclusion,
                         cantidadManifestada,
-                        cantidadDiferencia};
+                        cantidadDiferencia,
+                        lote1,
+                        FabricanteResumen,
+                        StockIngreso1};
                 rowspbuscar_ingresoCargoRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowspbuscar_ingresoCargoRow);
                 return rowspbuscar_ingresoCargoRow;
@@ -5401,6 +5437,9 @@ namespace CapaPresentacion {
                 this.columnconclusion = base.Columns["conclusion"];
                 this.columncantidadManifestada = base.Columns["cantidadManifestada"];
                 this.columncantidadDiferencia = base.Columns["cantidadDiferencia"];
+                this.columnlote = base.Columns["lote"];
+                this.columnFabricanteResumen = base.Columns["FabricanteResumen"];
+                this.columnStockIngreso = base.Columns["StockIngreso"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5478,6 +5517,12 @@ namespace CapaPresentacion {
                 base.Columns.Add(this.columncantidadManifestada);
                 this.columncantidadDiferencia = new global::System.Data.DataColumn("cantidadDiferencia", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncantidadDiferencia);
+                this.columnlote = new global::System.Data.DataColumn("lote", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnlote);
+                this.columnFabricanteResumen = new global::System.Data.DataColumn("FabricanteResumen", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFabricanteResumen);
+                this.columnStockIngreso = new global::System.Data.DataColumn("StockIngreso", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnStockIngreso);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnidingreso}, true));
                 this.columnidingreso.AutoIncrement = true;
@@ -5488,9 +5533,13 @@ namespace CapaPresentacion {
                 this.columnTrabajador.MaxLength = 61;
                 this.columnproveedor.MaxLength = 150;
                 this.columnfecha.AllowDBNull = false;
+                this.columntipo_comprobante.AllowDBNull = false;
                 this.columntipo_comprobante.MaxLength = 20;
+                this.columnserie.AllowDBNull = false;
                 this.columnserie.MaxLength = 4;
+                this.columncorrelativo.AllowDBNull = false;
                 this.columncorrelativo.MaxLength = 7;
+                this.columnestado.AllowDBNull = false;
                 this.columnestado.MaxLength = 7;
                 this.columnTotal.ReadOnly = true;
                 this.columnEncargadoTransportista.ReadOnly = true;
@@ -5525,6 +5574,7 @@ namespace CapaPresentacion {
                 this.columndua.MaxLength = 50;
                 this.columncorrelativoUnico.ReadOnly = true;
                 this.columncorrelativoUnico.MaxLength = 50;
+                this.columnfecha_vencimiento.AllowDBNull = false;
                 this.columnfecha_vencimiento.ReadOnly = true;
                 this.columnTransportista_num_documento.ReadOnly = true;
                 this.columnTransportista_num_documento.MaxLength = 15;
@@ -5538,6 +5588,11 @@ namespace CapaPresentacion {
                 this.columnconclusion.MaxLength = 50;
                 this.columncantidadManifestada.ReadOnly = true;
                 this.columncantidadDiferencia.ReadOnly = true;
+                this.columnlote.ReadOnly = true;
+                this.columnlote.MaxLength = 50;
+                this.columnFabricanteResumen.ReadOnly = true;
+                this.columnFabricanteResumen.MaxLength = 100;
+                this.columnStockIngreso.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9358,13 +9413,7 @@ namespace CapaPresentacion {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string tipo_comprobante {
                 get {
-                    try {
-                        return ((string)(this[this.tablespbuscar_ingresoCargo.tipo_comprobanteColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'tipo_comprobante\' de la tabla \'spbuscar_ingresoCargo\' es " +
-                                "DBNull.", e);
-                    }
+                    return ((string)(this[this.tablespbuscar_ingresoCargo.tipo_comprobanteColumn]));
                 }
                 set {
                     this[this.tablespbuscar_ingresoCargo.tipo_comprobanteColumn] = value;
@@ -9375,12 +9424,7 @@ namespace CapaPresentacion {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string serie {
                 get {
-                    try {
-                        return ((string)(this[this.tablespbuscar_ingresoCargo.serieColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'serie\' de la tabla \'spbuscar_ingresoCargo\' es DBNull.", e);
-                    }
+                    return ((string)(this[this.tablespbuscar_ingresoCargo.serieColumn]));
                 }
                 set {
                     this[this.tablespbuscar_ingresoCargo.serieColumn] = value;
@@ -9391,13 +9435,7 @@ namespace CapaPresentacion {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string correlativo {
                 get {
-                    try {
-                        return ((string)(this[this.tablespbuscar_ingresoCargo.correlativoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'correlativo\' de la tabla \'spbuscar_ingresoCargo\' es DBNul" +
-                                "l.", e);
-                    }
+                    return ((string)(this[this.tablespbuscar_ingresoCargo.correlativoColumn]));
                 }
                 set {
                     this[this.tablespbuscar_ingresoCargo.correlativoColumn] = value;
@@ -9408,12 +9446,7 @@ namespace CapaPresentacion {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string estado {
                 get {
-                    try {
-                        return ((string)(this[this.tablespbuscar_ingresoCargo.estadoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'estado\' de la tabla \'spbuscar_ingresoCargo\' es DBNull.", e);
-                    }
+                    return ((string)(this[this.tablespbuscar_ingresoCargo.estadoColumn]));
                 }
                 set {
                     this[this.tablespbuscar_ingresoCargo.estadoColumn] = value;
@@ -9757,13 +9790,7 @@ namespace CapaPresentacion {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public System.DateTime fecha_vencimiento {
                 get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tablespbuscar_ingresoCargo.fecha_vencimientoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'fecha_vencimiento\' de la tabla \'spbuscar_ingresoCargo\' es" +
-                                " DBNull.", e);
-                    }
+                    return ((global::System.DateTime)(this[this.tablespbuscar_ingresoCargo.fecha_vencimientoColumn]));
                 }
                 set {
                     this[this.tablespbuscar_ingresoCargo.fecha_vencimientoColumn] = value;
@@ -9890,6 +9917,50 @@ namespace CapaPresentacion {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string lote {
+                get {
+                    try {
+                        return ((string)(this[this.tablespbuscar_ingresoCargo.loteColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'lote\' de la tabla \'spbuscar_ingresoCargo\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespbuscar_ingresoCargo.loteColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string FabricanteResumen {
+                get {
+                    try {
+                        return ((string)(this[this.tablespbuscar_ingresoCargo.FabricanteResumenColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'FabricanteResumen\' de la tabla \'spbuscar_ingresoCargo\' es" +
+                                " DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespbuscar_ingresoCargo.FabricanteResumenColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int StockIngreso {
+                get {
+                    return ((int)(this[this.tablespbuscar_ingresoCargo.StockIngresoColumn]));
+                }
+                set {
+                    this[this.tablespbuscar_ingresoCargo.StockIngresoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsTrabajadorNull() {
                 return this.IsNull(this.tablespbuscar_ingresoCargo.TrabajadorColumn);
             }
@@ -9910,54 +9981,6 @@ namespace CapaPresentacion {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetproveedorNull() {
                 this[this.tablespbuscar_ingresoCargo.proveedorColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool Istipo_comprobanteNull() {
-                return this.IsNull(this.tablespbuscar_ingresoCargo.tipo_comprobanteColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Settipo_comprobanteNull() {
-                this[this.tablespbuscar_ingresoCargo.tipo_comprobanteColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsserieNull() {
-                return this.IsNull(this.tablespbuscar_ingresoCargo.serieColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetserieNull() {
-                this[this.tablespbuscar_ingresoCargo.serieColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IscorrelativoNull() {
-                return this.IsNull(this.tablespbuscar_ingresoCargo.correlativoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetcorrelativoNull() {
-                this[this.tablespbuscar_ingresoCargo.correlativoColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsestadoNull() {
-                return this.IsNull(this.tablespbuscar_ingresoCargo.estadoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetestadoNull() {
-                this[this.tablespbuscar_ingresoCargo.estadoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10202,18 +10225,6 @@ namespace CapaPresentacion {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool Isfecha_vencimientoNull() {
-                return this.IsNull(this.tablespbuscar_ingresoCargo.fecha_vencimientoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Setfecha_vencimientoNull() {
-                this[this.tablespbuscar_ingresoCargo.fecha_vencimientoColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsTransportista_num_documentoNull() {
                 return this.IsNull(this.tablespbuscar_ingresoCargo.Transportista_num_documentoColumn);
             }
@@ -10294,6 +10305,30 @@ namespace CapaPresentacion {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetcantidadDiferenciaNull() {
                 this[this.tablespbuscar_ingresoCargo.cantidadDiferenciaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsloteNull() {
+                return this.IsNull(this.tablespbuscar_ingresoCargo.loteColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetloteNull() {
+                this[this.tablespbuscar_ingresoCargo.loteColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsFabricanteResumenNull() {
+                return this.IsNull(this.tablespbuscar_ingresoCargo.FabricanteResumenColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetFabricanteResumenNull() {
+                this[this.tablespbuscar_ingresoCargo.FabricanteResumenColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -12501,11 +12536,8 @@ namespace CapaPresentacion.dsPrincipalTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
-
-            //this._connection = new global::System.Data.SqlClient.SqlConnection();
-            //this._connection.ConnectionString = global::CapaPresentacion.Properties.Settings.Default.dbventasConnectionString;
-
-            this._connection = CapaDatos.Conexion.CrearConexion();
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::CapaPresentacion.Properties.Settings.Default.dbventasConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12693,10 +12725,8 @@ namespace CapaPresentacion.dsPrincipalTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
-            //this._connection = new global::System.Data.SqlClient.SqlConnection();
-            //this._connection.ConnectionString = global::CapaPresentacion.Properties.Settings.Default.dbventasConnectionString;
-
-            this._connection = CapaDatos.Conexion.CrearConexion();
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::CapaPresentacion.Properties.Settings.Default.dbventasConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12865,10 +12895,8 @@ namespace CapaPresentacion.dsPrincipalTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
-            //this._connection = new global::System.Data.SqlClient.SqlConnection();
-            //this._connection.ConnectionString = global::CapaPresentacion.Properties.Settings.Default.dbventasConnectionString;
-
-            this._connection = CapaDatos.Conexion.CrearConexion();
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::CapaPresentacion.Properties.Settings.Default.dbventasConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13057,10 +13085,8 @@ namespace CapaPresentacion.dsPrincipalTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
-            //this._connection = new global::System.Data.SqlClient.SqlConnection();
-            //this._connection.ConnectionString = global::CapaPresentacion.Properties.Settings.Default.dbventasConnectionString;
-
-            this._connection = CapaDatos.Conexion.CrearConexion();
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::CapaPresentacion.Properties.Settings.Default.dbventasConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13242,10 +13268,8 @@ namespace CapaPresentacion.dsPrincipalTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
-            //this._connection = new global::System.Data.SqlClient.SqlConnection();
-            //this._connection.ConnectionString = global::CapaPresentacion.Properties.Settings.Default.dbventasConnectionString;
-
-            this._connection = CapaDatos.Conexion.CrearConexion();
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::CapaPresentacion.Properties.Settings.Default.dbventasConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13433,10 +13457,8 @@ namespace CapaPresentacion.dsPrincipalTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
-            //this._connection = new global::System.Data.SqlClient.SqlConnection();
-            //this._connection.ConnectionString = global::CapaPresentacion.Properties.Settings.Default.dbventasConnectionString;
-
-            this._connection = CapaDatos.Conexion.CrearConexion();
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::CapaPresentacion.Properties.Settings.Default.dbventasConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13627,10 +13649,8 @@ namespace CapaPresentacion.dsPrincipalTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
-            //this._connection = new global::System.Data.SqlClient.SqlConnection();
-            //this._connection.ConnectionString = global::CapaPresentacion.Properties.Settings.Default.dbventasConnectionString;
-
-            this._connection = CapaDatos.Conexion.CrearConexion();
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::CapaPresentacion.Properties.Settings.Default.dbventasConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13818,12 +13838,8 @@ namespace CapaPresentacion.dsPrincipalTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
-            //this._connection = new global::System.Data.SqlClient.SqlConnection();
-            //this._connection.ConnectionString = global::CapaPresentacion.Properties.Settings.Default.dbventasConnectionString;
-
-            this._connection = CapaDatos.Conexion.CrearConexion();
-
-
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::CapaPresentacion.Properties.Settings.Default.dbventasConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -14012,11 +14028,8 @@ namespace CapaPresentacion.dsPrincipalTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
-            //this._connection = new global::System.Data.SqlClient.SqlConnection();
-            //this._connection.ConnectionString = global::CapaPresentacion.Properties.Settings.Default.dbventasConnectionString;
-
-            this._connection = CapaDatos.Conexion.CrearConexion();
-
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::CapaPresentacion.Properties.Settings.Default.dbventasConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -14228,11 +14241,8 @@ namespace CapaPresentacion.dsPrincipalTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
-            //this._connection = new global::System.Data.SqlClient.SqlConnection();
-            //this._connection.ConnectionString = global::CapaPresentacion.Properties.Settings.Default.dbventasConnectionString;
-
-            this._connection = CapaDatos.Conexion.CrearConexion();
-
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::CapaPresentacion.Properties.Settings.Default.dbventasConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -14454,16 +14464,17 @@ namespace CapaPresentacion.dsPrincipalTableAdapters {
             tableMapping.ColumnMappings.Add("conclusion", "conclusion");
             tableMapping.ColumnMappings.Add("cantidadManifestada", "cantidadManifestada");
             tableMapping.ColumnMappings.Add("cantidadDiferencia", "cantidadDiferencia");
+            tableMapping.ColumnMappings.Add("lote", "lote");
+            tableMapping.ColumnMappings.Add("FabricanteResumen", "FabricanteResumen");
+            tableMapping.ColumnMappings.Add("StockIngreso", "StockIngreso");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
-            //this._connection = new global::System.Data.SqlClient.SqlConnection();
-            //this._connection.ConnectionString = global::CapaPresentacion.Properties.Settings.Default.dbventasConnectionString;
-
-            this._connection = CapaDatos.Conexion.CrearConexion();
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::CapaPresentacion.Properties.Settings.Default.dbventasConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -14659,10 +14670,8 @@ namespace CapaPresentacion.dsPrincipalTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
-            //this._connection = new global::System.Data.SqlClient.SqlConnection();
-            //this._connection.ConnectionString = global::CapaPresentacion.Properties.Settings.Default.dbventasConnectionString;
-
-            this._connection = CapaDatos.Conexion.CrearConexion();
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::CapaPresentacion.Properties.Settings.Default.dbventasConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -14896,11 +14905,8 @@ namespace CapaPresentacion.dsPrincipalTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
-            //this._connection = new global::System.Data.SqlClient.SqlConnection();
-            //this._connection.ConnectionString = global::CapaPresentacion.Properties.Settings.Default.dbventasConnectionString;
-
-
-            this._connection = CapaDatos.Conexion.CrearConexion();
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::CapaPresentacion.Properties.Settings.Default.dbventasConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -15127,10 +15133,8 @@ namespace CapaPresentacion.dsPrincipalTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
-            //this._connection = new global::System.Data.SqlClient.SqlConnection();
-            //this._connection.ConnectionString = global::CapaPresentacion.Properties.Settings.Default.dbventasConnectionString;
-
-            this._connection = CapaDatos.Conexion.CrearConexion();
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::CapaPresentacion.Properties.Settings.Default.dbventasConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

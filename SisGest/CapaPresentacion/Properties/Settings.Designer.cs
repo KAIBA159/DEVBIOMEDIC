@@ -22,5 +22,16 @@ namespace CapaPresentacion.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-IJHQVMG\\SQLSERVERMEDIC;Initial Catalog=dbventas;User ID=sa;Pa" +
+            "ssword=Maquina50;Encrypt=False")]
+        public string dbventasConnectionString {
+            get {
+                return ((string)(this["dbventasConnectionString"]));
+            }
+        }
     }
 }
