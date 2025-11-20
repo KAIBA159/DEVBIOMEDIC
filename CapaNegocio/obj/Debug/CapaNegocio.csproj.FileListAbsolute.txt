@@ -1,0 +1,94 @@
+C:\SisVentas\CapaNegocio\bin\Debug\CapaNegocio.dll
+C:\SisVentas\CapaNegocio\bin\Debug\CapaNegocio.pdb
+C:\SisVentas\CapaNegocio\bin\Debug\CapaDatos.dll
+C:\SisVentas\CapaNegocio\bin\Debug\CapaDatos.pdb
+C:\SisVentas\CapaNegocio\obj\Debug\CapaNegocio.csprojResolveAssemblyReference.cache
+C:\SisVentas\CapaNegocio\obj\Debug\CapaNegocio.dll
+C:\SisVentas\CapaNegocio\obj\Debug\CapaNegocio.pdb
+C:\SisVentas - copia\CapaNegocio\bin\Debug\CapaNegocio.dll
+C:\SisVentas - copia\CapaNegocio\bin\Debug\CapaNegocio.pdb
+C:\SisVentas - copia\CapaNegocio\bin\Debug\CapaDatos.dll
+C:\SisVentas - copia\CapaNegocio\bin\Debug\CapaDatos.pdb
+C:\SisVentas - copia\CapaNegocio\obj\Debug\CapaNegocio.csprojResolveAssemblyReference.cache
+C:\SisVentas - copia\CapaNegocio\obj\Debug\CapaNegocio.dll
+C:\SisVentas - copia\CapaNegocio\obj\Debug\CapaNegocio.pdb
+C:\Users\Administrador\Desktop\SW\Sistema de Ventas C# - SQL Server 2014 (Free)\Sistema de Ventas C# - SQL Server 2014 (Free) - Incanatoit\Código Fuente\SisVentas\CapaNegocio\bin\Debug\CapaNegocio.dll
+C:\Users\Administrador\Desktop\SW\Sistema de Ventas C# - SQL Server 2014 (Free)\Sistema de Ventas C# - SQL Server 2014 (Free) - Incanatoit\Código Fuente\SisVentas\CapaNegocio\bin\Debug\CapaNegocio.pdb
+C:\Users\Administrador\Desktop\SW\Sistema de Ventas C# - SQL Server 2014 (Free)\Sistema de Ventas C# - SQL Server 2014 (Free) - Incanatoit\Código Fuente\SisVentas\CapaNegocio\bin\Debug\CapaDatos.dll
+C:\Users\Administrador\Desktop\SW\Sistema de Ventas C# - SQL Server 2014 (Free)\Sistema de Ventas C# - SQL Server 2014 (Free) - Incanatoit\Código Fuente\SisVentas\CapaNegocio\bin\Debug\CapaDatos.pdb
+C:\Users\Administrador\Desktop\SW\Sistema de Ventas C# - SQL Server 2014 (Free)\Sistema de Ventas C# - SQL Server 2014 (Free) - Incanatoit\Código Fuente\SisVentas\CapaNegocio\bin\Debug\CapaDatos.dll.config
+C:\Users\Administrador\Desktop\SW\Sistema de Ventas C# - SQL Server 2014 (Free)\Sistema de Ventas C# - SQL Server 2014 (Free) - Incanatoit\Código Fuente\SisVentas\CapaNegocio\obj\Debug\CapaNegocio.csproj.AssemblyReference.cache
+C:\Users\Administrador\Desktop\SW\Sistema de Ventas C# - SQL Server 2014 (Free)\Sistema de Ventas C# - SQL Server 2014 (Free) - Incanatoit\Código Fuente\SisVentas\CapaNegocio\obj\Debug\CapaNegocio.csproj.CoreCompileInputs.cache
+C:\Users\Administrador\Desktop\SW\Sistema de Ventas C# - SQL Server 2014 (Free)\Sistema de Ventas C# - SQL Server 2014 (Free) - Incanatoit\Código Fuente\SisVentas\CapaNegocio\obj\Debug\CapaNego.81B9D119.Up2Date
+C:\Users\Administrador\Desktop\SW\Sistema de Ventas C# - SQL Server 2014 (Free)\Sistema de Ventas C# - SQL Server 2014 (Free) - Incanatoit\Código Fuente\SisVentas\CapaNegocio\obj\Debug\CapaNegocio.dll
+C:\Users\Administrador\Desktop\SW\Sistema de Ventas C# - SQL Server 2014 (Free)\Sistema de Ventas C# - SQL Server 2014 (Free) - Incanatoit\Código Fuente\SisVentas\CapaNegocio\obj\Debug\CapaNegocio.pdb
+C:\Users\Administrador\Documents\SW\SisVentas\CapaNegocio\bin\Debug\CapaNegocio.dll
+C:\Users\Administrador\Documents\SW\SisVentas\CapaNegocio\bin\Debug\CapaNegocio.pdb
+C:\Users\Administrador\Documents\SW\SisVentas\CapaNegocio\bin\Debug\CapaDatos.dll
+C:\Users\Administrador\Documents\SW\SisVentas\CapaNegocio\bin\Debug\CapaDatos.pdb
+C:\Users\Administrador\Documents\SW\SisVentas\CapaNegocio\bin\Debug\CapaDatos.dll.config
+C:\Users\Administrador\Documents\SW\SisVentas\CapaNegocio\obj\Debug\CapaNegocio.csproj.AssemblyReference.cache
+C:\Users\Administrador\Documents\SW\SisVentas\CapaNegocio\obj\Debug\CapaNegocio.csproj.CoreCompileInputs.cache
+C:\Users\Administrador\Documents\SW\SisVentas\CapaNegocio\obj\Debug\CapaNego.81B9D119.Up2Date
+C:\Users\Administrador\Documents\SW\SisVentas\CapaNegocio\obj\Debug\CapaNegocio.dll
+C:\Users\Administrador\Documents\SW\SisVentas\CapaNegocio\obj\Debug\CapaNegocio.pdb
+C:\Users\Administrador\Documents\SW\SisGest\CapaNegocio\bin\Debug\CapaNegocio.dll
+C:\Users\Administrador\Documents\SW\SisGest\CapaNegocio\bin\Debug\CapaNegocio.pdb
+C:\Users\Administrador\Documents\SW\SisGest\CapaNegocio\bin\Debug\CapaDatos.dll
+C:\Users\Administrador\Documents\SW\SisGest\CapaNegocio\bin\Debug\CapaDatos.pdb
+C:\Users\Administrador\Documents\SW\SisGest\CapaNegocio\bin\Debug\CapaDatos.dll.config
+C:\Users\Administrador\Documents\SW\SisGest\CapaNegocio\obj\Debug\CapaNegocio.csproj.AssemblyReference.cache
+C:\Users\Administrador\Documents\SW\SisGest\CapaNegocio\obj\Debug\CapaNegocio.csproj.CoreCompileInputs.cache
+C:\Users\Administrador\Documents\SW\SisGest\CapaNegocio\obj\Debug\CapaNego.81B9D119.Up2Date
+C:\Users\Administrador\Documents\SW\SisGest\CapaNegocio\obj\Debug\CapaNegocio.dll
+C:\Users\Administrador\Documents\SW\SisGest\CapaNegocio\obj\Debug\CapaNegocio.pdb
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEV\SisGest\CapaNegocio\bin\Debug\CapaNegocio.dll
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEV\SisGest\CapaNegocio\bin\Debug\CapaNegocio.pdb
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEV\SisGest\CapaNegocio\bin\Debug\CapaDatos.dll
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEV\SisGest\CapaNegocio\bin\Debug\CapaDatos.pdb
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEV\SisGest\CapaNegocio\bin\Debug\CapaDatos.dll.config
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEV\SisGest\CapaNegocio\obj\Debug\CapaNegocio.csproj.AssemblyReference.cache
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEV\SisGest\CapaNegocio\obj\Debug\CapaNegocio.csproj.CoreCompileInputs.cache
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEV\SisGest\CapaNegocio\obj\Debug\CapaNego.81B9D119.Up2Date
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEV\SisGest\CapaNegocio\obj\Debug\CapaNegocio.dll
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEV\SisGest\CapaNegocio\obj\Debug\CapaNegocio.pdb
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaNegocio\bin\Debug\CapaNegocio.dll
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaNegocio\bin\Debug\CapaNegocio.pdb
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaNegocio\bin\Debug\BCrypt.Net-Next.dll
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaNegocio\bin\Debug\CapaDatos.dll
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaNegocio\bin\Debug\System.Buffers.dll
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaNegocio\bin\Debug\System.Memory.dll
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaNegocio\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaNegocio\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaNegocio\bin\Debug\CapaDatos.pdb
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaNegocio\bin\Debug\CapaDatos.dll.config
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaNegocio\bin\Debug\BCrypt.Net-Next.xml
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaNegocio\bin\Debug\System.Buffers.xml
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaNegocio\bin\Debug\System.Memory.xml
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaNegocio\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaNegocio\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaNegocio\obj\Debug\CapaNegocio.csproj.AssemblyReference.cache
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaNegocio\obj\Debug\CapaNegocio.csproj.CoreCompileInputs.cache
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaNegocio\obj\Debug\CapaNego.81B9D119.Up2Date
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaNegocio\obj\Debug\CapaNegocio.dll
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaNegocio\obj\Debug\CapaNegocio.pdb
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaNegocio\bin\Debug\CapaNegocio.dll
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaNegocio\bin\Debug\CapaNegocio.pdb
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaNegocio\bin\Debug\BCrypt.Net-Next.dll
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaNegocio\bin\Debug\CapaDatos.dll
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaNegocio\bin\Debug\System.Buffers.dll
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaNegocio\bin\Debug\System.Memory.dll
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaNegocio\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaNegocio\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaNegocio\bin\Debug\CapaDatos.pdb
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaNegocio\bin\Debug\CapaDatos.dll.config
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaNegocio\bin\Debug\BCrypt.Net-Next.xml
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaNegocio\bin\Debug\System.Buffers.xml
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaNegocio\bin\Debug\System.Memory.xml
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaNegocio\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaNegocio\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaNegocio\obj\Debug\CapaNegocio.csproj.AssemblyReference.cache
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaNegocio\obj\Debug\CapaNegocio.csproj.CoreCompileInputs.cache
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaNegocio\obj\Debug\CapaNego.81B9D119.Up2Date
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaNegocio\obj\Debug\CapaNegocio.dll
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaNegocio\obj\Debug\CapaNegocio.pdb
