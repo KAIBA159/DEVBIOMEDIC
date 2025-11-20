@@ -292,6 +292,11 @@
       <DependentUpon>CrystalReport5.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Reportes\CrystalReport51.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport5.rpt</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\cr_reporting1.cs">
       <SubType>Form</SubType>
     </Compile>

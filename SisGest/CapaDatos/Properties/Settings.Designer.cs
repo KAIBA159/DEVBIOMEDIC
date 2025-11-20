@@ -26,8 +26,8 @@ namespace CapaDatos.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-9IK5P5Q\\SQLEXPRESS25;Initial Catalog=dbventas3;User ID=sa;Pas" +
-            "sword=Maquina50;Encrypt=False")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-IJHQVMG\\SQLSERVERMEDIC;Initial Catalog=dbventas;User ID=sa;Pa" +
+            "ssword=Maquina50;Encrypt=False")]
         public string cn {
             get {
                 return ((string)(this["cn"]));

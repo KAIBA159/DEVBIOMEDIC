@@ -67,7 +67,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>Yellow</BackgroundColor>
+                        <BackgroundColor>LightBlue</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -103,7 +103,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>Yellow</BackgroundColor>
+                        <BackgroundColor>LightBlue</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -139,7 +139,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>Yellow</BackgroundColor>
+                        <BackgroundColor>LightBlue</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -175,7 +175,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>Yellow</BackgroundColor>
+                        <BackgroundColor>LightBlue</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -211,7 +211,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>Yellow</BackgroundColor>
+                        <BackgroundColor>LightBlue</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -247,7 +247,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>Yellow</BackgroundColor>
+                        <BackgroundColor>LightBlue</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -283,7 +283,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>Yellow</BackgroundColor>
+                        <BackgroundColor>LightBlue</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -319,7 +319,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>Yellow</BackgroundColor>
+                        <BackgroundColor>LightBlue</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -355,7 +355,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>Yellow</BackgroundColor>
+                        <BackgroundColor>LightBlue</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -391,7 +391,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>Yellow</BackgroundColor>
+                        <BackgroundColor>LightBlue</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -776,7 +776,6 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet2</DataSetName>
-        <Top>0.17639cm</Top>
         <Left>0.15239cm</Left>
         <Height>1.33229cm</Height>
         <Width>19.62201cm</Width>
@@ -787,14 +786,14 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>4.02179cm</Height>
+    <Height>1.45533cm</Height>
     <Style>
       <Border>
         <Style>None</Style>
       </Border>
     </Style>
   </Body>
-  <Width>19.88761cm</Width>
+  <Width>19.96598cm</Width>
   <Page>
     <PageHeader>
       <Height>6.331cm</Height>
@@ -820,8 +819,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>cliente2</rd:DefaultName>
-              <Top>1.63014cm</Top>
-              <Left>2.98255cm</Left>
+              <Top>1.90906cm</Top>
+              <Left>3.14766cm</Left>
               <Height>0.52945cm</Height>
               <Width>8.33114cm</Width>
               <Style>
@@ -854,8 +853,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox19</rd:DefaultName>
-              <Top>0.89094cm</Top>
-              <Left>11.83158cm</Left>
+              <Top>1.16986cm</Top>
+              <Left>11.99669cm</Left>
               <Height>0.6cm</Height>
               <Width>2.41235cm</Width>
               <ZIndex>1</ZIndex>
@@ -889,8 +888,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox19</rd:DefaultName>
-              <Top>1.55959cm</Top>
-              <Left>11.83158cm</Left>
+              <Top>1.83851cm</Top>
+              <Left>11.99669cm</Left>
               <Height>0.6cm</Height>
               <Width>2.41235cm</Width>
               <ZIndex>2</ZIndex>
@@ -923,8 +922,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>codigo</rd:DefaultName>
-              <Top>0.89094cm</Top>
-              <Left>14.24897cm</Left>
+              <Top>1.16986cm</Top>
+              <Left>14.41408cm</Left>
               <Height>0.6cm</Height>
               <Width>5.04282cm</Width>
               <ZIndex>3</ZIndex>
@@ -957,8 +956,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>fabricante</rd:DefaultName>
-              <Top>1.55959cm</Top>
-              <Left>14.24897cm</Left>
+              <Top>1.83851cm</Top>
+              <Left>14.41408cm</Left>
               <Height>0.6cm</Height>
               <Width>5.04282cm</Width>
               <ZIndex>4</ZIndex>
@@ -992,8 +991,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox19</rd:DefaultName>
-              <Top>0.25566cm</Top>
-              <Left>0.15239cm</Left>
+              <Top>0.53458cm</Top>
+              <Left>0.3175cm</Left>
               <Height>0.6cm</Height>
               <Width>2.58049cm</Width>
               <ZIndex>5</ZIndex>
@@ -1027,8 +1026,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox19</rd:DefaultName>
-              <Top>0.92622cm</Top>
-              <Left>0.15239cm</Left>
+              <Top>1.20514cm</Top>
+              <Left>0.3175cm</Left>
               <Height>0.6cm</Height>
               <Width>2.58049cm</Width>
               <ZIndex>6</ZIndex>
@@ -1062,8 +1061,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox19</rd:DefaultName>
-              <Top>1.5615cm</Top>
-              <Left>0.15239cm</Left>
+              <Top>1.84042cm</Top>
+              <Left>0.3175cm</Left>
               <Height>0.6cm</Height>
               <Width>2.58049cm</Width>
               <ZIndex>7</ZIndex>
@@ -1079,10 +1078,10 @@
             </Textbox>
           </ReportItems>
           <KeepTogether>true</KeepTogether>
-          <Top>3.58347cm</Top>
-          <Left>0.3175cm</Left>
-          <Height>2.49176cm</Height>
-          <Width>19.4569cm</Width>
+          <Top>3.30455cm</Top>
+          <Left>0.15239cm</Left>
+          <Height>2.77068cm</Height>
+          <Width>19.62201cm</Width>
           <Style>
             <Border>
               <Style>Double</Style>
@@ -1230,7 +1229,7 @@
                       <Top>1.07102cm</Top>
                       <Left>3.38585cm</Left>
                       <Height>0.97124cm</Height>
-                      <Width>3.09712cm</Width>
+                      <Width>3.26224cm</Width>
                       <ZIndex>2</ZIndex>
                       <Style>
                         <Border>
@@ -1241,7 +1240,7 @@
                   </ReportItems>
                   <KeepTogether>true</KeepTogether>
                   <Height>2.04226cm</Height>
-                  <Width>6.48297cm</Width>
+                  <Width>6.64809cm</Width>
                   <Style>
                     <Border>
                       <Style>Double</Style>
@@ -1252,7 +1251,7 @@
               <KeepTogether>true</KeepTogether>
               <Left>12.97393cm</Left>
               <Height>2.04226cm</Height>
-              <Width>6.48297cm</Width>
+              <Width>6.64809cm</Width>
               <ZIndex>1</ZIndex>
               <Style>
                 <Border>
@@ -1297,7 +1296,7 @@
               <KeepTogether>true</KeepTogether>
               <Top>2.04226cm</Top>
               <Height>1.22701cm</Height>
-              <Width>19.4569cm</Width>
+              <Width>19.62201cm</Width>
               <ZIndex>2</ZIndex>
               <Style>
                 <Border>
@@ -1309,7 +1308,7 @@
           <KeepTogether>true</KeepTogether>
           <Left>0.15239cm</Left>
           <Height>3.26927cm</Height>
-          <Width>19.4569cm</Width>
+          <Width>19.62202cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>
@@ -1435,8 +1434,8 @@
     </PageFooter>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
-    <LeftMargin>0.5cm</LeftMargin>
-    <RightMargin>0.5cm</RightMargin>
+    <LeftMargin>0cm</LeftMargin>
+    <RightMargin>0cm</RightMargin>
     <TopMargin>1cm</TopMargin>
     <BottomMargin>1cm</BottomMargin>
     <ColumnSpacing>0.13cm</ColumnSpacing>
