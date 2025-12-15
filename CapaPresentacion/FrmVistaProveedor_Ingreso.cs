@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using CapaPresentacion.Interfaces;
+using System.Diagnostics.Eventing.Reader;
 
 namespace CapaPresentacion
 {
@@ -86,6 +87,16 @@ namespace CapaPresentacion
             lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
         }
 
+        private void BuscarCodigo()
+        {
+            this.dataListado.DataSource = NProveedor.BuscarCodigo(this.txtBuscar.Text);
+            this.OcultarColumnas();
+            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+        }
+
+        
+
+
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             if (cbBuscar.Text.Equals("Razon Social"))
@@ -94,7 +105,17 @@ namespace CapaPresentacion
             }
             else if (cbBuscar.Text.Equals("Documento"))
             {
-                this.BuscarNum_Documento();
+
+                if (cbBuscar.Text.Equals("Codigo"))
+                {
+                    this.BuscarCodigo();
+                }
+                else 
+                {
+                    this.BuscarNum_Documento();
+                }
+    
+                    
             }
         }
 

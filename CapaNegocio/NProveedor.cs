@@ -1,11 +1,12 @@
-﻿using System;
+﻿using CapaDatos;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-using System.Data;
-using CapaDatos;
+using static CapaDatos.DProveedor;
+using static CapaNegocio.NProveedor;
 
 
 
@@ -49,6 +50,15 @@ namespace CapaNegocio
             return Obj.Editar(Obj);
         }
 
+        public class NCliente_Proveedor
+        {
+            public static DataTable Listar()
+            {
+                return new Dcliente_Proveedor().Listar();
+            }
+        }
+
+
         //Método Eliminar que llama al método Eliminar de la clase DProveedor
         //de la CapaDatos
         public static string Eliminar(int idproveedor)
@@ -83,6 +93,13 @@ namespace CapaNegocio
             DProveedor Obj = new DProveedor();
             Obj.TextoBuscar = textobuscar;
             return Obj.BuscarNum_Documento(Obj);
+        }
+
+        public static DataTable BuscarCodigo(string textobuscar)
+        {
+            DProveedor Obj = new DProveedor();
+            Obj.TextoBuscar = textobuscar;
+            return Obj.BuscarCodigo(Obj);
         }
 
     }

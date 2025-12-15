@@ -115,6 +115,26 @@ namespace CapaDatos
 
         }
         //Métodos
+
+
+        public class Dcliente_Proveedor
+        {
+            public DataTable Listar()
+            {
+                DataTable tabla = new DataTable();
+
+                using (SqlConnection con = Conexion.CrearConexion())
+                {
+                    string sql = "SELECT idproveedor, razon_social FROM proveedor ORDER BY razon_social";
+
+                    SqlDataAdapter da = new SqlDataAdapter(sql, con);
+                    da.Fill(tabla);
+                }
+
+                return tabla;
+            }
+        }
+
         public string Insertar(DProveedor Proveedor)
         {
             string rpta = "";
@@ -440,6 +460,37 @@ namespace CapaDatos
 
         }
 
+
+        public DataTable BuscarCodigo(DProveedor Proveedor)
+        {
+            DataTable DtResultado = new DataTable("proveedor");
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                SqlCon.ConnectionString = Conexion.Cn;
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "spbuscar_proveedor_num_documento";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter ParTextoBuscar = new SqlParameter();
+                ParTextoBuscar.ParameterName = "@textobuscar";
+                ParTextoBuscar.SqlDbType = SqlDbType.VarChar;
+                ParTextoBuscar.Size = 50;
+                ParTextoBuscar.Value = Proveedor.TextoBuscar;
+                SqlCmd.Parameters.Add(ParTextoBuscar);
+
+                SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                SqlDat.Fill(DtResultado);
+
+            }
+            catch (Exception ex)
+            {
+                DtResultado = null;
+            }
+            return DtResultado;
+
+        }
 
     }
 }

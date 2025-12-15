@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaNegocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,8 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
-using CapaNegocio;
+using static CapaNegocio.NProveedor;
 
 namespace CapaPresentacion
 {
@@ -49,6 +49,21 @@ namespace CapaPresentacion
 
         }
 
+        private void CargarCliente_Proveedor()
+        {
+            DataTable dt = NCliente_Proveedor.Listar();
+
+            // Agregar fila vacía manualmente
+            DataRow fila = dt.NewRow();
+            fila["idproveedor"] = 0;
+            fila["razon_social"] = "";   // Texto vacío
+            dt.Rows.InsertAt(fila, 0);
+
+            cbContribuyente.DataSource = dt;
+            cbContribuyente.DisplayMember = "razon_social";
+            cbContribuyente.ValueMember = "idproveedor";
+        }
+
         //Mostrar Mensaje de Confirmación
         private void MensajeOk(string mensaje)
         {
@@ -76,6 +91,7 @@ namespace CapaPresentacion
             this.txtFabricante.Text = string.Empty;
             this.txtRegistroSanitario.Text = string.Empty;
 
+            this.comboBox1.SelectedValue = 0;
 
 
             this.pxImagen.Image = global::CapaPresentacion.Properties.Resources.file;
@@ -94,6 +110,9 @@ namespace CapaPresentacion
 
             this.btnBuscarCategoria.Enabled = valor;
             this.cbIdpresentacion.Enabled = valor;
+
+            this.comboBox1.Enabled = valor;
+
             this.btnCargar.Enabled = valor;
             this.btnLimpiar.Enabled = valor;
             this.txtIdarticulo.ReadOnly = true;
@@ -128,6 +147,8 @@ namespace CapaPresentacion
             this.dataListado.Columns[1].Visible = false;
             this.dataListado.Columns[6].Visible = false;
             this.dataListado.Columns[8].Visible = false;
+
+            dataListado.Columns["idclienteProveedor"].Visible = false;
         }
 
         //Método Mostrar
@@ -158,12 +179,98 @@ namespace CapaPresentacion
 
         }
 
+
+      
+
+
         //Método BuscarNombre
         private void BuscarNombre()
         {
-            this.dataListado.DataSource = NArticulo.BuscarNombre(this.txtBuscar.Text);
-            this.OcultarColumnas();
-            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+
+            lblTotal.Text = "Total de Registros: 0 encontrados";
+
+
+            // ⭐⭐ LIMPIEZA TOTAL ⭐⭐
+            dataListado.DataSource = null;
+            dataListado.Rows.Clear();
+            dataListado.Columns.Clear();
+            dataListado.Refresh();
+            this.BindingContext = new BindingContext();
+
+            // ===========================================
+            // 1. Obtener proveedor desde ComboBox
+            // ===========================================
+
+            int? idProveedor = null;
+
+            if (cbContribuyente.SelectedIndex > 0)   // 0 = vacío
+            {
+                idProveedor = Convert.ToInt32(cbContribuyente.SelectedValue);
+            }
+
+
+
+            // ===========================================
+            // 2. Ejecutar SP según proveedor
+            // ===========================================
+
+            if (idProveedor.HasValue)  // Tiene proveedor seleccionado
+            {
+                this.dataListado.DataSource = NArticulo.BuscarNombre2(
+                    this.txtBuscar.Text,
+                    idProveedor.Value
+                );
+            }
+            else                      // NO TIENE proveedor → buscar todo
+            {
+                this.dataListado.DataSource = NArticulo.BuscarNombre(this.txtBuscar.Text);
+            }
+
+            // ===========================================
+            // 3. Formateo de columnas
+            // ===========================================
+
+
+            if (this.dataListado.DataSource != null)
+            {
+                foreach (DataGridViewColumn col in dataListado.Columns)
+                {
+                    col.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+
+                    if (col.Width > 300)
+                        col.Width = 300;
+                }
+
+                this.OcultarColumnas();
+
+                ///////////////////////////////////////////
+                //ini adicional
+                if (!dataListado.Columns.Contains("Eliminar"))
+                {
+                    DataGridViewCheckBoxColumn chk = new DataGridViewCheckBoxColumn();
+                    chk.Name = "Eliminar";
+                    chk.HeaderText = "Eliminar";
+                    chk.ReadOnly = false;
+                    chk.Visible = false;
+
+                    dataListado.Columns.Insert(0, chk);
+                }
+                //fin adicional
+                ///////////////////////////////////////////
+
+
+                lblTotal.Text = "Total de Registros: " + dataListado.Rows.Count + " encontrados";
+            }
+
+
+
+
+            //this.dataListado.DataSource = NArticulo.BuscarNombre(this.txtBuscar.Text);
+            //this.OcultarColumnas();
+            //lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+
+
+
         }
 
         private void LlenarComboPresentacion()
@@ -193,6 +300,44 @@ namespace CapaPresentacion
             this.Mostrar();
             this.Habilitar(false);
             this.Botones();
+
+            CargarCliente_Proveedor2();
+
+        }
+
+        private void CargarCliente_Proveedor2()
+        {
+            //idproveedor, razon_social
+
+            //cbContribuyente.DataSource = NCliente_Proveedor.Listar();
+            //cbContribuyente.DisplayMember = "razon_social";
+            //cbContribuyente.ValueMember = "idproveedor";
+            //cbContribuyente.SelectedIndex = -1;
+
+
+            DataTable dt = NCliente_Proveedor.Listar();
+
+            // Agregar fila vacía manualmente
+            DataRow fila = dt.NewRow();
+            fila["idproveedor"] = 0;
+            fila["razon_social"] = "";   // Texto vacío
+            dt.Rows.InsertAt(fila, 0);
+
+            cbContribuyente.DataSource = dt;
+            cbContribuyente.DisplayMember = "razon_social";
+            cbContribuyente.ValueMember = "idproveedor";
+
+            DataTable dt2 = NCliente_Proveedor.Listar();
+
+            DataRow fila2 = dt2.NewRow();
+            fila2["idproveedor"] = 0;
+            fila2["razon_social"] = "";   // Texto vacío
+            dt2.Rows.InsertAt(fila2, 0);
+
+            comboBox1.DataSource = dt2;
+            comboBox1.DisplayMember = "razon_social";
+            comboBox1.ValueMember = "idproveedor";
+            
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
@@ -227,6 +372,16 @@ namespace CapaPresentacion
             try
             {
                 string rpta = "";
+
+                int idProveedor = 0;
+
+                if (cbContribuyente.SelectedIndex > 0)   // 0 = vacío
+                {
+                    idProveedor = Convert.ToInt32( comboBox1.SelectedValue.ToString()) ;
+                }
+
+
+
                 if (this.txtNombre.Text == string.Empty || this.txtIdcategoria.Text == string.Empty || this.txtCodigo.Text == string.Empty)
                 {
                     MensajeError("Falta ingresar algunos datos, serán remarcados");
@@ -250,14 +405,31 @@ namespace CapaPresentacion
 
                     if (this.IsNuevo)
                     {
-                        rpta = NArticulo.Insertar(  this.txtCodigo.Text,
+
+                        if (txtCodigo.Text.Trim() != "NO APLICA")
+                        {
+                            if (NArticulo.ExisteCodigo(txtCodigo.Text.Trim()))
+                            {
+                                //MessageBox.Show("El código ingresado ya existe. Use uno diferente.");
+                                //MessageBox.Show("Realmente Desea Eliminar los Registros", "Sistema de Ventas", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                                MessageBox.Show("El código ingresado ya existe. Use uno diferente.", "Sistema de Ventas SAS", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                                return;
+                            }
+                        }
+
+
+
+                        rpta = NArticulo.Insertar(this.txtCodigo.Text,
                                                     this.txtNombre.Text.Trim().ToUpper(),
                                                     this.txtDescripcion.Text.Trim(),
-                                                    imagen,Convert.ToInt32(this.txtIdcategoria.Text),
+                                                    imagen, Convert.ToInt32(this.txtIdcategoria.Text),
                                                     Convert.ToInt32(this.cbIdpresentacion.SelectedValue),
 
                                                     this.txtFabricante.Text.Trim(),
-                                                    this.txtRegistroSanitario.Text.Trim()
+                                                    this.txtRegistroSanitario.Text.Trim(),
+
+                                                   Convert.ToInt32(this.comboBox1.SelectedValue.ToString().Trim())
 
                                                     );
 
@@ -269,11 +441,13 @@ namespace CapaPresentacion
                                                     this.txtCodigo.Text, 
                                                     this.txtNombre.Text.Trim().ToUpper(),
                                                     this.txtDescripcion.Text.Trim(), 
-                                                    imagen, Convert.ToInt32(this.txtIdcategoria.Text),
+                                                    imagen,
+                                                    Convert.ToInt32(this.txtIdcategoria.Text),
                                                     Convert.ToInt32(this.cbIdpresentacion.SelectedValue),
 
                                                     this.txtFabricante.Text.Trim(),
-                                                    this.txtRegistroSanitario.Text.Trim()
+                                                    this.txtRegistroSanitario.Text.Trim(),
+                                                    Convert.ToInt32(this.comboBox1.SelectedValue.ToString().Trim())
 
                                                     );
                     }
@@ -371,6 +545,27 @@ namespace CapaPresentacion
             this.pxImagen.SizeMode = PictureBoxSizeMode.StretchImage;
 
             this.txtIdcategoria.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["idcategoria"].Value);
+
+            //this.comboBox1.SelectedValue = Convert.ToString(this.dataListado.CurrentRow.Cells["idcategoria"].Value);
+
+
+            object valor = this.dataListado.CurrentRow.Cells["idclienteProveedor"].Value;
+
+            if (valor == null || valor == DBNull.Value || valor.ToString() == "" || valor.ToString() == "0")
+            {
+                comboBox1.SelectedValue = 0;   // Combo queda vacío naturalmente
+            }
+            else
+            {
+                comboBox1.SelectedValue = Convert.ToInt32(valor);
+            }
+
+
+
+
+
+
+
             this.txtCategoria.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["Categoria"].Value);
             this.cbIdpresentacion.SelectedValue= Convert.ToString(this.dataListado.CurrentRow.Cells["idpresentacion"].Value);
 

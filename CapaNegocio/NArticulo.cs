@@ -13,7 +13,7 @@ namespace CapaNegocio
     {
         //Método Insertar que llama al método Insertar de la clase DArticulo
         //de la CapaDatos
-        public static string Insertar(string codigo,string nombre, string descripcion,byte[] imagen,int idcategoria, int idpresentacion, string fabricante, string registrosanitario)
+        public static string Insertar(string codigo,string nombre, string descripcion,byte[] imagen,int idcategoria, int idpresentacion, string fabricante, string registrosanitario , int idclienteProveedor)
         {
             DArticulo Obj = new DArticulo();
             Obj.Codigo = codigo;
@@ -26,6 +26,8 @@ namespace CapaNegocio
             Obj.Fabricante = fabricante;
             Obj.RegistroSanitario = registrosanitario;
 
+            Obj.IdclienteProveedor = idclienteProveedor;
+
 
 
             return Obj.Insertar(Obj);
@@ -33,7 +35,7 @@ namespace CapaNegocio
 
         //Método Editar que llama al método Editar de la clase DArticulo
         //de la CapaDatos
-        public static string Editar(int idarticulo,string codigo, string nombre, string descripcion, byte[] imagen, int idcategoria, int idpresentacion, string fabricante, string registrosanitario)
+        public static string Editar(int idarticulo,string codigo, string nombre, string descripcion, byte[] imagen, int idcategoria, int idpresentacion, string fabricante, string registrosanitario, int idclienteProveedor)
         {
             DArticulo Obj = new DArticulo();
             Obj.Idarticulo = idarticulo;
@@ -46,6 +48,8 @@ namespace CapaNegocio
 
             Obj.Fabricante = fabricante;
             Obj.RegistroSanitario = registrosanitario;
+
+            Obj.IdclienteProveedor = idclienteProveedor;
 
             return Obj.Editar(Obj);
         }
@@ -58,6 +62,14 @@ namespace CapaNegocio
             Obj.Idarticulo = idarticulo;
             return Obj.Eliminar(Obj);
         }
+
+
+        public static bool ExisteCodigo(string codigo, int? idActual = null)
+        {
+            DArticulo datos = new DArticulo();
+            return datos.ExisteCodigo(codigo, idActual);
+        }
+
 
         //Método Mostrar que llama al método Mostrar de la clase DArticulo
         //de la CapaDatos
@@ -75,6 +87,22 @@ namespace CapaNegocio
             Obj.TextoBuscar = textobuscar;
             return Obj.BuscarNombre(Obj);
         }
+
+        public static DataTable BuscarNombre2(string textobuscar , int idclienteProveedor)
+        {
+            DArticulo Obj = new DArticulo();
+            Obj.TextoBuscar = textobuscar;
+            Obj.IdclienteProveedor = idclienteProveedor; 
+            return Obj.BuscarNombre2(Obj);
+        }
+
+        public static DataTable BuscarCodigo(string textobuscar)
+        {
+            DArticulo Obj = new DArticulo();
+            Obj.TextoBuscar = textobuscar;
+            return Obj.BuscarCodigo(Obj);
+        }
+
         public static DataTable Stock_Articulos()
         {
             return new DArticulo().Stock_Articulos();

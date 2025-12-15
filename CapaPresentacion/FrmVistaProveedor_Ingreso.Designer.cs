@@ -91,9 +91,9 @@
             this.cbBuscar.Location = new System.Drawing.Point(10, 27);
             this.cbBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.cbBuscar.Name = "cbBuscar";
-            this.cbBuscar.Size = new System.Drawing.Size(151, 21);
+            this.cbBuscar.Size = new System.Drawing.Size(158, 21);
             this.cbBuscar.TabIndex = 8;
-            this.cbBuscar.Text = "Documento";
+            this.cbBuscar.Text = "Razon Social";
             // 
             // dataListado
             // 

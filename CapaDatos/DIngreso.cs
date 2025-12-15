@@ -654,6 +654,63 @@ namespace CapaDatos
 
         }
 
+        public DataTable BuscarFechas2(String TextoBuscar, String TextoBuscar2, int? idProveedor)
+        {
+            DataTable DtResultado = new DataTable("ingreso2");
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                SqlCon.ConnectionString = Conexion.Cn;
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "spbuscar_ingreso_fecha2";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter ParTextoBuscar = new SqlParameter();
+                ParTextoBuscar.ParameterName = "@textobuscar";
+                ParTextoBuscar.SqlDbType = SqlDbType.VarChar;
+                ParTextoBuscar.Size = 50;
+                ParTextoBuscar.Value = TextoBuscar;
+                SqlCmd.Parameters.Add(ParTextoBuscar);
+
+                SqlParameter ParTextoBuscar2 = new SqlParameter();
+                ParTextoBuscar2.ParameterName = "@textobuscar2";
+                ParTextoBuscar2.SqlDbType = SqlDbType.VarChar;
+                ParTextoBuscar2.Size = 50;
+                ParTextoBuscar2.Value = TextoBuscar2;
+                SqlCmd.Parameters.Add(ParTextoBuscar2);
+
+
+                SqlParameter ParProveedor = new SqlParameter();
+                ParProveedor.ParameterName = "@idproveedor";
+                ParProveedor.SqlDbType = SqlDbType.Int;
+                ParProveedor.Value = idProveedor;   // <-- SIEMPRE debe tener valor
+                SqlCmd.Parameters.Add(ParProveedor);
+
+
+                SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+
+
+
+                //// Enviar al Output Window
+                //System.Diagnostics.Debug.WriteLine(debugInfo);
+
+                SqlDat.Fill(DtResultado);
+
+                int totalFilas = DtResultado.Rows.Count;
+
+                // Puedes mostrarlo en output (debug)
+                System.Diagnostics.Debug.WriteLine("Total filas SP: " + totalFilas);
+
+            }
+            catch (Exception ex)
+            {
+                DtResultado = null;
+            }
+            return DtResultado;
+
+        }
+
 
         //Método Buscarfechas
         public DataTable BuscarFechas(String TextoBuscar,String TextoBuscar2)
@@ -681,6 +738,8 @@ namespace CapaDatos
                 ParTextoBuscar2.Size = 50;
                 ParTextoBuscar2.Value = TextoBuscar2;
                 SqlCmd.Parameters.Add(ParTextoBuscar2);
+
+
 
                 SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
                 SqlDat.Fill(DtResultado);

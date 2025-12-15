@@ -197,8 +197,8 @@ C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisVentas\bin\Debug\Sis
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisVentas\bin\Debug\SisVentas.pdb
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisVentas\bin\Debug\CapaPresentacion.dll
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisVentas\bin\Debug\log4net.dll
-C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisVentas\bin\Debug\WebDriver.dll
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisVentas\bin\Debug\CapaNegocio.dll
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisVentas\bin\Debug\WebDriver.dll
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisVentas\bin\Debug\BCrypt.Net-Next.dll
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisVentas\bin\Debug\Microsoft.ReportViewer.WinForms.dll
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisVentas\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
@@ -235,8 +235,8 @@ C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisVentas\bin\Debug\std
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisVentas\bin\Debug\CapaPresentacion.pdb
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisVentas\bin\Debug\CapaPresentacion.dll.config
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisVentas\bin\Debug\log4net.xml
-C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisVentas\bin\Debug\WebDriver.xml
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisVentas\bin\Debug\CapaNegocio.pdb
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisVentas\bin\Debug\WebDriver.xml
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisVentas\bin\Debug\BCrypt.Net-Next.xml
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisVentas\bin\Debug\CapaDatos.pdb
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisVentas\bin\Debug\CapaDatos.dll.config

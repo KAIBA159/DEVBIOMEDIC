@@ -77,9 +77,28 @@ namespace CapaPresentacion
             lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
         }
 
+        private void BuscarCodigo()
+        {
+            this.dataListado.DataSource = NArticulo.BuscarCodigo(this.txtBuscar.Text);
+            this.OcultarColumnas();
+            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+        }
+
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            this.BuscarNombre();
+            if (comboBox1.Text.Equals("Nombre") )
+            {
+                this.BuscarNombre();
+            }
+
+            if (comboBox1.Text.Equals("Codigo"))
+            {
+                this.BuscarCodigo();
+            }
+
+
+
+
         }
 
         private void dataListado_DoubleClick(object sender, EventArgs e)

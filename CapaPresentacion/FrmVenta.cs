@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CapaNegocio;
+using CapaPresentacion.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,9 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.UI.HtmlControls;
 using System.Windows.Forms;
-
-using CapaNegocio;
-using CapaPresentacion.Interfaces;
+using static CapaNegocio.NProveedor;
 
 namespace CapaPresentacion
 {
@@ -195,12 +195,12 @@ namespace CapaPresentacion
         private void OcultarColumnas()
         {
             this.dataListado.Columns[0].Visible = false;
-            this.dataListado.Columns[1].Visible = false;
+            //this.dataListado.Columns[1].Visible = false;
 
         }
 
         //Método Mostrar
-        private void Mostrar()
+        private void                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Mostrar()
         {
             this.dataListado.DataSource = NVenta.Mostrar();
            
@@ -231,8 +231,55 @@ namespace CapaPresentacion
         //Método BuscarFechas
         private void BuscarFechas()
         {
-            this.dataListado.DataSource = NVenta.BuscarFechas(this.dtFecha1.Value.ToString("dd/MM/yyyy"),
-                this.dtFecha2.Value.ToString("dd/MM/yyyy"));
+
+            lblTotal.Text = "Total de Registros: 0 encontrados";
+            // ⭐⭐ LIMPIEZA TOTAL ⭐⭐
+            dataListado.DataSource = null;
+            dataListado.Rows.Clear();
+            dataListado.Columns.Clear();
+            dataListado.Refresh();
+            this.BindingContext = new BindingContext();
+
+
+            //-+-------------------------------------------------------------------
+
+            // ===========================================
+            // 1. Obtener proveedor desde ComboBox
+            // ===========================================
+
+            int? idProveedor = null;
+
+            if (cbContribuyente.SelectedIndex > 0)   // 0 = vacío
+            {
+                idProveedor = Convert.ToInt32(cbContribuyente.SelectedValue);
+            }
+
+            // ===========================================
+            // 2. Ejecutar SP según proveedor
+            // ===========================================
+
+            if (idProveedor.HasValue)  // Tiene proveedor seleccionado
+            {
+                this.dataListado.DataSource = NVenta.BuscarFechas3(
+                    this.dtFecha1.Value.ToString("dd/MM/yyyy"),
+                    this.dtFecha2.Value.ToString("dd/MM/yyyy"),
+                    idProveedor.Value
+                );
+            }
+            else                      // NO TIENE proveedor → buscar todo
+            {
+                this.dataListado.DataSource = NVenta.BuscarFechas2(
+                    this.dtFecha1.Value.ToString("dd/MM/yyyy"),
+                    this.dtFecha2.Value.ToString("dd/MM/yyyy")
+                );
+            }
+
+            //-+-------------------------------------------------------------------
+
+            //this.dataListado.DataSource = NVenta.BuscarFechas(this.dtFecha1.Value.ToString("dd/MM/yyyy"),
+            //    this.dtFecha2.Value.ToString("dd/MM/yyyy"));
+
+
 
 
             if (dataListado.DataSource != null)
@@ -241,30 +288,139 @@ namespace CapaPresentacion
                 //this.OcultarColumnas();
                 //lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
                 this.OcultarColumnas();
+
+
+                ///////////////////////////////////////////
+                //ini adicional
+                if (!dataListado.Columns.Contains("Eliminar"))
+                {
+                    DataGridViewCheckBoxColumn chk = new DataGridViewCheckBoxColumn();
+                    chk.Name = "Eliminar";
+                    chk.HeaderText = "Eliminar";
+                    chk.ReadOnly = false;
+                    chk.Visible = false;
+
+                    dataListado.Columns.Insert(0, chk);
+                }
+                //fin adicional
+
+
                 lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+
+
+
+
             }
 
             //this.OcultarColumnas();
             //lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+
+
+
         }
 
         private void BuscarFechas2()
         {
-            this.dataListado.DataSource = NVenta.BuscarFechas2(this.dtFecha1.Value.ToString("dd/MM/yyyy"),
-                this.dtFecha2.Value.ToString("dd/MM/yyyy"));
+
+            lblTotal.Text = "Total de Registros: 0 encontrados";
 
 
-            if (dataListado.DataSource != null)
+            // ⭐⭐ LIMPIEZA TOTAL ⭐⭐
+            dataListado.DataSource = null;
+            dataListado.Rows.Clear();
+            dataListado.Columns.Clear();
+            dataListado.Refresh();
+            this.BindingContext = new BindingContext();
+
+
+            //-+-------------------------------------------------------------------
+
+            // ===========================================
+            // 1. Obtener proveedor desde ComboBox
+            // ===========================================
+
+            int? idProveedor = null;
+
+            if (cbContribuyente.SelectedIndex > 0)   // 0 = vacío
             {
-
-                //this.OcultarColumnas();
-                //lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
-                this.OcultarColumnas();
-                lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count) +" encontrados" ;
+                idProveedor = Convert.ToInt32(cbContribuyente.SelectedValue);
             }
 
-            //this.OcultarColumnas();
-            //lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+            // ===========================================
+            // 2. Ejecutar SP según proveedor
+            // ===========================================
+
+            if (idProveedor.HasValue)  // Tiene proveedor seleccionado
+            {
+                this.dataListado.DataSource = NVenta.BuscarFechas3(
+                    this.dtFecha1.Value.ToString("dd/MM/yyyy"),
+                    this.dtFecha2.Value.ToString("dd/MM/yyyy"),
+                    idProveedor.Value
+                );
+            }
+            else                      // NO TIENE proveedor → buscar todo
+            {
+                this.dataListado.DataSource = NVenta.BuscarFechas2(
+                    this.dtFecha1.Value.ToString("dd/MM/yyyy"),
+                    this.dtFecha2.Value.ToString("dd/MM/yyyy")
+                );
+            }
+
+            //-+-------------------------------------------------------------------
+
+            //this.dataListado.DataSource = NVenta.BuscarFechas(this.dtFecha1.Value.ToString("dd/MM/yyyy"),
+            //    this.dtFecha2.Value.ToString("dd/MM/yyyy"));
+
+
+
+
+            //if (dataListado.DataSource != null)
+            //{
+
+            //    //this.OcultarColumnas();
+            //    //lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+            //    this.OcultarColumnas();
+            //    lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+
+
+            //    //this.OcultarColumnas();
+            //    //lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+            //}
+
+            if (this.dataListado.DataSource != null)
+            {
+                foreach (DataGridViewColumn col in dataListado.Columns)
+                {
+                    col.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+
+                    if (col.Width > 300)
+                        col.Width = 300;
+                }
+
+                this.OcultarColumnas();
+
+
+                ///////////////////////////////////////////
+                //ini adicional
+                if (!dataListado.Columns.Contains("Eliminar"))
+                {
+                    DataGridViewCheckBoxColumn chk = new DataGridViewCheckBoxColumn();
+                    chk.Name = "Eliminar";
+                    chk.HeaderText = "Eliminar";
+                    chk.ReadOnly = false;
+                    chk.Visible = false;
+
+                    dataListado.Columns.Insert(0, chk);
+                }
+                //fin adicional
+                /////////////////////////////
+
+
+                lblTotal.Text = "Total de Registros: " + dataListado.Rows.Count + " encontrados";
+            }
+
+
+
         }
 
         private void MostrarDetalle()
@@ -348,7 +504,26 @@ namespace CapaPresentacion
             this.Habilitar(false);
             this.Botones();
             this.crearTabla();
+
+            CargarCliente_Proveedor();
+
         }
+
+        private void CargarCliente_Proveedor()
+        {
+            DataTable dt = NCliente_Proveedor.Listar();
+
+            // Agregar fila vacía manualmente
+            DataRow fila = dt.NewRow();
+            fila["idproveedor"] = 0;
+            fila["razon_social"] = "";   // Texto vacío
+            dt.Rows.InsertAt(fila, 0);
+
+            cbContribuyente.DataSource = dt;
+            cbContribuyente.DisplayMember = "razon_social";
+            cbContribuyente.ValueMember = "idproveedor";
+        }
+
 
         private void FrmVenta_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -563,6 +738,14 @@ namespace CapaPresentacion
             this.limpiarDetalle();
             this.Habilitar(true);
             this.txtSerie.Focus();
+
+            // obtener  id siguiente
+
+            int proximoCodigo = NVenta.ObtenerProximoCodigoSistema();
+            txtIdventa.Text = proximoCodigo.ToString();
+
+            //
+
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

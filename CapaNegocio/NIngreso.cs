@@ -245,10 +245,17 @@ namespace CapaNegocio
         //Método BuscarFecha que llama al método BuscarNombre
         //de la clase DIngreso de la CapaDatos
 
-        public static DataTable BuscarFechas(string textobuscar,string textobuscar2)
+
+        public static DataTable BuscarFechas(string textobuscar, string textobuscar2) 
+        { 
+            DIngreso Obj = new DIngreso(); 
+            return Obj.BuscarFechas(textobuscar, textobuscar2); 
+        }
+
+        public static DataTable BuscarFechas2(string textobuscar, string textobuscar2, int? idProveedor)
         {
             DIngreso Obj = new DIngreso();
-            return Obj.BuscarFechas(textobuscar,textobuscar2);
+            return Obj.BuscarFechas2(textobuscar, textobuscar2, idProveedor);
         }
 
         public static string ObtenerCorrelativoUnico()

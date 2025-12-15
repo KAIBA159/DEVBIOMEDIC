@@ -59,6 +59,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.cbContribuyente = new System.Windows.Forms.ComboBox();
             this.dataListado = new System.Windows.Forms.DataGridView();
             this.Eliminar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.lblTotal = new System.Windows.Forms.Label();
@@ -72,6 +73,9 @@
             this.ttMensaje = new System.Windows.Forms.ToolTip(this.components);
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.tabPage2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pxImagen)).BeginInit();
@@ -96,6 +100,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.txtFabricante);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.txtRegistroSanitario);
@@ -125,7 +131,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(742, 307);
+            this.groupBox1.Size = new System.Drawing.Size(809, 335);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Artículos";
@@ -138,7 +144,7 @@
             this.txtFabricante.Location = new System.Drawing.Point(119, 140);
             this.txtFabricante.Margin = new System.Windows.Forms.Padding(2);
             this.txtFabricante.Name = "txtFabricante";
-            this.txtFabricante.Size = new System.Drawing.Size(257, 20);
+            this.txtFabricante.Size = new System.Drawing.Size(402, 20);
             this.txtFabricante.TabIndex = 24;
             // 
             // label10
@@ -159,7 +165,7 @@
             this.txtRegistroSanitario.Location = new System.Drawing.Point(119, 116);
             this.txtRegistroSanitario.Margin = new System.Windows.Forms.Padding(2);
             this.txtRegistroSanitario.Name = "txtRegistroSanitario";
-            this.txtRegistroSanitario.Size = new System.Drawing.Size(257, 20);
+            this.txtRegistroSanitario.Size = new System.Drawing.Size(266, 20);
             this.txtRegistroSanitario.TabIndex = 22;
             // 
             // label9
@@ -175,7 +181,7 @@
             // cbIdpresentacion
             // 
             this.cbIdpresentacion.FormattingEnabled = true;
-            this.cbIdpresentacion.Location = new System.Drawing.Point(473, 68);
+            this.cbIdpresentacion.Location = new System.Drawing.Point(552, 68);
             this.cbIdpresentacion.Margin = new System.Windows.Forms.Padding(2);
             this.cbIdpresentacion.Name = "cbIdpresentacion";
             this.cbIdpresentacion.Size = new System.Drawing.Size(208, 21);
@@ -184,7 +190,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(397, 71);
+            this.label8.Location = new System.Drawing.Point(476, 71);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(72, 13);
@@ -194,7 +200,7 @@
             // btnBuscarCategoria
             // 
             this.btnBuscarCategoria.Image = global::CapaPresentacion.Properties.Resources.Buscar_p;
-            this.btnBuscarCategoria.Location = new System.Drawing.Point(684, 43);
+            this.btnBuscarCategoria.Location = new System.Drawing.Point(763, 43);
             this.btnBuscarCategoria.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscarCategoria.Name = "btnBuscarCategoria";
             this.btnBuscarCategoria.Size = new System.Drawing.Size(32, 25);
@@ -216,7 +222,7 @@
             // 
             this.txtCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.txtCategoria.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCategoria.Location = new System.Drawing.Point(474, 44);
+            this.txtCategoria.Location = new System.Drawing.Point(553, 44);
             this.txtCategoria.Margin = new System.Windows.Forms.Padding(2);
             this.txtCategoria.Name = "txtCategoria";
             this.txtCategoria.Size = new System.Drawing.Size(207, 20);
@@ -225,7 +231,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(413, 47);
+            this.label7.Location = new System.Drawing.Point(492, 47);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(57, 13);
@@ -236,7 +242,7 @@
             // 
             this.btnLimpiar.BackgroundImage = global::CapaPresentacion.Properties.Resources.file_delete;
             this.btnLimpiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnLimpiar.Location = new System.Drawing.Point(627, 179);
+            this.btnLimpiar.Location = new System.Drawing.Point(715, 229);
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(45, 46);
@@ -248,7 +254,7 @@
             // 
             this.btnCargar.BackgroundImage = global::CapaPresentacion.Properties.Resources.file_add;
             this.btnCargar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCargar.Location = new System.Drawing.Point(627, 129);
+            this.btnCargar.Location = new System.Drawing.Point(715, 179);
             this.btnCargar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCargar.Name = "btnCargar";
             this.btnCargar.Size = new System.Drawing.Size(45, 46);
@@ -259,10 +265,10 @@
             // pxImagen
             // 
             this.pxImagen.BackgroundImage = global::CapaPresentacion.Properties.Resources.file;
-            this.pxImagen.Location = new System.Drawing.Point(452, 132);
+            this.pxImagen.Location = new System.Drawing.Point(552, 132);
             this.pxImagen.Margin = new System.Windows.Forms.Padding(2);
             this.pxImagen.Name = "pxImagen";
-            this.pxImagen.Size = new System.Drawing.Size(166, 93);
+            this.pxImagen.Size = new System.Drawing.Size(159, 143);
             this.pxImagen.TabIndex = 12;
             this.pxImagen.TabStop = false;
             // 
@@ -273,7 +279,7 @@
             this.txtCodigo.Location = new System.Drawing.Point(119, 68);
             this.txtCodigo.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(257, 20);
+            this.txtCodigo.Size = new System.Drawing.Size(266, 20);
             this.txtCodigo.TabIndex = 11;
             // 
             // label6
@@ -291,7 +297,7 @@
             this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnCancelar.Image = global::CapaPresentacion.Properties.Resources.error2;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(398, 243);
+            this.btnCancelar.Location = new System.Drawing.Point(429, 291);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(92, 27);
@@ -305,7 +311,7 @@
             this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnEditar.Image = global::CapaPresentacion.Properties.Resources.modificar;
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditar.Location = new System.Drawing.Point(296, 243);
+            this.btnEditar.Location = new System.Drawing.Point(327, 291);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(80, 27);
@@ -319,7 +325,7 @@
             this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnGuardar.Image = global::CapaPresentacion.Properties.Resources.disco;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(186, 243);
+            this.btnGuardar.Location = new System.Drawing.Point(217, 291);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(91, 27);
@@ -333,7 +339,7 @@
             this.btnNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnNuevo.Image = global::CapaPresentacion.Properties.Resources.nuevo;
             this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevo.Location = new System.Drawing.Point(88, 243);
+            this.btnNuevo.Location = new System.Drawing.Point(119, 291);
             this.btnNuevo.Margin = new System.Windows.Forms.Padding(2);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(80, 26);
@@ -346,12 +352,12 @@
             // 
             this.txtDescripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtDescripcion.Location = new System.Drawing.Point(119, 164);
+            this.txtDescripcion.Location = new System.Drawing.Point(119, 216);
             this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtDescripcion.Size = new System.Drawing.Size(257, 59);
+            this.txtDescripcion.Size = new System.Drawing.Size(402, 59);
             this.txtDescripcion.TabIndex = 5;
             // 
             // txtNombre
@@ -361,7 +367,7 @@
             this.txtNombre.Location = new System.Drawing.Point(119, 92);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(257, 20);
+            this.txtNombre.Size = new System.Drawing.Size(266, 20);
             this.txtNombre.TabIndex = 4;
             // 
             // txtIdarticulo
@@ -377,7 +383,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(49, 166);
+            this.label5.Location = new System.Drawing.Point(49, 218);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(66, 13);
@@ -409,15 +415,17 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Maroon;
-            this.label1.Location = new System.Drawing.Point(18, 11);
+            this.label1.Location = new System.Drawing.Point(11, 20);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 29);
+            this.label1.Size = new System.Drawing.Size(228, 29);
             this.label1.TabIndex = 6;
-            this.label1.Text = "Artículos";
+            this.label1.Text = "Artículo / Producto";
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label12);
+            this.tabPage1.Controls.Add(this.cbContribuyente);
             this.tabPage1.Controls.Add(this.dataListado);
             this.tabPage1.Controls.Add(this.lblTotal);
             this.tabPage1.Controls.Add(this.chkEliminar);
@@ -434,6 +442,14 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Listado";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // cbContribuyente
+            // 
+            this.cbContribuyente.FormattingEnabled = true;
+            this.cbContribuyente.Location = new System.Drawing.Point(226, 30);
+            this.cbContribuyente.Name = "cbContribuyente";
+            this.cbContribuyente.Size = new System.Drawing.Size(325, 21);
+            this.cbContribuyente.TabIndex = 8;
             // 
             // dataListado
             // 
@@ -490,7 +506,7 @@
             this.btnImprimir.BackColor = System.Drawing.Color.Silver;
             this.btnImprimir.Image = global::CapaPresentacion.Properties.Resources.imprimir;
             this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImprimir.Location = new System.Drawing.Point(427, 27);
+            this.btnImprimir.Location = new System.Drawing.Point(676, 26);
             this.btnImprimir.Margin = new System.Windows.Forms.Padding(2);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(88, 28);
@@ -504,7 +520,7 @@
             this.btnEliminar.BackColor = System.Drawing.Color.Silver;
             this.btnEliminar.Image = global::CapaPresentacion.Properties.Resources.eliminar;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(570, 27);
+            this.btnEliminar.Location = new System.Drawing.Point(809, 26);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(81, 28);
@@ -519,7 +535,7 @@
             this.btnBuscar.BackColor = System.Drawing.Color.Silver;
             this.btnBuscar.Image = global::CapaPresentacion.Properties.Resources.Buscar_p;
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(234, 27);
+            this.btnBuscar.Location = new System.Drawing.Point(580, 26);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(79, 28);
@@ -530,7 +546,7 @@
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(78, 28);
+            this.txtBuscar.Location = new System.Drawing.Point(69, 30);
             this.txtBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(133, 20);
@@ -540,7 +556,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(18, 28);
+            this.label2.Location = new System.Drawing.Point(18, 31);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 13);
@@ -572,12 +588,40 @@
             // 
             this.pictureBox1.BackgroundImage = global::CapaPresentacion.Properties.Resources.pencil_scale;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(169, 11);
+            this.pictureBox1.Location = new System.Drawing.Point(262, 11);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(68, 48);
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(119, 165);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(402, 21);
+            this.comboBox1.TabIndex = 25;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(47, 169);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(69, 13);
+            this.label11.TabIndex = 26;
+            this.label11.Text = "Cliente/Prov:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(227, 13);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(99, 13);
+            this.label12.TabIndex = 9;
+            this.label12.Text = "Cliente/ Proveedor:";
             // 
             // frmArticulo
             // 
@@ -655,5 +699,9 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtRegistroSanitario;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox cbContribuyente;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
     }
 }

@@ -520,6 +520,7 @@ C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaPresentacion\bin\De
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaPresentacion\bin\Debug\zh-CHT\Microsoft.ReportViewer.WebForms.resources.dll
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.AssemblyReference.cache
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaPresentacion\obj\Debug\CapaPresentacion.ConsultarKardex3AgrupadoFabricante.resources
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaPresentacion\obj\Debug\CapaPresentacion.ConsultarKardexLote_x_mes.resources
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaPresentacion\obj\Debug\CapaPresentacion.ConsultarKardexLote.resources
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaPresentacion\obj\Debug\CapaPresentacion.ConsultarKardex.resources
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaPresentacion\obj\Debug\CapaPresentacion.Consultas.FrmConsultaCompras.resources
@@ -553,6 +554,7 @@ C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaPresentacion\obj\De
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.FrmReporteKardexv1.resources
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.FrmReporteKardexv2xLote.resources
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.FrmReporteKardexv3xFabricante.resources
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.FrmReporteKardexv4xLoteMes.resources
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.FrmReportePresentacion.resources
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.FrmReporteProveedor.resources
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.FrmReporteTrabajador.resources

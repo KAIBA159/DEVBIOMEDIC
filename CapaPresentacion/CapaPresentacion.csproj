@@ -124,6 +124,12 @@
     <Compile Include="ConsultarKardex3AgrupadoFabricante.Designer.cs">
       <DependentUpon>ConsultarKardex3AgrupadoFabricante.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConsultarKardexLote_x_mes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarKardexLote_x_mes.Designer.cs">
+      <DependentUpon>ConsultarKardexLote_x_mes.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConsultarKardexLote.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -352,6 +358,12 @@
     <Compile Include="Reportes\FrmReporteKardexv3xFabricante.Designer.cs">
       <DependentUpon>FrmReporteKardexv3xFabricante.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reportes\FrmReporteKardexv4xLoteMes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\FrmReporteKardexv4xLoteMes.Designer.cs">
+      <DependentUpon>FrmReporteKardexv4xLoteMes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\FrmReportePresentacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -398,6 +410,9 @@
   <ItemGroup>
     <EmbeddedResource Include="ConsultarKardex3AgrupadoFabricante.resx">
       <DependentUpon>ConsultarKardex3AgrupadoFabricante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarKardexLote_x_mes.resx">
+      <DependentUpon>ConsultarKardexLote_x_mes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultarKardexLote.resx">
       <DependentUpon>ConsultarKardexLote.cs</DependentUpon>
@@ -507,6 +522,9 @@
     <EmbeddedResource Include="Reportes\FrmReporteKardexv3xFabricante.resx">
       <DependentUpon>FrmReporteKardexv3xFabricante.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\FrmReporteKardexv4xLoteMes.resx">
+      <DependentUpon>FrmReporteKardexv4xLoteMes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\FrmReportePresentacion.resx">
       <DependentUpon>FrmReportePresentacion.cs</DependentUpon>
     </EmbeddedResource>
@@ -525,6 +543,7 @@
     <EmbeddedResource Include="Reportes\rptArticulos.rdlc" />
     <EmbeddedResource Include="Reportes\rptCategoria.rdlc" />
     <EmbeddedResource Include="Reportes\rptCliente.rdlc" />
+    <EmbeddedResource Include="Reportes\rptKardexv4_lote_mes.rdlc" />
     <EmbeddedResource Include="Reportes\rptKardexv3_fabricante.rdlc" />
     <EmbeddedResource Include="Reportes\rptKardexv2_lote.rdlc" />
     <EmbeddedResource Include="Reportes\rptReporteIngresoCargo.rdlc" />

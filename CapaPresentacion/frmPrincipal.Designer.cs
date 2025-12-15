@@ -76,8 +76,9 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.kardexProductoLoteMesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -241,7 +242,8 @@
             this.stockDeArtículosToolStripMenuItem,
             this.karteToolStripMenuItem,
             this.kardexProducctoLoteToolStripMenuItem,
-            this.consultarKardexAgrupadoFabricanteToolStripMenuItem});
+            this.consultarKardexAgrupadoFabricanteToolStripMenuItem,
+            this.kardexProductoLoteMesToolStripMenuItem});
             this.MnuConsultas.Image = global::CapaPresentacion.Properties.Resources.consultas;
             this.MnuConsultas.Name = "MnuConsultas";
             this.MnuConsultas.Size = new System.Drawing.Size(87, 20);
@@ -282,7 +284,7 @@
             // 
             this.kardexProducctoLoteToolStripMenuItem.Name = "kardexProducctoLoteToolStripMenuItem";
             this.kardexProducctoLoteToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
-            this.kardexProducctoLoteToolStripMenuItem.Text = "Kardex_Produccto_Lote";
+            this.kardexProducctoLoteToolStripMenuItem.Text = "Kardex_Producto_Lote";
             this.kardexProducctoLoteToolStripMenuItem.Click += new System.EventHandler(this.kardexProducctoLoteToolStripMenuItem_Click);
             // 
             // consultarKardexAgrupadoFabricanteToolStripMenuItem
@@ -500,6 +502,13 @@
             this.toolStripStatusLabel2.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.toolStripStatusLabel2.Click += new System.EventHandler(this.toolStripStatusLabel2_Click);
             // 
+            // kardexProductoLoteMesToolStripMenuItem
+            // 
+            this.kardexProductoLoteMesToolStripMenuItem.Name = "kardexProductoLoteMesToolStripMenuItem";
+            this.kardexProductoLoteMesToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
+            this.kardexProductoLoteMesToolStripMenuItem.Text = "Kardex_Producto_Lote_Mes";
+            this.kardexProductoLoteMesToolStripMenuItem.Click += new System.EventHandler(this.kardexProductoLoteMesToolStripMenuItem_Click);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -576,6 +585,7 @@
         private System.Windows.Forms.ToolStripMenuItem consultarKardexAgrupadoFabricanteToolStripMenuItem;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
+        private System.Windows.Forms.ToolStripMenuItem kardexProductoLoteMesToolStripMenuItem;
     }
 }
 

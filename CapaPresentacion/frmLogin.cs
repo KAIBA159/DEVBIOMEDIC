@@ -27,7 +27,7 @@ namespace CapaPresentacion
         private static readonly ILog log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
 
 
-        public const string VersionSW = "v1.0.7";
+        public const string VersionSW = "v1.0.8";
         public const string NombreApp = "Sistema de Ventas - SisGest";
 
         public frmLogin()

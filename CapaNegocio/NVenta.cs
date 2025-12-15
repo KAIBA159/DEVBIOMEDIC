@@ -69,6 +69,13 @@ namespace CapaNegocio
             return Obj.BuscarFechas(textobuscar, textobuscar2);
         }
 
+        public static DataTable BuscarFechas3(string textobuscar, string textobuscar2, int? idProveedor)
+        {
+            DVenta Obj = new DVenta();
+            return Obj.BuscarFechas3(textobuscar, textobuscar2 , idProveedor);
+        }
+
+
         public static DataTable BuscarFechas2(string textobuscar, string textobuscar2)
         {
             DVenta Obj = new DVenta();
@@ -97,7 +104,15 @@ namespace CapaNegocio
             DVenta Obj = new DVenta();
             return Obj.MostrarArticulo_Venta_Lote(textobuscar, idClienteb);
         }
+
         
+         public static int ObtenerProximoCodigoSistema()
+         {
+                DVenta obj = new DVenta();
+                return obj.ObtenerProximoCodigoSistema();
+         }
+        
+
 
         public static DataTable MostrarArticulo_Venta_Codigo(string textobuscar ,string idClientec)
         {

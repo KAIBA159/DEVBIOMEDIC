@@ -13,6 +13,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.UI.WebControls;
 using System.Windows.Forms;
+using static CapaNegocio.NProveedor;
 
 namespace CapaPresentacion
 {
@@ -403,36 +404,157 @@ namespace CapaPresentacion
 
         }
 
-        //Método BuscarFechas
+
         private void BuscarFechas()
         {
-            this.dataListado.DataSource = NIngreso.BuscarFechas(this.dtFecha1.Value.ToString("dd/MM/yyyy"),
-                this.dtFecha2.Value.ToString("dd/MM/yyyy"));
 
-            var resultado = this.dataListado.DataSource;
+            lblTotal.Text = "Total de Registros: 0 encontrados";
 
+            // ⭐⭐ LIMPIEZA TOTAL ⭐⭐
+            dataListado.DataSource = null;
+            dataListado.Rows.Clear();
+            dataListado.Columns.Clear();
+            dataListado.Refresh();
+            this.BindingContext = new BindingContext();
 
+            // ===========================================
+            // 1. Obtener proveedor desde ComboBox
+            // ===========================================
 
-            if (resultado != null)
+            int? idProveedor = null;
+
+            if (cbContribuyente.SelectedIndex > 0)   // 0 = vacío
             {
+                idProveedor = Convert.ToInt32(cbContribuyente.SelectedValue);
+            }
 
+            // ===========================================
+            // 2. Ejecutar SP según proveedor
+            // ===========================================
+
+            if (idProveedor.HasValue)  // Tiene proveedor seleccionado
+            {
+                this.dataListado.DataSource = NIngreso.BuscarFechas2(
+                    this.dtFecha1.Value.ToString("dd/MM/yyyy"),
+                    this.dtFecha2.Value.ToString("dd/MM/yyyy"),
+                    idProveedor.Value
+                );
+            }
+            else                      // NO TIENE proveedor → buscar todo
+            {
+                this.dataListado.DataSource = NIngreso.BuscarFechas(
+                    this.dtFecha1.Value.ToString("dd/MM/yyyy"),
+                    this.dtFecha2.Value.ToString("dd/MM/yyyy")
+                );
+            }
+
+            // ===========================================
+            // 3. Formateo de columnas
+            // ===========================================
+
+            if (this.dataListado.DataSource != null)
+            {
                 foreach (DataGridViewColumn col in dataListado.Columns)
                 {
                     col.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
 
-                    // Limitar el ancho máximo
                     if (col.Width > 300)
-                    {
                         col.Width = 300;
-                    }
                 }
 
                 this.OcultarColumnas();
-                lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count) + "encontrados";
 
+                ///////////////////////////////////////////
+                //ini adicional
+                if (!dataListado.Columns.Contains("Eliminar"))
+                {
+                    DataGridViewCheckBoxColumn chk = new DataGridViewCheckBoxColumn();
+                    chk.Name = "Eliminar";
+                    chk.HeaderText = "Eliminar";
+                    chk.ReadOnly = false;
+                    chk.Visible = false;
+
+                    dataListado.Columns.Insert(0, chk);
+                }
+                //fin adicional
+                ///////////////////////////////////////////
+
+                lblTotal.Text = "Total de Registros: " + dataListado.Rows.Count + " encontrados";
             }
-
         }
+
+        ////Método BuscarFechas
+        //private void BuscarFechas()
+        //{
+
+
+        //    // ⭐⭐ LIMPIEZA TOTAL ⭐⭐
+        //    dataListado.DataSource = null;
+        //    dataListado.Rows.Clear();
+        //    dataListado.Columns.Clear();
+        //    dataListado.Refresh();
+        //    this.BindingContext = new BindingContext();
+
+
+
+        //    //
+        //    int? idProveedor = null;
+
+        //    int? idProveedorFiltro = null;
+
+        //    if (idProveedor != 0)
+        //    {
+        //        idProveedorFiltro = idProveedor;
+
+        //        if (cbContribuyente.SelectedIndex != -1)
+        //            idProveedor = Convert.ToInt32(cbContribuyente.SelectedValue);
+
+
+        //        this.dataListado.DataSource = NIngreso.BuscarFechas2(this.dtFecha1.Value.ToString("dd/MM/yyyy"),
+        //            this.dtFecha2.Value.ToString("dd/MM/yyyy"), idProveedor);
+
+
+
+        //    }
+        //    else {
+
+
+        //        this.dataListado.DataSource = NIngreso.BuscarFechas(this.dtFecha1.Value.ToString("dd/MM/yyyy"),
+        //           this.dtFecha2.Value.ToString("dd/MM/yyyy"));
+
+        //    }
+
+        //        //
+
+
+
+
+        //    var resultado = this.dataListado.DataSource;
+
+
+
+
+
+        //    if (resultado != null)
+        //    {
+
+        //        foreach (DataGridViewColumn col in dataListado.Columns)
+        //        {
+        //            col.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+
+        //            // Limitar el ancho máximo
+        //            if (col.Width > 300)
+        //            {
+        //                col.Width = 300;
+        //            }
+        //        }
+
+        //        this.OcultarColumnas();
+        //        lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count) + "  encontrados";
+
+        //    }
+
+        //}
 
 
         //private void BuscarFechas()
@@ -751,6 +873,29 @@ namespace CapaPresentacion
             this.Habilitar(false);
             this.Botones();
             this.crearTabla();
+
+
+            CargarCliente_Proveedor();
+
+        }
+
+        private void CargarCliente_Proveedor()
+        {
+            DataTable dt = NCliente_Proveedor.Listar();
+
+            // Agregar fila vacía manualmente
+            DataRow fila = dt.NewRow();
+            fila["idproveedor"] = 0;
+            fila["razon_social"] = "";   // Texto vacío
+            dt.Rows.InsertAt(fila, 0);
+
+            cbContribuyente.DataSource = dt;
+            cbContribuyente.DisplayMember = "razon_social";
+            cbContribuyente.ValueMember = "idproveedor";
+
+
+
+
         }
 
         private void FrmIngreso_FormClosing(object sender, FormClosingEventArgs e)

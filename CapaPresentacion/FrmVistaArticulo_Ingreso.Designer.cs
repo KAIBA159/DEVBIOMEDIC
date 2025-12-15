@@ -39,6 +39,7 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataListado)).BeginInit();
@@ -69,6 +70,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.comboBox1);
             this.tabPage1.Controls.Add(this.dataListado);
             this.tabPage1.Controls.Add(this.lblTotal);
             this.tabPage1.Controls.Add(this.btnBuscar);
@@ -123,7 +125,7 @@
             this.btnBuscar.BackColor = System.Drawing.Color.Silver;
             this.btnBuscar.Image = global::CapaPresentacion.Properties.Resources.Buscar_p;
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(329, 20);
+            this.btnBuscar.Location = new System.Drawing.Point(511, 25);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(79, 28);
@@ -134,17 +136,17 @@
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(69, 25);
+            this.txtBuscar.Location = new System.Drawing.Point(199, 30);
             this.txtBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(243, 20);
+            this.txtBuscar.Size = new System.Drawing.Size(285, 20);
             this.txtBuscar.TabIndex = 1;
             this.txtBuscar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBuscar_KeyDown);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 28);
+            this.label2.Location = new System.Drawing.Point(35, 64);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 13);
@@ -161,6 +163,18 @@
             this.pictureBox1.Size = new System.Drawing.Size(68, 48);
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Nombre",
+            "Codigo"});
+            this.comboBox1.Location = new System.Drawing.Point(20, 30);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(107, 21);
+            this.comboBox1.TabIndex = 8;
+            this.comboBox1.Text = "Codigo";
             // 
             // FrmVistaArticulo_Ingreso
             // 
@@ -200,5 +214,6 @@
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

@@ -121,6 +121,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cbContribuyente = new System.Windows.Forms.ComboBox();
+            this.label29 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataListado)).BeginInit();
@@ -144,11 +146,13 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(976, 680);
+            this.tabControl1.Size = new System.Drawing.Size(1105, 680);
             this.tabControl1.TabIndex = 10;
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label29);
+            this.tabPage1.Controls.Add(this.cbContribuyente);
             this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.label9);
             this.tabPage1.Controls.Add(this.dtFecha2);
@@ -164,7 +168,7 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage1.Size = new System.Drawing.Size(968, 654);
+            this.tabPage1.Size = new System.Drawing.Size(1097, 654);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Listado";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -175,7 +179,7 @@
             this.button1.BackColor = System.Drawing.Color.Silver;
             this.button1.Image = global::CapaPresentacion.Properties.Resources.imprimir;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(698, 28);
+            this.button1.Location = new System.Drawing.Point(915, 36);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(148, 28);
@@ -229,7 +233,7 @@
             this.dataListado.ReadOnly = true;
             this.dataListado.RowTemplate.Height = 24;
             this.dataListado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataListado.Size = new System.Drawing.Size(936, 528);
+            this.dataListado.Size = new System.Drawing.Size(1065, 528);
             this.dataListado.TabIndex = 7;
             this.dataListado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataListado_CellContentClick);
             this.dataListado.DoubleClick += new System.EventHandler(this.dataListado_DoubleClick);
@@ -268,7 +272,7 @@
             this.btnImprimir.BackColor = System.Drawing.Color.Silver;
             this.btnImprimir.Image = global::CapaPresentacion.Properties.Resources.imprimir;
             this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImprimir.Location = new System.Drawing.Point(593, 28);
+            this.btnImprimir.Location = new System.Drawing.Point(810, 36);
             this.btnImprimir.Margin = new System.Windows.Forms.Padding(2);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(88, 28);
@@ -282,7 +286,7 @@
             this.btnEliminar.BackColor = System.Drawing.Color.Silver;
             this.btnEliminar.Image = global::CapaPresentacion.Properties.Resources.eliminar;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(498, 28);
+            this.btnEliminar.Location = new System.Drawing.Point(715, 36);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(81, 28);
@@ -296,7 +300,7 @@
             this.btnBuscar.BackColor = System.Drawing.Color.Silver;
             this.btnBuscar.Image = global::CapaPresentacion.Properties.Resources.Buscar_p;
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(405, 28);
+            this.btnBuscar.Location = new System.Drawing.Point(622, 36);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(79, 28);
@@ -322,7 +326,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage2.Size = new System.Drawing.Size(968, 654);
+            this.tabPage2.Size = new System.Drawing.Size(1097, 654);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Mantenimiento";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -377,7 +381,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(954, 633);
+            this.groupBox1.Size = new System.Drawing.Size(1083, 633);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ingresos Almacén";
@@ -661,7 +665,7 @@
             this.dataListadoDetalle.Margin = new System.Windows.Forms.Padding(2);
             this.dataListadoDetalle.Name = "dataListadoDetalle";
             this.dataListadoDetalle.RowTemplate.Height = 24;
-            this.dataListadoDetalle.Size = new System.Drawing.Size(921, 304);
+            this.dataListadoDetalle.Size = new System.Drawing.Size(1050, 304);
             this.dataListadoDetalle.TabIndex = 32;
             // 
             // groupBox2
@@ -1195,12 +1199,30 @@
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
+            // cbContribuyente
+            // 
+            this.cbContribuyente.FormattingEnabled = true;
+            this.cbContribuyente.Location = new System.Drawing.Point(244, 39);
+            this.cbContribuyente.Name = "cbContribuyente";
+            this.cbContribuyente.Size = new System.Drawing.Size(342, 21);
+            this.cbContribuyente.TabIndex = 12;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(241, 15);
+            this.label29.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(39, 13);
+            this.label29.TabIndex = 13;
+            this.label29.Text = "Cliente";
+            // 
             // FrmIngreso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(996, 751);
+            this.ClientSize = new System.Drawing.Size(1125, 751);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
@@ -1330,5 +1352,7 @@
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.TextBox tb_conclusion;
         private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.ComboBox cbContribuyente;
+        private System.Windows.Forms.Label label29;
     }
 }

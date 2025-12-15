@@ -23,6 +23,9 @@ namespace CapaDatos
         private string _RegistroSanitario;
         private string _Fabricante;
 
+
+        private int _IdclienteProveedor;
+
         public int Idarticulo
         {
             get { return _Idarticulo; }
@@ -76,13 +79,20 @@ namespace CapaDatos
             set { _RegistroSanitario = value; }
         }
 
+        public int IdclienteProveedor
+        {
+            get { return _IdclienteProveedor; }
+            set { _IdclienteProveedor = value; }
+        }
+
+
         //Constructores
         public DArticulo()
         {
 
         }
 
-        public DArticulo(int idarticulo,string codigo,string nombre,string descripcion,byte[] imagen,int idcategoria,int idpresentacion,string textobuscar ,string registrosantario,string fabricante)
+        public DArticulo(int idarticulo,string codigo,string nombre,string descripcion,byte[] imagen,int idcategoria,int idpresentacion,string textobuscar ,string registrosantario,string fabricante , int idclienteProveedor)
         {
             this.Idarticulo = idarticulo;
             this.Codigo = codigo;
@@ -96,7 +106,30 @@ namespace CapaDatos
 
             this.RegistroSanitario = registrosantario;
             this.Fabricante = fabricante;
+            this.IdclienteProveedor = idclienteProveedor;
 
+        }
+
+
+        // ✔ Validación de existencia del código
+        public bool ExisteCodigo(string codigo, int? idActual = null)
+        {
+            using (SqlConnection con = Conexion.CrearConexion())
+            {
+                string query = @"SELECT COUNT(*) 
+                                 FROM articulo 
+                                 WHERE codigo = @codigo
+                                 AND (@idActual IS NULL OR idarticulo <> @idActual)";
+
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.Parameters.AddWithValue("@codigo", codigo);
+                cmd.Parameters.AddWithValue("@idActual", (object)idActual ?? DBNull.Value);
+
+                con.Open();
+                int count = (int)cmd.ExecuteScalar();
+
+                return count > 0;
+            }
         }
 
         //Métodos
@@ -176,6 +209,14 @@ namespace CapaDatos
                 ParFabricante.Size = 100;
                 ParFabricante.Value = Articulo.Fabricante;
                 SqlCmd.Parameters.Add(ParFabricante);
+
+
+                SqlParameter ParClienteProveedor = new SqlParameter();
+                ParClienteProveedor.ParameterName = "@idclienteproveedor";
+                ParClienteProveedor.SqlDbType = SqlDbType.Int;
+                //ParClienteProveedor.Size = 100;
+                ParClienteProveedor.Value = Articulo.IdclienteProveedor;
+                SqlCmd.Parameters.Add(ParClienteProveedor);
 
 
 
@@ -273,7 +314,12 @@ namespace CapaDatos
                 ParFabricante.Value = Articulo.Fabricante;
                 SqlCmd.Parameters.Add(ParFabricante);
 
-
+                SqlParameter ParClienteProveedor = new SqlParameter();
+                ParClienteProveedor.ParameterName = "@idclienteproveedor";
+                ParClienteProveedor.SqlDbType = SqlDbType.Int;
+                //ParClienteProveedor.Size = 100;
+                ParClienteProveedor.Value = Articulo.IdclienteProveedor;
+                SqlCmd.Parameters.Add(ParClienteProveedor);
 
                 //Ejecutamos nuestro comando
 
@@ -389,6 +435,82 @@ namespace CapaDatos
             return DtResultado;
 
         }
+
+        public DataTable BuscarNombre2(DArticulo Articulo)
+        {
+            DataTable DtResultado = new DataTable("articulo");
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                SqlCon.ConnectionString = Conexion.Cn;
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "spbuscar_articulo_nombre2";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter ParTextoBuscar = new SqlParameter();
+                ParTextoBuscar.ParameterName = "@textobuscar";
+                ParTextoBuscar.SqlDbType = SqlDbType.VarChar;
+                ParTextoBuscar.Size = 50;
+                ParTextoBuscar.Value = Articulo.TextoBuscar;
+                SqlCmd.Parameters.Add(ParTextoBuscar);
+
+                SqlParameter ParIdclienteproveedor = new SqlParameter();
+                ParIdclienteproveedor.ParameterName = "@idclienteproveedor";
+                ParIdclienteproveedor.SqlDbType = SqlDbType.Int;
+                //ParTextoBuscar.Size = 50;
+                ParIdclienteproveedor.Value = Articulo.IdclienteProveedor;
+                SqlCmd.Parameters.Add(ParIdclienteproveedor);
+
+
+
+
+
+                SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                SqlDat.Fill(DtResultado);
+
+            }
+            catch (Exception ex)
+            {
+                DtResultado = null;
+            }
+            return DtResultado;
+
+        }
+
+
+
+        public DataTable BuscarCodigo(DArticulo Articulo)
+        {
+            DataTable DtResultado = new DataTable("articulo");
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                SqlCon.ConnectionString = Conexion.Cn;
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "spbuscar_articulo_codigo";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter ParTextoBuscar = new SqlParameter();
+                ParTextoBuscar.ParameterName = "@textobuscar";
+                ParTextoBuscar.SqlDbType = SqlDbType.VarChar;
+                ParTextoBuscar.Size = 50;
+                ParTextoBuscar.Value = Articulo.TextoBuscar;
+                SqlCmd.Parameters.Add(ParTextoBuscar);
+
+                SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                SqlDat.Fill(DtResultado);
+
+            }
+            catch (Exception ex)
+            {
+                DtResultado = null;
+            }
+            return DtResultado;
+
+        }
+
 
 
         public DataTable Stock_Articulos()
