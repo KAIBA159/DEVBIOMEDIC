@@ -40,21 +40,22 @@
             this.button2 = new System.Windows.Forms.Button();
             this.txtbox_cliente = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.ck_btnclic = new System.Windows.Forms.Button();
             this.txtbox_rs = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnBuscarCliente = new System.Windows.Forms.Button();
             this.txtbox_producto = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.dtp_hasta = new System.Windows.Forms.DateTimePicker();
-            this.dtp_desde = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.cmbMes = new System.Windows.Forms.ComboBox();
+            this.nudAnio = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAnio)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.nudAnio);
+            this.groupBox1.Controls.Add(this.cmbMes);
             this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.tbt_lote);
@@ -66,16 +67,12 @@
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.txtbox_cliente);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.ck_btnclic);
             this.groupBox1.Controls.Add(this.txtbox_rs);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.btnBuscarCliente);
             this.groupBox1.Controls.Add(this.txtbox_producto);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.dtp_hasta);
-            this.groupBox1.Controls.Add(this.dtp_desde);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(32, 14);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(586, 185);
@@ -88,11 +85,12 @@
             // 
             this.dateTimePicker1.CustomFormat = "MMMM yyyy";
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(100, 79);
+            this.dateTimePicker1.Location = new System.Drawing.Point(432, 96);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.ShowUpDown = true;
             this.dateTimePicker1.Size = new System.Drawing.Size(135, 20);
             this.dateTimePicker1.TabIndex = 33;
+            this.dateTimePicker1.Visible = false;
             // 
             // label7
             // 
@@ -126,7 +124,7 @@
             this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnCancelar.Image = global::CapaPresentacion.Properties.Resources.error2;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(203, 126);
+            this.btnCancelar.Location = new System.Drawing.Point(205, 125);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(126, 28);
@@ -193,17 +191,6 @@
             this.label5.TabIndex = 23;
             this.label5.Text = "Cliente :";
             // 
-            // ck_btnclic
-            // 
-            this.ck_btnclic.Location = new System.Drawing.Point(411, 108);
-            this.ck_btnclic.Name = "ck_btnclic";
-            this.ck_btnclic.Size = new System.Drawing.Size(169, 23);
-            this.ck_btnclic.TabIndex = 22;
-            this.ck_btnclic.Text = "Consultar";
-            this.ck_btnclic.UseVisualStyleBackColor = true;
-            this.ck_btnclic.Visible = false;
-            this.ck_btnclic.Click += new System.EventHandler(this.ck_btnclic_event);
-            // 
             // txtbox_rs
             // 
             this.txtbox_rs.Location = new System.Drawing.Point(460, 137);
@@ -254,24 +241,6 @@
             this.label3.Text = "Producto :";
             this.label3.Visible = false;
             // 
-            // dtp_hasta
-            // 
-            this.dtp_hasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_hasta.Location = new System.Drawing.Point(301, 10);
-            this.dtp_hasta.Name = "dtp_hasta";
-            this.dtp_hasta.Size = new System.Drawing.Size(99, 20);
-            this.dtp_hasta.TabIndex = 3;
-            this.dtp_hasta.Visible = false;
-            // 
-            // dtp_desde
-            // 
-            this.dtp_desde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_desde.Location = new System.Drawing.Point(108, 10);
-            this.dtp_desde.Name = "dtp_desde";
-            this.dtp_desde.Size = new System.Drawing.Size(99, 20);
-            this.dtp_desde.TabIndex = 2;
-            this.dtp_desde.Visible = false;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -282,15 +251,20 @@
             this.label2.Text = "Hasta : ";
             this.label2.Visible = false;
             // 
-            // label1
+            // cmbMes
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(59, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Desde : ";
-            this.label1.Visible = false;
+            this.cmbMes.FormattingEnabled = true;
+            this.cmbMes.Location = new System.Drawing.Point(189, 77);
+            this.cmbMes.Name = "cmbMes";
+            this.cmbMes.Size = new System.Drawing.Size(120, 21);
+            this.cmbMes.TabIndex = 34;
+            // 
+            // nudAnio
+            // 
+            this.nudAnio.Location = new System.Drawing.Point(100, 78);
+            this.nudAnio.Name = "nudAnio";
+            this.nudAnio.Size = new System.Drawing.Size(64, 20);
+            this.nudAnio.TabIndex = 35;
             // 
             // ConsultarKardex3AgrupadoFabricante
             // 
@@ -300,8 +274,10 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "ConsultarKardex3AgrupadoFabricante";
             this.Text = "ConsultarKardex Agrupado Fabricante";
+            this.Load += new System.EventHandler(this.ConsultarKardex3AgrupadoFabricante_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAnio)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -309,19 +285,15 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DateTimePicker dtp_desde;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtbox_producto;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dtp_hasta;
         private System.Windows.Forms.TextBox txtbox_rs;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnBuscarCliente;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox txtbox_cliente;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button ck_btnclic;
         private System.Windows.Forms.TextBox txt_idcliente;
         private System.Windows.Forms.TextBox txt_idproducto;
         private System.Windows.Forms.Button btnImprimir;
@@ -330,5 +302,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.NumericUpDown nudAnio;
+        private System.Windows.Forms.ComboBox cmbMes;
     }
 }

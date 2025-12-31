@@ -14,23 +14,16 @@ namespace CapaPresentacion.Reportes
     public partial class FrmReporteKardexv4xLoteMes : Form
     {
 
-        private String _Texto;
-        private String _Texto2;
+        public DateTime FechaInicio { get; set; }
+        public DateTime FechaFin { get; set; }
+
+
         private int _idproducto;
         private int _idCliente;
 
         private string _Lote;
 
-        public String Texto
-        {
-            get { return _Texto; }
-            set { _Texto = value; }
-        }
-        public String Texto2
-        {
-            get { return _Texto2; }
-            set { _Texto2 = value; }
-        }
+
 
         public int idproducto
         {
@@ -70,7 +63,7 @@ namespace CapaPresentacion.Reportes
 
                 //this.sp_kardex_productoTableAdapter.Fill(this.dsPrincipal.spbuscar_venta_fecha, Texto, Texto2);
                 //this.sp_kardex_productoTableAdapter.Fill(this.dsPrincipal.sp_kardex_producto, Convert.ToDateTime( "01/01/2025"), Convert.ToDateTime("01/08/2026") , 1008, 1003);
-                this.sp_kardex_producto_x_lote_x_mesTableAdapter.Fill(this.dsPrincipal.sp_kardex_producto_x_lote_x_mes, Convert.ToDateTime(Texto), Convert.ToDateTime(Texto2) , Lote, idproducto, idCliente);
+                this.sp_kardex_producto_x_lote_x_mesTableAdapter.Fill(this.dsPrincipal.sp_kardex_producto_x_lote_x_mes, FechaInicio, FechaFin, Lote, idproducto, idCliente);
                 //this.sp_kardex_productoTableAdapter.Fill(this.dsPrincipal.sp_kardex_producto, Convert.ToDateTime("01/01/2025"), Convert.ToDateTime("01/08/2026"), idproducto, idCliente);
                 this.reportViewer1.RefreshReport();
 

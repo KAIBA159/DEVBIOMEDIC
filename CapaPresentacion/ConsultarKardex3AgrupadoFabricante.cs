@@ -40,22 +40,7 @@ namespace CapaPresentacion
 
         }
 
-        private void ck_btnclic_event(object sender, EventArgs e)
-        {
-
-            Reportes.FrmReporteKardexv1 frm = new Reportes.FrmReporteKardexv1();
-            frm.Texto = Convert.ToString(dtp_desde.Value);
-            frm.Texto2 = Convert.ToString(dtp_hasta.Value);
-            frm.ShowDialog();
-
-            //Reportes.FrmReporteVentas frm = new Reportes.FrmReporteVentas();
-            //frm.Texto = Convert.ToString(dtp_desde.Value);
-            //frm.Texto2 = Convert.ToString(dtp_hasta.Value);
-            //frm.ShowDialog();
-
-
-
-        }
+      
 
         private void btnBuscarCliente_Click(object sender, EventArgs e)
         {
@@ -83,7 +68,7 @@ namespace CapaPresentacion
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
-            Reportes.FrmReporteKardexv3xFabricante  frm = new Reportes.FrmReporteKardexv3xFabricante();
+            /*Reportes.FrmReporteKardexv3xFabricante  frm = new Reportes.FrmReporteKardexv3xFabricante();*/
 
 
             //frm.Texto = Convert.ToString(dtp_desde.Value);
@@ -95,7 +80,7 @@ namespace CapaPresentacion
             //    MessageBox.Show("Escoger Producto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             //    return;
             //}
-
+            /*
             if (txtbox_cliente.Text == string.Empty)
             {
                 //MessageBox.Show(      ("Falta ingresar algunos datos, serán remarcados");
@@ -110,6 +95,7 @@ namespace CapaPresentacion
             //    return;
             //}
 
+            /*
             DateTime fechaSeleccionada = dateTimePicker1.Value;
 
             int mes = fechaSeleccionada.Month;
@@ -135,6 +121,57 @@ namespace CapaPresentacion
 
             frm.ShowDialog();
 
+            DateTime fechaSeleccionada = dateTimePicker1.Value;
+
+            DateTime fechaInicio = new DateTime(
+                fechaSeleccionada.Year,
+                fechaSeleccionada.Month,
+                1);
+
+            DateTime fechaFin = fechaInicio
+                .AddMonths(1)
+                .AddDays(-1);
+
+            frm.FechaInicio = fechaInicio;
+            frm.FechaFin = fechaFin;
+
+            frm.idCliente = Convert.ToInt32(txt_idcliente.Text);
+
+            frm.ShowDialog();
+            */
+
+            if (string.IsNullOrWhiteSpace(txtbox_cliente.Text))
+            {
+                MessageBox.Show("Escoger Cliente.", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (cmbMes.SelectedItem == null)
+            {
+                MessageBox.Show("Seleccione un mes.", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            int mes = ((KeyValuePair<int, string>)cmbMes.SelectedItem).Key;
+            int anio = (int)nudAnio.Value;
+
+            // ✅ Fechas seguras
+            DateTime fechaInicio = new DateTime(anio, mes, 1);
+            DateTime fechaFin = fechaInicio.AddMonths(1).AddDays(-1);
+
+            Reportes.FrmReporteKardexv3xFabricante frm =
+                new Reportes.FrmReporteKardexv3xFabricante();
+
+            frm.FechaInicio = fechaInicio;
+            frm.FechaFin = fechaFin;
+            frm.idCliente = Convert.ToInt32(txt_idcliente.Text);
+
+            frm.ShowDialog();
+
+
+
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -144,6 +181,33 @@ namespace CapaPresentacion
             this.txt_idproducto.Text = string.Empty;
             this.txt_idcliente.Text = string.Empty;
 
+        }
+
+        private void ConsultarKardex3AgrupadoFabricante_Load(object sender, EventArgs e)
+        {
+            cmbMes.Items.Clear();
+
+            cmbMes.Items.Add(new KeyValuePair<int, string>(1, "Enero"));
+            cmbMes.Items.Add(new KeyValuePair<int, string>(2, "Febrero"));
+            cmbMes.Items.Add(new KeyValuePair<int, string>(3, "Marzo"));
+            cmbMes.Items.Add(new KeyValuePair<int, string>(4, "Abril"));
+            cmbMes.Items.Add(new KeyValuePair<int, string>(5, "Mayo"));
+            cmbMes.Items.Add(new KeyValuePair<int, string>(6, "Junio"));
+            cmbMes.Items.Add(new KeyValuePair<int, string>(7, "Julio"));
+            cmbMes.Items.Add(new KeyValuePair<int, string>(8, "Agosto"));
+            cmbMes.Items.Add(new KeyValuePair<int, string>(9, "Septiembre"));
+            cmbMes.Items.Add(new KeyValuePair<int, string>(10, "Octubre"));
+            cmbMes.Items.Add(new KeyValuePair<int, string>(11, "Noviembre"));
+            cmbMes.Items.Add(new KeyValuePair<int, string>(12, "Diciembre"));
+
+            cmbMes.DisplayMember = "Value";
+            cmbMes.ValueMember = "Key";
+
+            cmbMes.SelectedValue = DateTime.Now.Month;
+
+            nudAnio.Minimum = 2000;
+            nudAnio.Maximum = 2100;
+            nudAnio.Value = DateTime.Now.Year;
         }
     }
 }

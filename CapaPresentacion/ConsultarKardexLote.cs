@@ -111,10 +111,10 @@ namespace CapaPresentacion
             }
 
 
-            frm.idproducto = Convert.ToInt32(txt_idproducto.Text);
-            frm.idCliente = Convert.ToInt32(txt_idcliente.Text);
+            frm.idproducto = Convert.ToInt32(txt_idproducto.Text.Trim());
+            frm.idCliente = Convert.ToInt32(txt_idcliente.Text.Trim());
 
-            frm.Lote  = tbt_lote.Text;
+            frm.Lote  = tbt_lote.Text.Trim();
             
 
             frm.ShowDialog();

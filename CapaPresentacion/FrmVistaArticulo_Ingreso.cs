@@ -103,12 +103,7 @@ namespace CapaPresentacion
 
         private void dataListado_DoubleClick(object sender, EventArgs e)
         {
-            //FrmIngreso form = FrmIngreso.GetInstancia();
-            //string par1, par2;
-            //par1 = Convert.ToString(this.dataListado.CurrentRow.Cells["idarticulo"].Value);
-            //par2 = Convert.ToString(this.dataListado.CurrentRow.Cells["nombre"].Value);
-            //form.setArticulo(par1,par2);
-            //this.Hide();
+           
 
             if (this.dataListado.CurrentRow != null)
             {

@@ -6821,6 +6821,10 @@ namespace CapaPresentacion {
             
             private global::System.Data.DataColumn columnpreset;
             
+            private global::System.Data.DataColumn columnidarticulo;
+            
+            private global::System.Data.DataColumn columnCodigoArticulo;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public sp_kardex_resumen_por_fabricanteDataTable() {
@@ -7040,6 +7044,22 @@ namespace CapaPresentacion {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn idarticuloColumn {
+                get {
+                    return this.columnidarticulo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn CodigoArticuloColumn {
+                get {
+                    return this.columnCodigoArticulo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -7098,7 +7118,8 @@ namespace CapaPresentacion {
                         System.DateTime FechaFin, 
                         System.DateTime FechaVencimiento, 
                         int idpresentacion, 
-                        string preset) {
+                        string preset, 
+                        string CodigoArticulo) {
                 sp_kardex_resumen_por_fabricanteRow rowsp_kardex_resumen_por_fabricanteRow = ((sp_kardex_resumen_por_fabricanteRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         fabricante,
@@ -7123,10 +7144,19 @@ namespace CapaPresentacion {
                         FechaFin,
                         FechaVencimiento,
                         idpresentacion,
-                        preset};
+                        preset,
+                        null,
+                        CodigoArticulo};
                 rowsp_kardex_resumen_por_fabricanteRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowsp_kardex_resumen_por_fabricanteRow);
                 return rowsp_kardex_resumen_por_fabricanteRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public sp_kardex_resumen_por_fabricanteRow FindByidarticulo(int idarticulo) {
+                return ((sp_kardex_resumen_por_fabricanteRow)(this.Rows.Find(new object[] {
+                            idarticulo})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7169,6 +7199,8 @@ namespace CapaPresentacion {
                 this.columnFechaVencimiento = base.Columns["FechaVencimiento"];
                 this.columnidpresentacion = base.Columns["idpresentacion"];
                 this.columnpreset = base.Columns["preset"];
+                this.columnidarticulo = base.Columns["idarticulo"];
+                this.columnCodigoArticulo = base.Columns["CodigoArticulo"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7220,6 +7252,12 @@ namespace CapaPresentacion {
                 base.Columns.Add(this.columnidpresentacion);
                 this.columnpreset = new global::System.Data.DataColumn("preset", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnpreset);
+                this.columnidarticulo = new global::System.Data.DataColumn("idarticulo", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnidarticulo);
+                this.columnCodigoArticulo = new global::System.Data.DataColumn("CodigoArticulo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCodigoArticulo);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnidarticulo}, true));
                 this.columnfabricante.MaxLength = 100;
                 this.columnProducto.AllowDBNull = false;
                 this.columnProducto.MaxLength = 1024;
@@ -7245,10 +7283,19 @@ namespace CapaPresentacion {
                 this.columnFila.ReadOnly = true;
                 this.columnFechaInicio.ReadOnly = true;
                 this.columnFechaFin.ReadOnly = true;
+                this.columnFechaVencimiento.AllowDBNull = false;
                 this.columnFechaVencimiento.ReadOnly = true;
                 this.columnidpresentacion.AllowDBNull = false;
                 this.columnpreset.AllowDBNull = false;
                 this.columnpreset.MaxLength = 50;
+                this.columnidarticulo.AutoIncrement = true;
+                this.columnidarticulo.AutoIncrementSeed = -1;
+                this.columnidarticulo.AutoIncrementStep = -1;
+                this.columnidarticulo.AllowDBNull = false;
+                this.columnidarticulo.ReadOnly = true;
+                this.columnidarticulo.Unique = true;
+                this.columnCodigoArticulo.AllowDBNull = false;
+                this.columnCodigoArticulo.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12261,13 +12308,7 @@ namespace CapaPresentacion {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public System.DateTime FechaVencimiento {
                 get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tablesp_kardex_resumen_por_fabricante.FechaVencimientoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'FechaVencimiento\' de la tabla \'sp_kardex_resumen_por_fabr" +
-                                "icante\' es DBNull.", e);
-                    }
+                    return ((global::System.DateTime)(this[this.tablesp_kardex_resumen_por_fabricante.FechaVencimientoColumn]));
                 }
                 set {
                     this[this.tablesp_kardex_resumen_por_fabricante.FechaVencimientoColumn] = value;
@@ -12293,6 +12334,28 @@ namespace CapaPresentacion {
                 }
                 set {
                     this[this.tablesp_kardex_resumen_por_fabricante.presetColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int idarticulo {
+                get {
+                    return ((int)(this[this.tablesp_kardex_resumen_por_fabricante.idarticuloColumn]));
+                }
+                set {
+                    this[this.tablesp_kardex_resumen_por_fabricante.idarticuloColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string CodigoArticulo {
+                get {
+                    return ((string)(this[this.tablesp_kardex_resumen_por_fabricante.CodigoArticuloColumn]));
+                }
+                set {
+                    this[this.tablesp_kardex_resumen_por_fabricante.CodigoArticuloColumn] = value;
                 }
             }
             
@@ -12510,18 +12573,6 @@ namespace CapaPresentacion {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetFechaFinNull() {
                 this[this.tablesp_kardex_resumen_por_fabricante.FechaFinColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsFechaVencimientoNull() {
-                return this.IsNull(this.tablesp_kardex_resumen_por_fabricante.FechaVencimientoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetFechaVencimientoNull() {
-                this[this.tablesp_kardex_resumen_por_fabricante.FechaVencimientoColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -15529,13 +15580,14 @@ namespace CapaPresentacion.dsPrincipalTableAdapters {
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@textobuscar", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@textobuscar2", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idproveedor", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(dsPrincipal.spbuscar_venta_fechaDataTable dataTable, string textobuscar, string textobuscar2) {
+        public virtual int Fill(dsPrincipal.spbuscar_venta_fechaDataTable dataTable, string textobuscar, string textobuscar2, global::System.Nullable<int> idproveedor) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((textobuscar == null)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -15548,6 +15600,12 @@ namespace CapaPresentacion.dsPrincipalTableAdapters {
             }
             else {
                 this.Adapter.SelectCommand.Parameters[2].Value = ((string)(textobuscar2));
+            }
+            if ((idproveedor.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((int)(idproveedor.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -15560,7 +15618,7 @@ namespace CapaPresentacion.dsPrincipalTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual dsPrincipal.spbuscar_venta_fechaDataTable GetData(string textobuscar, string textobuscar2) {
+        public virtual dsPrincipal.spbuscar_venta_fechaDataTable GetData(string textobuscar, string textobuscar2, global::System.Nullable<int> idproveedor) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((textobuscar == null)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -15573,6 +15631,12 @@ namespace CapaPresentacion.dsPrincipalTableAdapters {
             }
             else {
                 this.Adapter.SelectCommand.Parameters[2].Value = ((string)(textobuscar2));
+            }
+            if ((idproveedor.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((int)(idproveedor.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             dsPrincipal.spbuscar_venta_fechaDataTable dataTable = new dsPrincipal.spbuscar_venta_fechaDataTable();
             this.Adapter.Fill(dataTable);
@@ -16400,6 +16464,8 @@ namespace CapaPresentacion.dsPrincipalTableAdapters {
             tableMapping.ColumnMappings.Add("FechaVencimiento", "FechaVencimiento");
             tableMapping.ColumnMappings.Add("idpresentacion", "idpresentacion");
             tableMapping.ColumnMappings.Add("preset", "preset");
+            tableMapping.ColumnMappings.Add("idarticulo", "idarticulo");
+            tableMapping.ColumnMappings.Add("CodigoArticulo", "CodigoArticulo");
             this._adapter.TableMappings.Add(tableMapping);
         }
         

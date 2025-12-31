@@ -52,6 +52,11 @@ namespace CapaPresentacion
         {
             this.txtIdarticulo.Text = idarticulo;
             this.txtArticulo.Text = nombre;
+
+            this.txtStock.ReadOnly = false;
+            this.txtCantidad_Manifestada.ReadOnly = false;
+
+
         }
         public FrmIngreso()
         {

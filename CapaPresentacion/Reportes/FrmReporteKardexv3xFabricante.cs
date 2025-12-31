@@ -20,19 +20,9 @@ namespace CapaPresentacion.Reportes
         private int _idCliente;
 
 
-        private String _Texto;
-        private String _Texto2;
+        public DateTime FechaInicio { get; set; }
+        public DateTime FechaFin { get; set; }
 
-        public String Texto
-        {
-            get { return _Texto; }
-            set { _Texto = value; }
-        }
-        public String Texto2
-        {
-            get { return _Texto2; }
-            set { _Texto2 = value; }
-        }
 
 
         public int idCliente
@@ -55,7 +45,7 @@ namespace CapaPresentacion.Reportes
                 this.sp_kardex_resumen_por_fabricanteTableAdapter.Connection = Conexion.CrearConexion();
 
                 // TODO: esta línea de código carga datos en la tabla 'dsPrincipal.sp_kardex_resumen_por_fabricante' Puede moverla o quitarla según sea necesario.
-                this.sp_kardex_resumen_por_fabricanteTableAdapter.Fill(this.dsPrincipal.sp_kardex_resumen_por_fabricante, Convert.ToDateTime(Texto), Convert.ToDateTime(Texto2), idCliente);
+                this.sp_kardex_resumen_por_fabricanteTableAdapter.Fill(this.dsPrincipal.sp_kardex_resumen_por_fabricante, FechaInicio, FechaFin, idCliente);
                 //this.sp_kardex_producto_x_loteTableAdapter.Fill(this.dsPrincipal.sp_kardex_producto_x_lote, Lote, idproducto, idCliente);
 
                 this.reportViewer1.RefreshReport();

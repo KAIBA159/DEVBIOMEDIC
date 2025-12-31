@@ -6,22 +6,25 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>3.31063cm</Width>
+              <Width>2.76072cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.04413cm</Width>
+              <Width>0.79012cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.55066cm</Width>
+              <Width>3.90644cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>2.94979cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.90148cm</Width>
+              <Width>2.89166cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.4858cm</Width>
+              <Width>2.5cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>1.62822cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>2.26188cm</Width>
@@ -205,6 +208,41 @@
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox14</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox1">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Codigo</Value>
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox1</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -605,6 +643,40 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
+                    <Textbox Name="CodigoArticulo">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!CodigoArticulo.Value</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>CodigoArticulo</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
                     <Textbox Name="Lote">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
@@ -825,6 +897,7 @@
             <TablixMember />
             <TablixMember />
             <TablixMember />
+            <TablixMember />
           </TablixMembers>
         </TablixColumnHierarchy>
         <TablixRowHierarchy>
@@ -842,7 +915,7 @@
         <Top>0.17639cm</Top>
         <Left>0.17758cm</Left>
         <Height>1.14708cm</Height>
-        <Width>26.69477cm</Width>
+        <Width>26.87923cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -981,7 +1054,7 @@
       </Border>
     </Style>
   </Body>
-  <Width>26.95936cm</Width>
+  <Width>27.05681cm</Width>
   <Page>
     <PageHeader>
       <Height>3.26183cm</Height>
@@ -1511,10 +1584,18 @@
           <DataField>preset</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="idarticulo">
+          <DataField>idarticulo</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="CodigoArticulo">
+          <DataField>CodigoArticulo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>dsPrincipal</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaPresentacion\dsPrincipal.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaPresentacion\dsPrincipal.xsd</rd:SchemaPath>
         <rd:TableName>sp_kardex_resumen_por_fabricante</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

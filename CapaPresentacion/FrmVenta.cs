@@ -1022,10 +1022,34 @@ namespace CapaPresentacion
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
+            ////Reportes.FrmReporteVentas frm = new Reportes.FrmReporteVentas();
+
+            ////frm.Texto = Convert.ToString(dtFecha1.Value);
+            ////frm.Texto2 = Convert.ToString(dtFecha2.Value);
+
+            ////frm.ShowDialog();
+
             Reportes.FrmReporteVentas frm = new Reportes.FrmReporteVentas();
-            frm.Texto = Convert.ToString(dtFecha1.Value);
-            frm.Texto2 = Convert.ToString(dtFecha2.Value);
+
+            // Fechas
+            frm.Texto = dtFecha1.Value.ToString("dd/MM/yyyy");
+            frm.Texto2 = dtFecha2.Value.ToString("dd/MM/yyyy");
+
+            // Proveedor (0 o null → TODOS)
+            int? idProveedor = null;
+
+            if (cbContribuyente.SelectedValue != null)
+            {
+                idProveedor = Convert.ToInt32(cbContribuyente.SelectedValue); // puede ser 0
+            }
+
+            frm.IdProveedor = idProveedor;
+
             frm.ShowDialog();
+
+            //////////////////////////////
+
+
         }
 
         private void dataListado_CellClick(object sender, DataGridViewCellEventArgs e)

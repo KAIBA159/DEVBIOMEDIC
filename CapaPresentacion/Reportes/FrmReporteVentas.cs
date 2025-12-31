@@ -17,6 +17,15 @@ namespace CapaPresentacion.Reportes
         private String _Texto;
         private String _Texto2;
 
+        private int? _IdProveedor;
+
+        public int? IdProveedor
+        {
+            get { return _IdProveedor; }
+            set { _IdProveedor = value; }
+        }
+
+
         public String Texto
         {
             get { return _Texto; }
@@ -32,6 +41,9 @@ namespace CapaPresentacion.Reportes
             InitializeComponent();
         }
 
+
+
+
         private void FrmReporteVentas_Load(object sender, EventArgs e)
         {
 
@@ -39,7 +51,9 @@ namespace CapaPresentacion.Reportes
             {
                 this.spbuscar_venta_fechaTableAdapter.Connection = Conexion.CrearConexion();
 
-                this.spbuscar_venta_fechaTableAdapter.Fill(this.dsPrincipal.spbuscar_venta_fecha, Texto, Texto2);
+                //int? idProveedor = null; // 👈 TODOS
+
+                this.spbuscar_venta_fechaTableAdapter.Fill(this.dsPrincipal.spbuscar_venta_fecha, Texto, Texto2, IdProveedor);
                 this.reportViewer1.RefreshReport();
             }
             catch (Exception ex)
