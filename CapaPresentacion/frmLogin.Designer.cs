@@ -86,11 +86,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(310, 130);
+            this.label4.Location = new System.Drawing.Point(298, 128);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(48, 13);
+            this.label4.Size = new System.Drawing.Size(62, 13);
             this.label4.TabIndex = 7;
-            this.label4.Text = "V 1.0.9";
+            this.label4.Text = "version¿?";
             // 
             // LblHora
             // 
