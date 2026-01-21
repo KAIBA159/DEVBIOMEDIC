@@ -134,5 +134,20 @@ namespace CapaPresentacion
         {
 
         }
+
+        private void txtbox_cliente_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtbox_producto_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_idproducto_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

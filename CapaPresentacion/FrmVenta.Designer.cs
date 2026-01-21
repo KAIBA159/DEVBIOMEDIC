@@ -54,6 +54,8 @@
             this.txtPrecio_Compra = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label22 = new System.Windows.Forms.Label();
+            this.cbContribuyente = new System.Windows.Forms.ComboBox();
             this.btnComprobante = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.dtFecha2 = new System.Windows.Forms.DateTimePicker();
@@ -99,8 +101,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.cbContribuyente = new System.Windows.Forms.ComboBox();
-            this.label22 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -365,6 +365,24 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Listado";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(209, 15);
+            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(93, 13);
+            this.label22.TabIndex = 13;
+            this.label22.Text = "Cliente/Proveedor";
+            // 
+            // cbContribuyente
+            // 
+            this.cbContribuyente.FormattingEnabled = true;
+            this.cbContribuyente.Location = new System.Drawing.Point(211, 38);
+            this.cbContribuyente.Name = "cbContribuyente";
+            this.cbContribuyente.Size = new System.Drawing.Size(317, 21);
+            this.cbContribuyente.TabIndex = 12;
             // 
             // btnComprobante
             // 
@@ -653,6 +671,7 @@
             this.groupBox2.Size = new System.Drawing.Size(747, 112);
             this.groupBox2.TabIndex = 28;
             this.groupBox2.TabStop = false;
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // txtLote
             // 
@@ -918,24 +937,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(46, 43);
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
-            // 
-            // cbContribuyente
-            // 
-            this.cbContribuyente.FormattingEnabled = true;
-            this.cbContribuyente.Location = new System.Drawing.Point(211, 38);
-            this.cbContribuyente.Name = "cbContribuyente";
-            this.cbContribuyente.Size = new System.Drawing.Size(317, 21);
-            this.cbContribuyente.TabIndex = 12;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(209, 15);
-            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(93, 13);
-            this.label22.TabIndex = 13;
-            this.label22.Text = "Cliente/Proveedor";
             // 
             // FrmVenta
             // 

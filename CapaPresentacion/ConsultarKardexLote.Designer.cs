@@ -48,11 +48,13 @@
             this.dtp_desde = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.tbt_lote);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.btnCancelar);
@@ -74,7 +76,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(32, 14);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(586, 230);
+            this.groupBox1.Size = new System.Drawing.Size(586, 273);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Consulta";
@@ -82,7 +84,7 @@
             // 
             // tbt_lote
             // 
-            this.tbt_lote.Location = new System.Drawing.Point(112, 120);
+            this.tbt_lote.Location = new System.Drawing.Point(112, 144);
             this.tbt_lote.Name = "tbt_lote";
             this.tbt_lote.Size = new System.Drawing.Size(151, 20);
             this.tbt_lote.TabIndex = 31;
@@ -90,7 +92,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(72, 124);
+            this.label6.Location = new System.Drawing.Point(72, 148);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(34, 13);
             this.label6.TabIndex = 30;
@@ -101,7 +103,7 @@
             this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnCancelar.Image = global::CapaPresentacion.Properties.Resources.error2;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(204, 160);
+            this.btnCancelar.Location = new System.Drawing.Point(225, 211);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(126, 28);
@@ -115,7 +117,7 @@
             this.btnImprimir.BackColor = System.Drawing.Color.Silver;
             this.btnImprimir.Image = global::CapaPresentacion.Properties.Resources.imprimir;
             this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImprimir.Location = new System.Drawing.Point(54, 159);
+            this.btnImprimir.Location = new System.Drawing.Point(54, 211);
             this.btnImprimir.Margin = new System.Windows.Forms.Padding(2);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(126, 29);
@@ -126,7 +128,7 @@
             // 
             // txt_idcliente
             // 
-            this.txt_idcliente.Location = new System.Drawing.Point(507, 82);
+            this.txt_idcliente.Location = new System.Drawing.Point(507, 106);
             this.txt_idcliente.Name = "txt_idcliente";
             this.txt_idcliente.Size = new System.Drawing.Size(60, 20);
             this.txt_idcliente.TabIndex = 27;
@@ -134,16 +136,17 @@
             // 
             // txt_idproducto
             // 
-            this.txt_idproducto.Location = new System.Drawing.Point(507, 47);
+            this.txt_idproducto.Location = new System.Drawing.Point(114, 82);
             this.txt_idproducto.Name = "txt_idproducto";
-            this.txt_idproducto.Size = new System.Drawing.Size(60, 20);
+            this.txt_idproducto.ReadOnly = true;
+            this.txt_idproducto.Size = new System.Drawing.Size(292, 20);
             this.txt_idproducto.TabIndex = 26;
-            this.txt_idproducto.Visible = false;
+            this.txt_idproducto.TextChanged += new System.EventHandler(this.txt_idproducto_TextChanged);
             // 
             // button2
             // 
             this.button2.Image = global::CapaPresentacion.Properties.Resources.Buscar_p;
-            this.button2.Location = new System.Drawing.Point(417, 82);
+            this.button2.Location = new System.Drawing.Point(417, 106);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(46, 25);
@@ -153,16 +156,17 @@
             // 
             // txtbox_cliente
             // 
-            this.txtbox_cliente.Location = new System.Drawing.Point(114, 84);
+            this.txtbox_cliente.Location = new System.Drawing.Point(114, 108);
             this.txtbox_cliente.Name = "txtbox_cliente";
             this.txtbox_cliente.ReadOnly = true;
             this.txtbox_cliente.Size = new System.Drawing.Size(292, 20);
             this.txtbox_cliente.TabIndex = 24;
+            this.txtbox_cliente.TextChanged += new System.EventHandler(this.txtbox_cliente_TextChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(61, 88);
+            this.label5.Location = new System.Drawing.Point(61, 112);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(45, 13);
             this.label5.TabIndex = 23;
@@ -170,7 +174,7 @@
             // 
             // ck_btnclic
             // 
-            this.ck_btnclic.Location = new System.Drawing.Point(398, 186);
+            this.ck_btnclic.Location = new System.Drawing.Point(398, 238);
             this.ck_btnclic.Name = "ck_btnclic";
             this.ck_btnclic.Size = new System.Drawing.Size(169, 23);
             this.ck_btnclic.TabIndex = 22;
@@ -181,7 +185,7 @@
             // 
             // txtbox_rs
             // 
-            this.txtbox_rs.Location = new System.Drawing.Point(463, 160);
+            this.txtbox_rs.Location = new System.Drawing.Point(463, 212);
             this.txtbox_rs.Name = "txtbox_rs";
             this.txtbox_rs.Size = new System.Drawing.Size(120, 20);
             this.txtbox_rs.TabIndex = 21;
@@ -190,7 +194,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(365, 164);
+            this.label4.Location = new System.Drawing.Point(365, 216);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(96, 13);
             this.label4.TabIndex = 20;
@@ -216,6 +220,7 @@
             this.txtbox_producto.ReadOnly = true;
             this.txtbox_producto.Size = new System.Drawing.Size(292, 20);
             this.txtbox_producto.TabIndex = 5;
+            this.txtbox_producto.TextChanged += new System.EventHandler(this.txtbox_producto_TextChanged);
             // 
             // label3
             // 
@@ -264,14 +269,23 @@
             this.label1.Text = "Desde : ";
             this.label1.Visible = false;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(19, 85);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(86, 13);
+            this.label7.TabIndex = 32;
+            this.label7.Text = "Codigo Sistema :";
+            // 
             // ConsultarKardexLote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(630, 256);
+            this.ClientSize = new System.Drawing.Size(630, 299);
             this.Controls.Add(this.groupBox1);
             this.Name = "ConsultarKardexLote";
-            this.Text = "ConsultarKardex por Lote";
+            this.Text = "ConsultarKardex por Lote (Kardex)";
             this.Load += new System.EventHandler(this.ConsultarKardexLote_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -301,5 +315,6 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.TextBox tbt_lote;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }

@@ -53,6 +53,7 @@
             this.karteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kardexProducctoLoteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarKardexAgrupadoFabricanteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kardexProductoLoteMesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MnuVer = new System.Windows.Forms.ToolStripMenuItem();
             this.toolBarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusBarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -78,7 +79,6 @@
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.kardexProductoLoteMesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -103,6 +103,7 @@
             this.menuStrip.Size = new System.Drawing.Size(1110, 24);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "MenuStrip";
+            this.menuStrip.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip_ItemClicked);
             // 
             // MnuSistema
             // 
@@ -253,7 +254,7 @@
             // 
             this.ventasPorFechasToolStripMenuItem.Image = global::CapaPresentacion.Properties.Resources.ventasrealizadas1;
             this.ventasPorFechasToolStripMenuItem.Name = "ventasPorFechasToolStripMenuItem";
-            this.ventasPorFechasToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
+            this.ventasPorFechasToolStripMenuItem.Size = new System.Drawing.Size(237, 22);
             this.ventasPorFechasToolStripMenuItem.Text = "Ventas por Fechas";
             this.ventasPorFechasToolStripMenuItem.Click += new System.EventHandler(this.ventasPorFechasToolStripMenuItem_Click);
             // 
@@ -261,7 +262,7 @@
             // 
             this.comprasPorFechasToolStripMenuItem.Image = global::CapaPresentacion.Properties.Resources.comprasrealizadas;
             this.comprasPorFechasToolStripMenuItem.Name = "comprasPorFechasToolStripMenuItem";
-            this.comprasPorFechasToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
+            this.comprasPorFechasToolStripMenuItem.Size = new System.Drawing.Size(237, 22);
             this.comprasPorFechasToolStripMenuItem.Text = "Compras por Fechas";
             this.comprasPorFechasToolStripMenuItem.Click += new System.EventHandler(this.comprasPorFechasToolStripMenuItem_Click);
             // 
@@ -269,30 +270,37 @@
             // 
             this.stockDeArtículosToolStripMenuItem.Image = global::CapaPresentacion.Properties.Resources.comprasdetalladas;
             this.stockDeArtículosToolStripMenuItem.Name = "stockDeArtículosToolStripMenuItem";
-            this.stockDeArtículosToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
+            this.stockDeArtículosToolStripMenuItem.Size = new System.Drawing.Size(237, 22);
             this.stockDeArtículosToolStripMenuItem.Text = "Stock de Artículos";
             this.stockDeArtículosToolStripMenuItem.Click += new System.EventHandler(this.stockDeArtículosToolStripMenuItem_Click);
             // 
             // karteToolStripMenuItem
             // 
             this.karteToolStripMenuItem.Name = "karteToolStripMenuItem";
-            this.karteToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
+            this.karteToolStripMenuItem.Size = new System.Drawing.Size(237, 22);
             this.karteToolStripMenuItem.Text = "Kardex_Producto";
             this.karteToolStripMenuItem.Click += new System.EventHandler(this.karteToolStripMenuItem_Click);
             // 
             // kardexProducctoLoteToolStripMenuItem
             // 
             this.kardexProducctoLoteToolStripMenuItem.Name = "kardexProducctoLoteToolStripMenuItem";
-            this.kardexProducctoLoteToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
-            this.kardexProducctoLoteToolStripMenuItem.Text = "Kardex_Producto_Lote";
+            this.kardexProducctoLoteToolStripMenuItem.Size = new System.Drawing.Size(237, 22);
+            this.kardexProducctoLoteToolStripMenuItem.Text = "Kardex_Producto_Lote (Kardex)";
             this.kardexProducctoLoteToolStripMenuItem.Click += new System.EventHandler(this.kardexProducctoLoteToolStripMenuItem_Click);
             // 
             // consultarKardexAgrupadoFabricanteToolStripMenuItem
             // 
             this.consultarKardexAgrupadoFabricanteToolStripMenuItem.Name = "consultarKardexAgrupadoFabricanteToolStripMenuItem";
-            this.consultarKardexAgrupadoFabricanteToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
+            this.consultarKardexAgrupadoFabricanteToolStripMenuItem.Size = new System.Drawing.Size(237, 22);
             this.consultarKardexAgrupadoFabricanteToolStripMenuItem.Text = "Kardex_Agrupado_Fabricante";
             this.consultarKardexAgrupadoFabricanteToolStripMenuItem.Click += new System.EventHandler(this.consultarKardexAgrupadoFabricanteToolStripMenuItem_Click);
+            // 
+            // kardexProductoLoteMesToolStripMenuItem
+            // 
+            this.kardexProductoLoteMesToolStripMenuItem.Name = "kardexProductoLoteMesToolStripMenuItem";
+            this.kardexProductoLoteMesToolStripMenuItem.Size = new System.Drawing.Size(237, 22);
+            this.kardexProductoLoteMesToolStripMenuItem.Text = "Kardex_Producto_Lote_Mes";
+            this.kardexProductoLoteMesToolStripMenuItem.Click += new System.EventHandler(this.kardexProductoLoteMesToolStripMenuItem_Click);
             // 
             // MnuVer
             // 
@@ -501,13 +509,6 @@
             this.toolStripStatusLabel2.Text = "Prueba1";
             this.toolStripStatusLabel2.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.toolStripStatusLabel2.Click += new System.EventHandler(this.toolStripStatusLabel2_Click);
-            // 
-            // kardexProductoLoteMesToolStripMenuItem
-            // 
-            this.kardexProductoLoteMesToolStripMenuItem.Name = "kardexProductoLoteMesToolStripMenuItem";
-            this.kardexProductoLoteMesToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
-            this.kardexProductoLoteMesToolStripMenuItem.Text = "Kardex_Producto_Lote_Mes";
-            this.kardexProductoLoteMesToolStripMenuItem.Click += new System.EventHandler(this.kardexProductoLoteMesToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
