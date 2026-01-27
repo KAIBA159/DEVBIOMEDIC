@@ -1402,6 +1402,11 @@ namespace CapaPresentacion
 
             this.dtFecha.Value = Convert.ToDateTime(this.dataListado.CurrentRow.Cells["fecha"].Value);
             this.cbTipo_Comprobante.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["tipo_comprobante"].Value);
+
+            //
+            this.cbTipo_Ingreso.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["tipo_Ingreso"].Value);
+
+
             this.txtSerie.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["serie"].Value);
             this.txtCorrelativo.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["correlativo"].Value);
             this.lblTotal_Pagado.Text = "1";//Convert.ToString(this.dataListado.CurrentRow.Cells["total"].Value);
