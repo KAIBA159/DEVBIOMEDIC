@@ -249,6 +249,7 @@
             this.txtCliente.Name = "txtCliente";
             this.txtCliente.Size = new System.Drawing.Size(232, 20);
             this.txtCliente.TabIndex = 16;
+            this.txtCliente.TextChanged += new System.EventHandler(this.txtCliente_TextChanged);
             // 
             // label7
             // 

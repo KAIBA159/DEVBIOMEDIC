@@ -1066,5 +1066,24 @@ namespace CapaPresentacion
         {
 
         }
+
+        private void txtCliente_TextChanged(object sender, EventArgs e)
+        {
+
+            // Cada vez que el contenido de txtCliente varíe, ejecutamos la limpieza
+            LimpiarCamposProducto();
+
+        }
+
+        // Método para limpiar los campos específicos del producto
+        private void LimpiarCamposProducto()
+        {
+            txtArticulo.Text = string.Empty;
+            txtStock_Actual.Text = string.Empty;
+            txtLote.Text = string.Empty;
+
+            // Opcional: Si manejas una variable interna para el ID del producto, 
+            // también deberías resetearla aquí.
+        }
     }
 }

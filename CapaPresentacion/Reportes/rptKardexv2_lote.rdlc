@@ -778,7 +778,7 @@
         <DataSetName>DataSet2</DataSetName>
         <Left>0.15239cm</Left>
         <Height>1.33229cm</Height>
-        <Width>19.62201cm</Width>
+        <Width>19.62202cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -796,7 +796,7 @@
   <Width>19.96598cm</Width>
   <Page>
     <PageHeader>
-      <Height>6.331cm</Height>
+      <Height>7.65392cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -1076,11 +1076,43 @@
                 <PaddingBottom>2pt</PaddingBottom>
               </Style>
             </Textbox>
+            <Textbox Name="nombre">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=First(Fields!nombre.Value, "DataSet2")</Value>
+                      <Style>
+                        <FontSize>9pt</FontSize>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>nombre</rd:DefaultName>
+              <Top>0.53795cm</Top>
+              <Left>3.14766cm</Left>
+              <Height>0.6cm</Height>
+              <Width>16.30924cm</Width>
+              <ZIndex>8</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
           </ReportItems>
           <KeepTogether>true</KeepTogether>
           <Top>3.30455cm</Top>
           <Left>0.15239cm</Left>
-          <Height>2.77068cm</Height>
+          <Height>3.08665cm</Height>
           <Width>19.62201cm</Width>
           <Style>
             <Border>
@@ -1316,38 +1348,6 @@
             </Border>
           </Style>
         </Rectangle>
-        <Textbox Name="descripcion">
-          <CanGrow>true</CanGrow>
-          <KeepTogether>true</KeepTogether>
-          <Paragraphs>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>=First(Fields!descripcion.Value, "DataSet2")</Value>
-                  <Style>
-                    <FontSize>9pt</FontSize>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-          </Paragraphs>
-          <rd:DefaultName>descripcion</rd:DefaultName>
-          <Top>3.83913cm</Top>
-          <Left>3.30005cm</Left>
-          <Height>0.6cm</Height>
-          <Width>11.78077cm</Width>
-          <ZIndex>2</ZIndex>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-            <PaddingLeft>2pt</PaddingLeft>
-            <PaddingRight>2pt</PaddingRight>
-            <PaddingTop>2pt</PaddingTop>
-            <PaddingBottom>2pt</PaddingBottom>
-          </Style>
-        </Textbox>
         <Textbox Name="registrosanitario">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
@@ -1369,7 +1369,7 @@
           <Left>3.30005cm</Left>
           <Height>0.6cm</Height>
           <Width>8.33114cm</Width>
-          <ZIndex>3</ZIndex>
+          <ZIndex>2</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
