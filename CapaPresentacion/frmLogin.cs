@@ -27,7 +27,7 @@ namespace CapaPresentacion
         private static readonly ILog log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
 
 
-        public const string VersionSW = "v1.0.13";
+        public const string VersionSW = "v1.0.14";
         public const string NombreApp = "Sistema de Gestion - SAS";
 
         public frmLogin()
@@ -77,7 +77,7 @@ namespace CapaPresentacion
             // Paso 2: Validar si el usuario existe
             if (Datos.Rows.Count == 0)
             {
-                MessageBox.Show("Usuario no encontrado", "Sistema de Ventas", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Usuario no encontrado", "Sistema de Gestión SAS", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -105,7 +105,7 @@ namespace CapaPresentacion
 
             if (!accesoPermitido)
             {
-                MessageBox.Show("Contraseña incorrecta", "Sistema de Ventas", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Contraseña incorrecta", "Sistema de Gestión SAS", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -127,7 +127,7 @@ namespace CapaPresentacion
             ////Evaluar si existe el Usuario
             //if (Datos.Rows.Count==0)
             //{
-            //    MessageBox.Show("NO Tiene Acceso al Sistema","Sistema de Ventas",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            //    MessageBox.Show("NO Tiene Acceso al Sistema","Sistema de Gestión SAS",MessageBoxButtons.OK,MessageBoxIcon.Error);
             //}
             //else
             //{

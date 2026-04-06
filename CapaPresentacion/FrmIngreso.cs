@@ -988,7 +988,7 @@ namespace CapaPresentacion
             //try
             //{
             //    DialogResult Opcion;
-            //    Opcion = MessageBox.Show("Realmente Desea Anular los Registros", "Sistema de Ventas", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            //    Opcion = MessageBox.Show("Realmente Desea Anular los Registros", "Sistema de Gestión SAS", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
 
             //    if (Opcion == DialogResult.OK)
             //    {
@@ -1086,135 +1086,195 @@ namespace CapaPresentacion
 
 
                 string rpta = "";
-                if (this.txtIdproveedor.Text == string.Empty || this.txtSerie.Text == string.Empty
-                    || this.txtCorrelativo.Text == string.Empty || this.txtIgv.Text == string.Empty
+                errorIcono.Clear();
+
+                if (this.cbTipo_Ingreso.Text == "IMPORTACIÓN")
+                {
+                    if (this.txtIdproveedor.Text == string.Empty || this.txtIgv.Text == string.Empty
                     || this.txtIdencargado.Text == string.Empty
                     )
-                {
-                    MensajeError("Falta ingresar algunos datos, serán remarcados");
-                    errorIcono.SetError(txtIdproveedor, "Ingrese un Valor");
-                    errorIcono.SetError(txtSerie, "Ingrese un Valor");
-                    errorIcono.SetError(txtCorrelativo, "Ingrese un Valor");
-                    errorIcono.SetError(txtIgv, "Ingrese un Valor");
-                    errorIcono.SetError(txtEncargado, "Ingrese un Encargado");
-                    
-
-                    //errorIcono.SetError(txtLote, "Ingrese un lote");
-                }
-                else
-                {
-
-
-
-
-                    if (dtDetalle != null && dtDetalle.Rows.Count > 0)
                     {
-                        errorIcono.Clear();
 
-                        //editar para nuevo
-                        if (this.IsNuevo)
-                        {
-                            rpta = NIngreso.Insertar(
-                                Idtrabajador, 
-                                Convert.ToInt32(this.txtIdproveedor.Text),
-                                dtFecha.Value, 
-                                cbTipo_Comprobante.Text,
-                                txtSerie.Text,
-                                txtCorrelativo.Text,
-                                Convert.ToDecimal(txtIgv.Text), 
-                                "EMITIDO",
-
-                                cbTipo_Ingreso.Text,
-                                Convert.ToInt32(this.txtIdencargado.Text),
-
-                                horaInicioDT,
-                                horaFinDT,
+                        MensajeError("Falta ingresar algunos datos, serán remarcados");
+                        errorIcono.SetError(txtIdproveedor, "Ingrese un Valor");
+                        errorIcono.SetError(txtIgv, "Ingrese un Valor");
+                        errorIcono.SetError(txtEncargado, "Ingrese un Encargado");
 
 
-                                cbTipo_Producto.Text,
-                                txtBultos.Text,
-                                txtDUA.Text,
-                                txtCorrelativoUnico.Text,
-                                tb_conclusion.Text,
+                        return;
+                    }
 
+                    else {
 
-                                dtDetalle
-                                );
+                        
+                    }
 
-                        }
+                }
+                else { 
+                
 
+                
 
-                        //editar para nuevo
-                        if (this.IsEditar)
-                        {
-                            rpta = NIngreso.Editar(
-                                Convert.ToInt32( txtIdingreso.Text),
-                                Idtrabajador,
-                                Convert.ToInt32(this.txtIdproveedor.Text),
-                                dtFecha.Value,
-                                cbTipo_Comprobante.Text,
-                                txtSerie.Text,
-                                txtCorrelativo.Text,
-                                Convert.ToDecimal(txtIgv.Text),
-                                "EMITIDO",
-
-                                cbTipo_Ingreso.Text,
-                                Convert.ToInt32(this.txtIdencargado.Text),
-
-                                horaInicioDT,
-                                horaFinDT,
-
-
-                                cbTipo_Producto.Text,
-                                txtBultos.Text,
-                                txtDUA.Text,
-                                txtCorrelativoUnico.Text,
-                                tb_conclusion.Text,
-
-
-                                dtDetalle
-                                );
-
-                        }
+                    if (this.txtIdproveedor.Text == string.Empty || this.txtSerie.Text == string.Empty
+                        || this.txtCorrelativo.Text == string.Empty || this.txtIgv.Text == string.Empty
+                        || this.txtIdencargado.Text == string.Empty
+                        )
+                    {
 
 
 
 
-                        if (rpta.Equals("OK"))
-                        {
-                            if (this.IsNuevo)
-                            {
-                                this.MensajeOk("Se Insertó de forma correcta el registro");
-                            }
+                        MensajeError("Falta ingresar algunos datos, serán remarcados");
+                        errorIcono.SetError(txtIdproveedor, "Ingrese un Valor");
+                        errorIcono.SetError(txtSerie, "Ingrese un Valor");
+                        errorIcono.SetError(txtCorrelativo, "Ingrese un Valor");
+                        errorIcono.SetError(txtIgv, "Ingrese un Valor");
+                        errorIcono.SetError(txtEncargado, "Ingrese un Encargado");
 
-                            if (this.IsEditar)
-                            {
-                                this.MensajeOk("Se Edito/Actualizo el Ingreso correctamente");
-                            }
-
-                        }
-                        else
-                        {
-                            this.MensajeError(rpta);
-                        }
-
-                        this.IsNuevo = false;
-                        this.IsEditar = false;
-
-                        this.Botones();
-                        this.Limpiar();
-                        this.limpiarDetalle();
-                        this.Mostrar();
-
+                        return;
+                        //errorIcono.SetError(txtLote, "Ingrese un lote");
                     }
                     else
                     {
 
-                        errorIcono.SetError(dataListadoDetalle, "Ingrese un valor al Detalle ");
+
+                       
+
+
                     }
 
-                     
                 }
+
+
+
+                //despues de la validacion
+
+                if (dtDetalle != null && dtDetalle.Rows.Count > 0)
+                {
+                    errorIcono.Clear();
+
+                   
+
+
+                    //editar para nuevo
+                    if (this.IsNuevo)
+                    {
+
+                        // 2. Confirmación
+                        DialogResult confirm = MessageBox.Show(
+                            $"Se creará el ingreso. \n¿Desea continuar?",
+                            "Confirmación de Ingreso ",
+                            MessageBoxButtons.YesNo,
+                            MessageBoxIcon.Question
+                        );
+
+                        if (confirm != DialogResult.Yes)
+                            return;
+
+                        //
+
+
+                        rpta = NIngreso.Insertar(
+                            Idtrabajador,
+                            Convert.ToInt32(this.txtIdproveedor.Text),
+                            dtFecha.Value,
+                            cbTipo_Comprobante.Text,
+                            txtSerie.Text,
+                            txtCorrelativo.Text,
+                            Convert.ToDecimal(txtIgv.Text),
+                            "EMITIDO",
+
+                            cbTipo_Ingreso.Text,
+                            Convert.ToInt32(this.txtIdencargado.Text),
+
+                            horaInicioDT,
+                            horaFinDT,
+
+
+                            cbTipo_Producto.Text,
+                            txtBultos.Text,
+                            txtDUA.Text,
+                            txtCorrelativoUnico.Text,
+                            tb_conclusion.Text,
+
+
+                            dtDetalle
+                            );
+
+                    }
+
+
+                    //editar para nuevo
+                    if (this.IsEditar)
+                    {
+                        rpta = NIngreso.Editar(
+                            Convert.ToInt32(txtIdingreso.Text),
+                            Idtrabajador,
+                            Convert.ToInt32(this.txtIdproveedor.Text),
+                            dtFecha.Value,
+                            cbTipo_Comprobante.Text,
+                            txtSerie.Text,
+                            txtCorrelativo.Text,
+                            Convert.ToDecimal(txtIgv.Text),
+                            "EMITIDO",
+
+                            cbTipo_Ingreso.Text,
+                            Convert.ToInt32(this.txtIdencargado.Text),
+
+                            horaInicioDT,
+                            horaFinDT,
+
+
+                            cbTipo_Producto.Text,
+                            txtBultos.Text,
+                            txtDUA.Text,
+                            txtCorrelativoUnico.Text,
+                            tb_conclusion.Text,
+
+
+                            dtDetalle
+                            );
+
+                    }
+
+
+
+
+                    if (rpta.Equals("OK"))
+                    {
+                        if (this.IsNuevo)
+                        {
+                            this.MensajeOk("Se Insertó de forma correcta el registro");
+                        }
+
+                        if (this.IsEditar)
+                        {
+                            this.MensajeOk("Se Edito/Actualizo el Ingreso correctamente");
+                        }
+
+                    }
+                    else
+                    {
+                        this.MensajeError(rpta);
+                    }
+
+                    this.IsNuevo = false;
+                    this.IsEditar = false;
+
+                    this.Botones();
+                    this.Limpiar();
+                    this.limpiarDetalle();
+                    this.Mostrar();
+
+                }
+                else
+                {
+
+                    errorIcono.SetError(dataListadoDetalle, "Ingrese un valor al Detalle ");
+                }
+
+
+
             }
             catch (Exception ex)
             {

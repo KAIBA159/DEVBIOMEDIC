@@ -84,7 +84,7 @@ namespace CapaPresentacion
         //Mostrar Mensaje de Confirmación
         private void MensajeOk(string mensaje)
         {
-            MessageBox.Show(mensaje, "Sistema de Ventas", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(mensaje, "Sistema de Gestión ", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
 
@@ -92,7 +92,7 @@ namespace CapaPresentacion
         //Mostrar Mensaje de Error
         private void MensajeError(string mensaje)
         {
-            MessageBox.Show(mensaje, "Sistema de Ventas", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show(mensaje, "Sistema de Gestión ", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         //Limpiar todos los controles del formulario
@@ -635,42 +635,6 @@ namespace CapaPresentacion
 
 
 
-
-            //try
-            //{
-            //    DialogResult Opcion;
-            //    Opcion = MessageBox.Show("Realmente Desea Eliminar los Registros", "Sistema de Gestión", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-
-            //    if (Opcion == DialogResult.OK)
-            //    {
-            //        string Codigo;
-            //        string Rpta = "";
-
-            //        foreach (DataGridViewRow row in dataListado.Rows)
-            //        {
-            //            if (Convert.ToBoolean(row.Cells[0].Value))
-            //            {
-            //                Codigo = Convert.ToString(row.Cells[1].Value);
-            //                Rpta = NVenta.Eliminar(Convert.ToInt32(Codigo));
-
-            //                if (Rpta.Equals("OK"))
-            //                {
-            //                    this.MensajeOk("Se Eliminó Correctamente la salida");
-            //                }
-            //                else
-            //                {
-            //                    this.MensajeError(Rpta);
-            //                }
-
-            //            }
-            //        }
-            //        this.Mostrar();
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message + ex.StackTrace);
-            //}
         }
 
         private void dataListado_DoubleClick(object sender, EventArgs e)
@@ -788,8 +752,30 @@ namespace CapaPresentacion
                     {
                         errorIcono.Clear();
 
+
+                        
+
+
+
                         if (this.IsNuevo)
                         {
+
+                            //
+
+                            // 2. Confirmación
+                            DialogResult confirm = MessageBox.Show(
+                                $"Se creará la salida. \n¿Desea continuar?",
+                                "Confirmación de Salida",
+                                MessageBoxButtons.YesNo,
+                                MessageBoxIcon.Question
+                            );
+
+                            if (confirm != DialogResult.Yes)
+                                return;
+
+                            //
+
+
                             rpta = NVenta.Insertar(
                                 Convert.ToInt32(this.txtIdcliente.Text), 
                                 Idtrabajador,

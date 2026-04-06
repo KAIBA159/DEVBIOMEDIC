@@ -31,7 +31,7 @@ namespace CapaPresentacion
         //Mostrar Mensaje de Confirmación
         private void MensajeOk(string mensaje)
         {
-            MessageBox.Show(mensaje,"Sistema de Ventas",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            MessageBox.Show(mensaje,"Sistema de Gestión SAS",MessageBoxButtons.OK,MessageBoxIcon.Information);
 
         }
 
@@ -39,7 +39,7 @@ namespace CapaPresentacion
         //Mostrar Mensaje de Error
         private void MensajeError(string mensaje)
         {
-            MessageBox.Show(mensaje, "Sistema de Ventas", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show(mensaje, "Sistema de Gestión SAS", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         //Limpiar todos los controles del formulario
@@ -278,7 +278,7 @@ namespace CapaPresentacion
             try
             {
                 DialogResult Opcion;
-                Opcion = MessageBox.Show("Realmente Desea Eliminar los Registros","Sistema de Ventas",MessageBoxButtons.OKCancel,MessageBoxIcon.Question);
+                Opcion = MessageBox.Show("Realmente Desea Eliminar los Registros","Sistema de Gestión SAS",MessageBoxButtons.OKCancel,MessageBoxIcon.Question);
                  
                 if (Opcion == DialogResult.OK)
                 {
