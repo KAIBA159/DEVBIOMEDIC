@@ -39,7 +39,7 @@ namespace CapaNegocio
 
                 detalle.Guia_remisioncliente = row["guia_remisioncliente"].ToString();
                 detalle.Subcliente = row["subcliente"].ToString();
-                detalle.Lote  = row["lote"].ToString();
+                detalle.Lote  = row["lote"].ToString().Trim();
 
 
                 detalles.Add(detalle);

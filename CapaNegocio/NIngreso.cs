@@ -72,13 +72,13 @@ namespace CapaNegocio
             foreach (DataRow row in dtDetalles.Rows)
             {
                 DDetalle_Ingreso detalle = new DDetalle_Ingreso();
-                detalle.Idarticulo = Convert.ToInt32(row["idarticulo"].ToString());
+                detalle.Idarticulo = Convert.ToInt32(row["idarticulo"].ToString().Trim());
                 //detalle.Precio_Compra = Convert.ToDecimal(row["precio_compra"].ToString());
                 //detalle.Precio_Venta = Convert.ToDecimal(row["precio_venta"].ToString());
-                detalle.Stock_Inicial = Convert.ToInt32(row["stock_inicial"].ToString());
-                detalle.Stock_Actual = Convert.ToInt32(row["stock_inicial"].ToString());
-                detalle.Fecha_Produccion = Convert.ToDateTime(row["fecha_produccion"].ToString());
-                detalle.Fecha_Vencimiento = Convert.ToDateTime(row["fecha_vencimiento"].ToString());
+                detalle.Stock_Inicial = Convert.ToInt32(row["stock_inicial"].ToString().Trim());
+                detalle.Stock_Actual = Convert.ToInt32(row["stock_inicial"].ToString().Trim());
+                detalle.Fecha_Produccion = Convert.ToDateTime(row["fecha_produccion"].ToString().Trim());
+                detalle.Fecha_Vencimiento = Convert.ToDateTime(row["fecha_vencimiento"].ToString().Trim());
 
 
 
@@ -128,7 +128,7 @@ namespace CapaNegocio
 
 
 
-                detalle.Lote = Convert.ToString(row["lote"].ToString());
+                detalle.Lote = Convert.ToString(row["lote"].ToString().Trim());
 
 
                 detalles.Add(detalle);
@@ -201,7 +201,7 @@ namespace CapaNegocio
                 detalle.Certanalisis = Convert.ToBoolean(row["certanalisis"]) ? "Activo" : "Inactivo";
                 detalle.Sanitario = Convert.ToBoolean(row["sanitario"]) ? "Activo" : "Inactivo";
 
-                detalle.Lote = row["lote"].ToString();
+                detalle.Lote = row["lote"].ToString().Trim();
 
                 detalles.Add(detalle);
             }
