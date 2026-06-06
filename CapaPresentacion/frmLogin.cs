@@ -27,7 +27,7 @@ namespace CapaPresentacion
         private static readonly ILog log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
 
 
-        public const string VersionSW = "v1.0.15";
+        public const string VersionSW = "v2.0.1";
         public const string NombreApp = "Sistema de Gestion - SAS";
 
         public frmLogin()
@@ -110,12 +110,16 @@ namespace CapaPresentacion
             }
 
             // Paso 5: Acceso correcto → Abrir el formulario principal
+
+
             frmPrincipal frm = new frmPrincipal();
             frm.Idtrabajador = Datos.Rows[0]["idtrabajador"].ToString();
             frm.Apellidos = Datos.Rows[0]["apellidos"].ToString();
             frm.Nombre = Datos.Rows[0]["nombre"].ToString();
             frm.Acceso = Datos.Rows[0]["acceso"].ToString();
             frm.Version = VersionSW;
+            frm.usuarioconectado = TxtUsuario.Text.Trim();
+
 
             frm.Show();
             this.Hide();

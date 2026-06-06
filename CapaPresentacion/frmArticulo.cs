@@ -508,11 +508,33 @@ namespace CapaPresentacion
 
         private void dataListado_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == dataListado.Columns["Eliminar"].Index)
+            //if (e.ColumnIndex == dataListado.Columns["Eliminar"].Index)
+            //{
+            //    DataGridViewCheckBoxCell ChkEliminar = (DataGridViewCheckBoxCell)dataListado.Rows[e.RowIndex].Cells["Eliminar"];
+            //    ChkEliminar.Value = !Convert.ToBoolean(ChkEliminar.Value);
+            //}
+
+
+            // 1. Validamos que el clic no sea en la cabecera de la grilla (RowIndex -1)
+            if (e.RowIndex == -1) return;
+
+            // 2. Validamos que la columna "Eliminar" realmente exista en la grilla antes de usarla
+            if (dataListado.Columns.Contains("Eliminar"))
             {
-                DataGridViewCheckBoxCell ChkEliminar = (DataGridViewCheckBoxCell)dataListado.Rows[e.RowIndex].Cells["Eliminar"];
-                ChkEliminar.Value = !Convert.ToBoolean(ChkEliminar.Value);
+                // 3. Ahora sí, preguntamos si el clic fue en esa columna específica
+                if (e.ColumnIndex == dataListado.Columns["Eliminar"].Index)
+                {
+                    DataGridViewCheckBoxCell ChkEliminar = (DataGridViewCheckBoxCell)dataListado.Rows[e.RowIndex].Cells["Eliminar"];
+                    ChkEliminar.Value = !Convert.ToBoolean(ChkEliminar.Value);
+                }
             }
+
+
+
+
+
+
+
         }
 
         private void dataListado_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

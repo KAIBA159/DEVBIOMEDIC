@@ -19,6 +19,7 @@ namespace CapaPresentacion
         private bool IsNuevo = false;
         public int Idtrabajador;
         private DataTable dtDetalle;
+        public string usuariocreado;
 
         private decimal totalPagado = 0;
 
@@ -116,6 +117,9 @@ namespace CapaPresentacion
 
             this.lblTotal_Pagado.Text = "0,0";
             this.txtIgv.Text = "18";
+            this.lblFechaCreacion.Text = "--";
+            this.lblUsuarioCreador.Text = "--";
+
             this.crearTabla();
         }
         private void limpiarDetalle()
@@ -669,6 +673,43 @@ namespace CapaPresentacion
             }
 
 
+
+            //////////////////
+            ///
+
+
+            // ==========================================
+            // ✨ SETEAR Y ESTILIZAR CAMPOS DE AUDITORÍA
+            // ==========================================
+
+            // Mostrar Usuario Creador
+            if (this.dataListado.CurrentRow.Cells["usuariocreador"].Value != DBNull.Value)
+            {
+                this.lblUsuarioCreador.Text = "Creado por: " + Convert.ToString(this.dataListado.CurrentRow.Cells["usuariocreador"].Value);
+            }
+            else
+            {
+                this.lblUsuarioCreador.Text = "Creado por: (Sin registro)";
+            }
+
+            // Mostrar Fecha de Creación
+            if (this.dataListado.CurrentRow.Cells["fechacreacion"].Value != DBNull.Value)
+            {
+                this.lblFechaCreacion.Text = "Fecha creación: " + Convert.ToDateTime(this.dataListado.CurrentRow.Cells["fechacreacion"].Value).ToString("dd/MM/yyyy HH:mm:ss");
+            }
+            else
+            {
+                this.lblFechaCreacion.Text = "Fecha creación: (Sin registro)";
+            }
+
+            // Aplicar estilo visual sutil (Gris oscuro)
+            lblUsuarioCreador.ForeColor = Color.DimGray;
+            lblFechaCreacion.ForeColor = Color.DimGray;
+            lblUsuarioCreador.BackColor = Color.Transparent;
+            lblFechaCreacion.BackColor = Color.Transparent;
+
+            /////////////////////////
+
             this.MostrarDetalle();
             this.tabControl1.SelectedIndex = 1;
         }
@@ -787,7 +828,7 @@ namespace CapaPresentacion
 
                                 llb_estado.Text,
 
-
+                                usuariocreado.Trim(),
                                 dtDetalle);
 
                         }

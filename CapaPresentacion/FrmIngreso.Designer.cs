@@ -123,6 +123,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblUsuarioCreador = new System.Windows.Forms.Label();
+            this.lblFechaCreacion = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataListado)).BeginInit();
@@ -353,6 +355,8 @@
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.lblFechaCreacion);
+            this.groupBox1.Controls.Add(this.lblUsuarioCreador);
             this.groupBox1.Controls.Add(this.btnEditar);
             this.groupBox1.Controls.Add(this.label28);
             this.groupBox1.Controls.Add(this.tb_conclusion);
@@ -422,7 +426,7 @@
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(599, 107);
+            this.label28.Location = new System.Drawing.Point(599, 108);
             this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(62, 13);
@@ -433,7 +437,7 @@
             // 
             this.tb_conclusion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.tb_conclusion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tb_conclusion.Location = new System.Drawing.Point(664, 104);
+            this.tb_conclusion.Location = new System.Drawing.Point(664, 105);
             this.tb_conclusion.Margin = new System.Windows.Forms.Padding(2);
             this.tb_conclusion.Name = "tb_conclusion";
             this.tb_conclusion.Size = new System.Drawing.Size(221, 20);
@@ -472,7 +476,7 @@
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(621, 64);
+            this.label25.Location = new System.Drawing.Point(621, 65);
             this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(42, 13);
@@ -483,7 +487,7 @@
             // 
             this.txtBultos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.txtBultos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtBultos.Location = new System.Drawing.Point(664, 60);
+            this.txtBultos.Location = new System.Drawing.Point(664, 61);
             this.txtBultos.Margin = new System.Windows.Forms.Padding(2);
             this.txtBultos.Name = "txtBultos";
             this.txtBultos.Size = new System.Drawing.Size(97, 20);
@@ -577,7 +581,7 @@
             // dtp_fin
             // 
             this.dtp_fin.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtp_fin.Location = new System.Drawing.Point(855, 38);
+            this.dtp_fin.Location = new System.Drawing.Point(855, 39);
             this.dtp_fin.Margin = new System.Windows.Forms.Padding(2);
             this.dtp_fin.Name = "dtp_fin";
             this.dtp_fin.ShowUpDown = true;
@@ -587,7 +591,7 @@
             // dtp_inicio
             // 
             this.dtp_inicio.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtp_inicio.Location = new System.Drawing.Point(769, 38);
+            this.dtp_inicio.Location = new System.Drawing.Point(769, 39);
             this.dtp_inicio.Margin = new System.Windows.Forms.Padding(2);
             this.dtp_inicio.Name = "dtp_inicio";
             this.dtp_inicio.ShowUpDown = true;
@@ -597,7 +601,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(599, 85);
+            this.label19.Location = new System.Drawing.Point(599, 86);
             this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(62, 13);
@@ -607,7 +611,7 @@
             // btnBuscarEncargado
             // 
             this.btnBuscarEncargado.Image = global::CapaPresentacion.Properties.Resources.Buscar_p;
-            this.btnBuscarEncargado.Location = new System.Drawing.Point(889, 79);
+            this.btnBuscarEncargado.Location = new System.Drawing.Point(889, 80);
             this.btnBuscarEncargado.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscarEncargado.Name = "btnBuscarEncargado";
             this.btnBuscarEncargado.Size = new System.Drawing.Size(32, 25);
@@ -619,7 +623,7 @@
             // 
             this.txtEncargado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.txtEncargado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtEncargado.Location = new System.Drawing.Point(664, 82);
+            this.txtEncargado.Location = new System.Drawing.Point(664, 83);
             this.txtEncargado.Margin = new System.Windows.Forms.Padding(2);
             this.txtEncargado.Name = "txtEncargado";
             this.txtEncargado.Size = new System.Drawing.Size(221, 20);
@@ -679,11 +683,11 @@
             this.dataListadoDetalle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataListadoDetalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataListadoDetalle.Location = new System.Drawing.Point(11, 270);
+            this.dataListadoDetalle.Location = new System.Drawing.Point(11, 282);
             this.dataListadoDetalle.Margin = new System.Windows.Forms.Padding(2);
             this.dataListadoDetalle.Name = "dataListadoDetalle";
             this.dataListadoDetalle.RowTemplate.Height = 24;
-            this.dataListadoDetalle.Size = new System.Drawing.Size(1194, 304);
+            this.dataListadoDetalle.Size = new System.Drawing.Size(1194, 292);
             this.dataListadoDetalle.TabIndex = 32;
             // 
             // groupBox2
@@ -707,7 +711,7 @@
             this.groupBox2.Controls.Add(this.btnBuscarArticulo);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.txtArticulo);
-            this.groupBox2.Location = new System.Drawing.Point(11, 147);
+            this.groupBox2.Location = new System.Drawing.Point(11, 159);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
@@ -1001,7 +1005,7 @@
             // dtFecha
             // 
             this.dtFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtFecha.Location = new System.Drawing.Point(664, 39);
+            this.dtFecha.Location = new System.Drawing.Point(664, 40);
             this.dtFecha.Margin = new System.Windows.Forms.Padding(2);
             this.dtFecha.Name = "dtFecha";
             this.dtFecha.Size = new System.Drawing.Size(97, 20);
@@ -1011,7 +1015,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(621, 43);
+            this.label10.Location = new System.Drawing.Point(621, 44);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(40, 13);
@@ -1217,6 +1221,26 @@
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
+            // lblUsuarioCreador
+            // 
+            this.lblUsuarioCreador.AutoSize = true;
+            this.lblUsuarioCreador.Location = new System.Drawing.Point(600, 132);
+            this.lblUsuarioCreador.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUsuarioCreador.Name = "lblUsuarioCreador";
+            this.lblUsuarioCreador.Size = new System.Drawing.Size(13, 13);
+            this.lblUsuarioCreador.TabIndex = 68;
+            this.lblUsuarioCreador.Text = "--";
+            // 
+            // lblFechaCreacion
+            // 
+            this.lblFechaCreacion.AutoSize = true;
+            this.lblFechaCreacion.Location = new System.Drawing.Point(728, 132);
+            this.lblFechaCreacion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblFechaCreacion.Name = "lblFechaCreacion";
+            this.lblFechaCreacion.Size = new System.Drawing.Size(13, 13);
+            this.lblFechaCreacion.TabIndex = 70;
+            this.lblFechaCreacion.Text = "--";
+            // 
             // FrmIngreso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1354,5 +1378,7 @@
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.ComboBox cbContribuyente;
         private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label lblUsuarioCreador;
+        private System.Windows.Forms.Label lblFechaCreacion;
     }
 }

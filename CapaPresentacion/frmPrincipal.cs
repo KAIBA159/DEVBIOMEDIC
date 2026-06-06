@@ -21,6 +21,8 @@ namespace CapaPresentacion
         public string Nombre = "";
         public string Acceso = "";
 
+        public string usuarioconectado = string.Empty;
+
         public string Version = string.Empty;
 
         public frmPrincipal()
@@ -177,20 +179,76 @@ namespace CapaPresentacion
             ConfigurarStatusStrip();
         }
 
+        //private void ConfigurarStatusStrip()
+        //{
+        //    // 🔹 Alinear el label a la derecha
+        //    toolStripStatusLabel2.Alignment = ToolStripItemAlignment.Right;
+
+        //    toolStripStatusLabel3.Alignment = ToolStripItemAlignment.Right;
+
+        //    // 🔹 Separador elástico
+        //    ToolStripStatusLabel separador = new ToolStripStatusLabel();
+        //    separador.Spring = true;
+
+        //    if (!statusStrip.Items.Contains(separador))
+        //        statusStrip.Items.Insert(statusStrip.Items.IndexOf(toolStripStatusLabel2), separador);
+
+        //    // 🔹 Mostrar texto base
+        //    toolStripStatusLabel1.Text = Version;
+
+        //    // 🔹 Intentar obtener nombre de la base de datos activa
+        //    try
+        //    {
+        //        string cadena = ConfiguracionGlobal.ObtenerCadenaConexion("CapaDatos.Properties.Settings.cn");
+        //        SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder(cadena);
+
+        //        string nombreBD = builder.InitialCatalog; // ✅ Aquí tienes el nombre real de la BD
+
+        //        toolStripStatusLabel2.Text = $"BaseDatos : {nombreBD}";
+
+        //        toolStripStatusLabel3.Text = $"Tipo de Usuario : " + Acceso;
+
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        toolStripStatusLabel2.Text = "BD: (Error de conexión)";
+        //        MessageBox.Show("No se pudo obtener la base de datos activa:\n" + ex.Message,
+        //                        "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        //    }
+        //}
+
         private void ConfigurarStatusStrip()
         {
-            // 🔹 Alinear el label a la derecha
-            toolStripStatusLabel2.Alignment = ToolStripItemAlignment.Right;
+            // 🔹 1. Quitamos la alineación manual, el "Spring" hará todo el trabajo
+            toolStripStatusLabel2.Alignment = ToolStripItemAlignment.Left;
+            toolStripStatusLabel3.Alignment = ToolStripItemAlignment.Left;
 
-            // 🔹 Separador elástico
+            // 🔹 2. Crear el separador elástico
             ToolStripStatusLabel separador = new ToolStripStatusLabel();
             separador.Spring = true;
+            separador.Text = ""; // Importante que esté vacío
 
-            if (!statusStrip.Items.Contains(separador))
-                statusStrip.Items.Insert(statusStrip.Items.IndexOf(toolStripStatusLabel2), separador);
+            // 🔹 3. El truco: Ordenar los items correctamente.
+            // Queremos este orden: [Label1] [-> SPRING ->] [Label3] [Label2]
+
+            // Limpiamos los items actuales para evitar duplicados al recargar
+            statusStrip.Items.Clear();
+
+            // Los agregamos en el orden exacto que necesitamos
+            statusStrip.Items.Add(toolStripStatusLabel1); // Izquierda (Versión)
+            statusStrip.Items.Add(toolStripStatusLabel4); // Izquierda (Versión)
+            statusStrip.Items.Add(toolStripStatusLabel5 ); // Izquierda (Versión)
+
+
+
+            statusStrip.Items.Add(separador);             // El resorte que empuja todo a la derecha
+            statusStrip.Items.Add(toolStripStatusLabel3); // Derecha (Tipo de Usuario)
+            statusStrip.Items.Add(toolStripStatusLabel2); // Derecha (Base de Datos)
 
             // 🔹 Mostrar texto base
             toolStripStatusLabel1.Text = Version;
+            toolStripStatusLabel4.Text   = Nombre + " - " + Apellidos;
+            toolStripStatusLabel5.Text = " USUARIO : " + usuarioconectado;
 
             // 🔹 Intentar obtener nombre de la base de datos activa
             try
@@ -201,6 +259,7 @@ namespace CapaPresentacion
                 string nombreBD = builder.InitialCatalog; // ✅ Aquí tienes el nombre real de la BD
 
                 toolStripStatusLabel2.Text = $"BaseDatos : {nombreBD}";
+                toolStripStatusLabel3.Text = $"Tipo de Usuario : " + Acceso;
             }
             catch (Exception ex)
             {
@@ -225,7 +284,7 @@ namespace CapaPresentacion
                 this.TsVentas.Enabled = true;
 
             }
-            else if (Acceso == "Vendedor")
+            else if (Acceso == "Egreso")
             {
                 this.MnuAlmacen.Enabled = false;
                 this.MnuCompras.Enabled = false;
@@ -237,7 +296,7 @@ namespace CapaPresentacion
                 this.TsVentas.Enabled = true;
 
             }
-            else if (Acceso == "Almacenero")
+            else if (Acceso == "Ingreso")
             {
                 this.MnuAlmacen.Enabled = true;
                 this.MnuCompras.Enabled = true;
@@ -269,6 +328,9 @@ namespace CapaPresentacion
             frm.MdiParent = this;
             frm.Show();
             frm.Idtrabajador = Convert.ToInt32(this.Idtrabajador);
+            frm.usuariocreado = usuarioconectado.Trim();
+
+
         }
 
         private void ventasToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -277,6 +339,7 @@ namespace CapaPresentacion
             frm.MdiParent = this;
             frm.Show();
             frm.Idtrabajador = Convert.ToInt32(this.Idtrabajador);
+            frm.usuariocreado = usuarioconectado.Trim();
 
         }
 

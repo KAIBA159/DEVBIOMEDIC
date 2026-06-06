@@ -20,6 +20,7 @@ namespace CapaPresentacion
     public partial class FrmIngreso : Form, IFormularioReceptorArticulo, IFormularioReceptorProveedor
     {
         public int Idtrabajador;
+        public string usuariocreado = string.Empty;
         private bool IsNuevo;
         private bool IsEditar = false;
         private DataTable dtDetalle;
@@ -50,11 +51,34 @@ namespace CapaPresentacion
 
         public void setArticulo (string idarticulo,string nombre)
         {
+            //if (IsNuevo) { }
+
+            //this.txtIdarticulo.Text = idarticulo;
+            //this.txtArticulo.Text = nombre;
+
+            //this.txtStock.ReadOnly = false;
+            //this.txtCantidad_Manifestada.ReadOnly = false;
+
             this.txtIdarticulo.Text = idarticulo;
             this.txtArticulo.Text = nombre;
 
-            this.txtStock.ReadOnly = false;
-            this.txtCantidad_Manifestada.ReadOnly = false;
+            // Solo permitimos editar si estamos creando un registro NUEVO
+            if (this.IsNuevo)
+            {
+                this.txtStock.ReadOnly = false;
+                this.txtCantidad_Manifestada.ReadOnly = false;
+                this.txtCantidad_Manifestada.Enabled = true;
+
+                // 🔥 Tip UX: El cursor salta directo a la cantidad para ganar velocidad
+                this.txtCantidad_Manifestada.Focus();
+            }
+            else
+            {
+                // Si estamos solo viendo o editando la cabecera, se bloquea por seguridad
+                this.txtStock.ReadOnly = true;
+                this.txtCantidad_Manifestada.ReadOnly = true;
+            }
+
 
 
         }
@@ -125,6 +149,8 @@ namespace CapaPresentacion
 
             GenerarCorrelativo(dtFecha.Value, this.txtIdproveedor.Text);
             //
+            this.lblFechaCreacion.Text = "--";
+            this.lblUsuarioCreador.Text = "--";
 
 
             this.txtSerie.Text = string.Empty;
@@ -1066,7 +1092,7 @@ namespace CapaPresentacion
         {
             try
             {
-
+                string a1 = usuariocreado;
 
                 //TimeSpan hora = TimeSpan.Parse(horaInicio);
 
@@ -1196,9 +1222,11 @@ namespace CapaPresentacion
                             txtDUA.Text,
                             txtCorrelativoUnico.Text,
                             tb_conclusion.Text,
+                            usuariocreado,
 
+                            dtDetalle 
+                            
 
-                            dtDetalle
                             );
 
                     }
@@ -1498,8 +1526,28 @@ namespace CapaPresentacion
             this.tb_conclusion.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["conclusion"].Value);
 
 
+            ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            ///
 
-            
+            // Validamos que el valor no sea nulo (por los registros antiguos)
+            if (this.dataListado.CurrentRow.Cells["usuariocreador"].Value != DBNull.Value)
+            {
+                this.lblUsuarioCreador.Text = "Creado por: " + Convert.ToString(this.dataListado.CurrentRow.Cells["usuariocreador"].Value);
+            }
+            else
+            {
+                this.lblUsuarioCreador.Text = "Creado por: (Sin registro)";
+            }
+
+            if (this.dataListado.CurrentRow.Cells["fechacreacion"].Value != DBNull.Value)
+            {
+                this.lblFechaCreacion.Text = "Fecha creación: " + Convert.ToDateTime(this.dataListado.CurrentRow.Cells["fechacreacion"].Value).ToString("dd/MM/yyyy HH:mm:ss");
+            }
+            else
+            {
+                this.lblFechaCreacion.Text = "Fecha creación: (Sin registro)";
+            }
+            //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
             //         isnull(i.cbTipo_Producto, '') as 'cbTipo_Producto',

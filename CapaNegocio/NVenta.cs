@@ -12,7 +12,7 @@ namespace CapaNegocio
     public class NVenta
     {
         public static string Insertar(int idcliente, int idtrabajador, DateTime fecha,
-            string tipo_comprobante, string serie, string correlativo, decimal igv, string estado,
+            string tipo_comprobante, string serie, string correlativo, decimal igv, string estado,string usuariocreador,
             DataTable dtDetalles)
         {
             DVenta Obj = new DVenta();
@@ -25,6 +25,8 @@ namespace CapaNegocio
             Obj.Igv = igv;
 
             Obj.Estado = estado;
+
+            Obj.Usuariocreado = usuariocreador;
 
             List<DDetalle_Venta> detalles = new List<DDetalle_Venta>();
 

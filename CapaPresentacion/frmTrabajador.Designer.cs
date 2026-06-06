@@ -96,10 +96,10 @@
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(124, 28);
+            this.txtBuscar.Location = new System.Drawing.Point(163, 28);
             this.txtBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(133, 20);
+            this.txtBuscar.Size = new System.Drawing.Size(197, 20);
             this.txtBuscar.TabIndex = 1;
             // 
             // Eliminar
@@ -123,7 +123,7 @@
             this.dataListado.ReadOnly = true;
             this.dataListado.RowTemplate.Height = 24;
             this.dataListado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataListado.Size = new System.Drawing.Size(590, 215);
+            this.dataListado.Size = new System.Drawing.Size(690, 215);
             this.dataListado.TabIndex = 7;
             this.dataListado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataListado_CellContentClick);
             this.dataListado.DoubleClick += new System.EventHandler(this.dataListado_DoubleClick);
@@ -150,7 +150,7 @@
             this.cbBuscar.Location = new System.Drawing.Point(10, 24);
             this.cbBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.cbBuscar.Name = "cbBuscar";
-            this.cbBuscar.Size = new System.Drawing.Size(92, 21);
+            this.cbBuscar.Size = new System.Drawing.Size(107, 21);
             this.cbBuscar.TabIndex = 8;
             this.cbBuscar.Text = "Documento";
             // 
@@ -162,7 +162,7 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(651, 353);
+            this.tabControl1.Size = new System.Drawing.Size(727, 353);
             this.tabControl1.TabIndex = 7;
             // 
             // tabPage1
@@ -179,7 +179,7 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage1.Size = new System.Drawing.Size(643, 327);
+            this.tabPage1.Size = new System.Drawing.Size(719, 327);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Listado";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -189,7 +189,7 @@
             this.btnImprimir.BackColor = System.Drawing.Color.Silver;
             this.btnImprimir.Image = global::CapaPresentacion.Properties.Resources.imprimir;
             this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImprimir.Location = new System.Drawing.Point(513, 24);
+            this.btnImprimir.Location = new System.Drawing.Point(601, 23);
             this.btnImprimir.Margin = new System.Windows.Forms.Padding(2);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(88, 28);
@@ -203,7 +203,7 @@
             this.btnEliminar.BackColor = System.Drawing.Color.Silver;
             this.btnEliminar.Image = global::CapaPresentacion.Properties.Resources.eliminar;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(416, 24);
+            this.btnEliminar.Location = new System.Drawing.Point(504, 23);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(81, 28);
@@ -218,7 +218,7 @@
             this.btnBuscar.BackColor = System.Drawing.Color.Silver;
             this.btnBuscar.Image = global::CapaPresentacion.Properties.Resources.Buscar_p;
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(320, 24);
+            this.btnBuscar.Location = new System.Drawing.Point(408, 23);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(79, 28);
@@ -234,7 +234,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage2.Size = new System.Drawing.Size(643, 327);
+            this.tabPage2.Size = new System.Drawing.Size(719, 327);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Mantenimiento";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -273,7 +273,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(629, 297);
+            this.groupBox1.Size = new System.Drawing.Size(693, 297);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Trabajadores";
@@ -384,14 +384,14 @@
             this.cbAcceso.FormattingEnabled = true;
             this.cbAcceso.Items.AddRange(new object[] {
             "Administrador",
-            "Vendedor",
-            "Almacenero"});
+            "Egreso",
+            "Ingreso"});
             this.cbAcceso.Location = new System.Drawing.Point(116, 169);
             this.cbAcceso.Margin = new System.Windows.Forms.Padding(2);
             this.cbAcceso.Name = "cbAcceso";
-            this.cbAcceso.Size = new System.Drawing.Size(81, 21);
+            this.cbAcceso.Size = new System.Drawing.Size(150, 21);
             this.cbAcceso.TabIndex = 41;
-            this.cbAcceso.Text = "Vendedor";
+            this.cbAcceso.Text = "Administrador";
             // 
             // label9
             // 
@@ -619,7 +619,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(671, 430);
+            this.ClientSize = new System.Drawing.Size(747, 430);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);

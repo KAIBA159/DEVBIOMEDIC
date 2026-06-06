@@ -32,7 +32,7 @@ namespace CapaNegocio
             string correlativoUnico,
 
             string conclusion,
-
+            string usuariocreado,
 
 
             DataTable dtDetalles
@@ -61,6 +61,8 @@ namespace CapaNegocio
             Obj.CorrelativoUnico = correlativoUnico;
 
             Obj.Conclusion = conclusion;
+
+            Obj.UsuarioCreado = usuariocreado;
 
             //DateTime horaInicioDT,
             //DateTime horaFinDT,

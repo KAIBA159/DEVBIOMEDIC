@@ -33,7 +33,8 @@ namespace CapaDatos
         private string _CorrelativoUnico;
 
         private string _Conclusion;
-        
+        private string _UsuarioCreado;
+
 
 
         //Propiedades
@@ -152,6 +153,14 @@ namespace CapaDatos
             set { _Conclusion = value; }
         }
 
+        public string UsuarioCreado
+        {
+            get { return _UsuarioCreado; }
+            set { _UsuarioCreado = value; }
+        }
+
+
+        
         //tb_conclusion
 
         //Constructores
@@ -353,6 +362,14 @@ namespace CapaDatos
                 ParConclusion.Value = Ingreso.Conclusion;
                 SqlCmd.Parameters.Add(ParConclusion);
 
+
+                ///
+                SqlParameter ParUsuarioCreado = new SqlParameter();
+                ParUsuarioCreado.ParameterName = "@usuariocreador";
+                ParUsuarioCreado.SqlDbType = SqlDbType.VarChar;
+                ParUsuarioCreado.Size = 50;
+                ParUsuarioCreado.Value = Ingreso.UsuarioCreado.Trim();
+                SqlCmd.Parameters.Add(ParUsuarioCreado);
 
                 //Ejecutamos nuestro comando
 

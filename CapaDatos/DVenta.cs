@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 
 namespace CapaDatos
 {
@@ -20,6 +21,7 @@ namespace CapaDatos
         private string _Serie;
         private string _Correlativo;
         private decimal _Igv;
+        private string _Usuariocreado;
 
         private string _Estado; 
         public int Idventa
@@ -76,6 +78,13 @@ namespace CapaDatos
             get { return _Estado; }
             set { _Estado = value; }
         }
+
+        public string Usuariocreado
+        {
+            get { return _Usuariocreado; }
+            set { _Usuariocreado = value; }
+        }
+
         //Constructores 
         public DVenta()
         {
@@ -218,6 +227,15 @@ namespace CapaDatos
                 Parestado.Value = Venta.Estado;
                 SqlCmd.Parameters.Add(Parestado);
                 //
+
+                SqlParameter ParUsuariocreado = new SqlParameter();
+                ParUsuariocreado.ParameterName = "@usuariocreador";
+                ParUsuariocreado.SqlDbType = SqlDbType.VarChar;
+                ParUsuariocreado.Size = 50;
+                ParUsuariocreado.Value = Venta.Usuariocreado;
+                SqlCmd.Parameters.Add(ParUsuariocreado);
+
+
 
 
                 SqlParameter ParIgv = new SqlParameter();
