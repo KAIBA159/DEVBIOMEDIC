@@ -48,7 +48,10 @@ C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\SisGest\CapaDatos\obj\D
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaDatos\bin\Debug\CapaDatos.dll.config
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaDatos\bin\Debug\CapaDatos.dll
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaDatos\bin\Debug\CapaDatos.pdb
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaDatos\bin\Debug\log4net.dll
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaDatos\bin\Debug\log4net.xml
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaDatos\obj\Debug\CapaDatos.csproj.AssemblyReference.cache
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaDatos\obj\Debug\CapaDatos.csproj.CoreCompileInputs.cache
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaDatos\obj\Debug\CapaDatos.csproj.Up2Date
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaDatos\obj\Debug\CapaDatos.dll
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaDatos\obj\Debug\CapaDatos.pdb

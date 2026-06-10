@@ -123,7 +123,7 @@
             this.dataListado.ReadOnly = true;
             this.dataListado.RowTemplate.Height = 24;
             this.dataListado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataListado.Size = new System.Drawing.Size(690, 215);
+            this.dataListado.Size = new System.Drawing.Size(731, 215);
             this.dataListado.TabIndex = 7;
             this.dataListado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataListado_CellContentClick);
             this.dataListado.DoubleClick += new System.EventHandler(this.dataListado_DoubleClick);
@@ -156,13 +156,15 @@
             // 
             // tabControl1
             // 
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Location = new System.Drawing.Point(9, 65);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(727, 353);
+            this.tabControl1.Size = new System.Drawing.Size(767, 353);
             this.tabControl1.TabIndex = 7;
             // 
             // tabPage1
@@ -179,7 +181,7 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage1.Size = new System.Drawing.Size(719, 327);
+            this.tabPage1.Size = new System.Drawing.Size(759, 327);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Listado";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -234,7 +236,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage2.Size = new System.Drawing.Size(719, 327);
+            this.tabPage2.Size = new System.Drawing.Size(759, 327);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Mantenimiento";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -273,7 +275,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(693, 297);
+            this.groupBox1.Size = new System.Drawing.Size(721, 297);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Trabajadores";
@@ -333,7 +335,7 @@
             // 
             this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtEmail.Location = new System.Drawing.Point(408, 120);
+            this.txtEmail.Location = new System.Drawing.Point(438, 120);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(204, 20);
@@ -342,7 +344,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(369, 123);
+            this.label10.Location = new System.Drawing.Point(399, 123);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(35, 13);
@@ -353,7 +355,7 @@
             // 
             this.txtTelefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.txtTelefono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtTelefono.Location = new System.Drawing.Point(408, 96);
+            this.txtTelefono.Location = new System.Drawing.Point(438, 96);
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(2);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(204, 20);
@@ -362,7 +364,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(352, 100);
+            this.label11.Location = new System.Drawing.Point(382, 100);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(52, 13);
@@ -406,7 +408,7 @@
             // dtFecha_Nacimiento
             // 
             this.dtFecha_Nacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtFecha_Nacimiento.Location = new System.Drawing.Point(408, 71);
+            this.dtFecha_Nacimiento.Location = new System.Drawing.Point(438, 71);
             this.dtFecha_Nacimiento.Margin = new System.Windows.Forms.Padding(2);
             this.dtFecha_Nacimiento.Name = "dtFecha_Nacimiento";
             this.dtFecha_Nacimiento.Size = new System.Drawing.Size(151, 20);
@@ -415,7 +417,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(294, 75);
+            this.label8.Location = new System.Drawing.Point(324, 75);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(111, 13);
@@ -449,7 +451,7 @@
             // 
             this.txtApellidos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.txtApellidos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtApellidos.Location = new System.Drawing.Point(408, 43);
+            this.txtApellidos.Location = new System.Drawing.Point(438, 43);
             this.txtApellidos.Margin = new System.Windows.Forms.Padding(2);
             this.txtApellidos.Name = "txtApellidos";
             this.txtApellidos.Size = new System.Drawing.Size(204, 20);
@@ -458,7 +460,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(352, 46);
+            this.label6.Location = new System.Drawing.Point(382, 46);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(52, 13);
@@ -619,7 +621,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(747, 430);
+            this.ClientSize = new System.Drawing.Size(803, 430);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);

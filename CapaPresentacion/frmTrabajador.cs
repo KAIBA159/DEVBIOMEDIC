@@ -243,26 +243,72 @@ namespace CapaPresentacion
                         this.txtApellidos.Text.Trim().ToUpper(), cbSexo.Text,
                         dtFecha_Nacimiento.Value,
                         txtNum_Documento.Text, txtDireccion.Text,
-                        txtTelefono.Text, 
-                        txtEmail.Text, 
-                        cbAcceso.Text, 
-                        txtUsuario.Text, 
+                        txtTelefono.Text,
+                        txtEmail.Text,
+                        cbAcceso.Text,
+                        txtUsuario.Text,
                         txtPassword.Text);
 
                     }
+
                     else
                     {
-                        //Vamos a modificar un Trabajador
-                        Rpta = NTrabajador.Editar(Convert.ToInt32(this.txtIdtrabajador.Text), this.txtNombre.Text.Trim().ToUpper(),
-                        this.txtApellidos.Text.Trim().ToUpper(), cbSexo.Text,
-                        dtFecha_Nacimiento.Value,
-                        txtNum_Documento.Text, txtDireccion.Text,
-                        txtTelefono.Text, 
-                        txtEmail.Text, 
-                        cbAcceso.Text, 
-                        txtUsuario.Text, 
-                        txtPassword.Text);
+                        // Vamos a modificar un Trabajador
+
+                        // 1. OBTENER LA CONTRASEÑA NUEVA (SI LA HAY)
+                        string passwordParaActualizar = this.txtPassword.Text.Trim();
+
+                        // 2. VERIFICAR SI DEBEMOS HASHEAR
+                        // Si el usuario escribió algo nuevo, lo hasheamos.
+                        // Si lo dejó en blanco, significa que NO quiere cambiar la contraseña.
+                        if (!string.IsNullOrEmpty(passwordParaActualizar))
+                        {
+                            // Encriptar la nueva contraseña
+                            passwordParaActualizar = BCrypt.Net.BCrypt.HashPassword(passwordParaActualizar);
+                        }
+                        else
+                        {
+                            // Si está en blanco, recuperamos el hash actual desde la grilla
+                            // para enviarlo y que la BD lo mantenga igual
+                            passwordParaActualizar = Convert.ToString(this.dataListado.CurrentRow.Cells["password"].Value);
+                        }
+
+                        // 3. ENVIAR A LA CAPA DE NEGOCIO
+                        Rpta = NTrabajador.Editar(Convert.ToInt32(this.txtIdtrabajador.Text),
+                            this.txtNombre.Text.Trim().ToUpper(),
+                            this.txtApellidos.Text.Trim().ToUpper(),
+                            cbSexo.Text,
+                            dtFecha_Nacimiento.Value,
+                            txtNum_Documento.Text,
+                            txtDireccion.Text,
+                            txtTelefono.Text,
+                            txtEmail.Text,
+                            cbAcceso.Text,
+                            txtUsuario.Text,
+                            passwordParaActualizar); // <-- Pasamos la variable procesada
                     }
+
+
+
+                    //else
+                    //{
+                    //    //Vamos a modificar un Trabajador
+
+
+
+                    //    Rpta = NTrabajador.Editar(Convert.ToInt32(this.txtIdtrabajador.Text), this.txtNombre.Text.Trim().ToUpper(),
+                    //    this.txtApellidos.Text.Trim().ToUpper(), cbSexo.Text,
+                    //    dtFecha_Nacimiento.Value,
+                    //    txtNum_Documento.Text, txtDireccion.Text,
+                    //    txtTelefono.Text,
+                    //    txtEmail.Text,
+                    //    cbAcceso.Text,
+                    //    txtUsuario.Text,
+                    //    txtPassword.Text);
+                    //}
+
+
+
                     //Si la respuesta fue OK, fue porque se modifico 
                     //o inserto el Cliente
                     //de forma correcta
@@ -340,8 +386,12 @@ namespace CapaPresentacion
             this.txtEmail.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["email"].Value);
             this.cbAcceso.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["acceso"].Value);
             this.txtUsuario.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["usuario"].Value);
-            this.txtPassword.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["password"].Value);
 
+            // 1. DEJAMOS EL CAMPO DE CONTRASEÑA VACÍO POR SEGURIDAD
+            this.txtPassword.Text = string.Empty;
+
+            //this.txtPassword.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["password"].Value);
+            this.ttMensaje.SetToolTip(this.txtPassword, "Deje este campo vacío si NO desea cambiar la contraseña");
 
             this.tabControl1.SelectedIndex = 1;
         }

@@ -76,6 +76,7 @@ C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaNegocio\bin\Debug\C
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaNegocio\bin\Debug\CapaNegocio.pdb
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaNegocio\bin\Debug\BCrypt.Net-Next.dll
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaNegocio\bin\Debug\CapaDatos.dll
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaNegocio\bin\Debug\log4net.dll
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaNegocio\bin\Debug\System.Buffers.dll
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaNegocio\bin\Debug\System.Memory.dll
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaNegocio\bin\Debug\System.Numerics.Vectors.dll
@@ -83,6 +84,7 @@ C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaNegocio\bin\Debug\S
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaNegocio\bin\Debug\CapaDatos.pdb
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaNegocio\bin\Debug\CapaDatos.dll.config
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaNegocio\bin\Debug\BCrypt.Net-Next.xml
+C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaNegocio\bin\Debug\log4net.xml
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaNegocio\bin\Debug\System.Buffers.xml
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaNegocio\bin\Debug\System.Memory.xml
 C:\Users\Administrador\Documents\WS\BIOMEDIC\DEVBIOMEDIC\CapaNegocio\bin\Debug\System.Numerics.Vectors.xml

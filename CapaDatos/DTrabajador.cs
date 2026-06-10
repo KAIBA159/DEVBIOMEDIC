@@ -7,10 +7,17 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 
+using log4net;
+using System.Reflection;
+
 namespace CapaDatos
 {
     public class DTrabajador
     {
+
+        private static readonly ILog log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
+
+
         //Variables
         private int _Idtrabajador;
         private string _Nombre;
@@ -180,12 +187,20 @@ namespace CapaDatos
                 ParSexo.Value = Trabajador.Sexo;
                 SqlCmd.Parameters.Add(ParSexo);
 
+                //SqlParameter ParFecha_Nacimiento = new SqlParameter();
+                //ParFecha_Nacimiento.ParameterName = "@fecha_nacimiento";
+                //ParFecha_Nacimiento.SqlDbType = SqlDbType.VarChar;
+                //ParFecha_Nacimiento.Size = 50;
+                //ParFecha_Nacimiento.Value = Trabajador.Fecha_Nacimiento;
+                //SqlCmd.Parameters.Add(ParFecha_Nacimiento);
+
                 SqlParameter ParFecha_Nacimiento = new SqlParameter();
                 ParFecha_Nacimiento.ParameterName = "@fecha_nacimiento";
-                ParFecha_Nacimiento.SqlDbType = SqlDbType.VarChar;
-                ParFecha_Nacimiento.Size = 50;
+                ParFecha_Nacimiento.SqlDbType = SqlDbType.Date; // <-- CAMBIO AQUÍ
                 ParFecha_Nacimiento.Value = Trabajador.Fecha_Nacimiento;
                 SqlCmd.Parameters.Add(ParFecha_Nacimiento);
+
+
 
                 SqlParameter ParNum_Documento = new SqlParameter();
                 ParNum_Documento.ParameterName = "@num_documento";
@@ -298,12 +313,19 @@ namespace CapaDatos
                 ParSexo.Value = Trabajador.Sexo;
                 SqlCmd.Parameters.Add(ParSexo);
 
+                //SqlParameter ParFecha_Nacimiento = new SqlParameter();
+                //ParFecha_Nacimiento.ParameterName = "@fecha_nacimiento";
+                //ParFecha_Nacimiento.SqlDbType = SqlDbType.VarChar;
+                //ParFecha_Nacimiento.Size = 50;
+                //ParFecha_Nacimiento.Value = Trabajador.Fecha_Nacimiento;
+                //SqlCmd.Parameters.Add(ParFecha_Nacimiento);
+
                 SqlParameter ParFecha_Nacimiento = new SqlParameter();
                 ParFecha_Nacimiento.ParameterName = "@fecha_nacimiento";
-                ParFecha_Nacimiento.SqlDbType = SqlDbType.VarChar;
-                ParFecha_Nacimiento.Size = 50;
+                ParFecha_Nacimiento.SqlDbType = SqlDbType.Date; // <-- CAMBIO AQUÍ
                 ParFecha_Nacimiento.Value = Trabajador.Fecha_Nacimiento;
                 SqlCmd.Parameters.Add(ParFecha_Nacimiento);
+
 
                 SqlParameter ParNum_Documento = new SqlParameter();
                 ParNum_Documento.ParameterName = "@num_documento";
@@ -504,13 +526,47 @@ namespace CapaDatos
 
         }
 
+        //public DataTable Login(string usuario)
+        //{
+        //    DataTable DtResultado = new DataTable("trabajador");
+        //    SqlConnection SqlCon = new SqlConnection();
+        //    try
+        //    {
+        //        SqlCon.ConnectionString = Conexion.Cn;
+        //        SqlCommand SqlCmd = new SqlCommand();
+        //        SqlCmd.Connection = SqlCon;
+        //        SqlCmd.CommandText = "splogin";
+        //        SqlCmd.CommandType = CommandType.StoredProcedure;
+
+        //        SqlParameter ParUsuario = new SqlParameter();
+        //        ParUsuario.ParameterName = "@usuario";
+        //        ParUsuario.SqlDbType = SqlDbType.VarChar;
+        //        ParUsuario.Size = 20;
+        //        ParUsuario.Value = usuario;
+        //        SqlCmd.Parameters.Add(ParUsuario);
+
+        //        SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+        //        SqlDat.Fill(DtResultado);
+        //    }
+        //    catch (Exception)
+        //    {
+        //        DtResultado = null;
+        //    }
+        //    return DtResultado;
+        //}
+
         public DataTable Login(string usuario)
         {
             DataTable DtResultado = new DataTable("trabajador");
             SqlConnection SqlCon = new SqlConnection();
+
             try
             {
                 SqlCon.ConnectionString = Conexion.Cn;
+
+                // 2. LOG: Aviso de qué cadena está usando
+                log.Debug($"[CapaDatos] Conectando a BD con cadena: {SqlCon.ConnectionString}");
+
                 SqlCommand SqlCmd = new SqlCommand();
                 SqlCmd.Connection = SqlCon;
                 SqlCmd.CommandText = "splogin";
@@ -525,13 +581,20 @@ namespace CapaDatos
 
                 SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
                 SqlDat.Fill(DtResultado);
+
+                // 3. LOG: Todo salió bien
+                log.Info($"[CapaDatos] SQL respondió OK. Filas: {DtResultado.Rows.Count}");
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                DtResultado = null;
+                // 4. LOG CRÍTICO: Si se cae la red o el Timeout falla, lo atrapamos aquí
+                log.Error($"[CapaDatos] ERROR DE CONEXIÓN SQL: {ex.Message}", ex);
+                DtResultado = null; // IMPORTANTE: Devolvemos null para que la capa de presentación sepa que falló
             }
             return DtResultado;
         }
+
+
 
 
         public static void ActualizarPassword(string usuario, string nuevoHash)

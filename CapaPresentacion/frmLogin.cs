@@ -24,6 +24,9 @@ namespace CapaPresentacion
 
     public partial class frmLogin : Form
     {
+        //private static readonly ILog log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
+
+        // 3. ¡ESTA ES LA LÍNEA QUE TE FALTA! Crea el objeto "log" para este formulario
         private static readonly ILog log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
 
 
@@ -70,6 +73,8 @@ namespace CapaPresentacion
 
             string usuarioIngresado = this.TxtUsuario.Text.Trim();
             string passwordIngresado = this.TxtPassword.Text;
+
+            log.Info($"--- INICIO DE LOGIN: Usuario '{usuarioIngresado}' ---");
 
             // Paso 1: Obtener los datos del usuario desde la base de datos
             DataTable Datos = CapaNegocio.NTrabajador.Login(usuarioIngresado);
